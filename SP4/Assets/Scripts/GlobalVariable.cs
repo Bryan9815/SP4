@@ -30,8 +30,8 @@ public class GlobalVariable : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //Testing Purpose
-        screenHeight = 100.0f;
-        screenWidth = 100.0f;
+        screenWidth = PlayerPrefs.GetFloat("ScreenWidth", 800);
+        screenHeight = PlayerPrefs.GetFloat("ScreenHeight", 600);
 	}
 	
 	// Update is called once per frame
