@@ -5,17 +5,16 @@ using System.Collections;
 
 public class MainMenu : MonoBehaviour 
 {
-    public Button Play, Options;
+    private float testfloat;
 	// Use this for initialization
 	void Start () 
     {
-        Play.onClick.AddListener(delegate { SceneManager.LoadScene("SaveMenu"); });
-        Options.onClick.AddListener(delegate { SceneManager.LoadScene("OptionsMenu"); });
+      testfloat = GlobalVariable.GetScreenHeight();
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-	
+        Debug.Log("TestFloat = " + testfloat);
 	}
 }
