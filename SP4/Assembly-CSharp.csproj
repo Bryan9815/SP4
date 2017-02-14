@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Money\Money.cs" />
      <Compile Include="Assets\Scripts\Options\Mobile.cs" />
      <Compile Include="Assets\Scripts\Options\Windows.cs" />
+     <Compile Include="Assets\Scripts\Town\CharSelect.cs" />
      <Compile Include="Assets\Scripts\Town\Shop.cs" />
      <Compile Include="Assets\Scripts\Town\Town.cs" />
  <Reference Include="UnityEngine.UI">

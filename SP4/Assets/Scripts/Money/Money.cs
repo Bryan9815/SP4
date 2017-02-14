@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class Money : MonoBehaviour {
-    public int playerGold;
+    public static int playerGold;
     public Text GoldText;
     public Button goldButton;
     void start()
