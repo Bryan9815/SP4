@@ -6,7 +6,7 @@ public class GlobalVariable : MonoBehaviour {
 
     private static float screenWidth;
     private static float screenHeight;
-    public static int PlayerGoldG = 100;
+    private static int PlayerGoldG;
 
     //Added using unity engine UI on top
     //is for just in case anyone need a global Text field 
@@ -23,16 +23,19 @@ public class GlobalVariable : MonoBehaviour {
     //4th. Set Variable Name
 
     //===How to make a global function===
-    //1st. Set to private
+    //1st. Set to public
     //2nd. Set to static funtcion
     //3rd. Set the function you want
     //4th. Set Function Name
 
 	// Use this for initialization
-	void Start () {
-        //Testing Purpose
+	void Start () 
+    {
         screenWidth = PlayerPrefs.GetFloat("ScreenWidth", 800);
         screenHeight = PlayerPrefs.GetFloat("ScreenHeight", 600);
+
+        // Player Variables
+        PlayerGoldG = PlayerPrefs.GetInt("Gold", 100);
 	}
 	
 	// Update is called once per frame
@@ -55,5 +58,14 @@ public class GlobalVariable : MonoBehaviour {
     public static void SetScreenHeight(float newHeight)
     {
         screenHeight = newHeight;
+    }
+
+    public static float GetPlayerGold()
+    {
+        return PlayerGoldG;
+    }
+    public static void SetPlayerGold(int newGold)
+    {
+        PlayerGoldG = newGold;
     }
 }
