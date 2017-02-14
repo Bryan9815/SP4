@@ -47,7 +47,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Gameplay\Block.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Hero.cs" />
-     <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\GlobalVariable.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\MainMenuBtn.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
