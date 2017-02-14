@@ -1,8 +1,6 @@
 SP4/Temp/
-<<<<<<< HEAD
-=======
-SP4/Library/metadata/
->>>>>>> a42840ead07d2c5173897495c89dae900e87721c
+SP4/obj/
+SP4/SP4.v12.suo
 SP4/Library/
-SP4/twest_Data/Managed/UnityEngine.dll.mdb
 SP4/twest_Data/
+SP4/Assembly-CSharp.csproj
