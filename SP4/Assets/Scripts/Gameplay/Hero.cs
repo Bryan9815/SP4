@@ -4,7 +4,10 @@ using UnityEngine.UI;
 
 public class Hero : MonoBehaviour {
     public static float Attack,Defense, Resistance, Speed, Accuracy, Evasion;
+    public static Image hero;
     public static string name;
+    public int level;
+    public float exp, max_exp;
 	// Use this for initialization
 	void Start () {
         
