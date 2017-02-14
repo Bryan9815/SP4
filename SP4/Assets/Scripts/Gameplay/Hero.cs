@@ -18,6 +18,22 @@ public class Hero : MonoBehaviour {
 	
 	}
 
+    public void BlockAttack(int i)
+    {
+        switch(i)
+        {
+            case 1:
+                OneChain();
+                break;
+            case 2:
+                TwoChain();
+                break;
+            case 3:
+                ThreeChain();
+                break;
+        }
+    }
+
     // Chain attacks
     void OneChain()
     {
@@ -53,5 +69,9 @@ public class Hero : MonoBehaviour {
 
     }
 
+    public void LevelUp()
+    {
+
+    }
 
 }

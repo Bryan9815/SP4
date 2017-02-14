@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Scenes/TownShop.unity
-  isLoaded: 1
-  isActive: 1
