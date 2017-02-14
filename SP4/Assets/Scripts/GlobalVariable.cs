@@ -6,6 +6,7 @@ public class GlobalVariable : MonoBehaviour {
 
     private static float screenWidth;
     private static float screenHeight;
+    public static int PlayerGoldG = 100;
 
     //Added using unity engine UI on top
     //is for just in case anyone need a global Text field 

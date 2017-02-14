@@ -3,22 +3,21 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class Money : MonoBehaviour {
-
-    public static int gold = 100;
+    public int playerGold;
     public Text GoldText;
     public Button goldButton;
     void start()
     {
-
+        playerGold = GlobalVariable.PlayerGoldG;
     }
 	// Update is called once per frame
 	void Update () 
     {
-        GoldText.text = "$" + gold.ToString(); 
+        GoldText.text = "$" + playerGold.ToString(); 
 	}
 
     public void buttonPressed()
     {
-        gold += 100;
+        playerGold += 100;
     }
 }
