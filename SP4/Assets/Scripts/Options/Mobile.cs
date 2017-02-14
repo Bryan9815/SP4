@@ -30,9 +30,12 @@ public class Mobile : MonoBehaviour
         Music_Text.text = Music.value.ToString();
     }
 
-    public static void EraseAllData()
+    public void EraseAllData()
     {
         PlayerPrefs.DeleteAll();
+        SFX.value = PlayerPrefs.GetFloat("SFX", 100);
+        Music.value = PlayerPrefs.GetFloat("Music", 100);
+        Vibration.isOn = BoolPrefs.GetBool("Vibration", true);
     }
 
     void BackToMainMenu()

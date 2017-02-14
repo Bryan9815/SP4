@@ -136,9 +136,15 @@ public class Windows : MonoBehaviour
         }
     }
 
-    public static void EraseAllData()
+    public void EraseAllData()
     {
         PlayerPrefs.DeleteAll();
+        //PlayerPrefs.SetFloat("ScreenWidth", 800);
+        //PlayerPrefs.SetFloat("ScreenHeight", 600);
+        windowMode = PlayerPrefs.GetInt("winMode", 0);
+        Resolution = PlayerPrefs.GetInt("Resolution", 0);
+        SFX.value = PlayerPrefs.GetFloat("SFX", 100);
+        Music.value = PlayerPrefs.GetFloat("Music", 100);
     }
 
     void BackToMainMenu()
