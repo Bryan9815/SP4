@@ -27,6 +27,10 @@ public class MainMenuBtn : MonoBehaviour {
     }
     public void GoToOptions()
     {
-        SceneManager.LoadScene("Options");
+        SceneManager.LoadScene("Options_Window");
+    }
+    public void GoToHighscore()
+    {
+        SceneManager.LoadScene("High Score");
     }
 }
