@@ -8,7 +8,7 @@ public class Money : MonoBehaviour {
     public Button goldButton;
     void start()
     {
-        playerGold = GlobalVariable.PlayerGoldG;
+        playerGold = GlobalVariable.GetPlayerGold();
     }
 	// Update is called once per frame
 	void Update () 
@@ -19,5 +19,6 @@ public class Money : MonoBehaviour {
     public void buttonPressed()
     {
         playerGold += 100;
+        PlayerPrefs.SetInt("Gold", playerGold);
     }
 }
