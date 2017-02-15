@@ -74,4 +74,16 @@ public class Hero : MonoBehaviour {
 
     }
 
+    public float GetAttack()
+    {
+        return Attack;
+    }
+    public float GetDefense()
+    {
+        return Defense;
+    }
+    public Image GetImage()
+    {
+        return hero;
+    }
 }
