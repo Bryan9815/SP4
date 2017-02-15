@@ -145,6 +145,7 @@ public class Windows : MonoBehaviour
         Resolution = PlayerPrefs.GetInt("Resolution", 0);
         SFX.value = PlayerPrefs.GetFloat("SFX", 100);
         Music.value = PlayerPrefs.GetFloat("Music", 100);
+        UpdateWindow();
     }
 
     void BackToMainMenu()
