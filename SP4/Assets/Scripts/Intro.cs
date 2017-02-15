@@ -6,7 +6,7 @@ public class Intro : MonoBehaviour
 {
     bool HavePlayerName;
     float SplashTimer;
-    string playerName;
+    string playerName = "";
 	// Use this for initialization
 	void Start () 
     {
@@ -37,7 +37,7 @@ public class Intro : MonoBehaviour
             float height = Screen.height * 0.3f;
             GUILayoutOption[] layout = new GUILayoutOption[] { GUILayout.Width(width / 2.8f) };
 
-            Rect r = new Rect((Screen.width / 2) - (width / 2), (Screen.height / 2) - (height), width, height);
+            Rect r = new Rect((Screen.width / 2) - (width / 2), (Screen.height / 2), width, height * 0.2f);
             GUILayout.BeginArea(r, new GUIStyle("box"));
 
             GUILayout.BeginVertical();
