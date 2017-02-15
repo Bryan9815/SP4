@@ -60,7 +60,7 @@ public class GlobalVariable : MonoBehaviour {
         screenHeight = newHeight;
     }
 
-    public static float GetPlayerGold()
+    public static int GetPlayerGold()
     {
         return PlayerGoldG;
     }
