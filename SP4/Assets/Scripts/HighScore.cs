@@ -6,8 +6,6 @@ using System.Collections.Generic;
 
 public class HighScore : MonoBehaviour 
 {
-    string playerName = "";
-    string code = "";
     public Leaderboard lb;
     bool displayLeaderboard = false;
 
