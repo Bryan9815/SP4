@@ -17,7 +17,7 @@ public class SwitchHero : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        EquippedHero.GetComponent<Text>().text = lol.name;
+        //EquippedHero.GetComponent<Text>().text = lol.name;
         Toggle active = ToggleGroupExtension.GetActive(EquippedHeroes);
         Toggle active2 = ToggleGroupExtension.GetActive(UnEquippedHeroes);
         if (active && active2)
