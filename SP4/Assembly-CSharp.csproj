@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\HighScore.cs" />
      <Compile Include="Assets\Scripts\Intro.cs" />
      <Compile Include="Assets\Scripts\Leaderboard.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\DamageText.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MainMenuBtn.cs" />
      <Compile Include="Assets\Scripts\Money\Money.cs" />

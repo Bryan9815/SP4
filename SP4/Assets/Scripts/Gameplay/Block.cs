@@ -5,22 +5,23 @@ using System.Collections;
 using System.Collections.Generic;
 public class Block : MonoBehaviour {
     public Button gameobject;
-    private static string Name;
-    private static int block_slot;
-    private static int hero_slot;
-    private static bool active;
-    public float Block_Travel_Speed;
-
-    enum Chain
+    private string Name; // useless for now, but put just in case it might be used later
+    public int block_slot; // position in the block manager list of blocks
+    private int hero_slot; // slot which block corresponds to
+	private bool active; // if block should be destroyed
+    public float Block_Travel_Speed; // block travel speed
+	public bool set; // if block still travelling
+    public enum Chain
     {
         One_Chain,
         Two_Chain_Left,
         Two_Chain_Right,
         Three_Chain_Left,
-        Three_Chain_Right
+        Three_Chain_Right,
+		Three_Chain_Middle
     }
 
-    Chain chain_type;
+    public Chain chain_type;
 
 	// Use this for initialization
 	void Start () {
@@ -29,11 +30,24 @@ public class Block : MonoBehaviour {
         block_slot = 0;
         hero_slot = 0;
         chain_type = Chain.One_Chain;
+		set = false;
+		gameObject.GetComponent<Button> ().onClick.AddListener (delegate() {
+			this.Activate ();
+		});
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		
+	}
 
+	public bool get_Set()
+	{
+		return set;
+	}
+	public void set_Set(bool newSet)
+	{
+		set = newSet;
 	}
 
     public void set_BlockSlot(int blockslot)
@@ -77,16 +91,59 @@ public class Block : MonoBehaviour {
             gameobject.transform.position.z);
     }
 
+	public void Travel(float limit)
+	{
+		// if first block in list ----------------------------------------------------------------------------------------------------
+		if (gameobject.GetComponent<RectTransform> ().anchoredPosition.x < limit && block_slot == 0) {
+			Vector2 temp = new Vector2 (gameobject.GetComponent<RectTransform> ().anchoredPosition.x, gameobject.GetComponent<RectTransform> ().anchoredPosition.y);
+			temp.x += Time.deltaTime * Block_Travel_Speed;
+			gameobject.GetComponent<RectTransform> ().anchoredPosition = temp;
+			set = false;
+		} 
+		else if (block_slot != 0) { // if not first block in list ----------------------------------------------------------------------------------------------------
+			// if touching the previous block collider
+			if (gameObject.GetComponent<BoxCollider2D> ().IsTouching (BlockManager.Listof_Blocks [block_slot - 1].gameObject.GetComponent<BoxCollider2D> ())) {
+				set = true;
+			} 
+			else { // if not touching the previous block collider
+				Vector2 temp = new Vector2 (gameobject.GetComponent<RectTransform> ().anchoredPosition.x, gameobject.GetComponent<RectTransform> ().anchoredPosition.y);
+				temp.x += Time.deltaTime * Block_Travel_Speed;
+				gameobject.GetComponent<RectTransform> ().anchoredPosition = temp;
+				set = false;
+			}
+		} 
+		else  // if first block in list but x position over limit
+		{
+			set = true;
+		}
+	}	
+
+
+
     public void Activate()
     {
+		// if still traveling, dont activate
+		if (!set)
+			return;
+		// else set to destroy
         active = false;
+		// to check chain number
         int chain_no = 0;
         switch (chain_type)
         {
+			case Chain.Three_Chain_Middle:
+				{
+				Block temp = BlockManager.Listof_Blocks[block_slot + 1].gameObject.GetComponent<Block>();
+				Block temp2 = BlockManager.Listof_Blocks[block_slot - 1].gameObject.GetComponent<Block>();
+				temp.set_Active(false);
+				temp2.set_Active(false);
+				chain_no = 3;
+				}
+				break;
             case Chain.Three_Chain_Left:
                 {
-                    Block temp = BlockManager.Instance.Listof_Blocks[block_slot + 1].GetComponent<Block>();
-                    Block temp2 = BlockManager.Instance.Listof_Blocks[block_slot + 2].GetComponent<Block>();
+				Block temp = BlockManager.Listof_Blocks[block_slot + 1].gameObject.GetComponent<Block>();
+				Block temp2 = BlockManager.Listof_Blocks[block_slot + 2].gameObject.GetComponent<Block>();
                     temp.set_Active(false);
                     temp2.set_Active(false);
                     chain_no = 3;
@@ -94,8 +151,8 @@ public class Block : MonoBehaviour {
                 break;
             case Chain.Three_Chain_Right:
                 {
-                    Block temp = BlockManager.Instance.Listof_Blocks[block_slot - 1].GetComponent<Block>();
-                    Block temp2 = BlockManager.Instance.Listof_Blocks[block_slot - 2].GetComponent<Block>();
+				Block temp = BlockManager.Listof_Blocks[block_slot - 1].gameObject.GetComponent<Block>();
+				Block temp2 =BlockManager.Listof_Blocks[block_slot - 2].gameObject.GetComponent<Block>();
                     temp.set_Active(false);
                     temp2.set_Active(false);
                     chain_no = 3;
@@ -103,16 +160,17 @@ public class Block : MonoBehaviour {
                 break;
             case Chain.Two_Chain_Left:
                 {
-                    Block temp = BlockManager.Instance.Listof_Blocks[block_slot + 1].GetComponent<Block>();                    
+				Block temp = BlockManager.Listof_Blocks[block_slot + 1].gameObject.GetComponent<Block>();                    
                     temp.set_Active(false);
                     chain_no = 2;
                 }
                 break;
             case Chain.Two_Chain_Right:
                 {
-                    Block temp = BlockManager.Instance.Listof_Blocks[block_slot - 1].GetComponent<Block>();
+				Block temp = BlockManager.Listof_Blocks[block_slot - 1].gameObject.GetComponent<Block>();
                     temp.set_Active(false);
                     chain_no = 2;
+
                 }
                 break;
             case Chain.One_Chain:
@@ -121,14 +179,19 @@ public class Block : MonoBehaviour {
                 }
                 break;
         }
+
         // Run respective hero stuffs here
+
     }
     public void CheckBlockChain()
     {
         if (block_slot >= 2)
         {
             //right
-            if (ThreeChainCheck_Right())
+			if (ThreeChainCheck_Middle ())
+				chain_type = Chain.Three_Chain_Middle;
+			
+            else if (ThreeChainCheck_Right())
                 chain_type = Chain.Three_Chain_Right;
             else if (TwoChainCheck_Right())
                 chain_type = Chain.Two_Chain_Right;
@@ -144,11 +207,14 @@ public class Block : MonoBehaviour {
         else if (block_slot == 1)
         {
             //right
-            if (ThreeChainCheck_Right())
-                chain_type = Chain.Three_Chain_Right;
+			if (ThreeChainCheck_Middle ())
+				chain_type = Chain.Three_Chain_Middle;
+			
             else if (TwoChainCheck_Right())
                 chain_type = Chain.Two_Chain_Right;
             //left
+			else if (ThreeChainCheck_Left())
+				chain_type = Chain.Three_Chain_Left;
             else if (TwoChainCheck_Left())
                 chain_type = Chain.Two_Chain_Left;
             //No chain
@@ -157,29 +223,24 @@ public class Block : MonoBehaviour {
         }
         else
         {
-            if (ThreeChainCheck_Right())
-                chain_type = Chain.Three_Chain_Right;
-            else if (TwoChainCheck_Right())
-                chain_type = Chain.Two_Chain_Right;
+			if (ThreeChainCheck_Left())
+				chain_type = Chain.Three_Chain_Left;
+			else if (TwoChainCheck_Left())
+				chain_type = Chain.Two_Chain_Left;
             else
                 chain_type = Chain.One_Chain;
         }
     }
 
-    //void OneChainCheck_Left()
-    //{
-    //    if (BlockManager.Instance.Listof_Blocks[block_slot])
-    //}
 
-    //void OneChainCheck_Right()
-    //{
-    //    if (BlockManager.Instance.Listof_Blocks[block_slot])
-    //}
 
     bool TwoChainCheck_Left()
     {
-        Block temp = BlockManager.Instance.Listof_Blocks[block_slot + 1].GetComponent<Block>();
-        if (temp.get_HeroSlot() == hero_slot)
+		
+		if (BlockManager.Listof_Blocks.Count - 1 < block_slot + 1)
+			return false;
+		Block temp = BlockManager.Listof_Blocks[block_slot + 1].GetComponent<Block>();
+		if (temp.get_HeroSlot() == hero_slot && temp.get_Set())
         {
             return true;
         }
@@ -189,7 +250,8 @@ public class Block : MonoBehaviour {
 
     bool TwoChainCheck_Right()
     {
-        Block temp = BlockManager.Instance.Listof_Blocks[block_slot - 1].GetComponent<Block>();
+		Block temp = BlockManager.Listof_Blocks[block_slot - 1].GetComponent<Block>();
+
         if (temp.get_HeroSlot() == hero_slot)
         {
             return true;
@@ -200,8 +262,12 @@ public class Block : MonoBehaviour {
 
     bool ThreeChainCheck_Left()
     {
-        Block temp = BlockManager.Instance.Listof_Blocks[block_slot + 2].GetComponent<Block>();
-        if (temp.get_HeroSlot() == hero_slot && TwoChainCheck_Left())
+		//FindObjectOfType
+		if (BlockManager.Listof_Blocks.Count - 1 < block_slot + 2)
+			return false;
+		Block temp = BlockManager.Listof_Blocks[block_slot + 2].GetComponent<Block>();
+		bool test = ReferenceEquals (temp, BlockManager.Listof_Blocks [block_slot + 2].GetComponent<Block> ());
+		if (temp.get_HeroSlot() == hero_slot && TwoChainCheck_Left() && temp.get_Set())
         {
             return true;
         }
@@ -211,12 +277,25 @@ public class Block : MonoBehaviour {
 
     bool ThreeChainCheck_Right()
     {
-        Block temp = BlockManager.Instance.Listof_Blocks[block_slot - 2].GetComponent<Block>();
-        if (temp.get_HeroSlot() == hero_slot && TwoChainCheck_Right())
+		Block temp = BlockManager.Listof_Blocks[block_slot - 2].GetComponent<Block>();
+		if (temp.get_HeroSlot() == hero_slot && TwoChainCheck_Right() && temp.get_Set())
         {
             return true;
         }
         else
             return false;
     }
+
+	bool ThreeChainCheck_Middle()
+	{
+		if (TwoChainCheck_Left () && TwoChainCheck_Right ())
+			return true;
+		else
+			return false;
+	}
+
+	public void Exit()
+	{
+		Destroy (gameObject);
+	}
 }
