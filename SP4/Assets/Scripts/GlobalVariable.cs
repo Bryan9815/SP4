@@ -6,6 +6,7 @@ public class GlobalVariable : MonoBehaviour {
 
     private static float screenWidth;
     private static float screenHeight;
+    private static string PlayerName;
     private static int PlayerGoldG;
 
     //Added using unity engine UI on top
@@ -35,6 +36,7 @@ public class GlobalVariable : MonoBehaviour {
         screenHeight = PlayerPrefs.GetFloat("ScreenHeight", 600);
 
         // Player Variables
+        PlayerName = PlayerPrefs.GetString("userID", "");
         PlayerGoldG = PlayerPrefs.GetInt("Gold", 100);
 	}
 	
@@ -58,6 +60,16 @@ public class GlobalVariable : MonoBehaviour {
     public static void SetScreenHeight(float newHeight)
     {
         screenHeight = newHeight;
+    }
+
+    public static string GetPlayerName()
+    {
+        return PlayerName;
+    }
+
+    public static void SetPlayerName(string newName)
+    {
+        PlayerName = newName;
     }
 
     public static int GetPlayerGold()

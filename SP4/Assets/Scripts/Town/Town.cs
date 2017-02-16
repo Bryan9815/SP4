@@ -16,6 +16,11 @@ public class Town : MonoBehaviour {
 	
 	}
 
+    public void goToMain()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void goToShop()
     {
         SceneManager.LoadScene("TownShop");
