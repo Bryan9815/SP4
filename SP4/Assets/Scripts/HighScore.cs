@@ -8,6 +8,7 @@ public class HighScore : MonoBehaviour
 {
     public Leaderboard lb;
     bool displayLeaderboard = false;
+    List<Leaderboard.Score> scoreList;
 
     public Button ReturnToMainMenu, TriggerLeaderboard;
 
@@ -15,12 +16,25 @@ public class HighScore : MonoBehaviour
     public Image Hero1, Hero2, Hero3;
     void Start()
     {
+        StartCoroutine(RefreshRecords());
+
         ReturnToMainMenu.onClick.AddListener(delegate { SceneManager.LoadScene("MainMenu"); });
         TriggerLeaderboard.onClick.AddListener(delegate { displayLeaderboard = true; });
         // Call stats and hero records
 
         WaveRecord.text = "Wave Reached: " + PlayerPrefs.GetInt("Highest Wave Reached", 0).ToString();
         GoldRecord.text = "Gold Earned: " + PlayerPrefs.GetInt("Most Gold Earned", 0).ToString();
+    }
+
+    IEnumerator RefreshRecords()
+    {
+        while (true)
+        {
+            lb.AddScore(PlayerPrefs.GetString("userID"), PlayerPrefs.GetInt("Highest Wave Reached", 0));
+            scoreList = lb.ToListHighToLow();
+            Debug.Log("scoreList Count: " + scoreList.Count.ToString());
+            yield return new WaitForSeconds(5);
+        }
     }
 
     void Update()
@@ -42,7 +56,7 @@ public class HighScore : MonoBehaviour
 
             GUILayout.BeginVertical();
             GUILayout.Label("High Scores:");
-            List<Leaderboard.Score> scoreList = lb.ToListHighToLow();
+            //Debug.Log("scoreList Count: " + scoreList.Count.ToString());
 
             if (scoreList == null)
             {
@@ -50,14 +64,12 @@ public class HighScore : MonoBehaviour
             }
             else
             {
-                //Debug.LogError("Hi");
-                lb.AddScore(PlayerPrefs.GetString("userID"), PlayerPrefs.GetInt("Highest Wave Reached", 0));
                 int maxToDisplay = 20;
                 int count = 0;
                 foreach (Leaderboard.Score currentScore in scoreList)
                 {
                     count++;
-                    //Debug.LogError("Hi");
+                    //Debug.LogError("Printing List");
                     GUILayout.BeginHorizontal();
                     GUILayout.Label(currentScore.playerName, layout);
                     GUILayout.Label("Wave Reached: " + currentScore.score.ToString(), layout);
