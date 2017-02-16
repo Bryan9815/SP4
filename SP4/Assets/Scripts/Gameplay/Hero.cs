@@ -8,6 +8,7 @@ public class Hero : MonoBehaviour {
     public static string name;
     public int level;
     public float exp, max_exp;
+    public bool unlocked;
 	// Use this for initialization
 	void Start () {
         

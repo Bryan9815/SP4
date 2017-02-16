@@ -18,7 +18,7 @@ public class Money : MonoBehaviour {
 
     public void buttonPressed()
     {
-        playerGold += 100;
+        playerGold += 1000;
         PlayerPrefs.SetInt("Gold", playerGold);
     }
 }
