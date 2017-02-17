@@ -5,10 +5,11 @@ using System.Collections;
 
 public class Shop : MonoBehaviour 
 {
+    bool openTheShop = false, openTheUpgrade = false;
     public ToggleGroup UnBoughtHeroes;
     public Button buyButton, rngButton;
-    bool IsActivatedUnboughtHeroes = false;
     private Toggle tungle;
+    public Canvas buyCanvas, upgradePanel;
     int l = 0;
     public Toggle toggle1, toggle2, toggle3, toggle4, toggle5;
 	// Use this for initialization
@@ -114,6 +115,48 @@ public class Shop : MonoBehaviour
             {
                 buyButton.interactable = true;
             }
+        }
+    }
+
+    public void OpenUpgrade()
+    {
+        if (!openTheUpgrade)
+        {
+            openTheUpgrade = true;
+            upgradePanel.enabled = true;
+        }
+        if(openTheShop)
+        {
+            CloseShop();
+        }
+    }
+    public void CloseUpgrade()
+    {
+        if (openTheUpgrade)
+        {
+            openTheUpgrade = false;
+            upgradePanel.enabled = false;
+        }
+    }
+
+    public void OpenShop()
+    {
+        if(!openTheShop)
+        {
+            openTheShop = true;
+            buyCanvas.enabled = true;
+        }
+        if(openTheUpgrade)
+        {
+            CloseUpgrade();
+        }
+    }
+    public void CloseShop()
+    {   
+        if(openTheShop)
+        {
+            openTheShop = false;
+            buyCanvas.enabled = false;
         }
     }
 
