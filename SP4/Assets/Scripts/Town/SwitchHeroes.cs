@@ -54,6 +54,9 @@ public class SwitchHeroes : MonoBehaviour
         
         DestroyImmediate(temp1);
         DestroyImmediate(temp2);
+
+        active = null;
+        active2 = null;
     }
 
     Component CopyHeroComponent(Component original, GameObject destination)
