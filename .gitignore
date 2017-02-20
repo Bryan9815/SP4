@@ -5,3 +5,4 @@ SP4/Library/
 SP4/twest_Data/
 SP4/Assembly-CSharp.csproj
 *.userprefs
+SP4/ProjectSettings/EditorBuildSettings.asset

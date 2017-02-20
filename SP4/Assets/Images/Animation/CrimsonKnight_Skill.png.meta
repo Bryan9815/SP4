@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 18e0c6be106806c418f76b2944a5a5ce
+timeCreated: 1487322807
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Baron_Skill_0
+    21300002: Baron_Skill_1
+    21300004: Baron_Skill_2
+    21300006: Baron_Skill_3
+    21300008: Baron_Skill_4
+    21300010: Baron_Skill_5
+    21300012: Baron_Skill_6
+    21300014: Baron_Skill_7
+    21300016: Baron_Skill_8
+    21300018: Baron_Skill_9
+    21300020: Baron_Skill_10
+    21300022: Baron_Skill_11
+    21300024: Baron_Skill_12
+    21300026: Baron_Skill_13
+    21300028: Baron_Skill_14
+    21300030: Baron_Skill_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Baron_Skill_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 412
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 90, y: -85}
+        - {x: 90, y: -30}
+        - {x: 84, y: -2}
+        - {x: 73, y: 61}
+        - {x: 7, y: 97}
+        - {x: -47, y: 97}
+        - {x: -121, y: 80}
+        - {x: -139, y: 59}
+        - {x: -146, y: 50}
+        - {x: -146, y: 1}
+        - {x: -137, y: -69}
+        - {x: -117, y: -103}
+        - {x: -31, y: -103}
+        - {x: -15, y: -101}
+        - {x: 26, y: -90}
+        - {x: 41, y: -103}
+        - {x: 67, y: -103}
+    - name: Baron_Skill_1
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 412
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 99, y: -95}
+        - {x: 99, y: -39}
+        - {x: 74, y: 5}
+        - {x: 64, y: 71}
+        - {x: -3, y: 87}
+        - {x: -83, y: 87}
+        - {x: -119, y: 79}
+        - {x: -131, y: 55}
+        - {x: -131, y: -73}
+        - {x: -130, y: -82}
+        - {x: -116, y: -103}
+        - {x: -10, y: -103}
+        - {x: 21, y: -79}
+        - {x: 56, y: -103}
+        - {x: 95, y: -103}
+    - name: Baron_Skill_2
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 412
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 146, y: -90}
+        - {x: 146, y: -42}
+        - {x: 86, y: 56}
+        - {x: 34, y: 102}
+        - {x: -69, y: 102}
+        - {x: -118, y: 92}
+        - {x: -118, y: -67}
+        - {x: -114, y: -98}
+        - {x: -93, y: -103}
+        - {x: 36, y: -103}
+        - {x: 123, y: -100}
+        - {x: 132, y: -97}
+        - {x: 123, y: -78}
+        - {x: 142, y: -94}
+    - name: Baron_Skill_3
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 412
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 146, y: -88}
+        - {x: 146, y: -39}
+        - {x: 116, y: 46}
+        - {x: 19, y: 102}
+        - {x: -66, y: 102}
+        - {x: -101, y: 90}
+        - {x: -117, y: 58}
+        - {x: -117, y: -81}
+        - {x: -92, y: -103}
+        - {x: 125, y: -103}
+        - {x: 135, y: -87}
+        - {x: 67, y: -41}
+        - {x: 139, y: -89}
+      - - {x: -145, y: -69}
+        - {x: -146, y: -69}
+        - {x: -146, y: -88}
+        - {x: -145, y: -88}
+        - {x: -142, y: -86}
+        - {x: -142, y: -70}
+    - name: Baron_Skill_4
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 412
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 146, y: -38}
+        - {x: 97, y: 47}
+        - {x: 74, y: 70}
+        - {x: -3, y: 102}
+        - {x: -76, y: 102}
+        - {x: -116, y: 88}
+        - {x: -116, y: -72}
+        - {x: -113, y: -96}
+        - {x: -100, y: -103}
+        - {x: 146, y: -103}
+        - {x: 146, y: -102}
+        - {x: 76, y: -32}
+        - {x: 138, y: -85}
+        - {x: 146, y: -88}
+      - - {x: -146, y: -65}
+        - {x: -146, y: -88}
+        - {x: -144, y: -88}
+        - {x: -141, y: -86}
+        - {x: -141, y: -72}
+        - {x: -144, y: -65}
+    - name: Baron_Skill_5
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 412
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 88}
+        - {x: -108, y: 88}
+        - {x: -115, y: 41}
+        - {x: -115, y: -56}
+        - {x: -102, y: -88}
+        - {x: -74, y: -103}
+        - {x: -67, y: -103}
+        - {x: -28, y: -99}
+        - {x: -16, y: -103}
+        - {x: 113, y: -103}
+        - {x: 113, y: -62}
+        - {x: 90, y: 20}
+      - - {x: -146, y: -56}
+        - {x: -146, y: -88}
+        - {x: -141, y: -88}
+        - {x: -141, y: -59}
+        - {x: -143, y: -56}
+    - name: Baron_Skill_6
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 412
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 88}
+        - {x: -62, y: 88}
+        - {x: -67, y: 87}
+        - {x: -98, y: 81}
+        - {x: -115, y: 34}
+        - {x: -115, y: -33}
+        - {x: -114, y: -52}
+        - {x: -107, y: -95}
+        - {x: -94, y: -103}
+        - {x: 114, y: -103}
+        - {x: 114, y: -59}
+        - {x: 85, y: 17}
+    - name: Baron_Skill_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 206
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 85, y: -103}
+        - {x: 99, y: -75}
+        - {x: 99, y: -30}
+        - {x: 98, y: -16}
+        - {x: 80, y: 71}
+        - {x: 23, y: 87}
+        - {x: -88, y: 87}
+        - {x: -122, y: 83}
+        - {x: -132, y: 42}
+        - {x: -132, y: -19}
+        - {x: -122, y: -85}
+        - {x: -113, y: -103}
+        - {x: -30, y: -103}
+        - {x: 16, y: -85}
+        - {x: 49, y: -101}
+        - {x: 58, y: -103}
+    - name: Baron_Skill_8
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 206
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 99, y: -95}
+        - {x: 99, y: -39}
+        - {x: 74, y: 6}
+        - {x: 63, y: 71}
+        - {x: 17, y: 87}
+        - {x: -107, y: 87}
+        - {x: -131, y: 56}
+        - {x: -131, y: -76}
+        - {x: -130, y: -82}
+        - {x: -116, y: -103}
+        - {x: 95, y: -103}
+      - - {x: -100, y: 103}
+        - {x: -99, y: 100}
+        - {x: -96, y: 100}
+        - {x: -94, y: 102}
+        - {x: -94, y: 103}
+    - name: Baron_Skill_9
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 206
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 91, y: -91}
+        - {x: 91, y: 49}
+        - {x: 90, y: 65}
+        - {x: 9, y: 80}
+        - {x: -2, y: 97}
+        - {x: -30, y: 97}
+        - {x: -107, y: 74}
+        - {x: -127, y: 39}
+        - {x: -127, y: -79}
+        - {x: -115, y: -103}
+        - {x: -28, y: -103}
+        - {x: -19, y: -88}
+        - {x: 35, y: -103}
+        - {x: 81, y: -103}
+    - name: Baron_Skill_10
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 206
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: 97}
+        - {x: -106, y: 73}
+        - {x: -127, y: 55}
+        - {x: -127, y: -103}
+        - {x: -97, y: -103}
+        - {x: -96, y: -100}
+        - {x: -97, y: -89}
+        - {x: -102, y: -76}
+        - {x: -99, y: -73}
+        - {x: -101, y: -75}
+        - {x: -98, y: -79}
+        - {x: -96, y: -83}
+        - {x: -95, y: -103}
+        - {x: 82, y: -103}
+        - {x: 92, y: -94}
+        - {x: 92, y: 69}
+        - {x: 34, y: 97}
+    - name: Baron_Skill_11
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 206
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 97, y: -32}
+        - {x: 52, y: 62}
+        - {x: 19, y: 103}
+        - {x: -72, y: 103}
+        - {x: -146, y: 43}
+        - {x: -146, y: 0}
+        - {x: -131, y: -76}
+        - {x: -109, y: -101}
+        - {x: 42, y: -101}
+        - {x: 63, y: -96}
+        - {x: 97, y: -83}
+    - name: Baron_Skill_12
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 206
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 97, y: -14}
+        - {x: 92, y: 24}
+        - {x: 44, y: 103}
+        - {x: -70, y: 103}
+        - {x: -79, y: 99}
+        - {x: -146, y: 55}
+        - {x: -146, y: -79}
+        - {x: -135, y: -101}
+        - {x: 57, y: -101}
+        - {x: 62, y: -94}
+        - {x: 58, y: -84}
+        - {x: 97, y: -81}
+    - name: Baron_Skill_13
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 206
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 58, y: 81}
+        - {x: 22, y: 103}
+        - {x: -25, y: 103}
+        - {x: -75, y: 84}
+        - {x: -100, y: 3}
+        - {x: -100, y: -102}
+        - {x: 54, y: -102}
+        - {x: 62, y: -96}
+        - {x: 94, y: -89}
+        - {x: 94, y: -26}
+    - name: Baron_Skill_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 58, y: 66}
+        - {x: 26, y: 103}
+        - {x: -29, y: 103}
+        - {x: -71, y: 77}
+        - {x: -103, y: 31}
+        - {x: -103, y: -102}
+        - {x: -47, y: -102}
+        - {x: -26, y: -101}
+        - {x: -23, y: -102}
+        - {x: 75, y: -102}
+        - {x: 90, y: -96}
+        - {x: 90, y: -27}
+      - - {x: -101, y: 103}
+        - {x: -100, y: 100}
+        - {x: -97, y: 100}
+        - {x: -95, y: 102}
+        - {x: -95, y: 103}
+    - name: Baron_Skill_15
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 0
+        width: 292
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -100, y: 103}
+        - {x: -99, y: 100}
+        - {x: -96, y: 100}
+        - {x: -94, y: 102}
+        - {x: -94, y: 103}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
