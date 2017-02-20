@@ -1,0 +1,2423 @@
+fileFormatVersion: 2
+guid: c3156a29d80591340b3d328a8ba85548
+timeCreated: 1487427845
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Werewolf_Death_0
+    21300002: Werewolf_Death_1
+    21300004: Werewolf_Death_2
+    21300006: Werewolf_Death_3
+    21300008: Werewolf_Death_4
+    21300010: Werewolf_Death_5
+    21300012: Werewolf_Death_6
+    21300014: Werewolf_Death_7
+    21300016: Werewolf_Death_8
+    21300018: Werewolf_Death_9
+    21300020: Werewolf_Death_10
+    21300022: Werewolf_Death_11
+    21300024: Werewolf_Death_12
+    21300026: Werewolf_Death_13
+    21300028: Werewolf_Death_14
+    21300030: Werewolf_Death_15
+    21300032: Werewolf_Death_16
+    21300034: Werewolf_Death_17
+    21300036: Werewolf_Death_18
+    21300038: Werewolf_Death_19
+    21300040: Werewolf_Death_20
+    21300042: Werewolf_Death_21
+    21300044: Werewolf_Death_22
+    21300046: Werewolf_Death_23
+    21300048: Werewolf_Death_24
+    21300050: Werewolf_Death_25
+    21300052: Werewolf_Death_26
+    21300054: Werewolf_Death_27
+    21300056: Werewolf_Death_28
+    21300058: Werewolf_Death_29
+    21300060: Werewolf_Death_30
+    21300062: Werewolf_Death_31
+    21300064: Werewolf_Death_32
+    21300066: Werewolf_Death_33
+    21300068: Werewolf_Death_34
+    21300070: Werewolf_Death_35
+    21300072: Werewolf_Death_36
+    21300074: Werewolf_Death_37
+    21300076: Werewolf_Death_38
+    21300078: Werewolf_Death_39
+    21300080: Werewolf_Death_40
+    21300082: Werewolf_Death_41
+    21300084: Werewolf_Death_42
+    21300086: Werewolf_Death_43
+    21300088: Werewolf_Death_44
+    21300090: Werewolf_Death_45
+    21300092: Werewolf_Death_46
+    21300094: Werewolf_Death_47
+    21300096: Werewolf_Death_48
+    21300098: Werewolf_Death_49
+    21300100: Werewolf_Death_50
+    21300102: Werewolf_Death_51
+    21300104: Werewolf_Death_52
+    21300106: Werewolf_Death_53
+    21300108: Werewolf_Death_54
+    21300110: Werewolf_Death_55
+    21300112: Werewolf_Death_56
+    21300114: Werewolf_Death_57
+    21300116: Werewolf_Death_58
+    21300118: Werewolf_Death_59
+    21300120: Werewolf_Death_60
+    21300122: Werewolf_Death_61
+    21300124: Werewolf_Death_62
+    21300126: Werewolf_Death_63
+    21300128: Werewolf_Death_64
+    21300130: Werewolf_Death_65
+    21300132: Werewolf_Death_66
+    21300134: Werewolf_Death_67
+    21300136: Werewolf_Death_68
+    21300138: Werewolf_Death_69
+    21300140: Werewolf_Death_70
+    21300142: Werewolf_Death_71
+    21300144: Werewolf_Death_72
+    21300146: Werewolf_Death_73
+    21300148: Werewolf_Death_74
+    21300150: Werewolf_Death_75
+    21300152: Werewolf_Death_76
+    21300154: Werewolf_Death_77
+    21300156: Werewolf_Death_78
+    21300158: Werewolf_Death_79
+    21300160: Werewolf_Death_80
+    21300162: Werewolf_Death_81
+    21300164: Werewolf_Death_82
+    21300166: Werewolf_Death_83
+    21300168: Werewolf_Death_84
+    21300170: Werewolf_Death_85
+    21300172: Werewolf_Death_86
+    21300174: Werewolf_Death_87
+    21300176: Werewolf_Death_88
+    21300178: Werewolf_Death_89
+    21300180: Werewolf_Death_90
+    21300182: Werewolf_Death_91
+    21300184: Werewolf_Death_92
+    21300186: Werewolf_Death_93
+    21300188: Werewolf_Death_94
+    21300190: Werewolf_Death_95
+    21300192: Werewolf_Death_96
+    21300194: Werewolf_Death_97
+    21300196: Werewolf_Death_98
+    21300198: Werewolf_Death_99
+    21300200: Werewolf_Death_100
+    21300202: Werewolf_Death_101
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Werewolf_Death_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1582
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: -72}
+        - {x: 12, y: -79}
+        - {x: 15, y: -65}
+        - {x: 22, y: -26}
+        - {x: 7, y: -14}
+        - {x: 29, y: -1}
+        - {x: 37, y: 10}
+        - {x: 37, y: 21}
+        - {x: 22, y: 58}
+        - {x: -7, y: 63}
+        - {x: -46, y: 63}
+        - {x: -74, y: 44}
+        - {x: -71, y: 23}
+        - {x: -102, y: -65}
+        - {x: -102, y: -79}
+        - {x: -76, y: -79}
+        - {x: -65, y: -71}
+        - {x: -41, y: -51}
+        - {x: -41, y: -57}
+    - name: Werewolf_Death_1
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1582
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: -79}
+        - {x: 37, y: 51}
+        - {x: 16, y: 63}
+        - {x: -62, y: 63}
+        - {x: -80, y: 47}
+        - {x: -102, y: -66}
+        - {x: -102, y: -79}
+        - {x: -75, y: -79}
+        - {x: -62, y: -72}
+        - {x: -42, y: -52}
+        - {x: -37, y: -79}
+    - name: Werewolf_Death_2
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1582
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: -61}
+        - {x: 1, y: -57}
+        - {x: 14, y: -46}
+        - {x: 19, y: -41}
+        - {x: 20, y: -28}
+        - {x: 7, y: -13}
+        - {x: 33, y: 0}
+        - {x: 38, y: 5}
+        - {x: 38, y: 27}
+        - {x: 29, y: 59}
+        - {x: 15, y: 63}
+        - {x: -44, y: 63}
+        - {x: -74, y: 56}
+        - {x: -102, y: -58}
+        - {x: -102, y: -79}
+        - {x: -70, y: -79}
+        - {x: -57, y: -74}
+        - {x: -4, y: -78}
+        - {x: 17, y: -70}
+    - name: Werewolf_Death_3
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1582
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: 63}
+        - {x: -48, y: 63}
+        - {x: -82, y: 47}
+        - {x: -102, y: -67}
+        - {x: -102, y: -76}
+        - {x: -101, y: -79}
+        - {x: 39, y: -79}
+        - {x: 39, y: 52}
+        - {x: 27, y: 62}
+    - name: Werewolf_Death_4
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1582
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: -46}
+        - {x: 38, y: -31}
+        - {x: 40, y: -27}
+        - {x: 40, y: 34}
+        - {x: 35, y: 63}
+        - {x: -64, y: 63}
+        - {x: -71, y: 44}
+        - {x: -101, y: -54}
+        - {x: -101, y: -79}
+        - {x: -5, y: -79}
+        - {x: 16, y: -72}
+        - {x: 12, y: -61}
+        - {x: 3, y: -57}
+    - name: Werewolf_Death_5
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1582
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -78}
+        - {x: 14, y: -74}
+        - {x: 38, y: -62}
+        - {x: 41, y: -57}
+        - {x: 41, y: 38}
+        - {x: 24, y: 56}
+        - {x: 10, y: 63}
+        - {x: -39, y: 63}
+        - {x: -79, y: 47}
+        - {x: -101, y: -63}
+        - {x: -101, y: -79}
+        - {x: -72, y: -79}
+        - {x: -61, y: -71}
+        - {x: -37, y: -51}
+        - {x: -41, y: -66}
+    - name: Werewolf_Death_6
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1582
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41, y: -79}
+        - {x: 41, y: 63}
+        - {x: -88, y: 63}
+        - {x: -100, y: 11}
+        - {x: -100, y: -79}
+        - {x: -68, y: -79}
+        - {x: -60, y: -71}
+        - {x: -38, y: -52}
+        - {x: -33, y: -79}
+    - name: Werewolf_Death_7
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1582
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 57}
+        - {x: -52, y: 51}
+        - {x: -79, y: 14}
+        - {x: -95, y: -56}
+        - {x: -95, y: -78}
+        - {x: 32, y: -78}
+        - {x: 66, y: -18}
+        - {x: 66, y: 53}
+        - {x: 58, y: 57}
+    - name: Werewolf_Death_8
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1582
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: -65}
+        - {x: 67, y: -7}
+        - {x: 67, y: 42}
+        - {x: 60, y: 57}
+        - {x: -73, y: 57}
+        - {x: -95, y: 5}
+        - {x: -95, y: -78}
+        - {x: -1, y: -78}
+        - {x: -4, y: -66}
+        - {x: -12, y: -58}
+        - {x: -2, y: -61}
+    - name: Werewolf_Death_9
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 1582
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 57, y: 43}
+        - {x: 40, y: 34}
+        - {x: 48, y: 60}
+        - {x: 43, y: 72}
+        - {x: -38, y: 72}
+        - {x: -94, y: 1}
+        - {x: -94, y: -74}
+        - {x: 26, y: -74}
+        - {x: 39, y: -71}
+        - {x: 67, y: -2}
+        - {x: 67, y: 39}
+    - name: Werewolf_Death_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1424
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: 72}
+        - {x: -6, y: 72}
+        - {x: -82, y: 30}
+        - {x: -101, y: -52}
+        - {x: -101, y: -73}
+        - {x: -98, y: -74}
+        - {x: 16, y: -74}
+        - {x: 60, y: -5}
+        - {x: 60, y: 49}
+        - {x: 59, y: 52}
+      - - {x: -91, y: 79}
+        - {x: -90, y: 76}
+        - {x: -87, y: 76}
+        - {x: -85, y: 78}
+        - {x: -85, y: 79}
+    - name: Werewolf_Death_11
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1424
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: -19}
+        - {x: 17, y: -24}
+        - {x: 22, y: -26}
+        - {x: 29, y: -27}
+        - {x: 44, y: -20}
+        - {x: 53, y: 2}
+        - {x: 53, y: 29}
+        - {x: 19, y: 79}
+        - {x: -39, y: 79}
+        - {x: -79, y: -25}
+        - {x: -91, y: -49}
+        - {x: -91, y: -74}
+        - {x: 29, y: -74}
+        - {x: 35, y: -70}
+        - {x: 22, y: -27}
+        - {x: 20, y: -25}
+      - - {x: -85, y: 77}
+        - {x: -85, y: 79}
+        - {x: -90, y: 79}
+        - {x: -88, y: 76}
+    - name: Werewolf_Death_12
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1424
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: -26}
+        - {x: 22, y: -25}
+        - {x: 23, y: -26}
+        - {x: 30, y: -37}
+        - {x: 54, y: -10}
+        - {x: 54, y: 21}
+        - {x: 49, y: 26}
+        - {x: 24, y: 76}
+        - {x: 15, y: 79}
+        - {x: -32, y: 79}
+        - {x: -70, y: -8}
+        - {x: -51, y: -26}
+        - {x: -41, y: -31}
+        - {x: -89, y: -56}
+        - {x: -90, y: -58}
+        - {x: -90, y: -70}
+        - {x: -89, y: -74}
+        - {x: 32, y: -74}
+        - {x: 37, y: -64}
+        - {x: 23, y: -27}
+        - {x: 21, y: -25}
+      - - {x: -84, y: 77}
+        - {x: -84, y: 79}
+        - {x: -89, y: 79}
+        - {x: -87, y: 76}
+    - name: Werewolf_Death_13
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1424
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: 78}
+        - {x: -50, y: 78}
+        - {x: -79, y: -53}
+        - {x: -79, y: -72}
+        - {x: -78, y: -73}
+        - {x: 36, y: -73}
+        - {x: 52, y: -51}
+        - {x: 52, y: 47}
+      - - {x: -89, y: 79}
+        - {x: -88, y: 76}
+        - {x: -85, y: 76}
+        - {x: -83, y: 78}
+        - {x: -83, y: 79}
+    - name: Werewolf_Death_14
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1424
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 53, y: -5}
+        - {x: 53, y: 13}
+        - {x: 48, y: 24}
+        - {x: 37, y: 31}
+        - {x: 29, y: 23}
+        - {x: -3, y: 78}
+        - {x: -54, y: 78}
+        - {x: -79, y: 7}
+        - {x: -79, y: -71}
+        - {x: -72, y: -73}
+        - {x: 28, y: -73}
+        - {x: 33, y: -60}
+        - {x: 22, y: -34}
+        - {x: 41, y: -23}
+      - - {x: -88, y: 79}
+        - {x: -87, y: 76}
+        - {x: -84, y: 76}
+        - {x: -82, y: 78}
+        - {x: -82, y: 79}
+    - name: Werewolf_Death_15
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1424
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: 33}
+        - {x: 38, y: 31}
+        - {x: 33, y: 24}
+        - {x: 33, y: 20}
+        - {x: 33, y: 22}
+        - {x: 19, y: 57}
+        - {x: 4, y: 79}
+        - {x: -38, y: 79}
+        - {x: -79, y: -29}
+        - {x: -79, y: -74}
+        - {x: 32, y: -74}
+        - {x: 58, y: -23}
+        - {x: 58, y: 16}
+        - {x: 44, y: 34}
+      - - {x: -87, y: 79}
+        - {x: -86, y: 76}
+        - {x: -83, y: 76}
+        - {x: -81, y: 78}
+        - {x: -81, y: 79}
+    - name: Werewolf_Death_16
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1424
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 79}
+        - {x: -26, y: 73}
+        - {x: -55, y: 12}
+        - {x: -49, y: -25}
+        - {x: -40, y: -32}
+        - {x: -78, y: -62}
+        - {x: -78, y: -74}
+        - {x: 26, y: -74}
+        - {x: 59, y: -26}
+        - {x: 59, y: 34}
+        - {x: 25, y: 79}
+      - - {x: -81, y: 77}
+        - {x: -81, y: 79}
+        - {x: -86, y: 79}
+        - {x: -84, y: 76}
+    - name: Werewolf_Death_17
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1424
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 73}
+        - {x: -57, y: 27}
+        - {x: -77, y: -43}
+        - {x: -77, y: -73}
+        - {x: -76, y: -74}
+        - {x: 60, y: -74}
+        - {x: 60, y: 73}
+    - name: Werewolf_Death_18
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1424
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: 73}
+        - {x: 6, y: 73}
+        - {x: -76, y: 38}
+        - {x: -76, y: -70}
+        - {x: -71, y: -73}
+        - {x: -66, y: -74}
+        - {x: 30, y: -74}
+        - {x: 61, y: -22}
+        - {x: 61, y: 33}
+        - {x: 45, y: 64}
+    - name: Werewolf_Death_19
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 1424
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -75, y: -74}
+        - {x: 38, y: -74}
+        - {x: 61, y: -44}
+        - {x: 61, y: 54}
+        - {x: 48, y: 78}
+        - {x: -4, y: 78}
+        - {x: -68, y: 23}
+        - {x: -75, y: -6}
+    - name: Werewolf_Death_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1266
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 79}
+        - {x: -69, y: 28}
+        - {x: -82, y: -13}
+        - {x: -82, y: -74}
+        - {x: 24, y: -74}
+        - {x: 54, y: -24}
+        - {x: 54, y: 19}
+        - {x: 21, y: 79}
+    - name: Werewolf_Death_21
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1266
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: 77}
+        - {x: -4, y: 77}
+        - {x: -80, y: 39}
+        - {x: -82, y: 34}
+        - {x: -82, y: -74}
+        - {x: 32, y: -74}
+        - {x: 55, y: -33}
+        - {x: 55, y: 34}
+        - {x: 42, y: 63}
+    - name: Werewolf_Death_22
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1266
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 79}
+        - {x: -64, y: 44}
+        - {x: -81, y: -1}
+        - {x: -81, y: -74}
+        - {x: 13, y: -74}
+        - {x: 20, y: -73}
+        - {x: 56, y: -18}
+        - {x: 56, y: 22}
+        - {x: 26, y: 79}
+    - name: Werewolf_Death_23
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1266
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: -74}
+        - {x: 57, y: -29}
+        - {x: 57, y: 47}
+        - {x: 43, y: 77}
+        - {x: -18, y: 77}
+        - {x: -80, y: 14}
+        - {x: -80, y: -74}
+    - name: Werewolf_Death_24
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1266
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 57, y: -11}
+        - {x: 57, y: 43}
+        - {x: 41, y: 74}
+        - {x: 24, y: 79}
+        - {x: 9, y: 79}
+        - {x: 4, y: 73}
+        - {x: -53, y: 24}
+        - {x: -62, y: -9}
+        - {x: -79, y: -51}
+        - {x: -79, y: -74}
+        - {x: 12, y: -74}
+        - {x: 19, y: -72}
+        - {x: 22, y: -40}
+        - {x: 20, y: -32}
+        - {x: 46, y: -20}
+    - name: Werewolf_Death_25
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1266
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: 46}
+        - {x: 26, y: 34}
+        - {x: 25, y: 38}
+        - {x: 24, y: 45}
+        - {x: 29, y: 64}
+        - {x: 18, y: 78}
+        - {x: -6, y: 78}
+        - {x: -68, y: 26}
+        - {x: -80, y: 2}
+        - {x: -80, y: -74}
+        - {x: 25, y: -74}
+        - {x: 58, y: 7}
+        - {x: 58, y: 36}
+        - {x: 41, y: 54}
+    - name: Werewolf_Death_26
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1266
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 78}
+        - {x: -6, y: 78}
+        - {x: -71, y: 32}
+        - {x: -79, y: -5}
+        - {x: -79, y: -74}
+        - {x: 32, y: -74}
+        - {x: 59, y: 7}
+        - {x: 59, y: 36}
+        - {x: 49, y: 48}
+    - name: Werewolf_Death_27
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1266
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28, y: 45}
+        - {x: 27, y: 37}
+        - {x: 30, y: 63}
+        - {x: 27, y: 78}
+        - {x: -5, y: 78}
+        - {x: -18, y: 76}
+        - {x: -78, y: 18}
+        - {x: -78, y: -73}
+        - {x: -73, y: -74}
+        - {x: 23, y: -74}
+        - {x: 59, y: -2}
+        - {x: 59, y: 40}
+        - {x: 42, y: 55}
+    - name: Werewolf_Death_28
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1266
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 78}
+        - {x: -77, y: 37}
+        - {x: -77, y: -74}
+        - {x: 25, y: -74}
+        - {x: 60, y: -8}
+        - {x: 60, y: 49}
+        - {x: 26, y: 78}
+    - name: Werewolf_Death_29
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 1266
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27, y: 78}
+        - {x: -4, y: 78}
+        - {x: -72, y: -1}
+        - {x: -77, y: -23}
+        - {x: -77, y: -74}
+        - {x: 23, y: -74}
+        - {x: 26, y: -73}
+        - {x: 61, y: 4}
+        - {x: 61, y: 46}
+    - name: Werewolf_Death_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1108
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 78}
+        - {x: -9, y: 78}
+        - {x: -84, y: 11}
+        - {x: -84, y: -72}
+        - {x: -80, y: -74}
+        - {x: 29, y: -74}
+        - {x: 54, y: -6}
+        - {x: 54, y: 47}
+        - {x: 21, y: 76}
+    - name: Werewolf_Death_31
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1108
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 49}
+        - {x: 17, y: 44}
+        - {x: 15, y: 37}
+        - {x: 18, y: 47}
+        - {x: 27, y: 64}
+        - {x: 6, y: 73}
+        - {x: -23, y: 73}
+        - {x: -72, y: 30}
+        - {x: -69, y: -24}
+        - {x: -74, y: -55}
+        - {x: -74, y: -70}
+        - {x: -70, y: -74}
+        - {x: 18, y: -74}
+        - {x: 48, y: -25}
+        - {x: 48, y: 48}
+        - {x: 45, y: 60}
+    - name: Werewolf_Death_32
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1108
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: 49}
+        - {x: 14, y: 37}
+        - {x: 19, y: 43}
+        - {x: 19, y: 47}
+        - {x: 27, y: 65}
+        - {x: 5, y: 76}
+        - {x: -21, y: 76}
+        - {x: -67, y: 27}
+        - {x: -73, y: -5}
+        - {x: -57, y: -24}
+        - {x: -51, y: -21}
+        - {x: -41, y: -15}
+        - {x: -73, y: -62}
+        - {x: -73, y: -68}
+        - {x: -71, y: -73}
+        - {x: -67, y: -74}
+        - {x: 12, y: -74}
+        - {x: 19, y: -67}
+        - {x: 49, y: -27}
+        - {x: 49, y: 44}
+    - name: Werewolf_Death_33
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1108
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48, y: 56}
+        - {x: 24, y: 49}
+        - {x: 15, y: 37}
+        - {x: 19, y: 43}
+        - {x: 28, y: 65}
+        - {x: 8, y: 73}
+        - {x: -13, y: 73}
+        - {x: -65, y: 27}
+        - {x: -69, y: 4}
+        - {x: -62, y: -22}
+        - {x: -52, y: -23}
+        - {x: -72, y: -55}
+        - {x: -72, y: -73}
+        - {x: -70, y: -74}
+        - {x: 16, y: -74}
+        - {x: 50, y: -23}
+        - {x: 50, y: 44}
+    - name: Werewolf_Death_34
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1108
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 75}
+        - {x: 19, y: 76}
+        - {x: -24, y: 76}
+        - {x: -72, y: 19}
+        - {x: -72, y: -74}
+        - {x: 39, y: -74}
+        - {x: 50, y: -33}
+        - {x: 50, y: 44}
+    - name: Werewolf_Death_35
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1108
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 44}
+        - {x: 19, y: 37}
+        - {x: 23, y: 47}
+        - {x: 26, y: 64}
+        - {x: 13, y: 73}
+        - {x: -24, y: 73}
+        - {x: -71, y: 44}
+        - {x: -71, y: -9}
+        - {x: -66, y: -31}
+        - {x: -50, y: -24}
+        - {x: -36, y: -14}
+        - {x: -71, y: -56}
+        - {x: -71, y: -73}
+        - {x: -70, y: -74}
+        - {x: 30, y: -74}
+        - {x: 51, y: -36}
+        - {x: 51, y: 43}
+        - {x: 25, y: 50}
+    - name: Werewolf_Death_36
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1108
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 75}
+        - {x: -15, y: 75}
+        - {x: -69, y: 31}
+        - {x: -64, y: -22}
+        - {x: -55, y: -27}
+        - {x: -70, y: -59}
+        - {x: -70, y: -68}
+        - {x: -64, y: -73}
+        - {x: -61, y: -74}
+        - {x: 20, y: -74}
+        - {x: 52, y: 1}
+        - {x: 52, y: 39}
+        - {x: 20, y: 72}
+    - name: Werewolf_Death_37
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1108
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28, y: 71}
+        - {x: -27, y: 71}
+        - {x: -67, y: 42}
+        - {x: -67, y: -74}
+        - {x: 23, y: -74}
+        - {x: 45, y: -15}
+        - {x: 45, y: 59}
+    - name: Werewolf_Death_38
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1108
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 73}
+        - {x: -66, y: 47}
+        - {x: -66, y: -74}
+        - {x: 35, y: -74}
+        - {x: 46, y: -50}
+        - {x: 46, y: 53}
+        - {x: 37, y: 73}
+    - name: Werewolf_Death_39
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 1108
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47, y: 40}
+        - {x: 21, y: 55}
+        - {x: 15, y: 44}
+        - {x: 14, y: 36}
+        - {x: 14, y: 33}
+        - {x: 12, y: 31}
+        - {x: 14, y: 41}
+        - {x: 10, y: 51}
+        - {x: 18, y: 58}
+        - {x: 15, y: 71}
+        - {x: -24, y: 71}
+        - {x: -34, y: 69}
+        - {x: -65, y: 52}
+        - {x: -65, y: -74}
+        - {x: 21, y: -74}
+        - {x: 26, y: -60}
+        - {x: 44, y: -22}
+        - {x: 47, y: -6}
+    - name: Werewolf_Death_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 950
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: 72}
+        - {x: -20, y: 72}
+        - {x: -42, y: 64}
+        - {x: -72, y: 24}
+        - {x: -72, y: -8}
+        - {x: -58, y: -25}
+        - {x: -54, y: -25}
+        - {x: -72, y: -64}
+        - {x: -72, y: -74}
+        - {x: 26, y: -74}
+        - {x: 40, y: -26}
+        - {x: 40, y: 58}
+    - name: Werewolf_Death_41
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 950
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: 71}
+        - {x: -71, y: 33}
+        - {x: -71, y: -74}
+        - {x: 40, y: -74}
+        - {x: 40, y: 61}
+        - {x: 10, y: 71}
+    - name: Werewolf_Death_42
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 950
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 72}
+        - {x: -71, y: 44}
+        - {x: -71, y: -74}
+        - {x: 39, y: -74}
+        - {x: 41, y: -63}
+        - {x: 41, y: 57}
+        - {x: 15, y: 72}
+    - name: Werewolf_Death_43
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 950
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: -15}
+        - {x: 12, y: -15}
+        - {x: 13, y: -17}
+        - {x: 16, y: -21}
+        - {x: 26, y: -21}
+        - {x: 39, y: 3}
+        - {x: 39, y: 50}
+        - {x: 19, y: 62}
+        - {x: -40, y: 62}
+        - {x: -47, y: 57}
+        - {x: -68, y: 29}
+        - {x: -68, y: -11}
+        - {x: -63, y: -29}
+        - {x: -49, y: -28}
+        - {x: -62, y: -65}
+        - {x: -64, y: -73}
+        - {x: 22, y: -73}
+        - {x: 22, y: -55}
+        - {x: 14, y: -39}
+        - {x: 11, y: -18}
+    - name: Werewolf_Death_44
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 950
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: 50}
+        - {x: 11, y: 49}
+        - {x: -6, y: 64}
+        - {x: -36, y: 64}
+        - {x: -47, y: 55}
+        - {x: -67, y: 27}
+        - {x: -67, y: -73}
+        - {x: 15, y: -73}
+        - {x: 27, y: -67}
+        - {x: 23, y: -55}
+        - {x: 39, y: -1}
+        - {x: 39, y: 38}
+    - name: Werewolf_Death_45
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 950
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 59}
+        - {x: 13, y: 62}
+        - {x: -48, y: 62}
+        - {x: -53, y: 61}
+        - {x: -66, y: 26}
+        - {x: -66, y: -9}
+        - {x: -53, y: -27}
+        - {x: -47, y: -27}
+        - {x: -61, y: -64}
+        - {x: -59, y: -73}
+        - {x: 24, y: -73}
+        - {x: 32, y: -67}
+        - {x: 40, y: -16}
+        - {x: 40, y: 43}
+    - name: Werewolf_Death_46
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 950
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36, y: 64}
+        - {x: -53, y: 47}
+        - {x: -60, y: 25}
+        - {x: -60, y: -73}
+        - {x: 18, y: -73}
+        - {x: 31, y: -66}
+        - {x: 37, y: -25}
+        - {x: 37, y: 32}
+        - {x: -3, y: 64}
+    - name: Werewolf_Death_47
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 950
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50, y: 59}
+        - {x: -55, y: 58}
+        - {x: -58, y: 48}
+        - {x: -58, y: -74}
+        - {x: 24, y: -74}
+        - {x: 24, y: 41}
+        - {x: -16, y: 59}
+    - name: Werewolf_Death_48
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 950
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 59}
+        - {x: -52, y: 59}
+        - {x: -57, y: 48}
+        - {x: -57, y: -74}
+        - {x: 24, y: -74}
+        - {x: 24, y: 31}
+        - {x: -11, y: 55}
+    - name: Werewolf_Death_49
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 950
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45, y: 59}
+        - {x: -49, y: 54}
+        - {x: -56, y: 49}
+        - {x: -56, y: -74}
+        - {x: 25, y: -74}
+        - {x: 25, y: 29}
+        - {x: -5, y: 59}
+    - name: Werewolf_Death_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 792
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -67, y: 55}
+        - {x: -67, y: -72}
+        - {x: -64, y: -73}
+        - {x: 27, y: -73}
+        - {x: 27, y: -15}
+        - {x: -27, y: 55}
+    - name: Werewolf_Death_51
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 792
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: -32}
+        - {x: 18, y: -32}
+        - {x: 17, y: -16}
+        - {x: -3, y: 13}
+        - {x: -39, y: 55}
+        - {x: -56, y: 55}
+        - {x: -66, y: 51}
+        - {x: -66, y: -73}
+        - {x: 20, y: -73}
+        - {x: 26, y: -69}
+        - {x: 28, y: -56}
+        - {x: 28, y: -37}
+    - name: Werewolf_Death_52
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 792
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 55}
+        - {x: -54, y: 55}
+        - {x: -66, y: 49}
+        - {x: -66, y: -73}
+        - {x: 29, y: -73}
+        - {x: 29, y: -23}
+        - {x: 8, y: 23}
+    - name: Werewolf_Death_53
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 792
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -65, y: -73}
+        - {x: 30, y: -73}
+        - {x: 30, y: -15}
+        - {x: 18, y: 24}
+        - {x: -33, y: 55}
+        - {x: -57, y: 55}
+        - {x: -65, y: 52}
+    - name: Werewolf_Death_54
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 792
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58, y: 55}
+        - {x: -72, y: 44}
+        - {x: -72, y: -73}
+        - {x: 25, y: -73}
+        - {x: 31, y: -53}
+        - {x: 31, y: -30}
+        - {x: -30, y: 55}
+    - name: Werewolf_Death_55
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 792
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -56, y: 55}
+        - {x: -67, y: 47}
+        - {x: -64, y: 22}
+        - {x: -48, y: -17}
+        - {x: -71, y: -46}
+        - {x: -71, y: -68}
+        - {x: -69, y: -73}
+        - {x: 31, y: -73}
+        - {x: 31, y: -22}
+        - {x: -33, y: 55}
+    - name: Werewolf_Death_56
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 792
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -65, y: 55}
+        - {x: -72, y: 48}
+        - {x: -88, y: -34}
+        - {x: -88, y: -58}
+        - {x: -63, y: -73}
+        - {x: 25, y: -73}
+        - {x: 28, y: -72}
+        - {x: 28, y: -9}
+        - {x: -18, y: 55}
+    - name: Werewolf_Death_57
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 792
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 55}
+        - {x: -50, y: 55}
+        - {x: -68, y: 48}
+        - {x: -63, y: 23}
+        - {x: -87, y: -38}
+        - {x: -87, y: -58}
+        - {x: -85, y: -60}
+        - {x: -58, y: -73}
+        - {x: 25, y: -73}
+        - {x: 29, y: -66}
+        - {x: 29, y: -42}
+        - {x: 7, y: 7}
+    - name: Werewolf_Death_58
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 792
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 55}
+        - {x: -55, y: 55}
+        - {x: -66, y: 46}
+        - {x: -62, y: 24}
+        - {x: -46, y: -17}
+        - {x: -73, y: -42}
+        - {x: -73, y: -73}
+        - {x: 39, y: -73}
+        - {x: 43, y: -69}
+        - {x: 43, y: -47}
+        - {x: 24, y: -2}
+    - name: Werewolf_Death_59
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 792
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: 4}
+        - {x: -29, y: 55}
+        - {x: -58, y: 55}
+        - {x: -63, y: 49}
+        - {x: -63, y: 22}
+        - {x: -46, y: -17}
+        - {x: -38, y: -34}
+        - {x: -38, y: -42}
+        - {x: -38, y: -40}
+        - {x: -43, y: -29}
+        - {x: -67, y: -33}
+        - {x: -72, y: -48}
+        - {x: -72, y: -68}
+        - {x: -66, y: -73}
+        - {x: 27, y: -73}
+        - {x: 44, y: -61}
+        - {x: 44, y: -57}
+        - {x: 40, y: -48}
+    - name: Werewolf_Death_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 634
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57, y: 55}
+        - {x: -59, y: 53}
+        - {x: -69, y: 45}
+        - {x: -70, y: 21}
+        - {x: -83, y: -32}
+        - {x: -83, y: -66}
+        - {x: -67, y: -73}
+        - {x: 35, y: -73}
+        - {x: 55, y: -60}
+        - {x: 55, y: -31}
+        - {x: -39, y: 55}
+    - name: Werewolf_Death_61
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 634
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 55, y: -73}
+        - {x: 55, y: -40}
+        - {x: -33, y: 55}
+        - {x: -82, y: 55}
+        - {x: -82, y: -73}
+    - name: Werewolf_Death_62
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 634
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 16}
+        - {x: -40, y: 55}
+        - {x: -56, y: 55}
+        - {x: -72, y: 46}
+        - {x: -68, y: 23}
+        - {x: -82, y: -17}
+        - {x: -82, y: -67}
+        - {x: -74, y: -73}
+        - {x: 34, y: -73}
+        - {x: 43, y: -67}
+        - {x: 43, y: -52}
+        - {x: 42, y: -44}
+    - name: Werewolf_Death_63
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 634
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -77, y: 55}
+        - {x: -99, y: -28}
+        - {x: -99, y: -63}
+        - {x: -90, y: -73}
+        - {x: 35, y: -73}
+        - {x: 43, y: -67}
+        - {x: 43, y: -8}
+        - {x: -29, y: 55}
+    - name: Werewolf_Death_64
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 634
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -91, y: 55}
+        - {x: -98, y: 42}
+        - {x: -98, y: -73}
+        - {x: 38, y: -73}
+        - {x: 48, y: -67}
+        - {x: 48, y: -40}
+        - {x: -18, y: 55}
+    - name: Werewolf_Death_65
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 634
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36, y: 55}
+        - {x: -56, y: 55}
+        - {x: -75, y: 48}
+        - {x: -55, y: -18}
+        - {x: -43, y: -49}
+        - {x: -41, y: -49}
+        - {x: -41, y: -51}
+        - {x: -45, y: -47}
+        - {x: -52, y: -46}
+        - {x: -91, y: -51}
+        - {x: -97, y: -53}
+        - {x: -97, y: -62}
+        - {x: -90, y: -73}
+        - {x: 49, y: -73}
+        - {x: 49, y: -26}
+        - {x: 2, y: 37}
+    - name: Werewolf_Death_66
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 634
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41, y: 55}
+        - {x: -58, y: 55}
+        - {x: -73, y: 47}
+        - {x: -86, y: -40}
+        - {x: -86, y: -62}
+        - {x: -79, y: -73}
+        - {x: 44, y: -73}
+        - {x: 50, y: -69}
+        - {x: 50, y: -32}
+        - {x: 0, y: 38}
+    - name: Werewolf_Death_67
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 634
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -82, y: 55}
+        - {x: -85, y: -17}
+        - {x: -85, y: -67}
+        - {x: -81, y: -74}
+        - {x: 65, y: -74}
+        - {x: 68, y: -67}
+        - {x: 68, y: -49}
+        - {x: -28, y: 55}
+    - name: Werewolf_Death_68
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 634
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 55}
+        - {x: -80, y: 55}
+        - {x: -84, y: 48}
+        - {x: -84, y: -73}
+        - {x: -73, y: -74}
+        - {x: 59, y: -74}
+        - {x: 69, y: -62}
+        - {x: 69, y: -55}
+        - {x: 63, y: -50}
+    - name: Werewolf_Death_69
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 634
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41, y: 6}
+        - {x: 3, y: 48}
+        - {x: -60, y: 48}
+        - {x: -89, y: -27}
+        - {x: -89, y: -71}
+        - {x: -88, y: -74}
+        - {x: 54, y: -74}
+        - {x: 70, y: -62}
+        - {x: 70, y: -55}
+        - {x: 64, y: -50}
+    - name: Werewolf_Death_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 476
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 47}
+        - {x: -70, y: 47}
+        - {x: -96, y: -35}
+        - {x: -97, y: -36}
+        - {x: -97, y: -73}
+        - {x: 50, y: -73}
+        - {x: 52, y: -69}
+        - {x: 52, y: -40}
+        - {x: 12, y: 42}
+    - name: Werewolf_Death_71
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 476
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 47}
+        - {x: -44, y: 47}
+        - {x: -56, y: 43}
+        - {x: -48, y: 24}
+        - {x: -93, y: -37}
+        - {x: -96, y: -44}
+        - {x: -96, y: -66}
+        - {x: -92, y: -73}
+        - {x: 51, y: -73}
+        - {x: 53, y: -65}
+        - {x: 53, y: -41}
+        - {x: 15, y: 26}
+    - name: Werewolf_Death_72
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 476
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 45}
+        - {x: -99, y: 5}
+        - {x: -99, y: -73}
+        - {x: 54, y: -73}
+        - {x: 54, y: 34}
+        - {x: 39, y: 45}
+    - name: Werewolf_Death_73
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 476
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: 45}
+        - {x: -10, y: 45}
+        - {x: -54, y: -11}
+        - {x: -49, y: -22}
+        - {x: -37, y: -28}
+        - {x: -98, y: -41}
+        - {x: -98, y: -73}
+        - {x: 57, y: -73}
+        - {x: 61, y: -69}
+        - {x: 61, y: 4}
+        - {x: 59, y: 10}
+    - name: Werewolf_Death_74
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 476
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39, y: 45}
+        - {x: -64, y: 38}
+        - {x: -97, y: -34}
+        - {x: -97, y: -73}
+        - {x: 61, y: -73}
+        - {x: 61, y: 33}
+        - {x: 48, y: 45}
+    - name: Werewolf_Death_75
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 476
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: 45}
+        - {x: -96, y: -10}
+        - {x: -96, y: -73}
+        - {x: 56, y: -73}
+        - {x: 62, y: -66}
+        - {x: 62, y: -18}
+        - {x: 46, y: 45}
+    - name: Werewolf_Death_76
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 476
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 45}
+        - {x: -8, y: 28}
+        - {x: -4, y: 19}
+        - {x: -1, y: 17}
+        - {x: -10, y: 14}
+        - {x: -78, y: -6}
+        - {x: -95, y: -37}
+        - {x: -95, y: -70}
+        - {x: -94, y: -73}
+        - {x: 67, y: -73}
+        - {x: 67, y: -17}
+        - {x: 41, y: 45}
+    - name: Werewolf_Death_77
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 476
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61, y: 25}
+        - {x: 25, y: 25}
+        - {x: -19, y: 5}
+        - {x: -95, y: -43}
+        - {x: -95, y: -74}
+        - {x: 71, y: -74}
+        - {x: 82, y: -51}
+        - {x: 82, y: 10}
+        - {x: 71, y: 21}
+    - name: Werewolf_Death_78
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 476
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41, y: -54}
+        - {x: 56, y: -46}
+        - {x: 74, y: -42}
+        - {x: 83, y: -26}
+        - {x: 83, y: 25}
+        - {x: -18, y: 25}
+        - {x: -94, y: -37}
+        - {x: -94, y: -74}
+        - {x: 68, y: -74}
+        - {x: 71, y: -52}
+        - {x: 65, y: -46}
+        - {x: 58, y: -46}
+    - name: Werewolf_Death_79
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 476
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59, y: -46}
+        - {x: 49, y: -50}
+        - {x: 49, y: -49}
+        - {x: 70, y: -41}
+        - {x: 77, y: -34}
+        - {x: 84, y: -24}
+        - {x: 84, y: 10}
+        - {x: 78, y: 25}
+        - {x: 28, y: 25}
+        - {x: -93, y: -39}
+        - {x: -93, y: -72}
+        - {x: -91, y: -74}
+        - {x: 64, y: -74}
+        - {x: 71, y: -65}
+        - {x: 69, y: -49}
+        - {x: 64, y: -46}
+    - name: Werewolf_Death_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 318
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 65, y: -43}
+        - {x: 76, y: -34}
+        - {x: 76, y: 12}
+        - {x: 72, y: 25}
+        - {x: -6, y: 25}
+        - {x: -100, y: -23}
+        - {x: -100, y: -72}
+        - {x: -98, y: -74}
+        - {x: 61, y: -74}
+        - {x: 66, y: -48}
+        - {x: 57, y: -46}
+        - {x: 52, y: -45}
+    - name: Werewolf_Death_81
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 318
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 75, y: -33}
+        - {x: -37, y: -33}
+        - {x: -99, y: -36}
+        - {x: -99, y: -70}
+        - {x: -97, y: -76}
+        - {x: 80, y: -76}
+        - {x: 86, y: -59}
+        - {x: 86, y: -37}
+    - name: Werewolf_Death_82
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 318
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: -33}
+        - {x: -99, y: -44}
+        - {x: -99, y: -71}
+        - {x: -95, y: -76}
+        - {x: 78, y: -76}
+        - {x: 87, y: -64}
+        - {x: 87, y: -37}
+        - {x: 81, y: -33}
+    - name: Werewolf_Death_83
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 318
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: -22}
+        - {x: -91, y: -28}
+        - {x: -98, y: -44}
+        - {x: -98, y: -73}
+        - {x: 86, y: -73}
+        - {x: 86, y: -29}
+        - {x: 71, y: -22}
+    - name: Werewolf_Death_84
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 318
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: -22}
+        - {x: -97, y: -43}
+        - {x: -97, y: -71}
+        - {x: -93, y: -73}
+        - {x: 87, y: -73}
+        - {x: 87, y: -31}
+        - {x: 79, y: -22}
+    - name: Werewolf_Death_85
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 318
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 78, y: -22}
+        - {x: -9, y: -22}
+        - {x: -96, y: -45}
+        - {x: -96, y: -73}
+        - {x: 72, y: -73}
+        - {x: 88, y: -64}
+        - {x: 88, y: -41}
+        - {x: 80, y: -23}
+    - name: Werewolf_Death_86
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 318
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: -22}
+        - {x: -95, y: -38}
+        - {x: -95, y: -73}
+        - {x: 65, y: -73}
+        - {x: 88, y: -60}
+        - {x: 88, y: -39}
+        - {x: 68, y: -22}
+    - name: Werewolf_Death_87
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 318
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: -29}
+        - {x: -93, y: -42}
+        - {x: -95, y: -44}
+        - {x: -95, y: -70}
+        - {x: -93, y: -76}
+        - {x: 63, y: -76}
+        - {x: 86, y: -69}
+        - {x: 86, y: -31}
+        - {x: 84, y: -29}
+    - name: Werewolf_Death_88
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 318
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: -29}
+        - {x: 10, y: -30}
+        - {x: -64, y: -39}
+        - {x: -94, y: -44}
+        - {x: -94, y: -71}
+        - {x: -89, y: -74}
+        - {x: -77, y: -76}
+        - {x: 63, y: -76}
+        - {x: 87, y: -66}
+        - {x: 87, y: -31}
+        - {x: 81, y: -29}
+    - name: Werewolf_Death_89
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 318
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -93, y: -43}
+        - {x: -93, y: -70}
+        - {x: -88, y: -76}
+        - {x: 0, y: -78}
+        - {x: 102, y: -78}
+        - {x: 102, y: -51}
+        - {x: 82, y: -43}
+    - name: Werewolf_Death_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 81, y: -46}
+        - {x: 52, y: -43}
+        - {x: -98, y: -43}
+        - {x: -100, y: -53}
+        - {x: -100, y: -65}
+        - {x: -98, y: -70}
+        - {x: -96, y: -74}
+        - {x: 83, y: -79}
+        - {x: 102, y: -79}
+        - {x: 102, y: -61}
+        - {x: 99, y: -50}
+    - name: Werewolf_Death_91
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 160
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -99, y: -43}
+        - {x: -99, y: -69}
+        - {x: -96, y: -77}
+        - {x: 50, y: -79}
+        - {x: 102, y: -79}
+        - {x: 102, y: -43}
+      - - {x: -102, y: -75}
+        - {x: -99, y: -74}
+        - {x: -99, y: -71}
+        - {x: -101, y: -69}
+        - {x: -102, y: -69}
+    - name: Werewolf_Death_92
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 160
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -98, y: -43}
+        - {x: -99, y: -47}
+        - {x: -99, y: -72}
+        - {x: -96, y: -79}
+        - {x: 102, y: -79}
+        - {x: 102, y: -56}
+        - {x: 100, y: -51}
+        - {x: 90, y: -43}
+      - - {x: -102, y: -68}
+        - {x: -102, y: -75}
+        - {x: -100, y: -75}
+        - {x: -98, y: -73}
+        - {x: -98, y: -71}
+        - {x: -101, y: -68}
+    - name: Werewolf_Death_93
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 160
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -98, y: -43}
+        - {x: -98, y: -72}
+        - {x: -95, y: -77}
+        - {x: -42, y: -79}
+        - {x: 102, y: -79}
+        - {x: 102, y: -59}
+        - {x: 101, y: -52}
+        - {x: 66, y: -43}
+      - - {x: -102, y: -76}
+        - {x: -97, y: -74}
+        - {x: -97, y: -71}
+        - {x: -100, y: -68}
+        - {x: -102, y: -68}
+    - name: Werewolf_Death_94
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 160
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 84, y: -47}
+        - {x: 55, y: -43}
+        - {x: -25, y: -43}
+        - {x: -93, y: -45}
+        - {x: -97, y: -50}
+        - {x: -97, y: -65}
+        - {x: -96, y: -71}
+        - {x: -93, y: -74}
+        - {x: 51, y: -79}
+        - {x: 99, y: -79}
+        - {x: 102, y: -77}
+        - {x: 102, y: -61}
+        - {x: 97, y: -53}
+      - - {x: -102, y: -67}
+        - {x: -102, y: -76}
+        - {x: -100, y: -76}
+        - {x: -96, y: -73}
+        - {x: -96, y: -71}
+        - {x: -98, y: -68}
+    - name: Werewolf_Death_95
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 160
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 81, y: -43}
+        - {x: -96, y: -43}
+        - {x: -96, y: -70}
+        - {x: -92, y: -74}
+        - {x: 24, y: -79}
+        - {x: 102, y: -79}
+        - {x: 102, y: -56}
+        - {x: 98, y: -52}
+      - - {x: -101, y: -63}
+        - {x: -102, y: -63}
+        - {x: -102, y: -76}
+        - {x: -97, y: -76}
+        - {x: -95, y: -73}
+        - {x: -95, y: -68}
+        - {x: -99, y: -64}
+    - name: Werewolf_Death_96
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 160
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -95, y: -43}
+        - {x: -95, y: -68}
+        - {x: -91, y: -74}
+        - {x: 31, y: -79}
+        - {x: 102, y: -79}
+        - {x: 102, y: -43}
+      - - {x: -100, y: -63}
+        - {x: -102, y: -63}
+        - {x: -102, y: -76}
+        - {x: -97, y: -76}
+        - {x: -95, y: -73}
+        - {x: -95, y: -67}
+        - {x: -97, y: -64}
+    - name: Werewolf_Death_97
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 160
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -92, y: -43}
+        - {x: -94, y: -50}
+        - {x: -95, y: -62}
+        - {x: -95, y: -68}
+        - {x: -90, y: -74}
+        - {x: 45, y: -79}
+        - {x: 102, y: -79}
+        - {x: 102, y: -50}
+        - {x: 82, y: -43}
+      - - {x: -102, y: -62}
+        - {x: -102, y: -76}
+        - {x: -96, y: -76}
+        - {x: -94, y: -73}
+        - {x: -94, y: -67}
+        - {x: -99, y: -62}
+    - name: Werewolf_Death_98
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 160
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -94, y: -43}
+        - {x: -94, y: -70}
+        - {x: -90, y: -77}
+        - {x: 58, y: -79}
+        - {x: 102, y: -79}
+        - {x: 102, y: -45}
+        - {x: 92, y: -43}
+      - - {x: -97, y: -64}
+        - {x: -101, y: -61}
+        - {x: -102, y: -61}
+        - {x: -102, y: -76}
+        - {x: -97, y: -76}
+        - {x: -93, y: -73}
+        - {x: -93, y: -70}
+    - name: Werewolf_Death_99
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 160
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -93, y: -43}
+        - {x: -93, y: -69}
+        - {x: -90, y: -75}
+        - {x: 16, y: -78}
+        - {x: 90, y: -79}
+        - {x: 102, y: -79}
+        - {x: 102, y: -53}
+        - {x: 97, y: -43}
+      - - {x: -96, y: -64}
+        - {x: -101, y: -60}
+        - {x: -102, y: -60}
+        - {x: -102, y: -76}
+        - {x: -96, y: -76}
+        - {x: -92, y: -73}
+        - {x: -92, y: -70}
+    - name: Werewolf_Death_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -100, y: -43}
+        - {x: -100, y: -71}
+        - {x: -96, y: -74}
+        - {x: 34, y: -79}
+        - {x: 102, y: -79}
+        - {x: 102, y: -43}
+    - name: Werewolf_Death_101
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 2
+        width: 204
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102, y: -75}
+        - {x: -99, y: -74}
+        - {x: -99, y: -71}
+        - {x: -101, y: -69}
+        - {x: -102, y: -69}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
