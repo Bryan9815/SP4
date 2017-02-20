@@ -74,6 +74,8 @@
      <Compile Include="Assets\Scripts\Town\SwitchHeroes.cs" />
      <Compile Include="Assets\Scripts\Town\Town.cs" />
      <Compile Include="Assets\Scripts\Town\UpgradeHeroes.cs" />
+     <None Include="Assets\Texture Packer\Editor\SettingsTexturePackerImporter.txt" />
+     <None Include="Assets\Texture Packer\Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

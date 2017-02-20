@@ -1,0 +1,2590 @@
+fileFormatVersion: 2
+guid: 2d4a7e7af5582104eaa63cffdc43c206
+timeCreated: 1487578344
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Johnny_0
+    21300002: Johnny_1
+    21300004: Johnny_2
+    21300006: Johnny_3
+    21300008: Johnny_4
+    21300010: Johnny_5
+    21300012: Johnny_6
+    21300014: Johnny_7
+    21300016: Johnny_8
+    21300018: Johnny_9
+    21300020: Johnny_10
+    21300022: Johnny_11
+    21300024: Johnny_12
+    21300026: Johnny_13
+    21300028: Johnny_14
+    21300030: Johnny_15
+    21300032: Johnny_16
+    21300034: Johnny_17
+    21300036: Johnny_18
+    21300038: Johnny_19
+    21300040: Johnny_20
+    21300042: Johnny_21
+    21300044: Johnny_22
+    21300046: Johnny_23
+    21300048: Johnny_24
+    21300050: Johnny_25
+    21300052: Johnny_26
+    21300054: Johnny_27
+    21300056: Johnny_28
+    21300058: Johnny_29
+    21300060: Johnny_30
+    21300062: Johnny_31
+    21300064: Johnny_32
+    21300066: Johnny_33
+    21300068: Johnny_34
+    21300070: Johnny_35
+    21300072: Johnny_36
+    21300074: Johnny_37
+    21300076: Johnny_38
+    21300078: Johnny_39
+    21300080: Johnny_40
+    21300082: Johnny_41
+    21300084: Johnny_42
+    21300086: Johnny_43
+    21300088: Johnny_44
+    21300090: Johnny_45
+    21300092: Johnny_46
+    21300094: Johnny_47
+    21300096: Johnny_48
+    21300098: Johnny_49
+    21300100: Johnny_50
+    21300102: Johnny_51
+    21300104: Johnny_52
+    21300106: Johnny_53
+    21300108: Johnny_54
+    21300110: Johnny_55
+    21300112: Johnny_56
+    21300114: Johnny_57
+    21300116: Johnny_58
+    21300118: Johnny_59
+    21300120: Johnny_60
+    21300122: Johnny_61
+    21300124: Johnny_62
+    21300126: Johnny_63
+    21300128: Johnny_64
+    21300130: Johnny_65
+    21300132: Johnny_66
+    21300134: Johnny_67
+    21300136: Johnny_68
+    21300138: Johnny_69
+    21300140: Johnny_70
+    21300142: Johnny_71
+    21300144: Johnny_72
+    21300146: Johnny_73
+    21300148: Johnny_74
+    21300150: Johnny_75
+    21300152: Johnny_76
+    21300154: Johnny_77
+    21300156: Johnny_78
+    21300158: Johnny_79
+    21300160: Johnny_80
+    21300162: Johnny_81
+    21300164: Johnny_82
+    21300166: Johnny_83
+    21300168: Johnny_84
+    21300170: Johnny_85
+    21300172: Johnny_86
+    21300174: Johnny_87
+    21300176: Johnny_88
+    21300178: Johnny_89
+    21300180: Johnny_91
+    21300182: Johnny_93
+    21300184: Johnny_94
+    21300186: Johnny_95
+    21300188: Johnny_96
+    21300190: Johnny_97
+    21300192: Johnny_98
+    21300194: Johnny_99
+    21300196: Johnny_100
+    21300198: Johnny_101
+    21300200: Johnny_102
+    21300202: Johnny_103
+    21300204: Johnny_104
+    21300206: Johnny_105
+    21300208: Johnny_106
+    21300210: Johnny_107
+    21300212: Johnny_108
+    21300214: Johnny_109
+    21300216: Johnny_110
+    21300218: Johnny_111
+    21300220: Johnny_112
+    21300222: Johnny_113
+    21300224: Johnny_114
+    21300226: Johnny_115
+    21300228: Johnny_116
+    21300230: Johnny_117
+    21300232: Johnny_118
+    21300234: Johnny_119
+    21300236: Johnny_120
+    21300238: Johnny_121
+    21300240: Johnny_122
+    21300242: Johnny_123
+    21300244: Johnny_124
+    21300246: Johnny_125
+    21300248: Johnny_126
+    21300250: Johnny_119
+    21300252: Johnny_120
+    21300254: Johnny_121
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Johnny_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1644
+        width: 54
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: -33}
+        - {x: 12, y: -35}
+        - {x: 24, y: -35}
+        - {x: 27, y: -19}
+        - {x: 27, y: 31}
+        - {x: 21, y: 35}
+        - {x: -17, y: 35}
+        - {x: -27, y: 24}
+        - {x: -27, y: -5}
+        - {x: -19, y: -35}
+        - {x: -9, y: -35}
+        - {x: -5, y: -31}
+        - {x: -3, y: -24}
+        - {x: -1, y: -28}
+    - name: Johnny_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1644
+        width: 55
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.5, y: 35}
+        - {x: -27.5, y: -14}
+        - {x: -18.5, y: -35}
+        - {x: 23.5, y: -35}
+        - {x: 27.5, y: -32}
+        - {x: 27.5, y: 35}
+    - name: Johnny_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1644
+        width: 56
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 35}
+        - {x: -28, y: 29}
+        - {x: -28, y: 10}
+        - {x: -19, y: -35}
+        - {x: 17, y: -35}
+        - {x: 28, y: -29}
+        - {x: 28, y: 35}
+    - name: Johnny_3
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1644
+        width: 54
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: -33}
+        - {x: 27, y: -21}
+        - {x: 27, y: -1}
+        - {x: 23, y: 28}
+        - {x: 20, y: 35}
+        - {x: -27, y: 35}
+        - {x: -27, y: -4}
+        - {x: -17, y: -32}
+        - {x: -16, y: -35}
+        - {x: -9, y: -35}
+        - {x: -5, y: -32}
+        - {x: 1, y: -34}
+        - {x: 12, y: -34}
+    - name: Johnny_4
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1644
+        width: 51
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.5, y: 35}
+        - {x: -25.5, y: 31}
+        - {x: -25.5, y: 10}
+        - {x: -20.5, y: -35}
+        - {x: 20.5, y: -35}
+        - {x: 25.5, y: -29}
+        - {x: 25.5, y: 20}
+        - {x: 18.5, y: 35}
+    - name: Johnny_5
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 1644
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 35}
+        - {x: -25, y: -12}
+        - {x: -16, y: -35}
+        - {x: 16, y: -35}
+        - {x: 25, y: -27}
+        - {x: 25, y: 35}
+    - name: Johnny_6
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1644
+        width: 54
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 35}
+        - {x: -27, y: 31}
+        - {x: -27, y: -8}
+        - {x: -23, y: -34}
+        - {x: -19, y: -35}
+        - {x: 27, y: -35}
+        - {x: 27, y: 35}
+    - name: Johnny_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1644
+        width: 54
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 35}
+        - {x: -27, y: -15}
+        - {x: -21, y: -35}
+        - {x: 27, y: -35}
+        - {x: 27, y: 35}
+    - name: Johnny_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1566
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 25.5}
+        - {x: -17, y: 25.5}
+        - {x: -29, y: 7.5}
+        - {x: -29, y: -15.5}
+        - {x: -19, y: -25.5}
+        - {x: 29, y: -25.5}
+        - {x: 29, y: 5.5}
+        - {x: 27, y: 19.5}
+    - name: Johnny_9
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 1567
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.5, y: 21}
+        - {x: -29.5, y: -7}
+        - {x: -29.5, y: -18}
+        - {x: -28.5, y: -21}
+        - {x: 29.5, y: -21}
+        - {x: 29.5, y: 2}
+        - {x: 26.5, y: 14}
+        - {x: 18.5, y: 21}
+    - name: Johnny_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1475
+        width: 45
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18.5, y: 32.5}
+        - {x: -0.5, y: 32.5}
+        - {x: -22.5, y: 25.5}
+        - {x: -22.5, y: -22.5}
+        - {x: -16.5, y: -32.5}
+        - {x: 18.5, y: -32.5}
+        - {x: 22.5, y: -5.5}
+        - {x: 22.5, y: 27.5}
+    - name: Johnny_11
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1475
+        width: 53
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.5, y: 32}
+        - {x: -26.5, y: 7}
+        - {x: -26.5, y: -18}
+        - {x: -9.5, y: -32}
+        - {x: 19.5, y: -32}
+        - {x: 26.5, y: -15}
+        - {x: 26.5, y: 25}
+        - {x: 19.5, y: 32}
+    - name: Johnny_12
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1474
+        width: 54
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: 32.5}
+        - {x: 8, y: 32.5}
+        - {x: 8, y: 30.5}
+        - {x: -4, y: 30.5}
+        - {x: -10, y: 28.5}
+        - {x: -27, y: 0.5}
+        - {x: -27, y: -11.5}
+        - {x: -13, y: -32.5}
+        - {x: 27, y: -32.5}
+        - {x: 27, y: 23.5}
+        - {x: 26, y: 24.5}
+    - name: Johnny_13
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 1474
+        width: 52
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 32.5}
+        - {x: -26, y: 23.5}
+        - {x: -26, y: -28.5}
+        - {x: -19, y: -32.5}
+        - {x: 26, y: -32.5}
+        - {x: 26, y: 27.5}
+        - {x: 19, y: 32.5}
+    - name: Johnny_14
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 1474
+        width: 44
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 33}
+        - {x: -18, y: 30}
+        - {x: -22, y: 14}
+        - {x: -22, y: -33}
+        - {x: 13, y: -33}
+        - {x: 22, y: -21}
+        - {x: 22, y: 26}
+        - {x: 14, y: 33}
+    - name: Johnny_15
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1474
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 32}
+        - {x: 2, y: 32}
+        - {x: -20, y: 23}
+        - {x: -24, y: 3}
+        - {x: -24, y: -30}
+        - {x: -17, y: -32}
+        - {x: 24, y: -32}
+        - {x: 24, y: 14}
+        - {x: 21, y: 31}
+    - name: Johnny_16
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1478
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 25.5}
+        - {x: -29, y: 23.5}
+        - {x: -29, y: -25.5}
+        - {x: 23, y: -25.5}
+        - {x: 29, y: -11.5}
+        - {x: 29, y: 25.5}
+    - name: Johnny_17
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1380
+        width: 50
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 33.5}
+        - {x: -25, y: 33.5}
+        - {x: -25, y: 5.5}
+        - {x: -19, y: -19.5}
+        - {x: -8, y: -33.5}
+        - {x: 18, y: -33.5}
+        - {x: 25, y: -29.5}
+        - {x: 25, y: 10.5}
+        - {x: 19, y: 30.5}
+    - name: Johnny_18
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1378
+        width: 64
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 26.5}
+        - {x: -1, y: 33.5}
+        - {x: -32, y: 33.5}
+        - {x: -32, y: 2.5}
+        - {x: -25, y: -33.5}
+        - {x: 25, y: -33.5}
+        - {x: 32, y: -29.5}
+        - {x: 32, y: -8.5}
+        - {x: 24, y: -0.5}
+    - name: Johnny_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1380
+        width: 60
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 32.5}
+        - {x: -30, y: -1.5}
+        - {x: -29, y: -10.5}
+        - {x: -20, y: -32.5}
+        - {x: 17, y: -32.5}
+        - {x: 30, y: -17.5}
+        - {x: 30, y: 13.5}
+        - {x: 10, y: 32.5}
+    - name: Johnny_20
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1380
+        width: 62
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: 33}
+        - {x: -31, y: -27}
+        - {x: -29, y: -33}
+        - {x: 7, y: -33}
+        - {x: 31, y: -19}
+        - {x: 31, y: 13}
+        - {x: 2, y: 33}
+    - name: Johnny_21
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1380
+        width: 61
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.5, y: 33.5}
+        - {x: -30.5, y: -0.5}
+        - {x: -14.5, y: -33.5}
+        - {x: 3.5, y: -33.5}
+        - {x: 6.5, y: -32.5}
+        - {x: 30.5, y: -2.5}
+        - {x: 30.5, y: 14.5}
+        - {x: 5.5, y: 33.5}
+    - name: Johnny_22
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1380
+        width: 55
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.5, y: 33}
+        - {x: -23.5, y: 33}
+        - {x: -27.5, y: 32}
+        - {x: -27.5, y: -21}
+        - {x: -21.5, y: -33}
+        - {x: 12.5, y: -33}
+        - {x: 27.5, y: -18}
+        - {x: 27.5, y: 13}
+        - {x: 16.5, y: 32}
+    - name: Johnny_23
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1380
+        width: 54
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 32.5}
+        - {x: -27, y: 5.5}
+        - {x: -24, y: -15.5}
+        - {x: -21, y: -18.5}
+        - {x: -18, y: -17.5}
+        - {x: -17, y: -24.5}
+        - {x: -14, y: -32.5}
+        - {x: 27, y: -32.5}
+        - {x: 27, y: 32.5}
+    - name: Johnny_24
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 1380
+        width: 61
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30.5, y: 29.5}
+        - {x: 28.5, y: 31.5}
+        - {x: -11.5, y: 31.5}
+        - {x: -30.5, y: 19.5}
+        - {x: -30.5, y: -9.5}
+        - {x: -27.5, y: -7.5}
+        - {x: 2.5, y: -31.5}
+        - {x: 12.5, y: -31.5}
+        - {x: 13.5, y: -30.5}
+        - {x: 13.5, y: -25.5}
+        - {x: 30.5, y: -0.5}
+    - name: Johnny_25
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1275
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 25.5}
+        - {x: -17, y: 25.5}
+        - {x: -29, y: 7.5}
+        - {x: -29, y: -15.5}
+        - {x: -19, y: -25.5}
+        - {x: 29, y: -25.5}
+        - {x: 29, y: 5.5}
+        - {x: 27, y: 19.5}
+    - name: Johnny_26
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1284
+        width: 59
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: 35}
+        - {x: -29.5, y: 24}
+        - {x: -16.5, y: -35}
+        - {x: 29.5, y: -35}
+        - {x: 29.5, y: 31}
+        - {x: 26.5, y: 35}
+    - name: Johnny_27
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1303
+        width: 70
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 4.5}
+        - {x: 24, y: 3.5}
+        - {x: 30, y: 3.5}
+        - {x: 31, y: 6.5}
+        - {x: 25, y: 13.5}
+        - {x: 14, y: 29.5}
+        - {x: 5, y: 30.5}
+        - {x: -35, y: 30.5}
+        - {x: -35, y: 25.5}
+        - {x: -30, y: 20.5}
+        - {x: -23, y: 9.5}
+        - {x: -24, y: -10.5}
+        - {x: -21, y: -30.5}
+        - {x: 20, y: -30.5}
+        - {x: 35, y: -24.5}
+        - {x: 35, y: -14.5}
+        - {x: 22, y: 2.5}
+    - name: Johnny_28
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1307
+        width: 70
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27, y: 4}
+        - {x: 8, y: 23}
+        - {x: -5, y: 24}
+        - {x: -29, y: 30}
+        - {x: -35, y: 30}
+        - {x: -35, y: 19}
+        - {x: -30, y: -15}
+        - {x: -27, y: -23}
+        - {x: -7, y: -30}
+        - {x: 14, y: -30}
+        - {x: 35, y: -12}
+        - {x: 35, y: -3}
+    - name: Johnny_29
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1276
+        width: 67
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.5, y: 49.5}
+        - {x: -33.5, y: -15.5}
+        - {x: -31.5, y: -13.5}
+        - {x: -28.5, y: -11.5}
+        - {x: 1.5, y: -49.5}
+        - {x: 18.5, y: -49.5}
+        - {x: 33.5, y: -4.5}
+        - {x: 33.5, y: 48.5}
+        - {x: 22.5, y: 49.5}
+    - name: Johnny_30
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 1275
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 25.5}
+        - {x: -17, y: 25.5}
+        - {x: -29, y: 7.5}
+        - {x: -29, y: -15.5}
+        - {x: -19, y: -25.5}
+        - {x: 29, y: -25.5}
+        - {x: 29, y: 5.5}
+        - {x: 27, y: 19.5}
+    - name: Johnny_31
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1182
+        width: 56
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 32.5}
+        - {x: -25, y: 32.5}
+        - {x: -28, y: 26.5}
+        - {x: -28, y: -18.5}
+        - {x: -17, y: -32.5}
+        - {x: -4, y: -32.5}
+        - {x: 14, y: -26.5}
+        - {x: 28, y: -8.5}
+        - {x: 28, y: 7.5}
+    - name: Johnny_32
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1182
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 29}
+        - {x: -27.5, y: 28}
+        - {x: -27.5, y: -8}
+        - {x: -12.5, y: -29}
+        - {x: 9.5, y: -29}
+        - {x: 27.5, y: -13}
+        - {x: 27.5, y: 19}
+        - {x: 19.5, y: 29}
+    - name: Johnny_33
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1182
+        width: 69
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26.5, y: 26}
+        - {x: 18.5, y: 32}
+        - {x: -34.5, y: 32}
+        - {x: -34.5, y: -20}
+        - {x: -31.5, y: -32}
+        - {x: -4.5, y: -32}
+        - {x: 23.5, y: -20}
+        - {x: 34.5, y: -2}
+        - {x: 34.5, y: 15}
+    - name: Johnny_34
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1182
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 32.5}
+        - {x: -31, y: 32.5}
+        - {x: -31, y: -19.5}
+        - {x: -28, y: -32.5}
+        - {x: -2, y: -32.5}
+        - {x: 23, y: -21.5}
+        - {x: 31, y: -14.5}
+        - {x: 31, y: 20.5}
+    - name: Johnny_35
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1182
+        width: 52
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 32.5}
+        - {x: -25, y: 32.5}
+        - {x: -26, y: 29.5}
+        - {x: -26, y: -24.5}
+        - {x: -19, y: -32.5}
+        - {x: 20, y: -32.5}
+        - {x: 26, y: -27.5}
+        - {x: 26, y: 7.5}
+        - {x: 13, y: 30.5}
+    - name: Johnny_36
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1091
+        width: 41
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.5, y: 29.5}
+        - {x: -14.5, y: 26.5}
+        - {x: -20.5, y: 14.5}
+        - {x: -20.5, y: 3.5}
+        - {x: -16.5, y: 3.5}
+        - {x: -6.5, y: -24.5}
+        - {x: -4.5, y: -26.5}
+        - {x: -1.5, y: -25.5}
+        - {x: 3.5, y: -29.5}
+        - {x: 6.5, y: -29.5}
+        - {x: 9.5, y: -28.5}
+        - {x: 12.5, y: -25.5}
+        - {x: 10.5, y: -27.5}
+        - {x: 10.5, y: -29.5}
+        - {x: 20.5, y: -29.5}
+        - {x: 20.5, y: 27.5}
+        - {x: 19.5, y: 29.5}
+    - name: Johnny_37
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1091
+        width: 72
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: 29.5}
+        - {x: -36, y: 29.5}
+        - {x: -36, y: -18.5}
+        - {x: -32, y: -29.5}
+        - {x: 26, y: -29.5}
+        - {x: 29, y: -25.5}
+        - {x: 36, y: 11.5}
+        - {x: 36, y: 24.5}
+    - name: Johnny_38
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 1091
+        width: 102
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51, y: 32}
+        - {x: -51, y: -9}
+        - {x: -19, y: -32}
+        - {x: 21, y: -32}
+        - {x: 51, y: -9}
+        - {x: 51, y: 10}
+        - {x: 8, y: 32}
+    - name: Johnny_39
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1091
+        width: 98
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45, y: 33.5}
+        - {x: -49, y: 6.5}
+        - {x: -49, y: -7.5}
+        - {x: -31, y: -33.5}
+        - {x: -8, y: -33.5}
+        - {x: -5, y: -30.5}
+        - {x: 49, y: 0.5}
+        - {x: 49, y: 7.5}
+        - {x: -2, y: 33.5}
+    - name: Johnny_40
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1091
+        width: 87
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.5, y: 33}
+        - {x: -43.5, y: 27}
+        - {x: -43.5, y: 22}
+        - {x: -37.5, y: 19}
+        - {x: -28.5, y: 16}
+        - {x: -34.5, y: 14}
+        - {x: -43.5, y: 1}
+        - {x: -43.5, y: -10}
+        - {x: -36.5, y: -12}
+        - {x: -27.5, y: -10}
+        - {x: -15.5, y: -33}
+        - {x: 13.5, y: -33}
+        - {x: 43.5, y: -25}
+        - {x: 43.5, y: 1}
+        - {x: 9.5, y: 33}
+    - name: Johnny_41
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1091
+        width: 70
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 33.5}
+        - {x: -35, y: -22.5}
+        - {x: -16, y: -33.5}
+        - {x: 30, y: -33.5}
+        - {x: 35, y: -19.5}
+        - {x: 35, y: 19.5}
+        - {x: 29, y: 33.5}
+    - name: Johnny_42
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1091
+        width: 44
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 32.5}
+        - {x: -22, y: 32.5}
+        - {x: -22, y: 10.5}
+        - {x: -16, y: 7.5}
+        - {x: -13, y: -22.5}
+        - {x: -4, y: -32.5}
+        - {x: 20, y: -32.5}
+        - {x: 22, y: -29.5}
+        - {x: 22, y: 14.5}
+        - {x: 18, y: 31.5}
+    - name: Johnny_43
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1091
+        width: 38
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: -30}
+        - {x: 19, y: -30}
+        - {x: 19, y: 30}
+        - {x: -9, y: 30}
+        - {x: -15, y: 23}
+        - {x: -13, y: 20}
+        - {x: -19, y: -1}
+        - {x: -19, y: -9}
+        - {x: -18, y: -9}
+        - {x: -6, y: -29}
+        - {x: -5, y: -30}
+        - {x: 2, y: -30}
+        - {x: 5, y: -27}
+        - {x: 5, y: -25}
+        - {x: 5, y: -27}
+    - name: Johnny_44
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 1091
+        width: 40
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 28.5}
+        - {x: -12, y: 28.5}
+        - {x: -20, y: 25.5}
+        - {x: -20, y: -28.5}
+        - {x: 18, y: -28.5}
+        - {x: 20, y: -26.5}
+        - {x: 20, y: 25.5}
+    - name: Johnny_45
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 991
+        width: 40
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 8.5}
+        - {x: 14, y: 8.5}
+        - {x: 8, y: 11.5}
+        - {x: 8, y: 10.5}
+        - {x: 9, y: 11.5}
+        - {x: 10, y: 10.5}
+        - {x: 13, y: 10.5}
+        - {x: 16, y: 13.5}
+        - {x: 17, y: 17.5}
+        - {x: 17, y: 34.5}
+        - {x: -20, y: 34.5}
+        - {x: -20, y: -34.5}
+        - {x: 10, y: -34.5}
+        - {x: 11, y: -29.5}
+        - {x: 20, y: -25.5}
+    - name: Johnny_46
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 991
+        width: 39
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.5, y: 35}
+        - {x: -13.5, y: 35}
+        - {x: -17.5, y: 0}
+        - {x: -18.5, y: -11}
+        - {x: -19.5, y: -14}
+        - {x: -19.5, y: -35}
+        - {x: 19.5, y: -35}
+        - {x: 19.5, y: 24}
+        - {x: 16.5, y: 31}
+    - name: Johnny_47
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 991
+        width: 57
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 32}
+        - {x: -28.5, y: 15}
+        - {x: -28.5, y: -29}
+        - {x: -24.5, y: -32}
+        - {x: 13.5, y: -32}
+        - {x: 28.5, y: -16}
+        - {x: 28.5, y: 32}
+    - name: Johnny_48
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 991
+        width: 57
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 32}
+        - {x: -20.5, y: 29}
+        - {x: -28.5, y: -3}
+        - {x: -28.5, y: -28}
+        - {x: -24.5, y: -32}
+        - {x: 28.5, y: -32}
+        - {x: 28.5, y: 32}
+    - name: Johnny_49
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 991
+        width: 39
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.5, y: 35}
+        - {x: -13.5, y: 35}
+        - {x: -17.5, y: 0}
+        - {x: -18.5, y: -11}
+        - {x: -19.5, y: -14}
+        - {x: -19.5, y: -35}
+        - {x: 19.5, y: -35}
+        - {x: 19.5, y: 24}
+        - {x: 16.5, y: 31}
+    - name: Johnny_50
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 1047
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Johnny_51
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 991
+        width: 40
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 8.5}
+        - {x: 14, y: 8.5}
+        - {x: 8, y: 11.5}
+        - {x: 8, y: 10.5}
+        - {x: 9, y: 11.5}
+        - {x: 10, y: 10.5}
+        - {x: 13, y: 10.5}
+        - {x: 16, y: 13.5}
+        - {x: 17, y: 17.5}
+        - {x: 17, y: 34.5}
+        - {x: -20, y: 34.5}
+        - {x: -20, y: -34.5}
+        - {x: 10, y: -34.5}
+        - {x: 11, y: -29.5}
+        - {x: 20, y: -25.5}
+    - name: Johnny_52
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 1047
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Johnny_53
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 991
+        width: 56
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 35}
+        - {x: -28, y: 29}
+        - {x: -28, y: 10}
+        - {x: -19, y: -35}
+        - {x: 17, y: -35}
+        - {x: 28, y: -29}
+        - {x: 28, y: 35}
+    - name: Johnny_54
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1047
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Johnny_55
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 991
+        width: 54
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: -33}
+        - {x: 27, y: -21}
+        - {x: 27, y: -1}
+        - {x: 23, y: 28}
+        - {x: 20, y: 35}
+        - {x: -27, y: 35}
+        - {x: -27, y: -4}
+        - {x: -17, y: -32}
+        - {x: -16, y: -35}
+        - {x: -9, y: -35}
+        - {x: -5, y: -32}
+        - {x: 1, y: -34}
+        - {x: 12, y: -34}
+    - name: Johnny_56
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1047
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Johnny_57
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 990
+        width: 54
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: -33}
+        - {x: 27, y: -21}
+        - {x: 27, y: -1}
+        - {x: 23, y: 28}
+        - {x: 20, y: 35}
+        - {x: -27, y: 35}
+        - {x: -27, y: -4}
+        - {x: -17, y: -32}
+        - {x: -16, y: -35}
+        - {x: -9, y: -35}
+        - {x: -5, y: -32}
+        - {x: 1, y: -34}
+        - {x: 12, y: -34}
+    - name: Johnny_58
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1047
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Johnny_59
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 873
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25.5, y: -25}
+        - {x: 25.5, y: -5}
+        - {x: -7.5, y: 34}
+        - {x: -15.5, y: 36}
+        - {x: -25.5, y: 36}
+        - {x: -25.5, y: -36}
+        - {x: -15.5, y: -36}
+        - {x: -12.5, y: -31}
+        - {x: 5.5, y: -36}
+        - {x: 21.5, y: -36}
+    - name: Johnny_60
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 874
+        width: 66
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 31.5}
+        - {x: -25, y: 25.5}
+        - {x: -32, y: 6.5}
+        - {x: -31, y: 2.5}
+        - {x: -28, y: 1.5}
+        - {x: -20, y: 7.5}
+        - {x: -22, y: -1.5}
+        - {x: -30, y: 2.5}
+        - {x: -33, y: -1.5}
+        - {x: -33, y: -31.5}
+        - {x: 33, y: -31.5}
+        - {x: 33, y: 10.5}
+        - {x: 5, y: 31.5}
+    - name: Johnny_61
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 875
+        width: 103
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.5, y: 0.5}
+        - {x: 44.5, y: -4.5}
+        - {x: 41.5, y: -8.5}
+        - {x: 40.5, y: -12.5}
+        - {x: 40.5, y: -10.5}
+        - {x: 41.5, y: -9.5}
+        - {x: 41.5, y: -7.5}
+        - {x: 42.5, y: -6.5}
+        - {x: 47.5, y: 7.5}
+        - {x: 49.5, y: 28.5}
+        - {x: 48.5, y: 37.5}
+        - {x: -11.5, y: 37.5}
+        - {x: -38.5, y: 32.5}
+        - {x: -44.5, y: 24.5}
+        - {x: -51.5, y: -9.5}
+        - {x: -51.5, y: -34.5}
+        - {x: -47.5, y: -37.5}
+        - {x: 39.5, y: -37.5}
+        - {x: 48.5, y: -23.5}
+        - {x: 51.5, y: -10.5}
+        - {x: 51.5, y: 1.5}
+      - - {x: 0.5, y: 1.5}
+        - {x: -2.5, y: 1.5}
+        - {x: -4.5, y: 0.5}
+        - {x: -3.5, y: 0.5}
+        - {x: 1.5, y: 5.5}
+        - {x: 1.5, y: 7.5}
+        - {x: -1.5, y: 10.5}
+        - {x: 34.5, y: 22.5}
+    - name: Johnny_62
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 875
+        width: 104
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: 47.5}
+        - {x: 22, y: 47.5}
+        - {x: -52, y: 7.5}
+        - {x: -52, y: -40.5}
+        - {x: -48, y: -47.5}
+        - {x: 40, y: -47.5}
+        - {x: 52, y: -20.5}
+        - {x: 52, y: -9.5}
+        - {x: 49, y: -10.5}
+    - name: Johnny_63
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 875
+        width: 110
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 32}
+        - {x: -55, y: 7}
+        - {x: -55, y: -30}
+        - {x: -54, y: -32}
+        - {x: 16, y: -32}
+        - {x: 42, y: 6}
+        - {x: 42, y: 25}
+        - {x: 14, y: 32}
+      - - {x: 53, y: 7}
+        - {x: 51, y: 7}
+        - {x: 25, y: -18}
+        - {x: 25, y: -30}
+        - {x: 30, y: -32}
+        - {x: 40, y: -32}
+        - {x: 44, y: -24}
+        - {x: 55, y: 4}
+        - {x: 55, y: 6}
+    - name: Johnny_65
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 875
+        width: 106
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 28.5}
+        - {x: -53, y: 26.5}
+        - {x: -53, y: -28.5}
+        - {x: -7, y: -28.5}
+        - {x: -7, y: 28.5}
+      - - {x: 31, y: -11.5}
+        - {x: 27, y: -11.5}
+        - {x: 27, y: -23.5}
+        - {x: 30, y: -24.5}
+        - {x: 36, y: -24.5}
+        - {x: 38, y: -21.5}
+        - {x: 38, y: -15.5}
+        - {x: 36, y: -12.5}
+      - - {x: 32, y: -13.5}
+        - {x: 36, y: -19.5}
+        - {x: 45, y: -19.5}
+        - {x: 53, y: -13.5}
+        - {x: 53, y: -0.5}
+        - {x: 50, y: 0.5}
+        - {x: 35, y: 0.5}
+        - {x: 32, y: -7.5}
+    - name: Johnny_68
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 763
+        width: 40
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 8.5}
+        - {x: 14, y: 8.5}
+        - {x: 8, y: 11.5}
+        - {x: 8, y: 10.5}
+        - {x: 9, y: 11.5}
+        - {x: 10, y: 10.5}
+        - {x: 13, y: 10.5}
+        - {x: 16, y: 13.5}
+        - {x: 17, y: 17.5}
+        - {x: 17, y: 34.5}
+        - {x: -20, y: 34.5}
+        - {x: -20, y: -34.5}
+        - {x: 10, y: -34.5}
+        - {x: 11, y: -29.5}
+        - {x: 20, y: -25.5}
+    - name: Johnny_69
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 763
+        width: 39
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.5, y: 35}
+        - {x: -13.5, y: 35}
+        - {x: -17.5, y: 0}
+        - {x: -18.5, y: -11}
+        - {x: -19.5, y: -14}
+        - {x: -19.5, y: -35}
+        - {x: 19.5, y: -35}
+        - {x: 19.5, y: 24}
+        - {x: 16.5, y: 31}
+    - name: Johnny_70
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 763
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 32}
+        - {x: -23, y: -32}
+        - {x: 14, y: -32}
+        - {x: 23, y: -14}
+        - {x: 23, y: 28}
+        - {x: 18, y: 32}
+    - name: Johnny_71
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 763
+        width: 54
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 32}
+        - {x: -19, y: 29}
+        - {x: -27, y: 1}
+        - {x: -27, y: -32}
+        - {x: 21, y: -32}
+        - {x: 27, y: -29}
+        - {x: 27, y: 32}
+    - name: Johnny_72
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 820
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Johnny_73
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 820
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Johnny_74
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 820
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Johnny_75
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 820
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Johnny_76
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 668
+        width: 48
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 35.5}
+        - {x: -24, y: 25.5}
+        - {x: -24, y: 20.5}
+        - {x: -21, y: 17.5}
+        - {x: -24, y: 0.5}
+        - {x: -24, y: -0.5}
+        - {x: -20, y: -35.5}
+        - {x: -12, y: -35.5}
+        - {x: -10, y: -34.5}
+        - {x: -1, y: -28.5}
+        - {x: -1, y: -27.5}
+        - {x: 0, y: -31.5}
+        - {x: 2, y: -35.5}
+        - {x: 16, y: -35.5}
+        - {x: 24, y: -23.5}
+        - {x: 24, y: 7.5}
+        - {x: 12, y: 35.5}
+    - name: Johnny_77
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 668
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 34.5}
+        - {x: -18.5, y: 30.5}
+        - {x: -18.5, y: -28.5}
+        - {x: -16.5, y: -34.5}
+        - {x: -5.5, y: -34.5}
+        - {x: -2.5, y: -33.5}
+        - {x: -0.5, y: -29.5}
+        - {x: 5.5, y: -34.5}
+        - {x: 18.5, y: -34.5}
+        - {x: 18.5, y: 34.5}
+    - name: Johnny_78
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 668
+        width: 88
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 34}
+        - {x: -44, y: 15}
+        - {x: -44, y: 5}
+        - {x: 1, y: -34}
+        - {x: 38, y: -34}
+        - {x: 44, y: -6}
+        - {x: 44, y: 28}
+        - {x: 30, y: 34}
+    - name: Johnny_79
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 668
+        width: 93
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.5, y: 34.5}
+        - {x: -46.5, y: 26.5}
+        - {x: -46.5, y: -12.5}
+        - {x: -32.5, y: -34.5}
+        - {x: 22.5, y: -34.5}
+        - {x: 46.5, y: -9.5}
+        - {x: 46.5, y: 12.5}
+        - {x: 23.5, y: 34.5}
+    - name: Johnny_80
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 668
+        width: 121
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -60.5, y: 35}
+        - {x: -60.5, y: -35}
+        - {x: -16.5, y: -35}
+        - {x: 60.5, y: 8}
+        - {x: 60.5, y: 32}
+        - {x: 49.5, y: 35}
+    - name: Johnny_81
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 668
+        width: 121
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: 11}
+        - {x: 22.5, y: 5}
+        - {x: 28.5, y: 1}
+        - {x: 57.5, y: 16}
+        - {x: 60.5, y: 19}
+        - {x: 60.5, y: 27}
+        - {x: 58.5, y: 30}
+        - {x: 25.5, y: 34}
+        - {x: -59.5, y: 34}
+        - {x: -60.5, y: 32}
+        - {x: -60.5, y: -34}
+        - {x: -27.5, y: -34}
+        - {x: -12.5, y: 6}
+        - {x: -14.5, y: 14}
+        - {x: -28.5, y: 15}
+      - - {x: 7.5, y: 12}
+        - {x: 2.5, y: 11}
+        - {x: 2.5, y: 0}
+        - {x: 12.5, y: 0}
+        - {x: 14.5, y: 1}
+        - {x: 14.5, y: 8}
+        - {x: 13.5, y: 12}
+    - name: Johnny_82
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 668
+        width: 79
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.5, y: 34.5}
+        - {x: -39.5, y: 8.5}
+        - {x: -38.5, y: 2.5}
+        - {x: -22.5, y: -2.5}
+        - {x: -22.5, y: 2.5}
+        - {x: -6.5, y: -31.5}
+        - {x: -1.5, y: -34.5}
+        - {x: 39.5, y: -34.5}
+        - {x: 39.5, y: 13.5}
+        - {x: 36.5, y: 34.5}
+      - - {x: -28.5, y: 21.5}
+        - {x: -29.5, y: 20.5}
+        - {x: -29.5, y: 11.5}
+        - {x: -23.5, y: 7.5}
+        - {x: -20.5, y: 8.5}
+        - {x: -20.5, y: 10.5}
+        - {x: -22.5, y: 20.5}
+        - {x: -25.5, y: 21.5}
+    - name: Johnny_83
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 668
+        width: 53
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.5, y: 34.5}
+        - {x: -26.5, y: 21.5}
+        - {x: -12.5, y: -34.5}
+        - {x: 26.5, y: -34.5}
+        - {x: 26.5, y: 34.5}
+    - name: Johnny_84
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 666
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 34.5}
+        - {x: -18.5, y: 30.5}
+        - {x: -18.5, y: -28.5}
+        - {x: -16.5, y: -34.5}
+        - {x: -5.5, y: -34.5}
+        - {x: -2.5, y: -33.5}
+        - {x: -0.5, y: -29.5}
+        - {x: 5.5, y: -34.5}
+        - {x: 18.5, y: -34.5}
+        - {x: 18.5, y: 34.5}
+    - name: Johnny_85
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 554
+        width: 48
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 35.5}
+        - {x: -24, y: 25.5}
+        - {x: -24, y: 20.5}
+        - {x: -21, y: 17.5}
+        - {x: -24, y: 0.5}
+        - {x: -24, y: -0.5}
+        - {x: -20, y: -35.5}
+        - {x: -12, y: -35.5}
+        - {x: -10, y: -34.5}
+        - {x: -1, y: -28.5}
+        - {x: -1, y: -27.5}
+        - {x: 0, y: -31.5}
+        - {x: 2, y: -35.5}
+        - {x: 16, y: -35.5}
+        - {x: 24, y: -23.5}
+        - {x: 24, y: 7.5}
+        - {x: 12, y: 35.5}
+    - name: Johnny_86
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 554
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 34.5}
+        - {x: -18.5, y: 30.5}
+        - {x: -18.5, y: -28.5}
+        - {x: -16.5, y: -34.5}
+        - {x: -5.5, y: -34.5}
+        - {x: -2.5, y: -33.5}
+        - {x: -0.5, y: -29.5}
+        - {x: 5.5, y: -34.5}
+        - {x: 18.5, y: -34.5}
+        - {x: 18.5, y: 34.5}
+    - name: Johnny_87
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 554
+        width: 75
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31.5, y: 34}
+        - {x: -3.5, y: 34}
+        - {x: -37.5, y: -7}
+        - {x: -37.5, y: -16}
+        - {x: -14.5, y: -13}
+        - {x: 2.5, y: -21}
+        - {x: 5.5, y: -20}
+        - {x: 5.5, y: -18}
+        - {x: 4.5, y: -24}
+        - {x: -0.5, y: -27}
+        - {x: -0.5, y: -34}
+        - {x: 34.5, y: -34}
+        - {x: 37.5, y: -26}
+        - {x: 37.5, y: 32}
+    - name: Johnny_88
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 554
+        width: 57
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.5, y: 35}
+        - {x: -21.5, y: 35}
+        - {x: -28.5, y: 15}
+        - {x: -28.5, y: -29}
+        - {x: -22.5, y: -35}
+        - {x: 6.5, y: -35}
+        - {x: 6.5, y: -33}
+        - {x: 21.5, y: -9}
+        - {x: 28.5, y: 11}
+    - name: Johnny_89
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 554
+        width: 98
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 6}
+        - {x: 49, y: 26}
+        - {x: 49, y: 40}
+        - {x: 35, y: 47}
+        - {x: 0, y: 47}
+        - {x: -46, y: 23}
+        - {x: -49, y: 16}
+        - {x: -49, y: -47}
+        - {x: -13, y: -47}
+        - {x: -3, y: -28}
+        - {x: -2, y: -25}
+        - {x: -10, y: 7}
+      - - {x: -1, y: 10}
+        - {x: -6, y: 9}
+        - {x: -6, y: -2}
+        - {x: 4, y: -2}
+        - {x: 6, y: -1}
+        - {x: 6, y: 6}
+        - {x: 5, y: 10}
+    - name: Johnny_91
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 554
+        width: 117
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 37.5}
+        - {x: -58.5, y: 0.5}
+        - {x: -58.5, y: -36.5}
+        - {x: -57.5, y: -39.5}
+        - {x: -54.5, y: -40.5}
+        - {x: 14.5, y: -40.5}
+        - {x: 57.5, y: 24.5}
+        - {x: 57.5, y: 37.5}
+      - - {x: 48.5, y: 9.5}
+        - {x: 51.5, y: 10.5}
+        - {x: 51.5, y: 13.5}
+        - {x: 48.5, y: 14.5}
+        - {x: 46.5, y: 12.5}
+    - name: Johnny_93
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 554
+        width: 79
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.5, y: 34.5}
+        - {x: -39.5, y: 8.5}
+        - {x: -38.5, y: 2.5}
+        - {x: -22.5, y: -2.5}
+        - {x: -22.5, y: 2.5}
+        - {x: -6.5, y: -31.5}
+        - {x: -1.5, y: -34.5}
+        - {x: 39.5, y: -34.5}
+        - {x: 39.5, y: 13.5}
+        - {x: 36.5, y: 34.5}
+      - - {x: -28.5, y: 21.5}
+        - {x: -29.5, y: 20.5}
+        - {x: -29.5, y: 11.5}
+        - {x: -23.5, y: 7.5}
+        - {x: -20.5, y: 8.5}
+        - {x: -20.5, y: 10.5}
+        - {x: -22.5, y: 20.5}
+        - {x: -25.5, y: 21.5}
+    - name: Johnny_94
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 553
+        width: 53
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.5, y: 34.5}
+        - {x: -26.5, y: 21.5}
+        - {x: -12.5, y: -34.5}
+        - {x: 26.5, y: -34.5}
+        - {x: 26.5, y: 34.5}
+    - name: Johnny_95
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 553
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 34.5}
+        - {x: -18.5, y: 30.5}
+        - {x: -18.5, y: -28.5}
+        - {x: -16.5, y: -34.5}
+        - {x: -5.5, y: -34.5}
+        - {x: -2.5, y: -33.5}
+        - {x: -0.5, y: -29.5}
+        - {x: 5.5, y: -34.5}
+        - {x: 18.5, y: -34.5}
+        - {x: 18.5, y: 34.5}
+    - name: Johnny_96
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 444
+        width: 48
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 35.5}
+        - {x: -24, y: 25.5}
+        - {x: -24, y: 20.5}
+        - {x: -21, y: 17.5}
+        - {x: -24, y: 0.5}
+        - {x: -24, y: -0.5}
+        - {x: -20, y: -35.5}
+        - {x: -12, y: -35.5}
+        - {x: -10, y: -34.5}
+        - {x: -1, y: -28.5}
+        - {x: -1, y: -27.5}
+        - {x: 0, y: -31.5}
+        - {x: 2, y: -35.5}
+        - {x: 16, y: -35.5}
+        - {x: 24, y: -23.5}
+        - {x: 24, y: 7.5}
+        - {x: 12, y: 35.5}
+    - name: Johnny_97
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 444
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 34.5}
+        - {x: -18.5, y: 30.5}
+        - {x: -18.5, y: -28.5}
+        - {x: -16.5, y: -34.5}
+        - {x: -5.5, y: -34.5}
+        - {x: -2.5, y: -33.5}
+        - {x: -0.5, y: -29.5}
+        - {x: 5.5, y: -34.5}
+        - {x: 18.5, y: -34.5}
+        - {x: 18.5, y: 34.5}
+    - name: Johnny_98
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 444
+        width: 75
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.5, y: 42.5}
+        - {x: -37.5, y: 42.5}
+        - {x: -37.5, y: 36.5}
+        - {x: -19.5, y: 14.5}
+        - {x: -1.5, y: 4.5}
+        - {x: -1.5, y: 9.5}
+        - {x: -1.5, y: 1.5}
+        - {x: -0.5, y: -31.5}
+        - {x: 1.5, y: -32.5}
+        - {x: 0.5, y: -36.5}
+        - {x: 0.5, y: -42.5}
+        - {x: 34.5, y: -42.5}
+        - {x: 37.5, y: -29.5}
+        - {x: 37.5, y: 6.5}
+        - {x: 29.5, y: 31.5}
+    - name: Johnny_99
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 444
+        width: 70
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 39}
+        - {x: -35, y: 39}
+        - {x: -35, y: 12}
+        - {x: -4, y: -38}
+        - {x: -1, y: -39}
+        - {x: 32, y: -39}
+        - {x: 35, y: -32}
+        - {x: 35, y: 11}
+        - {x: 25, y: 34}
+    - name: Johnny_100
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 444
+        width: 103
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: 35.5}
+        - {x: -50.5, y: 35.5}
+        - {x: -51.5, y: 31.5}
+        - {x: -51.5, y: -35.5}
+        - {x: 51.5, y: -35.5}
+        - {x: 51.5, y: -10.5}
+        - {x: 50.5, y: -9.5}
+    - name: Johnny_101
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 444
+        width: 102
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41, y: 35}
+        - {x: -51, y: 26}
+        - {x: -51, y: -16}
+        - {x: -49, y: -17}
+        - {x: -48, y: -17}
+        - {x: -51, y: -32}
+        - {x: -47, y: -35}
+        - {x: 45, y: -35}
+        - {x: 49, y: -34}
+        - {x: 51, y: -30}
+        - {x: 51, y: -7}
+        - {x: -24, y: 35}
+    - name: Johnny_102
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 444
+        width: 79
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.5, y: 34.5}
+        - {x: -39.5, y: 8.5}
+        - {x: -38.5, y: 2.5}
+        - {x: -22.5, y: -2.5}
+        - {x: -22.5, y: 2.5}
+        - {x: -6.5, y: -31.5}
+        - {x: -1.5, y: -34.5}
+        - {x: 39.5, y: -34.5}
+        - {x: 39.5, y: 13.5}
+        - {x: 36.5, y: 34.5}
+      - - {x: -28.5, y: 21.5}
+        - {x: -29.5, y: 20.5}
+        - {x: -29.5, y: 11.5}
+        - {x: -23.5, y: 7.5}
+        - {x: -20.5, y: 8.5}
+        - {x: -20.5, y: 10.5}
+        - {x: -22.5, y: 20.5}
+        - {x: -25.5, y: 21.5}
+    - name: Johnny_103
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 444
+        width: 53
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.5, y: 34.5}
+        - {x: -26.5, y: 21.5}
+        - {x: -12.5, y: -34.5}
+        - {x: 26.5, y: -34.5}
+        - {x: 26.5, y: 34.5}
+    - name: Johnny_104
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 444
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 34.5}
+        - {x: -18.5, y: 30.5}
+        - {x: -18.5, y: -28.5}
+        - {x: -16.5, y: -34.5}
+        - {x: -5.5, y: -34.5}
+        - {x: -2.5, y: -33.5}
+        - {x: -0.5, y: -29.5}
+        - {x: 5.5, y: -34.5}
+        - {x: 18.5, y: -34.5}
+        - {x: 18.5, y: 34.5}
+    - name: Johnny_105
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 345
+        width: 53
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.5, y: 39}
+        - {x: -17.5, y: 39}
+        - {x: -17.5, y: 36}
+        - {x: -26.5, y: 10}
+        - {x: -26.5, y: -19}
+        - {x: -15.5, y: -39}
+        - {x: -3.5, y: -39}
+        - {x: -3.5, y: -36}
+        - {x: 26.5, y: -11}
+        - {x: 26.5, y: 15}
+    - name: Johnny_106
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 345
+        width: 79
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.5, y: 34.5}
+        - {x: -9.5, y: 30.5}
+        - {x: -9.5, y: 28.5}
+        - {x: -7.5, y: 26.5}
+        - {x: -8.5, y: 5.5}
+        - {x: -8.5, y: 2.5}
+        - {x: -3.5, y: 0.5}
+        - {x: -6.5, y: 1.5}
+        - {x: -19.5, y: 10.5}
+        - {x: -9.5, y: 29.5}
+        - {x: -10.5, y: 32.5}
+        - {x: -14.5, y: 34.5}
+        - {x: -39.5, y: 34.5}
+        - {x: -39.5, y: 3.5}
+        - {x: -3.5, y: -34.5}
+        - {x: 35.5, y: -34.5}
+        - {x: 39.5, y: -27.5}
+        - {x: 39.5, y: 21.5}
+        - {x: 0.5, y: 34.5}
+    - name: Johnny_107
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 345
+        width: 89
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0.5, y: 27.5}
+        - {x: -13.5, y: 27.5}
+        - {x: -17.5, y: 12.5}
+        - {x: -14.5, y: 9.5}
+        - {x: -44.5, y: 13.5}
+        - {x: -44.5, y: 2.5}
+        - {x: -24.5, y: -27.5}
+        - {x: 44.5, y: -27.5}
+        - {x: 44.5, y: 9.5}
+        - {x: 29.5, y: 16.5}
+    - name: Johnny_108
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 345
+        width: 103
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.5, y: -10}
+        - {x: 6.5, y: -10}
+        - {x: 6.5, y: -9}
+        - {x: 10.5, y: -12}
+        - {x: 12.5, y: -12}
+        - {x: 16.5, y: -8}
+        - {x: 25.5, y: -10}
+        - {x: 45.5, y: -2}
+        - {x: 51.5, y: 15}
+        - {x: 51.5, y: 30}
+        - {x: -33.5, y: 30}
+        - {x: -51.5, y: 17}
+        - {x: -51.5, y: -28}
+        - {x: -49.5, y: -30}
+        - {x: 28.5, y: -30}
+        - {x: 29.5, y: -28}
+        - {x: 16.5, y: -16}
+        - {x: 14.5, y: -17}
+    - name: Johnny_109
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 345
+        width: 109
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54.5, y: 22}
+        - {x: 36.5, y: 30}
+        - {x: -28.5, y: 30}
+        - {x: -54.5, y: 6}
+        - {x: -54.5, y: -30}
+        - {x: 39.5, y: -30}
+        - {x: 40.5, y: -28}
+        - {x: 19.5, y: -9}
+        - {x: 54.5, y: 15}
+    - name: Johnny_110
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 345
+        width: 104
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 30}
+        - {x: -33, y: 29}
+        - {x: -52, y: -9}
+        - {x: -52, y: -30}
+        - {x: 52, y: -30}
+        - {x: 52, y: 23}
+        - {x: 32, y: 30}
+    - name: Johnny_111
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 345
+        width: 73
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36.5, y: 23.5}
+        - {x: -36.5, y: -23.5}
+        - {x: 36.5, y: -23.5}
+        - {x: 36.5, y: 0.5}
+        - {x: 13.5, y: 23.5}
+    - name: Johnny_113
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 342
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25.5, y: -25}
+        - {x: 25.5, y: -5}
+        - {x: -7.5, y: 34}
+        - {x: -15.5, y: 36}
+        - {x: -25.5, y: 36}
+        - {x: -25.5, y: -36}
+        - {x: -15.5, y: -36}
+        - {x: -12.5, y: -31}
+        - {x: 5.5, y: -36}
+        - {x: 21.5, y: -36}
+    - name: Johnny_115
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 247
+        width: 68
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 35}
+        - {x: -9, y: 35}
+        - {x: -13, y: 26}
+        - {x: -34, y: 14}
+        - {x: -34, y: 5}
+        - {x: -19, y: -35}
+        - {x: 31, y: -35}
+        - {x: 34, y: -28}
+        - {x: 34, y: 8}
+        - {x: 23, y: 28}
+    - name: Johnny_116
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 247
+        width: 83
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.5, y: 33}
+        - {x: -17.5, y: 30}
+        - {x: -41.5, y: 5}
+        - {x: -41.5, y: -17}
+        - {x: -17.5, y: -33}
+        - {x: 40.5, y: -33}
+        - {x: 41.5, y: -32}
+        - {x: 41.5, y: -3}
+        - {x: 27.5, y: 33}
+    - name: Johnny_117
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 247
+        width: 68
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 35}
+        - {x: -9, y: 35}
+        - {x: -13, y: 26}
+        - {x: -34, y: 14}
+        - {x: -34, y: 5}
+        - {x: -19, y: -35}
+        - {x: 31, y: -35}
+        - {x: 34, y: -28}
+        - {x: 34, y: 8}
+        - {x: 23, y: 28}
+    - name: Johnny_118
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 247
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: 35.5}
+        - {x: -4, y: 35.5}
+        - {x: -5, y: 34.5}
+        - {x: -32, y: 29.5}
+        - {x: -32, y: -35.5}
+        - {x: 23, y: -35.5}
+        - {x: 24, y: -34.5}
+        - {x: 32, y: -27.5}
+        - {x: 32, y: -2.5}
+    - name: Johnny_122
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 149
+        width: 82
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Johnny_123
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 151
+        width: 77
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Johnny_119
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 40
+        width: 52
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 37}
+        - {x: -7, y: 37}
+        - {x: -9, y: 34}
+        - {x: -26, y: 33}
+        - {x: -26, y: 6}
+        - {x: -23, y: -15}
+        - {x: -12, y: -29}
+        - {x: -10, y: -28}
+        - {x: -7, y: -24}
+        - {x: -7, y: -21}
+        - {x: -6, y: -20}
+        - {x: -6, y: -19}
+        - {x: -7, y: -25}
+        - {x: -9, y: -28}
+        - {x: -9, y: -37}
+        - {x: 26, y: -37}
+        - {x: 26, y: 9}
+        - {x: 19, y: 28}
+    - name: Johnny_120
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 52
+        width: 75
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37.5, y: 13}
+        - {x: 31.5, y: 27}
+        - {x: -14.5, y: 27}
+        - {x: -28.5, y: 22}
+        - {x: -37.5, y: 1}
+        - {x: -37.5, y: -18}
+        - {x: 6.5, y: -27}
+        - {x: 37.5, y: -27}
+    - name: Johnny_121
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 63
+        width: 93
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.5, y: 19}
+        - {x: -46.5, y: -14}
+        - {x: -46.5, y: -19}
+        - {x: 40.5, y: -19}
+        - {x: 46.5, y: -11}
+        - {x: 46.5, y: 19}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
