@@ -13,6 +13,7 @@ public class Hero : MonoBehaviour {
 	protected float attackTimer, attackTimer_Max;
 	protected int state;
 	protected string ClassName;
+	public bool unlocked;
 	// Use this for initialization
 	protected virtual void Start () {
         

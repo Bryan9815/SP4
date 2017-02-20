@@ -30,10 +30,10 @@ public class HeroManager : MonoBehaviour {
 
 		foreach (var temp in gameobjprefab)
 		{
-			Hero t = Instantiate(temp as GameObject);
-			Debug.Log (t.gameObject);
-			Map_ofHeros_ID.Add(t.Get_Id(),t);
-			Map_ofHeros_Name.Add(t.Get_ClassName(),t);
+			//Hero t = Instantiate(temp as GameObject);
+//			Debug.Log (t.gameObject);
+//			Map_ofHeros_ID.Add(t.Get_Id(),t);
+//			Map_ofHeros_Name.Add(t.Get_ClassName(),t);
 		}
 
 		for (int i = 0; i < 3; i++)
