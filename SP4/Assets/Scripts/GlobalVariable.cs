@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class GlobalVariable : MonoBehaviour {
 
@@ -8,7 +9,7 @@ public class GlobalVariable : MonoBehaviour {
     private static float screenHeight;
     private static string PlayerName;
     private static int PlayerGoldG;
-
+	private static List<int> PlayerActiveHeroes;
     //Added using unity engine UI on top
     //is for just in case anyone need a global Text field 
     //or anything related in UI
@@ -38,6 +39,11 @@ public class GlobalVariable : MonoBehaviour {
         // Player Variables
         PlayerName = PlayerPrefs.GetString("userID", "");
         PlayerGoldG = PlayerPrefs.GetInt("Gold", 100);
+
+		PlayerActiveHeroes = new List<int> ();
+		PlayerActiveHeroes.Add (1);
+		PlayerActiveHeroes.Add (2);
+		PlayerActiveHeroes.Add (3);
 	}
 	
 	// Update is called once per frame
@@ -80,4 +86,14 @@ public class GlobalVariable : MonoBehaviour {
     {
         PlayerGoldG = newGold;
     }
+
+	public static void SetPlayerHeroID(int slot,int id)
+	{
+		PlayerActiveHeroes.Insert (slot, id);
+	}
+
+	public static int GetPlayerHeroID(int slot)
+	{
+		return PlayerActiveHeroes [slot];
+	}
 }
