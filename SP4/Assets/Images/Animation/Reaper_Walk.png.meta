@@ -1,0 +1,893 @@
+fileFormatVersion: 2
+guid: 8bf3372b8f920c640b26e682b41f7d04
+timeCreated: 1487564260
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Reaper_Walk_0
+    21300002: Reaper_Walk_1
+    21300004: Reaper_Walk_2
+    21300006: Reaper_Walk_3
+    21300008: Reaper_Walk_4
+    21300010: Reaper_Walk_5
+    21300012: Reaper_Walk_6
+    21300014: Reaper_Walk_7
+    21300016: Reaper_Walk_8
+    21300018: Reaper_Walk_9
+    21300020: Reaper_Walk_10
+    21300022: Reaper_Walk_11
+    21300024: Reaper_Walk_12
+    21300026: Reaper_Walk_13
+    21300028: Reaper_Walk_14
+    21300030: Reaper_Walk_15
+    21300032: Reaper_Walk_16
+    21300034: Reaper_Walk_17
+    21300036: Reaper_Walk_18
+    21300038: Reaper_Walk_19
+    21300040: Reaper_Walk_20
+    21300042: Reaper_Walk_21
+    21300044: Reaper_Walk_22
+    21300046: Reaper_Walk_23
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Reaper_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1272
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 141, y: -160}
+        - {x: 61, y: -4}
+        - {x: 141, y: 145}
+        - {x: 141, y: 175}
+        - {x: 82, y: 212}
+        - {x: -65, y: 212}
+        - {x: -89, y: 204}
+        - {x: -107, y: 175}
+        - {x: -108, y: 157}
+        - {x: -134, y: -65}
+        - {x: -132, y: -76}
+        - {x: -120, y: -80}
+        - {x: -77, y: -43}
+        - {x: -58, y: -55}
+        - {x: -132, y: -89}
+        - {x: -141, y: -101}
+        - {x: -141, y: -126}
+        - {x: -134, y: -135}
+        - {x: -127, y: -135}
+        - {x: -100, y: -192}
+        - {x: -83, y: -212}
+        - {x: 141, y: -212}
+    - name: Reaper_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1272
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 141, y: -160}
+        - {x: 61, y: -4}
+        - {x: 141, y: 145}
+        - {x: 141, y: 175}
+        - {x: 82, y: 212}
+        - {x: -65, y: 212}
+        - {x: -89, y: 204}
+        - {x: -107, y: 175}
+        - {x: -108, y: 157}
+        - {x: -134, y: -65}
+        - {x: -132, y: -76}
+        - {x: -120, y: -80}
+        - {x: -77, y: -43}
+        - {x: -58, y: -55}
+        - {x: -132, y: -89}
+        - {x: -141, y: -101}
+        - {x: -141, y: -126}
+        - {x: -134, y: -135}
+        - {x: -127, y: -135}
+        - {x: -100, y: -192}
+        - {x: -83, y: -212}
+        - {x: 141, y: -212}
+    - name: Reaper_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1272
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 141, y: -160}
+        - {x: 61, y: -4}
+        - {x: 141, y: 145}
+        - {x: 141, y: 175}
+        - {x: 82, y: 212}
+        - {x: -65, y: 212}
+        - {x: -89, y: 204}
+        - {x: -107, y: 175}
+        - {x: -108, y: 157}
+        - {x: -134, y: -65}
+        - {x: -132, y: -76}
+        - {x: -120, y: -80}
+        - {x: -77, y: -43}
+        - {x: -58, y: -55}
+        - {x: -132, y: -89}
+        - {x: -141, y: -101}
+        - {x: -141, y: -126}
+        - {x: -134, y: -135}
+        - {x: -127, y: -135}
+        - {x: -100, y: -192}
+        - {x: -83, y: -212}
+        - {x: 141, y: -212}
+    - name: Reaper_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 1272
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 141, y: -160}
+        - {x: 61, y: -4}
+        - {x: 141, y: 145}
+        - {x: 141, y: 175}
+        - {x: 82, y: 212}
+        - {x: -65, y: 212}
+        - {x: -89, y: 204}
+        - {x: -107, y: 175}
+        - {x: -108, y: 157}
+        - {x: -134, y: -65}
+        - {x: -132, y: -76}
+        - {x: -120, y: -80}
+        - {x: -77, y: -43}
+        - {x: -58, y: -55}
+        - {x: -132, y: -89}
+        - {x: -141, y: -101}
+        - {x: -141, y: -126}
+        - {x: -134, y: -135}
+        - {x: -127, y: -135}
+        - {x: -100, y: -192}
+        - {x: -83, y: -212}
+        - {x: 141, y: -212}
+    - name: Reaper_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 1272
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 132, y: 175}
+        - {x: 126, y: 204}
+        - {x: 75, y: 212}
+        - {x: -76, y: 212}
+        - {x: -97, y: 185}
+        - {x: -95, y: 172}
+        - {x: -47, y: 166}
+        - {x: -81, y: 74}
+        - {x: -141, y: -42}
+        - {x: -141, y: -71}
+        - {x: -132, y: -69}
+        - {x: -120, y: -62}
+        - {x: -126, y: -115}
+        - {x: -75, y: -190}
+        - {x: -67, y: -195}
+        - {x: -45, y: -196}
+        - {x: -20, y: -211}
+        - {x: 97, y: -211}
+        - {x: 92, y: -55}
+        - {x: 132, y: 144}
+    - name: Reaper_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1272
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 132, y: 175}
+        - {x: 126, y: 204}
+        - {x: 75, y: 212}
+        - {x: -76, y: 212}
+        - {x: -97, y: 185}
+        - {x: -95, y: 172}
+        - {x: -47, y: 166}
+        - {x: -81, y: 74}
+        - {x: -141, y: -42}
+        - {x: -141, y: -71}
+        - {x: -132, y: -69}
+        - {x: -120, y: -62}
+        - {x: -126, y: -115}
+        - {x: -75, y: -190}
+        - {x: -67, y: -195}
+        - {x: -45, y: -196}
+        - {x: -20, y: -211}
+        - {x: 97, y: -211}
+        - {x: 92, y: -55}
+        - {x: 132, y: 144}
+    - name: Reaper_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 848
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 132, y: 175}
+        - {x: 126, y: 204}
+        - {x: 75, y: 212}
+        - {x: -76, y: 212}
+        - {x: -97, y: 185}
+        - {x: -95, y: 172}
+        - {x: -47, y: 166}
+        - {x: -81, y: 74}
+        - {x: -141, y: -42}
+        - {x: -141, y: -71}
+        - {x: -132, y: -69}
+        - {x: -120, y: -62}
+        - {x: -126, y: -115}
+        - {x: -75, y: -190}
+        - {x: -67, y: -195}
+        - {x: -45, y: -196}
+        - {x: -20, y: -211}
+        - {x: 97, y: -211}
+        - {x: 92, y: -55}
+        - {x: 132, y: 144}
+    - name: Reaper_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 848
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 132, y: 175}
+        - {x: 126, y: 204}
+        - {x: 75, y: 212}
+        - {x: -76, y: 212}
+        - {x: -97, y: 185}
+        - {x: -95, y: 172}
+        - {x: -47, y: 166}
+        - {x: -81, y: 74}
+        - {x: -141, y: -42}
+        - {x: -141, y: -71}
+        - {x: -132, y: -69}
+        - {x: -120, y: -62}
+        - {x: -126, y: -115}
+        - {x: -75, y: -190}
+        - {x: -67, y: -195}
+        - {x: -45, y: -196}
+        - {x: -20, y: -211}
+        - {x: 97, y: -211}
+        - {x: 92, y: -55}
+        - {x: 132, y: 144}
+    - name: Reaper_Walk_8
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 848
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 123, y: 160}
+        - {x: 123, y: 177}
+        - {x: 108, y: 190}
+        - {x: 66, y: 212}
+        - {x: -58, y: 212}
+        - {x: -104, y: 184}
+        - {x: -113, y: 164}
+        - {x: 0, y: 151}
+        - {x: -40, y: 142}
+        - {x: -118, y: -27}
+        - {x: -128, y: -56}
+        - {x: -128, y: -111}
+        - {x: -118, y: -110}
+        - {x: -94, y: -211}
+        - {x: -6, y: -211}
+        - {x: 0, y: -210}
+        - {x: 14, y: -211}
+        - {x: 67, y: -211}
+        - {x: 74, y: -204}
+        - {x: 113, y: -96}
+        - {x: 72, y: 45}
+    - name: Reaper_Walk_9
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 848
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 123, y: 160}
+        - {x: 123, y: 177}
+        - {x: 108, y: 190}
+        - {x: 66, y: 212}
+        - {x: -58, y: 212}
+        - {x: -104, y: 184}
+        - {x: -113, y: 164}
+        - {x: 0, y: 151}
+        - {x: -40, y: 142}
+        - {x: -118, y: -27}
+        - {x: -128, y: -56}
+        - {x: -128, y: -111}
+        - {x: -118, y: -110}
+        - {x: -94, y: -211}
+        - {x: -6, y: -211}
+        - {x: 0, y: -210}
+        - {x: 14, y: -211}
+        - {x: 67, y: -211}
+        - {x: 74, y: -204}
+        - {x: 113, y: -96}
+        - {x: 72, y: 45}
+    - name: Reaper_Walk_10
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 848
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 123, y: 160}
+        - {x: 123, y: 177}
+        - {x: 108, y: 190}
+        - {x: 66, y: 212}
+        - {x: -58, y: 212}
+        - {x: -104, y: 184}
+        - {x: -113, y: 164}
+        - {x: 0, y: 151}
+        - {x: -40, y: 142}
+        - {x: -118, y: -27}
+        - {x: -128, y: -56}
+        - {x: -128, y: -111}
+        - {x: -118, y: -110}
+        - {x: -94, y: -211}
+        - {x: -6, y: -211}
+        - {x: 0, y: -210}
+        - {x: 14, y: -211}
+        - {x: 67, y: -211}
+        - {x: 74, y: -204}
+        - {x: 113, y: -96}
+        - {x: 72, y: 45}
+    - name: Reaper_Walk_11
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 848
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 123, y: 160}
+        - {x: 123, y: 177}
+        - {x: 108, y: 190}
+        - {x: 66, y: 212}
+        - {x: -58, y: 212}
+        - {x: -104, y: 184}
+        - {x: -113, y: 164}
+        - {x: 0, y: 151}
+        - {x: -40, y: 142}
+        - {x: -118, y: -27}
+        - {x: -128, y: -56}
+        - {x: -128, y: -111}
+        - {x: -118, y: -110}
+        - {x: -94, y: -211}
+        - {x: -6, y: -211}
+        - {x: 0, y: -210}
+        - {x: 14, y: -211}
+        - {x: 67, y: -211}
+        - {x: 74, y: -204}
+        - {x: 113, y: -96}
+        - {x: 72, y: 45}
+    - name: Reaper_Walk_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 424
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: -188}
+        - {x: 44, y: -211}
+        - {x: 98, y: -211}
+        - {x: 135, y: -210}
+        - {x: 136, y: -208}
+        - {x: 136, y: -191}
+        - {x: 105, y: -156}
+        - {x: 112, y: -25}
+        - {x: 71, y: 58}
+        - {x: 128, y: 183}
+        - {x: 92, y: 203}
+        - {x: 64, y: 212}
+        - {x: -56, y: 212}
+        - {x: -121, y: 179}
+        - {x: -111, y: 150}
+        - {x: -30, y: 117}
+        - {x: -98, y: 19}
+        - {x: -123, y: -84}
+        - {x: -118, y: -99}
+        - {x: -124, y: -122}
+        - {x: -124, y: -145}
+        - {x: -80, y: -210}
+        - {x: -78, y: -211}
+        - {x: -17, y: -211}
+        - {x: -10, y: -209}
+        - {x: -9, y: -195}
+    - name: Reaper_Walk_13
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 424
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: -188}
+        - {x: 44, y: -211}
+        - {x: 98, y: -211}
+        - {x: 135, y: -210}
+        - {x: 136, y: -208}
+        - {x: 136, y: -191}
+        - {x: 105, y: -156}
+        - {x: 112, y: -25}
+        - {x: 71, y: 58}
+        - {x: 128, y: 183}
+        - {x: 92, y: 203}
+        - {x: 64, y: 212}
+        - {x: -56, y: 212}
+        - {x: -121, y: 179}
+        - {x: -111, y: 150}
+        - {x: -30, y: 117}
+        - {x: -98, y: 19}
+        - {x: -123, y: -84}
+        - {x: -118, y: -99}
+        - {x: -124, y: -122}
+        - {x: -124, y: -145}
+        - {x: -80, y: -210}
+        - {x: -78, y: -211}
+        - {x: -17, y: -211}
+        - {x: -10, y: -209}
+        - {x: -9, y: -195}
+    - name: Reaper_Walk_14
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 424
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: -188}
+        - {x: 44, y: -211}
+        - {x: 98, y: -211}
+        - {x: 135, y: -210}
+        - {x: 136, y: -208}
+        - {x: 136, y: -191}
+        - {x: 105, y: -156}
+        - {x: 112, y: -25}
+        - {x: 71, y: 58}
+        - {x: 128, y: 183}
+        - {x: 92, y: 203}
+        - {x: 64, y: 212}
+        - {x: -56, y: 212}
+        - {x: -121, y: 179}
+        - {x: -111, y: 150}
+        - {x: -30, y: 117}
+        - {x: -98, y: 19}
+        - {x: -123, y: -84}
+        - {x: -118, y: -99}
+        - {x: -124, y: -122}
+        - {x: -124, y: -145}
+        - {x: -80, y: -210}
+        - {x: -78, y: -211}
+        - {x: -17, y: -211}
+        - {x: -10, y: -209}
+        - {x: -9, y: -195}
+    - name: Reaper_Walk_15
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 424
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: -188}
+        - {x: 44, y: -211}
+        - {x: 98, y: -211}
+        - {x: 135, y: -210}
+        - {x: 136, y: -208}
+        - {x: 136, y: -191}
+        - {x: 105, y: -156}
+        - {x: 112, y: -25}
+        - {x: 71, y: 58}
+        - {x: 128, y: 183}
+        - {x: 92, y: 203}
+        - {x: 64, y: 212}
+        - {x: -56, y: 212}
+        - {x: -121, y: 179}
+        - {x: -111, y: 150}
+        - {x: -30, y: 117}
+        - {x: -98, y: 19}
+        - {x: -123, y: -84}
+        - {x: -118, y: -99}
+        - {x: -124, y: -122}
+        - {x: -124, y: -145}
+        - {x: -80, y: -210}
+        - {x: -78, y: -211}
+        - {x: -17, y: -211}
+        - {x: -10, y: -209}
+        - {x: -9, y: -195}
+    - name: Reaper_Walk_16
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 424
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 70, y: 61}
+        - {x: 116, y: 139}
+        - {x: 116, y: 187}
+        - {x: 110, y: 199}
+        - {x: 69, y: 203}
+        - {x: -70, y: 203}
+        - {x: -119, y: 157}
+        - {x: -113, y: 141}
+        - {x: -30, y: 124}
+        - {x: -89, y: 46}
+        - {x: -119, y: -68}
+        - {x: -119, y: -100}
+        - {x: -108, y: -100}
+        - {x: -64, y: -54}
+        - {x: -48, y: -37}
+        - {x: -100, y: -135}
+        - {x: -102, y: -210}
+        - {x: -97, y: -212}
+        - {x: 63, y: -212}
+        - {x: 64, y: -211}
+        - {x: 65, y: -199}
+        - {x: 85, y: -43}
+    - name: Reaper_Walk_17
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 424
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 70, y: 61}
+        - {x: 116, y: 139}
+        - {x: 116, y: 187}
+        - {x: 110, y: 199}
+        - {x: 69, y: 203}
+        - {x: -70, y: 203}
+        - {x: -119, y: 157}
+        - {x: -113, y: 141}
+        - {x: -30, y: 124}
+        - {x: -89, y: 46}
+        - {x: -119, y: -68}
+        - {x: -119, y: -100}
+        - {x: -108, y: -100}
+        - {x: -64, y: -54}
+        - {x: -48, y: -37}
+        - {x: -100, y: -135}
+        - {x: -102, y: -210}
+        - {x: -97, y: -212}
+        - {x: 63, y: -212}
+        - {x: 64, y: -211}
+        - {x: 65, y: -199}
+        - {x: 85, y: -43}
+    - name: Reaper_Walk_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 70, y: 61}
+        - {x: 116, y: 139}
+        - {x: 116, y: 187}
+        - {x: 110, y: 199}
+        - {x: 69, y: 203}
+        - {x: -70, y: 203}
+        - {x: -119, y: 157}
+        - {x: -113, y: 141}
+        - {x: -30, y: 124}
+        - {x: -89, y: 46}
+        - {x: -119, y: -68}
+        - {x: -119, y: -100}
+        - {x: -108, y: -100}
+        - {x: -64, y: -54}
+        - {x: -48, y: -37}
+        - {x: -100, y: -135}
+        - {x: -102, y: -210}
+        - {x: -97, y: -212}
+        - {x: 63, y: -212}
+        - {x: 64, y: -211}
+        - {x: 65, y: -199}
+        - {x: 85, y: -43}
+    - name: Reaper_Walk_19
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 0
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 70, y: 61}
+        - {x: 116, y: 139}
+        - {x: 116, y: 187}
+        - {x: 110, y: 199}
+        - {x: 69, y: 203}
+        - {x: -70, y: 203}
+        - {x: -119, y: 157}
+        - {x: -113, y: 141}
+        - {x: -30, y: 124}
+        - {x: -89, y: 46}
+        - {x: -119, y: -68}
+        - {x: -119, y: -100}
+        - {x: -108, y: -100}
+        - {x: -64, y: -54}
+        - {x: -48, y: -37}
+        - {x: -100, y: -135}
+        - {x: -102, y: -210}
+        - {x: -97, y: -212}
+        - {x: 63, y: -212}
+        - {x: 64, y: -211}
+        - {x: 65, y: -199}
+        - {x: 85, y: -43}
+    - name: Reaper_Walk_20
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 0
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25, y: -206}
+        - {x: 41, y: -212}
+        - {x: 90, y: -212}
+        - {x: 110, y: -175}
+        - {x: 110, y: -142}
+        - {x: 66, y: -13}
+        - {x: 110, y: 106}
+        - {x: 110, y: 178}
+        - {x: 61, y: 203}
+        - {x: -48, y: 203}
+        - {x: -81, y: 195}
+        - {x: -122, y: 158}
+        - {x: -122, y: 137}
+        - {x: -25, y: 105}
+        - {x: -85, y: 66}
+        - {x: -100, y: -6}
+        - {x: -124, y: -76}
+        - {x: -125, y: -81}
+        - {x: -125, y: -96}
+        - {x: -114, y: -101}
+        - {x: -89, y: -209}
+        - {x: -59, y: -212}
+        - {x: 11, y: -212}
+        - {x: 14, y: -197}
+        - {x: -1, y: -175}
+        - {x: 9, y: -189}
+    - name: Reaper_Walk_21
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 0
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25, y: -206}
+        - {x: 41, y: -212}
+        - {x: 90, y: -212}
+        - {x: 110, y: -175}
+        - {x: 110, y: -142}
+        - {x: 66, y: -13}
+        - {x: 110, y: 106}
+        - {x: 110, y: 178}
+        - {x: 61, y: 203}
+        - {x: -48, y: 203}
+        - {x: -81, y: 195}
+        - {x: -122, y: 158}
+        - {x: -122, y: 137}
+        - {x: -25, y: 105}
+        - {x: -85, y: 66}
+        - {x: -100, y: -6}
+        - {x: -124, y: -76}
+        - {x: -125, y: -81}
+        - {x: -125, y: -96}
+        - {x: -114, y: -101}
+        - {x: -89, y: -209}
+        - {x: -59, y: -212}
+        - {x: 11, y: -212}
+        - {x: 14, y: -197}
+        - {x: -1, y: -175}
+        - {x: 9, y: -189}
+    - name: Reaper_Walk_22
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 0
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25, y: -206}
+        - {x: 41, y: -212}
+        - {x: 90, y: -212}
+        - {x: 110, y: -175}
+        - {x: 110, y: -142}
+        - {x: 66, y: -13}
+        - {x: 110, y: 106}
+        - {x: 110, y: 178}
+        - {x: 61, y: 203}
+        - {x: -48, y: 203}
+        - {x: -81, y: 195}
+        - {x: -122, y: 158}
+        - {x: -122, y: 137}
+        - {x: -25, y: 105}
+        - {x: -85, y: 66}
+        - {x: -100, y: -6}
+        - {x: -124, y: -76}
+        - {x: -125, y: -81}
+        - {x: -125, y: -96}
+        - {x: -114, y: -101}
+        - {x: -89, y: -209}
+        - {x: -59, y: -212}
+        - {x: 11, y: -212}
+        - {x: 14, y: -197}
+        - {x: -1, y: -175}
+        - {x: 9, y: -189}
+    - name: Reaper_Walk_23
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 0
+        width: 282
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25, y: -206}
+        - {x: 41, y: -212}
+        - {x: 90, y: -212}
+        - {x: 110, y: -175}
+        - {x: 110, y: -142}
+        - {x: 66, y: -13}
+        - {x: 110, y: 106}
+        - {x: 110, y: 178}
+        - {x: 61, y: 203}
+        - {x: -48, y: 203}
+        - {x: -81, y: 195}
+        - {x: -122, y: 158}
+        - {x: -122, y: 137}
+        - {x: -25, y: 105}
+        - {x: -85, y: 66}
+        - {x: -100, y: -6}
+        - {x: -124, y: -76}
+        - {x: -125, y: -81}
+        - {x: -125, y: -96}
+        - {x: -114, y: -101}
+        - {x: -89, y: -209}
+        - {x: -59, y: -212}
+        - {x: 11, y: -212}
+        - {x: 14, y: -197}
+        - {x: -1, y: -175}
+        - {x: 9, y: -189}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
