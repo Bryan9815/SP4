@@ -47,7 +47,7 @@ public class BlockManager : MonoBehaviour {
         {
             Block_Spawn_Timer = 0.0f;
             SpawnNewBlock(Random.Range(1, 3));
-            Debug.Log("Block spawned");
+            //Debug.Log("Block spawned");
         }
         for (int i = 0; i < Listof_Blocks.Count; ++i)
         {
@@ -67,7 +67,7 @@ public class BlockManager : MonoBehaviour {
 				temp.Travel(travel_limit);
             }
         }
-		Debug.Log (Listof_Blocks.Count);
+		//Debug.Log (Listof_Blocks.Count);
 	}
 
     public Button SpawnNewBlock(int hero_slot)

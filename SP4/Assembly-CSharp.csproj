@@ -45,11 +45,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Resources\Heroes\Leon.cs" />
      <Compile Include="Assets\Scripts\BoolPrefs.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Block.cs" />
      <Compile Include="Assets\Scripts\Gameplay\BlockManager.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Hero.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\HeroHolder.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\HeroManager.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\ListofAllHeroes.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\TemplateHero.cs" />
      <Compile Include="Assets\Scripts\GlobalVariable.cs" />
      <Compile Include="Assets\Scripts\HighScore.cs" />
      <Compile Include="Assets\Scripts\Intro.cs" />

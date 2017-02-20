@@ -132,8 +132,6 @@ public class Block : MonoBehaviour {
 		}
 	}	
 
-
-
     public void Activate()
     {
 		// if still traveling, dont activate
