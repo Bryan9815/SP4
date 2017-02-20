@@ -17,7 +17,7 @@ public class HeroManager : MonoBehaviour {
 //		Active_Hero2.GetComponent<HeroHolder> ().Set_GameObject();
 //		Active_Hero3.GetComponent<HeroHolder> ().Set_GameObject();
 
-		Active_Hero1.GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().unlocked = true;
+		//Active_Hero1.GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().unlocked = true;
 	}
 
 	// Update is called once per frame
