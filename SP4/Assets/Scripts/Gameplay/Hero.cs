@@ -148,6 +148,6 @@ public class Hero : MonoBehaviour {
 
 	public virtual void Exit()
 	{
-		Destroy (this);
+		Destroy (gameObject);
 	}
 }

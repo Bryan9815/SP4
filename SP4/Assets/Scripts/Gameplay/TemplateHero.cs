@@ -151,6 +151,6 @@ public class TemplateHero : Hero {
 
 	public override void Exit()
 	{
-
+		Destroy (gameObject);
 	}
 }

@@ -161,6 +161,6 @@ public class Leon : Hero {
 
 	public override void Exit()
 	{
-
+		Destroy (gameObject);
 	}
 }
