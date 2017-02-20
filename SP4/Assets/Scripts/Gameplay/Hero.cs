@@ -3,11 +3,12 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Hero : MonoBehaviour {
-    public static float Attack,Defense, Resistance, Speed, Accuracy, Evasion;
-    public static Image hero;
-    public static string name;
-    public int level;
-    public float exp, max_exp;
+    protected static float hp,Attack,Defense, Resistance, Speed, Accuracy, Evasion;
+    protected static Image hero;
+    protected int sp;
+    protected static string name;
+    protected int level;
+    protected float exp, max_exp;
     public bool unlocked;
 	// Use this for initialization
 	void Start () {
@@ -75,6 +76,14 @@ public class Hero : MonoBehaviour {
 
     }
 
+    public float GetHealth()
+    {
+        return hp;
+    }
+    public int GetSP()
+    {
+        return sp;
+    }
     public float GetAttack()
     {
         return Attack;
@@ -86,5 +95,37 @@ public class Hero : MonoBehaviour {
     public Image GetImage()
     {
         return hero;
+    }
+    public float GetResistance()
+    {
+        return Resistance;
+    }
+    public float GetSpeed()
+    {
+        return Speed;
+    }
+    public float GetAccuracy()
+    {
+        return Accuracy;
+    }
+    public float GetEvasion()
+    {
+        return Evasion;
+    }
+    public int GetLevel()
+    {
+        return level;
+    }
+    public string GetHeroName()
+    {
+        return name;
+    }
+    public float GetExp()
+    {
+        return exp;
+    }
+    public float GetMaxExp()
+    {
+        return max_exp;
     }
 }
