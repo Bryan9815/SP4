@@ -38,6 +38,16 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
+<<<<<<< HEAD
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Scripts\AutoFade.cs" />
+=======
       <HintPath>D:/unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
@@ -46,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Resources\Heroes\Leon.cs" />
+>>>>>>> 19170c5bb788146b0c0c1e821cae2488135304db
      <Compile Include="Assets\Scripts\BoolPrefs.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Block.cs" />
@@ -77,10 +88,17 @@
      <None Include="Assets\Texture Packer\Editor\SettingsTexturePackerImporter.txt" />
      <None Include="Assets\Texture Packer\Readme.txt" />
  <Reference Include="UnityEngine.UI">
+<<<<<<< HEAD
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+=======
  <HintPath>D:/unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>D:/unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+>>>>>>> 19170c5bb788146b0c0c1e821cae2488135304db
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
