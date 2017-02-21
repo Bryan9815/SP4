@@ -87,6 +87,7 @@ public class BlockManager : MonoBehaviour {
 		newObject.GetComponent<RectTransform> ().localScale = temp;
 		newObject.gameObject.SetActive(true);
 		newObject.gameObject.GetComponent<Block> ().set_Active (true);
+		newObject.gameObject.GetComponent<Block> ().set_HeroSlot (hero_slot);
 //		newObject.GetComponent<Button>().onClick.AddListener (delegate() {
 //			this.GetComponent<Block>().Activate();
 //		});

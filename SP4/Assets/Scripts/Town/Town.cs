@@ -5,9 +5,10 @@ using System.Collections;
 public class Town : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () 
+	void Start ()
     {
-	
+        AutoFade AF = GameObject.FindGameObjectWithTag("Fader").GetComponent<AutoFade>();
+        StartCoroutine(AF.FadeToClear());
 	}
 	
 	// Update is called once per frame
