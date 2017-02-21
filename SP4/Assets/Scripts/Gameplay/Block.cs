@@ -12,6 +12,7 @@ public class Block : MonoBehaviour {
     public float Block_Travel_Speed; // block travel speed
 	public bool set; // if block still travelling
 	public float collide_allowance;
+	public Sprite Block_Img;
     public enum Chain
     {
         One_Chain,

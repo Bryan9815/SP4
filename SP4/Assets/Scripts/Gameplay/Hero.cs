@@ -68,7 +68,7 @@ public class Hero : MonoBehaviour {
     }
 
     // when attacked
-	public virtual void getHit()
+	public virtual void getHit(int damagetaken)
     {
         //calculate how damage is taken here
 
