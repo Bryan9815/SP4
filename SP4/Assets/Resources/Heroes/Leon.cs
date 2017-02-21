@@ -15,6 +15,8 @@ public class Leon : Hero {
 	{
 		Idle,
 		Attack,
+
+		Death,
 	}
 	// Use this for initialization
 	protected override void Start () {
