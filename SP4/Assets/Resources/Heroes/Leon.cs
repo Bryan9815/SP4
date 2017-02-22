@@ -22,6 +22,9 @@ public class Leon : Hero {
 	protected override void Start () {
 		id = 1;
 		ClassName = "Leon";
+
+
+
 	}
 
 	// Update is called once per frame
@@ -74,7 +77,7 @@ public class Leon : Hero {
 	}
 
 	// when attacked
-	public override void getHit()
+	public override void getHit(int damagetaken)
 	{
 		//calculate how damage is taken here
 
