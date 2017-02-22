@@ -43,7 +43,7 @@ public class WaveManager : MonoBehaviour
         Vector3 tempPos;
         switch(mobID)
         {
-            case 0:
+            case 0: // Orc
                 tempPos = new Vector3((float)(Random.Range(Screen.width / 20, Screen.width / 10)), gameObject.transform.position.y, gameObject.transform.position.z);
                 GameObject newOrc = Instantiate(Orc, tempPos, Orc.transform.rotation) as GameObject;
                 newOrc.SetActive(true);
@@ -54,53 +54,137 @@ public class WaveManager : MonoBehaviour
                 }
                 ListOfMobs.Add(newOrc);
                 break;
-            case 1:
+            case 1: // Green Dwarf Miner
                 tempPos = new Vector3((float)(Random.Range(Screen.width / 20, Screen.width / 10)), gameObject.transform.position.y, gameObject.transform.position.z);
                 GameObject newG_Dwarf_Miner = Instantiate(G_Dwarf_Miner, tempPos, G_Dwarf_Miner.transform.rotation) as GameObject;
+                newG_Dwarf_Miner.SetActive(true);
+                if (newG_Dwarf_Miner == null)
+                {
+                    Debug.Log("newG_Dwarf_Miner is Null");
+                    return;
+                }
+                Debug.Log("G_DwarMiner: " + newG_Dwarf_Miner);
                 ListOfMobs.Add(newG_Dwarf_Miner);
                 break;
-            case 2:
-                GameObject newG_Dwarf_Warrior = Instantiate(G_Dwarf_Warrior);
+            case 2: // Green Dwarf Warrior
+                tempPos = new Vector3((float)(Random.Range(Screen.width / 20, Screen.width / 10)), gameObject.transform.position.y, gameObject.transform.position.z);
+                GameObject newG_Dwarf_Warrior = Instantiate(G_Dwarf_Warrior, tempPos, G_Dwarf_Warrior.transform.rotation) as GameObject;
+                newG_Dwarf_Warrior.SetActive(true);
+                if (newG_Dwarf_Warrior == null)
+                {
+                    Debug.Log("newG_Dwarf_Warrior is Null");
+                    return;
+                }
                 ListOfMobs.Add(newG_Dwarf_Warrior);
                 break;
-            case 3:
-                GameObject newG_Dwarf_Archer = Instantiate(G_Dwarf_Archer);
+            case 3: // Green Dwarf Archer
+                tempPos = new Vector3((float)(Random.Range(Screen.width / 20, Screen.width / 10)), gameObject.transform.position.y, gameObject.transform.position.z);
+                GameObject newG_Dwarf_Archer = Instantiate(G_Dwarf_Archer, tempPos, G_Dwarf_Archer.transform.rotation) as GameObject;
+                newG_Dwarf_Archer.SetActive(true);
+                if (newG_Dwarf_Archer == null)
+                {
+                    Debug.Log("newG_Dwarf_Archer is Null");
+                    return;
+                }
                 ListOfMobs.Add(newG_Dwarf_Archer);
                 break;
-            case 4:
-                GameObject newB_Dwarf_Miner = Instantiate(B_Dwarf_Miner);
+            case 4: // Blue Dwarf Miner
+                tempPos = new Vector3((float)(Random.Range(Screen.width / 20, Screen.width / 10)), gameObject.transform.position.y, gameObject.transform.position.z);
+                GameObject newB_Dwarf_Miner = Instantiate(B_Dwarf_Miner, tempPos, B_Dwarf_Miner.transform.rotation) as GameObject;
+                newB_Dwarf_Miner.SetActive(true);
+                if (newB_Dwarf_Miner == null)
+                {
+                    Debug.Log("newB_Dwarf_Miner is Null");
+                    return;
+                }
                 ListOfMobs.Add(newB_Dwarf_Miner);
                 break;
-            case 5:
-                GameObject newB_Dwarf_Warrior = Instantiate(B_Dwarf_Warrior);
+            case 5: // Blue Dwarf Warrior
+                tempPos = new Vector3((float)(Random.Range(Screen.width / 20, Screen.width / 10)), gameObject.transform.position.y, gameObject.transform.position.z);
+                GameObject newB_Dwarf_Warrior = Instantiate(B_Dwarf_Warrior, tempPos, B_Dwarf_Warrior.transform.rotation) as GameObject;
+                newB_Dwarf_Warrior.SetActive(true);
+                if (newB_Dwarf_Warrior == null)
+                {
+                    Debug.Log("newB_Dwarf_Warrior is Null");
+                    return;
+                }
                 ListOfMobs.Add(newB_Dwarf_Warrior);
                 break;
-            case 6:
-                GameObject newB_Dwarf_Archer = Instantiate(B_Dwarf_Archer);
+            case 6: // Blue Dwarf Archer
+                tempPos = new Vector3((float)(Random.Range(Screen.width / 20, Screen.width / 10)), gameObject.transform.position.y, gameObject.transform.position.z);
+                GameObject newB_Dwarf_Archer = Instantiate(B_Dwarf_Archer, tempPos, B_Dwarf_Archer.transform.rotation) as GameObject;
+                newB_Dwarf_Archer.SetActive(true);
+                if (newB_Dwarf_Archer == null)
+                {
+                    Debug.Log("newB_Dwarf_Archer is Null");
+                    return;
+                }
                 ListOfMobs.Add(newB_Dwarf_Archer);
                 break;
-            case 7:
-                GameObject newR_Dwarf_Miner = Instantiate(R_Dwarf_Miner);
+            case 7: // Red Dwarf Miner
+                tempPos = new Vector3((float)(Random.Range(Screen.width / 20, Screen.width / 10)), gameObject.transform.position.y, gameObject.transform.position.z);
+                GameObject newR_Dwarf_Miner = Instantiate(R_Dwarf_Miner, tempPos, R_Dwarf_Miner.transform.rotation) as GameObject;
+                newR_Dwarf_Miner.SetActive(true);
+                if (newR_Dwarf_Miner == null)
+                {
+                    Debug.Log("newR_Dwarf_Miner is Null");
+                    return;
+                }
                 ListOfMobs.Add(newR_Dwarf_Miner);
                 break;
-            case 8:
-                GameObject newR_Dwarf_Warrior = Instantiate(R_Dwarf_Warrior);
+            case 8: // Red Dwarf Warrior
+                tempPos = new Vector3((float)(Random.Range(Screen.width / 20, Screen.width / 10)), gameObject.transform.position.y, gameObject.transform.position.z);
+                GameObject newR_Dwarf_Warrior = Instantiate(R_Dwarf_Warrior, tempPos, R_Dwarf_Warrior.transform.rotation) as GameObject;
+                newR_Dwarf_Warrior.SetActive(true);
+                if (newR_Dwarf_Warrior == null)
+                {
+                    Debug.Log("newR_Dwarf_Warrior is Null");
+                    return;
+                }
                 ListOfMobs.Add(newR_Dwarf_Warrior);
                 break;
-            case 9:
-                GameObject newR_Dwarf_Archer = Instantiate(R_Dwarf_Archer);
+            case 9: // Red Dwarf Archer
+                tempPos = new Vector3((float)(Random.Range(Screen.width / 20, Screen.width / 10)), gameObject.transform.position.y, gameObject.transform.position.z);
+                GameObject newR_Dwarf_Archer = Instantiate(R_Dwarf_Archer, tempPos, R_Dwarf_Archer.transform.rotation) as GameObject;
+                newR_Dwarf_Archer.SetActive(true);
+                if (newR_Dwarf_Archer == null)
+                {
+                    Debug.Log("newR_Dwarf_Archer is Null");
+                    return;
+                }
                 ListOfMobs.Add(newR_Dwarf_Archer);
                 break;
-            case 10:
-                GameObject newU_Dwarf_Miner = Instantiate(U_Dwarf_Miner);
+            case 10: // Black Dwarf Miner
+                tempPos = new Vector3((float)(Random.Range(Screen.width / 20, Screen.width / 10)), gameObject.transform.position.y, gameObject.transform.position.z);
+                GameObject newU_Dwarf_Miner = Instantiate(U_Dwarf_Miner, tempPos, U_Dwarf_Miner.transform.rotation) as GameObject;
+                newU_Dwarf_Miner.SetActive(true);
+                if (newU_Dwarf_Miner == null)
+                {
+                    Debug.Log("newU_Dwarf_Miner is Null");
+                    return;
+                }
                 ListOfMobs.Add(newU_Dwarf_Miner);
                 break;
-            case 11:
-                GameObject newU_Dwarf_Warrior = Instantiate(U_Dwarf_Warrior);
+            case 11: // Black Dwarf Warrior
+                tempPos = new Vector3((float)(Random.Range(Screen.width / 20, Screen.width / 10)), gameObject.transform.position.y, gameObject.transform.position.z);
+                GameObject newU_Dwarf_Warrior = Instantiate(U_Dwarf_Warrior, tempPos, U_Dwarf_Warrior.transform.rotation) as GameObject;
+                newU_Dwarf_Warrior.SetActive(true);
+                if (newU_Dwarf_Warrior == null)
+                {
+                    Debug.Log("newU_Dwarf_Warrior is Null");
+                    return;
+                }
                 ListOfMobs.Add(newU_Dwarf_Warrior);
                 break;
-            case 12:
-                GameObject newU_Dwarf_Archer = Instantiate(U_Dwarf_Archer);
+            case 12: // Black Dwarf Archer
+                tempPos = new Vector3((float)(Random.Range(Screen.width / 20, Screen.width / 10)), gameObject.transform.position.y, gameObject.transform.position.z);
+                GameObject newU_Dwarf_Archer = Instantiate(U_Dwarf_Archer, tempPos, U_Dwarf_Archer.transform.rotation) as GameObject;
+                newU_Dwarf_Archer.SetActive(true);
+                if (newU_Dwarf_Archer == null)
+                {
+                    Debug.Log("newU_Dwarf_Archer is Null");
+                    return;
+                }
                 ListOfMobs.Add(newU_Dwarf_Archer);
                 break;
             default:
@@ -117,11 +201,12 @@ public class WaveManager : MonoBehaviour
                 SpawnMobs(0);
             }
         }
-        else if (WaveNumber > 3 && WaveNumber <= 4)
+        else if (WaveNumber > 3 && WaveNumber <= 5)
         {
+            int temp = Random.Range(0, 1);
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(0, 1));
+               SpawnMobs(temp);
             }
         }
         else if (WaveNumber > 5 && WaveNumber <= 7)
@@ -208,6 +293,7 @@ public class WaveManager : MonoBehaviour
                 SpawnMobs(Random.Range(9, 12));
             }
         }
+        Debug.Log("Wave Number: " + WaveNumber);
     }
 
     void WaveTransition()
@@ -216,6 +302,5 @@ public class WaveManager : MonoBehaviour
         RandomizeMobNumber();
         GenerateMobs();
         WaveOver = false;
-        Debug.Log("Wave Number: " + WaveNumber);
     }
 }
