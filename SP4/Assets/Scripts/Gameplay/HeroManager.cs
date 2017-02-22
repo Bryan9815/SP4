@@ -13,7 +13,7 @@ public class HeroManager : MonoBehaviour {
 	void Start () {
 		int id_1 = 1;//GlobalVariable.GetPlayerHeroID (0);
 		GameObject temp = (GameObject)Resources.Load ("Heroes/" + id_1.ToString(), typeof(GameObject));
-		Active_Hero1.GetComponent<HeroHolder> ().Set_GameObject(Instantiate(temp));
+		//Active_Hero1.GetComponent<HeroHolder> ().Set_GameObject(Instantiate(temp));
 //		Active_Hero2.GetComponent<HeroHolder> ().Set_GameObject();
 //		Active_Hero3.GetComponent<HeroHolder> ().Set_GameObject();
 

@@ -18,6 +18,8 @@ public class Mob : MonoBehaviour
         Hp = 1;
         Defense = 1;
 
+        HeroList = new List<GameObject>();
+
         HeroList.Add(Hero1);
         HeroList.Add(Hero2);
         HeroList.Add(Hero3);
