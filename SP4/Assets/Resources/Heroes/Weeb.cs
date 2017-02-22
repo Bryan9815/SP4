@@ -86,7 +86,7 @@ public class Weeb : Hero
     }
 
     // when attacked
-    public override void getHit()
+    public override void getHit(int damagetaken)
     {
         //calculate how damage is taken here
 

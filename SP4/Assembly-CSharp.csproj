@@ -38,15 +38,28 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Resources\Heroes\Leon.cs" />
      <Compile Include="Assets\Resources\Heroes\Weeb.cs" />
+     <Compile Include="Assets\Resources\Mobs\B_DwarfArcher.cs" />
+     <Compile Include="Assets\Resources\Mobs\B_DwarfMiner.cs" />
+     <Compile Include="Assets\Resources\Mobs\B_DwarfWarrior.cs" />
+     <Compile Include="Assets\Resources\Mobs\G_DwarfArcher.cs" />
+     <Compile Include="Assets\Resources\Mobs\G_DwarfMiner.cs" />
+     <Compile Include="Assets\Resources\Mobs\G_DwarfWarrior.cs" />
+     <Compile Include="Assets\Resources\Mobs\Orc.cs" />
+     <Compile Include="Assets\Resources\Mobs\R_DwarfArcher.cs" />
+     <Compile Include="Assets\Resources\Mobs\R_DwarfMiner.cs" />
+     <Compile Include="Assets\Resources\Mobs\R_DwarfWarrior.cs" />
+     <Compile Include="Assets\Resources\Mobs\U_DwarfArcher.cs" />
+     <Compile Include="Assets\Resources\Mobs\U_DwarfMiner.cs" />
+     <Compile Include="Assets\Resources\Mobs\U_DwarfWarrior.cs" />
      <Compile Include="Assets\Scripts\AutoFade.cs" />
      <Compile Include="Assets\Scripts\BoolPrefs.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
@@ -56,7 +69,9 @@
      <Compile Include="Assets\Scripts\Gameplay\HeroHolder.cs" />
      <Compile Include="Assets\Scripts\Gameplay\HeroManager.cs" />
      <Compile Include="Assets\Scripts\Gameplay\ListofAllHeroes.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Mob.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TemplateHero.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\WaveManager.cs" />
      <Compile Include="Assets\Scripts\GlobalVariable.cs" />
      <Compile Include="Assets\Scripts\HighScore.cs" />
      <Compile Include="Assets\Scripts\Intro.cs" />
@@ -79,10 +94,10 @@
      <None Include="Assets\Texture Packer\Editor\SettingsTexturePackerImporter.txt" />
      <None Include="Assets\Texture Packer\Readme.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
