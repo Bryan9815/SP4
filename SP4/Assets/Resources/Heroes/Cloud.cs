@@ -2,9 +2,9 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Weeb : Hero 
+public class Cloud : Hero
 {
-    static Weeb _instance;
+    static Cloud _instance;
     Animator anim;
     enum States // for animation
     {
@@ -16,21 +16,21 @@ public class Weeb : Hero
     // Use this for initialization
     protected override void Start()
     {
-        id = 2;
-        ClassName = "Weeb";                                             //Weeb's Class Name
-        Hp = level * 10 + 81;                                           //Weeb's Health Points
-        Attack = Attack = level * 20.775f + 9;                          //Weeb's Attack Value
-        Defense = Defense = (level * 6.4f) + (Attack / 100) + 5;        //Weeb's Defense Value
+        id = 1;
+        ClassName = "Cloud";                                            //Cloud's Class Name
+        Hp = level * 10 + 105;                                          //Cloud's Health Points
+        Attack = level * 17.25f + 9;                                    //Cloud's Attack Value
+        Defense = (level * 14.31f) + (Attack / 100) + 5;                //Cloud's Defense Value
         Resistance = 1;                                                             //Useless Stat 1:What is this going to be for if we already have defense?
         Speed = 1;                                                                  //Useless Stat 2: If our hero is static, why is there a need for this
         Accuracy = 1;                                                       //Not really sure if we need this
-        Evasion = 48 + ((Defense / 12));                                //Weeb's Evasion Rate (Maximum of 100% of course)
-	    Sp = 100;                                                       //Weeb's Special Points for ultimate (Sort of)
-        //hero_img = ;                                                  //Weeb's Sprite I guess?
-        name = "Weeb";                                                  //Name of Weeb
-        level = 1;                                                      //Weeb's Level
-        exp = 0;                                                        //Weeb's Experience points
-        max_exp = (level * 2 * 500);                                    //Weeb's Experience points needed to level up
+        Evasion = 48 + (((Attack - Defense) / 12));                     //Cloud's Evasion Rate (Maximum of 100% of course)
+        Sp = 100;                                                       //Cloud's Special Points for ultimate (Sort of)
+        //hero_img = ;                                                  //Cloud's Sprite I guess?
+        name = "Cloud";                                                 //Name of Cloud
+        level = 1;                                                      //Cloud's Level
+        exp = 0;                                                        //Cloud's Experience points
+        max_exp = (level * 100);                                        //Cloud's Experience points needed to level up
         //state;
         anim = GetComponent<Animator>();
     }
@@ -66,21 +66,21 @@ public class Weeb : Hero
     // Chain attacks
     protected override void OneChain()
     {
-        //EnemyHealth -= (GetAttack() * 1.0f);
+        //Damage = GetAttack() * 1.0f;
         anim.SetInteger("Number of Blocks", 1);
         anim.SetTrigger("BlockPressed");
     }
 
     protected override void TwoChain()
     {
-        //EnemyHealth -= (GetAttack() * 2.0f);
+        //Damage = GetAttack() * 2.0f;
         anim.SetInteger("Number of Blocks", 2);
         anim.SetTrigger("BlockPressed");
     }
 
     protected override void ThreeChain()
     {
-        //EnemyHealth = (GetAttack() * 3.0f);
+        //Damage = GetAttack() * 3.0f;
         anim.SetInteger("Number of Blocks", 3);
         anim.SetTrigger("BlockPressed");
     }
@@ -95,13 +95,14 @@ public class Weeb : Hero
     public override void getHit(int damagetaken)
     {
         //calculate how damage is taken here
-        //damagetaken = EnemyDamage - GetDefense();
+
     }
 
     // Special ability
     protected override void SpecialAbility()
     {
-        //EnemyHealth = (GetAttack() * 5 + GetDefense() * 2);
+        //Damage = GetAttack() * 3;
+        //Hp = (Attack * 3) * 0.3f;
         anim.SetTrigger("Skill Activated");
     }
 
@@ -109,7 +110,7 @@ public class Weeb : Hero
     {
         exp = 0;
         level += 1;
-        max_exp = (level * 2 * 500);
+        max_exp = (level * 100);
     }
 
     public override void SetAttack(int newAtk)
@@ -148,6 +149,15 @@ public class Weeb : Hero
         return id;
     }
 
+    public override float Get_AttackTimer()
+    {
+        return attackTimer;
+    }
+
+    public override float Get_Max_AttackTimer()
+    {
+        return attackTimer_Max;
+    }
 
     public override string Get_ClassName()
     {
@@ -163,7 +173,7 @@ public class Weeb : Hero
     {
         if (_instance == null)
         {
-            _instance = new Weeb();
+            _instance = new Cloud();
             _instance.Start();
             return _instance;
         }
