@@ -18,20 +18,13 @@ public class Cloud : Hero
     {
         id = 1;
         ClassName = "Cloud";                                            //Cloud's Class Name
-        Hp = level * 10 + 105;                                          //Cloud's Health Points
-        Attack = level * 17.25f + 9;                                    //Cloud's Attack Value
-        Defense = (level * 14.31f) + (Attack / 100) + 5;                //Cloud's Defense Value
-        Resistance = 1;                                                             //Useless Stat 1:What is this going to be for if we already have defense?
-        Speed = 1;                                                                  //Useless Stat 2: If our hero is static, why is there a need for this
-        Accuracy = 1;                                                       //Not really sure if we need this
-        Evasion = 48 + (((Attack - Defense) / 12));                     //Cloud's Evasion Rate (Maximum of 100% of course)
         Sp = 100;                                                       //Cloud's Special Points for ultimate (Sort of)
         //hero_img = ;                                                  //Cloud's Sprite I guess?
         name = "Cloud";                                                 //Name of Cloud
         level = 1;                                                      //Cloud's Level
         exp = 0;                                                        //Cloud's Experience points
-        max_exp = (level * 100);                                        //Cloud's Experience points needed to level up
         //state;
+        CalculateStats();
         anim = GetComponent<Animator>();
     }
 
@@ -41,6 +34,14 @@ public class Cloud : Hero
 
     }
 
+    void CalculateStats()
+    {
+        Hp = level * 10 + 105;                                          //Cloud's Health Points
+        Attack = level * 17.25f + 9;                                    //Cloud's Attack Value
+        Defense = (level * 14.31f) + (Attack / 100) + 5;                //Cloud's Defense Value
+        Evasion = 48 + (((Attack - Defense) / 12));                     //Cloud's Evasion Rate (Maximum of 100% of course)
+        max_exp = (500 * level * 2);                                    //Cloud's Experience points needed to level up
+    }
 
     protected override Hero Get_Class()
     {
@@ -69,14 +70,15 @@ public class Cloud : Hero
        anim.SetInteger("Number of Blocks", 1);
        anim.SetTrigger("BlockPressed");
 
-       GameObject[] MobList;
-       GameObject[] MobList2; 
-
-       MobList = GameObject.FindGameObjectsWithTag("Mobs");
-       for (int i = 0; i < MobList.Length; i++)
-       {
-           MobList2[i] = MobList[i].GetComponent<Collider2D>();
-       }
+       //GameObject[] MobList;
+       //Mob[] MobList2; 
+       //
+       
+       //MobList = GameObject.FindGameObjectsWithTag("Mobs");
+       //for (int i = 0; i < MobList.Length; i++)
+       //{
+       //    MobList2[i] = MobList[i].GetComponent<Mob>();
+       //}
 
        Debug.Log("LOLXDXD");
     }
@@ -126,7 +128,7 @@ public class Cloud : Hero
     {
         exp = 0;
         level += 1;
-        max_exp = (level * 100);
+        CalculateStats();
     }
 
     public override void SetAttack(int newAtk)
