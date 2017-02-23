@@ -143,6 +143,31 @@ public class Hero : MonoBehaviour {
 		return Hp;
 	}
 
+    public virtual float GetSP()
+    {
+        return Sp;
+    }
+
+    public virtual float Get_Evasion()
+    {
+        return Evasion;
+    }
+    public virtual float Get_Exp()
+    {
+        return exp;
+    }
+    public virtual float Get_MaxExp()
+    {
+        return max_exp;
+    }
+    public virtual int Get_Level()
+    {
+        return level;
+    }
+    public virtual string Get_HeroName()
+    {
+        return name;
+    }
 	public virtual string Get_ClassName()
 	{
 		return ClassName;
