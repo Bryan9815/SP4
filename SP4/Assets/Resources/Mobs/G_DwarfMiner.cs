@@ -18,6 +18,7 @@ public class G_DwarfMiner : Mob
     protected override void Start()
     {
         Hp = 10;
+        Attack = 10;
         Defense = 10;
 
         attackTimer = 0.0f;
@@ -51,6 +52,8 @@ public class G_DwarfMiner : Mob
             state = States.Death;
             animator.SetTrigger("No HP");
         }
+
+        // States
         switch (state)
         {
             case States.Idle:
