@@ -90,7 +90,7 @@ public class Leon : Hero {
 		{
 			if (tempcoll.GetComponent<BoxCollider2D> ().IsTouching (temp.GetComponent<BoxCollider2D> ()))
 			{
-				temp.GetComponent<Mob> ().getHit (Attack);
+				temp.GetComponent<Mob> ().getHit ((int)GetAttack());
 			}
 		}
 		Destroy (tempcoll);
@@ -109,7 +109,7 @@ public class Leon : Hero {
 		{
 			if (tempcoll.GetComponent<BoxCollider2D> ().IsTouching (temp.GetComponent<BoxCollider2D> ()))
 			{
-				temp.GetComponent<Mob> ().getHit (Attack * 1.5f);
+				temp.GetComponent<Mob> ().getHit ((int)(GetAttack() * 1.5f));
 			}
 		}
 		Destroy (tempcoll);
@@ -127,7 +127,7 @@ public class Leon : Hero {
 		{
 			if (tempcoll.GetComponent<BoxCollider2D> ().IsTouching (temp.GetComponent<BoxCollider2D> ()))
 			{
-				temp.GetComponent<Mob> ().getHit (Attack * 2f);
+				temp.GetComponent<Mob> ().getHit ((int)(GetAttack() * 2f));
 			}
 		}
 		Destroy (tempcoll);
