@@ -20,8 +20,7 @@ public class G_DwarfArcher : Mob
         Defense = 10;
 
         attackTimer = 5.0f;
-        attackTimer_Max = 2.0f;
-        animationReset = 0.0f;
+        attackTimer_Max = 3.1f;
 
         state = States.Idle;
         animator = GetComponent<Animator>();
@@ -71,31 +70,28 @@ public class G_DwarfArcher : Mob
                 }
                 break;
             case States.Attack:
-                if(animator.GetFloat("Cooldown Timer") < 3)
+                if(animator.GetFloat("Cooldown Timer") < 3.1f)
                     attackTimer += Time.deltaTime;
                 animator.SetFloat("Cooldown Timer", attackTimer);
+                
+                Vector3 temp2 = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+
+                if (attackTimer >= attackTimer_Max)
+                {
+                    GameObject arrow = Instantiate(Arrow.GetComponent<ProjectileHolder>().Get_GameObject(), new Vector3(temp2.x - 1, temp2.y, temp2.z), Arrow.transform.rotation) as GameObject;
+                    arrow.SetActive(true);
+
+                    attackTimer = 0.0f;
+                    animator.SetFloat("Cooldown Timer", attackTimer);
+                    animator.SetTrigger("Cooldown");
+                }
+
                 foreach (GameObject hero in HeroList)
                 {
                     if (!gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
                     {
-                        Vector3 temp = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
-                        temp.x -= Time.deltaTime * 0.25f;
-                        gameObject.transform.position = temp;
-
-                        if (attackTimer >= attackTimer_Max)
-                        {
-                            animationReset += Time.deltaTime;
-
-                            GameObject arrow = Instantiate(Arrow.GetComponent<ProjectileHolder>().Get_GameObject(), new Vector3(temp.x - 1, temp.y, temp.z), Arrow.transform.rotation) as GameObject;
-                            arrow.SetActive(true);
-
-                            attackTimer = 0.0f;
-                            if (animationReset > 1)
-                            {
-                                animator.SetFloat("Cooldown Timer", attackTimer);
-                                animator.SetTrigger("Cooldown");
-                            }
-                        }
+                        temp2.x -= Time.deltaTime * 0.25f;
+                        gameObject.transform.position = temp2;
                     }
                 }
                 break;

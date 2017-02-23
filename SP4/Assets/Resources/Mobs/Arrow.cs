@@ -29,8 +29,10 @@ public class Arrow : Mob
             if(temp.x <= hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().transform.position.x)
             {
                 hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
-                Debug.Log("Arrow Shot");
-                Exit();
+                if (temp.x <= Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().transform.position.x)
+                {
+                    Exit();
+                }
             }
         }
 	}
