@@ -3,8 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Hero : MonoBehaviour {
-	protected float Attack,Defense, Resistance, Speed, Accuracy, Evasion;
-	protected int Hp,currHp,Sp;
+	protected float Hp,currHp,Attack,Defense, Resistance, Speed, Accuracy, Evasion;
+	protected int Sp;
     protected Sprite hero_img;
     protected string name;
     protected int level;
@@ -133,12 +133,12 @@ public class Hero : MonoBehaviour {
 		return attackTimer_Max;
 	}
 
-	public virtual int Get_Hp()
+	public virtual float Get_Hp()
 	{
 		return currHp;
 	}
 
-	public virtual int Get_MaxHp()
+	public virtual float Get_MaxHp()
 	{
 		return Hp;
 	}
