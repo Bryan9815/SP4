@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuBtn : MonoBehaviour {
 
+	PolygonCollider2D testtest;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -17,7 +19,7 @@ public class MainMenuBtn : MonoBehaviour {
             Application.Quit();
 	}
 
-    public void GoToTown()
+    public static void GoToTown()
     {
         SceneManager.LoadScene("Town");
     }

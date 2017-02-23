@@ -4,5 +4,8 @@ SP4/SP4.v12.suo
 SP4/Library/
 SP4/twest_Data/
 SP4/Assembly-CSharp.csproj
+<<<<<<< HEAD
+SP4/SP4.userprefs
 *.userprefs
 SP4/ProjectSettings/EditorBuildSettings.asset
+SP4/Assets/Prefabs/Heros.meta

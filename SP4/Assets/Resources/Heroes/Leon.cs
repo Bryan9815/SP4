@@ -25,6 +25,7 @@ public class Leon : Hero {
 	Animator animator;
 	// Use this for initialization
 	protected override void Start () {
+		currHp = Hp;
 		id = 1;
 		ClassName = "Leon";
 		//Level increase stat variables
@@ -83,6 +84,17 @@ public class Leon : Hero {
 		//state = States.Chain1;
 		animator.SetInteger ("Number of Blocks",1);
 		animator.SetTrigger ("Blocks Pressed");
+		GameObject tempcoll = Instantiate (attackCollider);
+		tempcoll.SetActive (true);
+		foreach(GameObject temp in WaveManager.ListOfMobs)
+		{
+			if (tempcoll.GetComponent<BoxCollider2D> ().IsTouching (temp.GetComponent<BoxCollider2D> ()))
+			{
+				temp.GetComponent<Mob> ().getHit (Attack);
+			}
+		}
+		Destroy (tempcoll);
+
 	}
 
 	protected override void TwoChain()
@@ -90,6 +102,17 @@ public class Leon : Hero {
 		//state = States.Chain2;
 		animator.SetInteger ("Number of Blocks",2);
 		animator.SetTrigger ("Blocks Pressed");
+
+		GameObject tempcoll = Instantiate (attackCollider);
+		tempcoll.SetActive (true);
+		foreach(GameObject temp in WaveManager.ListOfMobs)
+		{
+			if (tempcoll.GetComponent<BoxCollider2D> ().IsTouching (temp.GetComponent<BoxCollider2D> ()))
+			{
+				temp.GetComponent<Mob> ().getHit (Attack * 1.5f);
+			}
+		}
+		Destroy (tempcoll);
 	}
 
 	protected override void ThreeChain()
@@ -97,6 +120,17 @@ public class Leon : Hero {
 		//state = States.Chain3;
 		animator.SetInteger ("Number of Blocks",3);
 		animator.SetTrigger ("Blocks Pressed");
+
+		GameObject tempcoll = Instantiate (attackCollider);
+		tempcoll.SetActive (true);
+		foreach(GameObject temp in WaveManager.ListOfMobs)
+		{
+			if (tempcoll.GetComponent<BoxCollider2D> ().IsTouching (temp.GetComponent<BoxCollider2D> ()))
+			{
+				temp.GetComponent<Mob> ().getHit (Attack * 2f);
+			}
+		}
+		Destroy (tempcoll);
 	}
 
 	// Normal attack
@@ -127,6 +161,7 @@ public class Leon : Hero {
 	public override void LevelUp()
 	{
 		level += 1;
+		exp = 0;
 		CalculateStats ();
 	}
 
