@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class DamageTextManager : MonoBehaviour 
 {
@@ -19,27 +20,17 @@ public class DamageTextManager : MonoBehaviour
     //for each number in damage string as char set
     int tempCharSet;
 
-	//for transition effect of the Daamge
-	float transitionX;
-
 	//for where the damage sprite will come out from
 	Vector3 spawnPos;
 
-	//floating up values
-	float scrollspeed;
 
-	//To trigger display
-	bool generateDamageText;
 
     // Use this for initialization
 	void Start () 
 	{
 	    damage = 0;
 	    damage_String = "";
-		transitionX = 0.0f;
 		spawnPos = new Vector3(0.0f,0.0f,0.0f);
-		scrollspeed = 0.05f;
-		generateDamageText = false;
 	}
 	
 	// Update is called once per frame
@@ -48,7 +39,22 @@ public class DamageTextManager : MonoBehaviour
 
 	}
 
-    public void GenerateSprite()
+	//Debug testing purposes
+	public void UpdateWaveNumber()//								(To Be Changed)
+	{
+		int tempWave = GlobalVariable.GetWaveNumber ();
+		int tempStage = GlobalVariable.GetStageLevel ();
+
+		GlobalVariable.SetWaveNumber (tempWave + 1);
+		if (GlobalVariable.GetWaveNumber () > GlobalVariable.GetMaxWaveNumber ()) 
+		{
+			SceneManager.LoadScene ("Options_Window");
+			GlobalVariable.SetWaveNumber (1);
+			GlobalVariable.SetStageLevel (tempStage + 1);
+		}
+	}
+
+	public void GenerateSprite()//								(To Be Changed)
 	{
 		damage = Random.Range (0, 999);
 		damage_String = damage.ToString ();
