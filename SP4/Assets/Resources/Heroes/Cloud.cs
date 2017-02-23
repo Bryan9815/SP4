@@ -6,7 +6,6 @@ public class Cloud : Hero
 {
     static Cloud _instance;
     Animator anim;
-    public Collider2D attackTrigger;
     enum States // for animation
     {
         Idle,
@@ -34,7 +33,6 @@ public class Cloud : Hero
         max_exp = (level * 100);                                        //Cloud's Experience points needed to level up
         //state;
         anim = GetComponent<Animator>();
-        attackTrigger = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -68,11 +66,12 @@ public class Cloud : Hero
     // Chain attacks
     protected override void OneChain()
     {
-        attackTrigger.enabled = true;
-       //int Damage = GetAttack() * 1.0f;
-       anim.SetInteger("Number of Blocks", 1);
-       anim.SetTrigger("BlockPressed");
-       //EnemyHp -= Damage;
+       if(attackCollider.GetComponent<Collider2D>().IsTouching(GameObject.Find("Orc").GetComponent<Collider2D>()))
+       {
+           anim.SetInteger("Number of Blocks", 1);
+           anim.SetTrigger("BlockPressed");
+           //EnemyHp -= GetAttack() * 1.0f;
+       }
         Debug.Log("LOLXDXD");
     }
 
@@ -100,7 +99,13 @@ public class Cloud : Hero
     public override void getHit(int damagetaken)
     {
         //calculate how damage is taken here
+        if(damagetaken - GetDefense() > 0)
+        {
+            Hp -= (damagetaken - GetDefense());
+        }
+        else { 
 
+}
     }
 
     // Special ability
