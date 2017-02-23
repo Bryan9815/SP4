@@ -22,7 +22,7 @@ public class G_DwarfMiner : Mob
         Defense = 10;
 
         attackTimer = 0.0f;
-        attackTimer_Max = 2.0f;
+        attackTimer_Max = 3.01f;
 
         state = States.Idle;
         animator = GetComponent<Animator>();
@@ -37,6 +37,7 @@ public class G_DwarfMiner : Mob
         if (distFromHero <= 7.5 && state != States.Attack)
         {
             state = States.Walk;
+            animator.SetTrigger("Target Detected");
         }
         else if(distFromHero > 7.5 && state != States.Attack)
         {
@@ -62,13 +63,12 @@ public class G_DwarfMiner : Mob
                     if (!gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
                     {
                         Vector3 temp = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
-                        temp.x -= Time.deltaTime * 2;
+                        temp.x -= Time.deltaTime * 0.8f;
                         gameObject.transform.position = temp;
                     }
                 }
                 break;
             case States.Walk:
-                animator.SetTrigger("Target Detected");
                 foreach (GameObject hero in HeroList)
                 {
                     if (!gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
@@ -85,13 +85,16 @@ public class G_DwarfMiner : Mob
                 }
                 break;
             case States.Attack:
-                attackTimer += Time.deltaTime;
+                if(attackTimer < attackTimer_Max)
+                    attackTimer += Time.deltaTime;
+                animator.SetFloat("Cooldown Timer", attackTimer);
                 foreach (GameObject hero in HeroList)
                 {
                     if(attackTimer >= attackTimer_Max)
                     {
                         hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
                         attackTimer = 0.0f;
+                        animator.SetFloat("Cooldown Timer", 0);
                     }
                 }
                 break;
