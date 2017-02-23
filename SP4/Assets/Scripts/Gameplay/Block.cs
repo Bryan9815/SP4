@@ -194,7 +194,7 @@ public class Block : MonoBehaviour {
         }
 
         // Run respective hero stuffs here
-		HeroManager.List_ofHeroes [hero_slot].gameObject.GetComponent<Hero> ().BlockAttack (chain_no);
+		HeroManager.List_ofHeroes [hero_slot].GetComponent<HeroHolder> ().Get_GameObject().GetComponent<Hero>().BlockAttack (chain_no);
 
     }
     public void CheckBlockChain()

@@ -70,15 +70,19 @@ public class Cloud : Hero
        anim.SetInteger("Number of Blocks", 1);
        anim.SetTrigger("BlockPressed");
 
-       //GameObject[] MobList;
-       //Mob[] MobList2; 
-       //
-       
-       //MobList = GameObject.FindGameObjectsWithTag("Mobs");
-       //for (int i = 0; i < MobList.Length; i++)
-       //{
-       //    MobList2[i] = MobList[i].GetComponent<Mob>();
-       //}
+       Instantiate(attackCollider);
+
+       foreach (GameObject temp in WaveManager.ListOfMobs)
+       {
+           if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+           {
+               temp.GetComponent<Mob>().getHit((int)GetAttack());
+               Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
+               v3Temp.x += 50;
+               //temp.GetComponent<Mob>().GetPosition() = v3Temp;
+               Destroy(attackCollider);
+           }
+       }
 
        Debug.Log("LOLXDXD");
     }
@@ -109,7 +113,7 @@ public class Cloud : Hero
         //calculate how damage is taken here
         if(damagetaken - GetDefense() > 0)
         {
-            Hp -= (damagetaken - GetDefense());
+            Hp -= (damagetaken - (int)GetDefense());
         }
         else { 
 
