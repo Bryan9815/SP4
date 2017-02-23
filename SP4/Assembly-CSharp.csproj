@@ -48,9 +48,7 @@
      <Compile Include="Assets\Resources\Heroes\Cloud.cs" />
      <Compile Include="Assets\Resources\Heroes\Leon.cs" />
      <Compile Include="Assets\Resources\Heroes\Weeb.cs" />
-<<<<<<< HEAD
-     <Compile Include="Assets\Resources\Mobs\Orc.cs" />
-=======
+     <Compile Include="Assets\Resources\Mobs\Arrow.cs" />
      <Compile Include="Assets\Resources\Mobs\B_DwarfArcher.cs" />
      <Compile Include="Assets\Resources\Mobs\B_DwarfMiner.cs" />
      <Compile Include="Assets\Resources\Mobs\B_DwarfWarrior.cs" />
@@ -64,7 +62,6 @@
      <Compile Include="Assets\Resources\Mobs\U_DwarfArcher.cs" />
      <Compile Include="Assets\Resources\Mobs\U_DwarfMiner.cs" />
      <Compile Include="Assets\Resources\Mobs\U_DwarfWarrior.cs" />
->>>>>>> 439d7bb8ada45802b259f960e0d57f3440e9b436
      <Compile Include="Assets\Scripts\AutoFade.cs" />
      <Compile Include="Assets\Scripts\BoolPrefs.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
@@ -75,6 +72,7 @@
      <Compile Include="Assets\Scripts\Gameplay\HeroManager.cs" />
      <Compile Include="Assets\Scripts\Gameplay\ListofAllHeroes.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Mob.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\ProjectileHolder.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TemplateHero.cs" />
      <Compile Include="Assets\Scripts\Gameplay\WaveManager.cs" />
      <Compile Include="Assets\Scripts\GlobalVariable.cs" />

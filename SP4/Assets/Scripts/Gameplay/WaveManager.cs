@@ -8,18 +8,18 @@ public class WaveManager : MonoBehaviour
 
     public static List<GameObject> ListOfMobs;
 
-    private int WaveNumber, MobNumber;
+    private static int WaveNumber, MobNumber;
     private bool WaveOver;
 	// Use this for initialization
-	void Start ()
+    void Start()
     {
-        WaveNumber = 1;
+        WaveNumber = 10;
         WaveOver = false;
 
         ListOfMobs = new List<GameObject>();
         RandomizeMobNumber();
         GenerateMobs();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () 
@@ -248,14 +248,14 @@ public class WaveManager : MonoBehaviour
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(3, 6));
+                SpawnMobs(Random.Range(4, 6));
             }
         }
         else if (WaveNumber > 19 && WaveNumber <= 20)
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(4, 7));
+                SpawnMobs(Random.Range(5, 7));
             }
         }
         else if (WaveNumber > 21 && WaveNumber <= 22)
@@ -269,28 +269,28 @@ public class WaveManager : MonoBehaviour
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(6, 9));
+                SpawnMobs(Random.Range(7, 9));
             }
         }
         else if (WaveNumber > 25 && WaveNumber <= 26)
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(7, 10));
+                SpawnMobs(Random.Range(8, 10));
             }
         }
         else if (WaveNumber > 27 && WaveNumber <= 28)
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(8, 11));
+                SpawnMobs(Random.Range(9, 11));
             }
         }
         else if (WaveNumber > 29)
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(9, 12));
+                SpawnMobs(Random.Range(3,3));
             }
         }
         Debug.Log("Wave Number: " + WaveNumber);
@@ -302,5 +302,10 @@ public class WaveManager : MonoBehaviour
         RandomizeMobNumber();
         GenerateMobs();
         WaveOver = false;
+    }
+
+    public static int GetWaveNumber()
+    {
+        return WaveNumber;
     }
 }
