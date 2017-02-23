@@ -25,6 +25,10 @@ public class HeroManager : MonoBehaviour {
 		List_ofHeroes.Add (Active_Hero1);
 		List_ofHeroes.Add (Active_Hero2);
 		List_ofHeroes.Add (Active_Hero3);
+		List_ofHeroes [0].GetComponent<HeroHolder> ().HeroSlot = 0;
+		List_ofHeroes [1].GetComponent<HeroHolder> ().HeroSlot = 1;
+		List_ofHeroes [2].GetComponent<HeroHolder> ().HeroSlot = 2;
+
 	}
 
 	// Update is called once per frame
