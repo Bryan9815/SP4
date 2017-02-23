@@ -4,6 +4,7 @@ using System.Collections;
 
 public class HUD : MonoBehaviour
 {
+    public GameObject Hero;
 	public Image characterIcon;
 	public Image characterHP;
 	public Image characterMP;
@@ -23,6 +24,7 @@ public class HUD : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+        characterIcon.sprite = Hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().GetSprite();
 		Hp_txt.text = "";
 		Mp_txt.text = "";
 

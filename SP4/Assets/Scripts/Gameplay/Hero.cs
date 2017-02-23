@@ -119,9 +119,9 @@ public class Hero : MonoBehaviour {
 		//hero_img = newHero_img;
 	}
 
-	public virtual Sprite GetImage()
+    public virtual Sprite GetSprite()
     {
-		return gameObject.GetComponent<Image>().sprite;
+		return gameObject.GetComponent<SpriteRenderer>().sprite;
     }
 
 	public virtual int Get_Id()

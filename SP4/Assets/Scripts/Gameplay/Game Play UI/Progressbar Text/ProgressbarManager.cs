@@ -30,7 +30,7 @@ public class ProgressbarManager : MonoBehaviour
 
 	//Just a copy of GlobalVariable current wave
 	private int currWaveNum;
-
+	  
 	//Just a temp variable for setting the endpoint position
 	private Vector3 tempEndpoint;
 
