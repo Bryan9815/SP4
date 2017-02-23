@@ -113,7 +113,7 @@ public class Cloud : Hero
         //calculate how damage is taken here
         if(damagetaken - GetDefense() > 0)
         {
-            Hp -= (damagetaken - GetDefense());
+            Hp -= (damagetaken - (int)GetDefense());
         }
         else { 
 
