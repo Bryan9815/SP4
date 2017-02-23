@@ -75,7 +75,7 @@ public class Cloud : Hero
     protected override void OneChain()
     {
        anim.SetInteger("Number of Blocks", 1);
-       anim.SetTrigger("Block Pressed");
+       anim.SetTrigger("Blocks Pressed");
 
        GameObject tempcoll = Instantiate(attackCollider);
        tempcoll.SetActive(true);
@@ -92,7 +92,7 @@ public class Cloud : Hero
     protected override void TwoChain()
     {
         anim.SetInteger("Number of Blocks", 2);
-        anim.SetTrigger("Block Pressed");
+        anim.SetTrigger("Blocks Pressed");
 
         GameObject tempcoll = Instantiate(attackCollider);
         tempcoll.SetActive(true);
@@ -109,7 +109,7 @@ public class Cloud : Hero
     protected override void ThreeChain()
     {
         anim.SetInteger("Number of Blocks", 3);
-        anim.SetTrigger("Block Pressed");
+        anim.SetTrigger("Blocks Pressed");
 
         GameObject tempcoll = Instantiate(attackCollider);
         tempcoll.SetActive(true);

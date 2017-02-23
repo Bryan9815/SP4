@@ -198,7 +198,7 @@ public class WaveManager : MonoBehaviour
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(1);
+                SpawnMobs(0);
             }
         }
         else if (WaveNumber > 3 && WaveNumber <= 5)

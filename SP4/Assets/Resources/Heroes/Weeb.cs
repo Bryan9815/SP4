@@ -72,7 +72,7 @@ public class Weeb : Hero
     {
         //EnemyHealth -= (GetAttack() * 1.0f);
         anim.SetInteger("Number of Blocks", 1);
-        anim.SetTrigger("Block Pressed");
+        anim.SetTrigger("Blocks Pressed");
 
         GameObject tempcoll = Instantiate(attackCollider);
         tempcoll.SetActive(true);
@@ -90,7 +90,7 @@ public class Weeb : Hero
     {
         //EnemyHealth -= (GetAttack() * 2.0f);
         anim.SetInteger("Number of Blocks", 2);
-        anim.SetTrigger("Block Pressed");
+        anim.SetTrigger("Blocks Pressed");
 
         GameObject tempcoll = Instantiate(attackCollider);
         tempcoll.SetActive(true);
@@ -108,7 +108,7 @@ public class Weeb : Hero
     {
         //EnemyHealth = (GetAttack() * 3.0f);
         anim.SetInteger("Number of Blocks", 3);
-        anim.SetTrigger("Block Pressed");
+        anim.SetTrigger("Blocks Pressed");
 
         GameObject tempcoll = Instantiate(attackCollider);
         tempcoll.SetActive(true);
