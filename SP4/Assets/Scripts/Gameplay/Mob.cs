@@ -9,7 +9,7 @@ public class Mob : MonoBehaviour
     protected float attackTimer, attackTimer_Max;
     protected Vector3 position;
 
-    protected static GameObject Hero1, Hero2, Hero3, Arrow;
+    protected static GameObject Hero1, Hero2, Hero3, Arrow, attackCollider;
     protected static List<GameObject> HeroList;
     // Use this for initialization
     protected virtual void Start()
@@ -18,6 +18,8 @@ public class Mob : MonoBehaviour
         Defense = 1;
 
         Arrow = GameObject.Find("Arrow");
+        attackCollider = GameObject.Find("AttackCollider");
+        Debug.Log("Attack Collider: " + attackCollider);
 
         HeroList = new List<GameObject>();
 

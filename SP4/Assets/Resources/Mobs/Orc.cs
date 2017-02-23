@@ -42,7 +42,7 @@ public class Orc : Mob
 
                 foreach (GameObject hero in HeroList)
                 {
-                    if (!gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<BoxCollider2D>()))
+                    if (!gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
                     {
                         Vector3 temp = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
                         temp.x -= Time.deltaTime * 10;

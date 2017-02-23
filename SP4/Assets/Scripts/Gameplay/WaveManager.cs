@@ -13,7 +13,7 @@ public class WaveManager : MonoBehaviour
 	// Use this for initialization
     void Start()
     {
-        WaveNumber = 10;
+        WaveNumber = 1;
         WaveOver = false;
 
         ListOfMobs = new List<GameObject>();
