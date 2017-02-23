@@ -14,17 +14,20 @@ public class R_DwarfArcher : Mob
     States state;
     Animator animator;
     // Use this for initialization
-    void Start()
+    protected override void Start()
     {
         Hp = 10;
         Defense = 10;
+
+        attackTimer = 0.0f;
+        attackTimer_Max = 2.0f;
 
         state = States.Idle;
         animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
         float distFromHero = Mathf.Sqrt((float)(gameObject.transform.position.x + Hero1.transform.position.x) * (gameObject.transform.position.x + Hero1.transform.position.x) + (gameObject.transform.position.y + Hero1.transform.position.y) * (gameObject.transform.position.y + Hero1.transform.position.y));
         if (distFromHero <= 7.5)
@@ -48,7 +51,7 @@ public class R_DwarfArcher : Mob
 
                 foreach (GameObject hero in HeroList)
                 {
-                    if (!gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<BoxCollider2D>()))
+                    if (!gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
                     {
                         Vector3 temp = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
                         temp.x -= Time.deltaTime * 2;
@@ -69,6 +72,7 @@ public class R_DwarfArcher : Mob
                 }
                 break;
             case States.Attack:
+                attackTimer += Time.deltaTime;
                 foreach (GameObject hero in HeroList)
                 {
                     if (!gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
@@ -77,8 +81,11 @@ public class R_DwarfArcher : Mob
                         temp.x -= Time.deltaTime * 0.5f;
                         gameObject.transform.position = temp;
 
-                        // Code for shooting arrow
-                        // to be added
+                        if (attackTimer >= attackTimer_Max)
+                        {
+                            GameObject arrow = Instantiate(Arrow, temp, Arrow.transform.rotation) as GameObject;
+                            attackTimer = 0.0f;
+                        }
                     }
                     else
                     {
@@ -88,10 +95,7 @@ public class R_DwarfArcher : Mob
                 break;
             case States.Death:
                 if (animator.GetCurrentAnimatorStateInfo(0).IsName("Exit"))
-                {
-                    Destroy(gameObject);
-                    WaveManager.ListOfMobs.Remove(gameObject);
-                }
+                    Exit();
                 break;
             default:
                 break;

@@ -14,33 +14,45 @@ public class G_DwarfWarrior : Mob
     States state;
     Animator animator;
     // Use this for initialization
-    void Start()
+    protected override void Start()
     {
         Hp = 10;
         Defense = 10;
+
+        attackTimer = 0.0f;
+        attackTimer_Max = 2.0f;
 
         state = States.Idle;
         animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-        float distFromHero = Mathf.Sqrt((float)(gameObject.transform.position.x + Hero1.transform.position.x) * (gameObject.transform.position.x + Hero1.transform.position.x) + (gameObject.transform.position.y + Hero1.transform.position.y) * (gameObject.transform.position.y + Hero1.transform.position.y));
-        if (distFromHero <= 7.5)
+        float distFromHero = Mathf.Sqrt((float)(gameObject.transform.position.x + Hero1.transform.position.x) * (gameObject.transform.position.x + Hero1.transform.position.x));
+
+        // State Transition
+        if (distFromHero <= 7.5 && state != States.Attack)
         {
             state = States.Walk;
-            animator.SetTrigger("Target Detected");
         }
-        else
+        else if (distFromHero > 7.5 && state != States.Attack)
         {
             state = States.Idle;
-            animator.SetTrigger("No Targets");
+        }
+        else if (distFromHero > 4 && state == States.Attack)
+        {
+            state = States.Walk;
+            animator.SetBool("Targets In Range", false);
+        }
+        if (Hp <= 0)
+        {
+            state = States.Death;
+            animator.SetTrigger("No HP");
         }
         switch (state)
         {
             case States.Idle:
-
                 foreach (GameObject hero in HeroList)
                 {
                     if (!gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<BoxCollider2D>()))
@@ -48,11 +60,11 @@ public class G_DwarfWarrior : Mob
                         Vector3 temp = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
                         temp.x -= Time.deltaTime * 2;
                         gameObject.transform.position = temp;
-                        Debug.Log("DistFromHero: " + distFromHero);
                     }
                 }
                 break;
             case States.Walk:
+                animator.SetTrigger("Target Detected");
                 foreach (GameObject hero in HeroList)
                 {
                     if (!gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
@@ -69,7 +81,15 @@ public class G_DwarfWarrior : Mob
                 }
                 break;
             case States.Attack:
-
+                attackTimer += Time.deltaTime;
+                foreach (GameObject hero in HeroList)
+                {
+                    if (attackTimer >= attackTimer_Max)
+                    {
+                        hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
+                        attackTimer = 0.0f;
+                    }
+                }
                 break;
             case States.Death:
                 if (animator.GetCurrentAnimatorStateInfo(0).IsName("Exit"))

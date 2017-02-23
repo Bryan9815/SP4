@@ -38,16 +38,17 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Resources\Heroes\Cloud.cs" />
      <Compile Include="Assets\Resources\Heroes\Leon.cs" />
      <Compile Include="Assets\Resources\Heroes\Weeb.cs" />
+     <Compile Include="Assets\Resources\Mobs\Arrow.cs" />
      <Compile Include="Assets\Resources\Mobs\B_DwarfArcher.cs" />
      <Compile Include="Assets\Resources\Mobs\B_DwarfMiner.cs" />
      <Compile Include="Assets\Resources\Mobs\B_DwarfWarrior.cs" />
@@ -71,6 +72,7 @@
      <Compile Include="Assets\Scripts\Gameplay\HeroManager.cs" />
      <Compile Include="Assets\Scripts\Gameplay\ListofAllHeroes.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Mob.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\ProjectileHolder.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TemplateHero.cs" />
      <Compile Include="Assets\Scripts\Gameplay\WaveManager.cs" />
      <Compile Include="Assets\Scripts\GlobalVariable.cs" />
@@ -95,10 +97,10 @@
      <None Include="Assets\Texture Packer\Editor\SettingsTexturePackerImporter.txt" />
      <None Include="Assets\Texture Packer\Readme.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
