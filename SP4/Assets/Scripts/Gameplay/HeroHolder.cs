@@ -4,6 +4,7 @@ using System.Collections;
 public class HeroHolder : MonoBehaviour {
 
 	public GameObject hero;
+	public GameObject SpriteAnimation;
 
 	// Use this for initialization
 	void Start () {
