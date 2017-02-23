@@ -13,16 +13,15 @@ public class DisplayChar : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-       //HeroStats.text  = "Name: " + theHero.GetHeroName()
-       //                + "\nHealth: " + theHero.GetHealth()
-       //                + "\nSP: " + theHero.GetSP()
-       //                + "\nAttack: " + theHero.GetAttack()
-       //                + "\nDefense: " + theHero.GetDefense()
-       //                + "\nResistance: " + theHero.GetResistance();
-       //HeroSecondStats.text = "Speed: " + theHero.GetSpeed()
-       //                     + "\nAccuracy: " + theHero.GetAccuracy()
-       //                     + "\nEvasion" + theHero.GetEvasion()
-       //                     + "\nExp: " + theHero.GetExp()
-       //                     + "\nExp To Next: " + theHero.GetMaxExp();
+        HeroStats.text = "Name: " + theHero.Get_HeroName()
+                        + "\nLevel: " + theHero.Get_Level()
+                        + "\nHealth: " + theHero.Get_MaxHp()
+                        + "\nSP: " + theHero.GetSP()
+                        + "\nAttack: " + theHero.GetAttack()
+                        + "\nDefense: " + theHero.GetDefense();
+        HeroSecondStats.text = "\nEvasion: " + theHero.Get_Evasion() + "%"
+                             + "\nExp: " + theHero.Get_Exp()
+                             + "\nExp To Next: " + theHero.Get_MaxExp()
+                             + "\nCost: " + UpgradeHeroes.GetCost();
 	}
 }

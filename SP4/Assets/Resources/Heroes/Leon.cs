@@ -32,7 +32,7 @@ public class Leon : Hero {
 		Sp = 0;
 		isDead = false;
 		//state = States.Idle;
-		animator = gameObject.gameObject.GetComponent<Animator> ();
+		animator = GetComponent<Animator> ();
 		level = 1;
 		exp = 0;
 		CalculateStats ();
