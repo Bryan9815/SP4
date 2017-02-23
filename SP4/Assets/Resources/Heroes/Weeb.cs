@@ -25,7 +25,7 @@ public class Weeb : Hero
         exp = 0;                                                        //Weeb's Experience points
         //state;
         CalculateStats();
-        anim = GetComponent<Animator>();
+		anim = gameObject.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame

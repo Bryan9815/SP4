@@ -26,7 +26,7 @@ public class Cloud : Hero
         //state;
         CalculateStats();
         currHp = Hp;
-        anim = GetComponent<Animator>();
+		anim = gameObject.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -131,9 +131,10 @@ public class Cloud : Hero
         {
             Hp -= (damagetaken - GetDefense());
         }
-        else { 
+        else 
+		{ 
 
-}
+		}
     }
 
     // Special ability
