@@ -15,10 +15,16 @@ public class Hero : MonoBehaviour {
 	protected string ClassName;
 	public bool unlocked;
 
-	protected GameObject attackCollider;
+	public GameObject attackCollider;
+
+	protected virtual void Awake()
+	{
+		//attackCollider = gameObject.gameObject.get
+	}
+
 	// Use this for initialization
 	protected virtual void Start () {
-		attackCollider = GameObject.Find ("AttackCollider");
+		
 	}
 	
 	// Update is called once per frame
