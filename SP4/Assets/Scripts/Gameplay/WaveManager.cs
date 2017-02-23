@@ -198,7 +198,7 @@ public class WaveManager : MonoBehaviour
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(0);
+                SpawnMobs(3);
             }
         }
         else if (WaveNumber > 3 && WaveNumber <= 5)
@@ -290,10 +290,9 @@ public class WaveManager : MonoBehaviour
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(3,3));
+                SpawnMobs(Random.Range(9, 12));
             }
         }
-        Debug.Log("Wave Number: " + WaveNumber);
     }
 
     void WaveTransition()
