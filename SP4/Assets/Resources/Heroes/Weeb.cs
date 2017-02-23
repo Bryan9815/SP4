@@ -6,6 +6,7 @@ public class Weeb : Hero
 {
     static Weeb _instance;
     Animator anim;
+    bool isDead;
     enum States // for animation
     {
         Idle,
@@ -24,8 +25,9 @@ public class Weeb : Hero
         level = 1;                                                      //Weeb's Level
         exp = 0;                                                        //Weeb's Experience points
         //state;
+        isDead = false;
         CalculateStats();
-        anim = GetComponent<Animator>();
+        anim = gameObject.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -130,14 +132,12 @@ public class Weeb : Hero
     public override void getHit(int damagetaken)
     {
         //calculate how damage is taken here
-        //damagetaken = EnemyDamage - GetDefense();
-        if (damagetaken - GetDefense() > 0)
+        anim.SetTrigger("isHit");
+        Hp -= damagetaken;
+        if (Hp <= 0)
         {
-            Hp -= (damagetaken - GetDefense());
-        }
-        else
-        {
-
+            isDead = true;
+            anim.SetBool("No HP", true);
         }
     }
 
