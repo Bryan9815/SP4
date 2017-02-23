@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Fonts\Script\scriptTexttest.cs" />
      <Compile Include="Assets\Scripts\BoolPrefs.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Block.cs" />
@@ -54,8 +55,15 @@
      <Compile Include="Assets\Scripts\HighScore.cs" />
      <Compile Include="Assets\Scripts\Intro.cs" />
      <Compile Include="Assets\Scripts\Leaderboard.cs" />
-     <Compile Include="Assets\Scripts\MainMenu\DamageText.cs" />
-     <Compile Include="Assets\Scripts\MainMenu\DamageTextManager.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\BG_Collision.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\BackgroundManager.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\Game Play UI\CharacterHUD\HUD.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\Game Play UI\Damage Text\DamageText.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\Game Play UI\Damage Text\DamageTextManager.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\Game Play UI\Pause\PauseManager.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\Game Play UI\Progressbar Text\ProgressBall.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\Game Play UI\Progressbar Text\ProgressbarManager.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\Game Play UI\Wave Text\WaveText.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MainMenuBtn.cs" />
      <Compile Include="Assets\Scripts\Money\Money.cs" />
@@ -65,6 +73,8 @@
      <Compile Include="Assets\Scripts\Town\Shop.cs" />
      <Compile Include="Assets\Scripts\Town\SwitchHeroes.cs" />
      <Compile Include="Assets\Scripts\Town\Town.cs" />
+     <None Include="Assets\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />
+     <None Include="Assets\Fonts\Documentation\JazzCreateAltKeys_BubbleFont.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
