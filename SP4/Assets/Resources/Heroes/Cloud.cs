@@ -66,9 +66,13 @@ public class Cloud : Hero
     // Chain attacks
     protected override void OneChain()
     {
-        //Damage = GetAttack() * 1.0f;
-        anim.SetInteger("Number of Blocks", 1);
-        anim.SetTrigger("BlockPressed");
+       if(attackCollider.GetComponent<Collider2D>().IsTouching(GameObject.Find("Orc").GetComponent<Collider2D>()))
+       {
+           anim.SetInteger("Number of Blocks", 1);
+           anim.SetTrigger("BlockPressed");
+           //EnemyHp -= GetAttack() * 1.0f;
+       }
+        Debug.Log("LOLXDXD");
     }
 
     protected override void TwoChain()
@@ -95,7 +99,13 @@ public class Cloud : Hero
     public override void getHit(int damagetaken)
     {
         //calculate how damage is taken here
+        if(damagetaken - GetDefense() > 0)
+        {
+            Hp -= (damagetaken - GetDefense());
+        }
+        else { 
 
+}
     }
 
     // Special ability

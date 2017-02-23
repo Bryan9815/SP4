@@ -9,6 +9,8 @@ public class HeroManager : MonoBehaviour {
 	public GameObject Active_Hero2;
 	public GameObject Active_Hero3;
 
+	public static List<GameObject> List_ofHeroes;
+
 	// Use this for initialization
 	void Start () {
 		int id_1 = 1;//GlobalVariable.GetPlayerHeroID (0);
@@ -18,6 +20,11 @@ public class HeroManager : MonoBehaviour {
 //		Active_Hero3.GetComponent<HeroHolder> ().Set_GameObject();
 
 		//Active_Hero1.GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().unlocked = true;
+
+		List_ofHeroes = new List<GameObject> ();
+		List_ofHeroes.Add (Active_Hero1);
+		List_ofHeroes.Add (Active_Hero2);
+		List_ofHeroes.Add (Active_Hero3);
 	}
 
 	// Update is called once per frame
