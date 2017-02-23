@@ -26,7 +26,7 @@ public class Arrow : Mob
         gameObject.transform.position = temp;
         foreach (GameObject hero in HeroList)
         {
-            if(gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
+            if(temp.x <= hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().transform.position.x)
             {
                 hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
                 Debug.Log("Arrow Shot");
