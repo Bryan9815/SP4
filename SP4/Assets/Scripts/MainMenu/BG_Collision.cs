@@ -52,13 +52,13 @@ public class BG_Collision : MonoBehaviour {
 				if (hit) 
 				{
 					if (hit.collider.gameObject.name == "town_background")
-						Debug.Log ("hit mm");
+						SceneManager.LoadScene("Town");
 					else if (hit.collider.gameObject.name == "options")
-						Debug.Log ("hit options");
+						SceneManager.LoadScene("Options_Window");
 					else if (hit.collider.gameObject.name == "highscore")
-						Debug.Log ("hit highscore");
+						SceneManager.LoadScene("High Score");
 					else if (hit.collider.gameObject.name == "quit")
-						Debug.Log ("hit quit");
+						Application.Quit();
 				}
 				else
 					Debug.Log ("Hit nothing");
