@@ -71,57 +71,50 @@ public class Cloud : Hero
        anim.SetInteger("Number of Blocks", 1);
        anim.SetTrigger("Block Pressed");
 
-       Instantiate(attackCollider);
-
+       GameObject tempcoll = Instantiate(attackCollider);
+       tempcoll.SetActive(true);
        foreach (GameObject temp in WaveManager.ListOfMobs)
        {
-           if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+           if (tempcoll.GetComponent<BoxCollider2D>().IsTouching(temp.GetComponent<BoxCollider2D>()))
            {
-               temp.GetComponent<Mob>().getHit((int)GetAttack());
-               Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
-               v3Temp.x += 50;
-               //temp.GetComponent<Mob>().GetPosition() = v3Temp;
-               Destroy(attackCollider);
+               temp.GetComponent<Mob>().getHit((int)(GetAttack()));
            }
        }
+       Destroy(tempcoll);
     }
 
     protected override void TwoChain()
     {
         anim.SetInteger("Number of Blocks", 2);
         anim.SetTrigger("Block Pressed");
-        Instantiate(attackCollider);
 
+        GameObject tempcoll = Instantiate(attackCollider);
+        tempcoll.SetActive(true);
         foreach (GameObject temp in WaveManager.ListOfMobs)
         {
-            if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+            if (tempcoll.GetComponent<BoxCollider2D>().IsTouching(temp.GetComponent<BoxCollider2D>()))
             {
                 temp.GetComponent<Mob>().getHit((int)(GetAttack() * 2.0f));
-                Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
-                v3Temp.x += 50;
-                //temp.GetComponent<Mob>().GetPosition() = v3Temp;
-                Destroy(attackCollider);
             }
         }
+        Destroy(tempcoll);
     }
 
     protected override void ThreeChain()
     {
         anim.SetInteger("Number of Blocks", 3);
         anim.SetTrigger("Block Pressed");
-        Instantiate(attackCollider);
 
+        GameObject tempcoll = Instantiate(attackCollider);
+        tempcoll.SetActive(true);
         foreach (GameObject temp in WaveManager.ListOfMobs)
         {
-            if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+            if (tempcoll.GetComponent<BoxCollider2D>().IsTouching(temp.GetComponent<BoxCollider2D>()))
             {
                 temp.GetComponent<Mob>().getHit((int)(GetAttack() * 3.0f));
-                Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
-                v3Temp.x += 50;
-                //temp.GetComponent<Mob>().GetPosition() = v3Temp;
-                Destroy(attackCollider);
             }
         }
+        Destroy(tempcoll);
     }
 
     // Normal attack
@@ -146,21 +139,19 @@ public class Cloud : Hero
     // Special ability
     protected override void SpecialAbility()
     {
-        anim.SetTrigger("Skill Activated"); 
-        Instantiate(attackCollider);
+        anim.SetTrigger("Skill Activated");
 
+        GameObject tempcoll = Instantiate(attackCollider);
+        tempcoll.SetActive(true);
         foreach (GameObject temp in WaveManager.ListOfMobs)
         {
-            if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+            if (tempcoll.GetComponent<BoxCollider2D>().IsTouching(temp.GetComponent<BoxCollider2D>()))
             {
-                temp.GetComponent<Mob>().getHit((int)(GetAttack() * 3.0f));
+                temp.GetComponent<Mob>().getHit((int)(GetAttack() * 2.0f));
                 currHp += (Attack * 3) * 0.3f;
-                Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
-                v3Temp.x += 50;
-                //temp.GetComponent<Mob>().GetPosition() = v3Temp;
-                Destroy(attackCollider);
             }
         }
+        Destroy(tempcoll);
     }
 
     public override void LevelUp()

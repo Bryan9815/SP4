@@ -70,21 +70,18 @@ public class Weeb : Hero
     {
         //EnemyHealth -= (GetAttack() * 1.0f);
         anim.SetInteger("Number of Blocks", 1);
-        anim.SetTrigger("Block Pressed"); 
-        
-        Instantiate(attackCollider);
+        anim.SetTrigger("Block Pressed");
 
+        GameObject tempcoll = Instantiate(attackCollider);
+        tempcoll.SetActive(true);
         foreach (GameObject temp in WaveManager.ListOfMobs)
         {
-            if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+            if (tempcoll.GetComponent<BoxCollider2D>().IsTouching(temp.GetComponent<BoxCollider2D>()))
             {
-                temp.GetComponent<Mob>().getHit((int)GetAttack());
-                Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
-                v3Temp.x += 50;
-                //temp.GetComponent<Mob>().GetPosition() = v3Temp;
-                Destroy(attackCollider);
+                temp.GetComponent<Mob>().getHit((int)(GetAttack()));
             }
         }
+        Destroy(tempcoll);
     }
 
     protected override void TwoChain()
@@ -93,19 +90,16 @@ public class Weeb : Hero
         anim.SetInteger("Number of Blocks", 2);
         anim.SetTrigger("Block Pressed");
 
-        Instantiate(attackCollider);
-
+        GameObject tempcoll = Instantiate(attackCollider);
+        tempcoll.SetActive(true);
         foreach (GameObject temp in WaveManager.ListOfMobs)
         {
-            if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+            if (tempcoll.GetComponent<BoxCollider2D>().IsTouching(temp.GetComponent<BoxCollider2D>()))
             {
                 temp.GetComponent<Mob>().getHit((int)(GetAttack() * 2.0f));
-                Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
-                v3Temp.x += 50;
-                //temp.GetComponent<Mob>().GetPosition() = v3Temp;
-                Destroy(attackCollider);
             }
         }
+        Destroy(tempcoll);
     }
 
     protected override void ThreeChain()
@@ -114,19 +108,16 @@ public class Weeb : Hero
         anim.SetInteger("Number of Blocks", 3);
         anim.SetTrigger("Block Pressed");
 
-        Instantiate(attackCollider);
-
+        GameObject tempcoll = Instantiate(attackCollider);
+        tempcoll.SetActive(true);
         foreach (GameObject temp in WaveManager.ListOfMobs)
         {
-            if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+            if (tempcoll.GetComponent<BoxCollider2D>().IsTouching(temp.GetComponent<BoxCollider2D>()))
             {
                 temp.GetComponent<Mob>().getHit((int)(GetAttack() * 3.0f));
-                Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
-                v3Temp.x += 50;
-                //temp.GetComponent<Mob>().GetPosition() = v3Temp;
-                Destroy(attackCollider);
             }
         }
+        Destroy(tempcoll);
     }
 
     // Normal attack
@@ -155,17 +146,17 @@ public class Weeb : Hero
     {
         anim.SetTrigger("Skill Activated");
 
+        GameObject tempcoll = Instantiate(attackCollider);
+        tempcoll.SetActive(true);
         foreach (GameObject temp in WaveManager.ListOfMobs)
         {
-            if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+            if (tempcoll.GetComponent<BoxCollider2D>().IsTouching(temp.GetComponent<BoxCollider2D>()))
             {
                 temp.GetComponent<Mob>().getHit((int)((GetAttack() * 5.0f) + (GetDefense() * 2.0f)));
-                Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
-                v3Temp.x += 50;
-                //temp.GetComponent<Mob>().GetPosition() = v3Temp;
-                Destroy(attackCollider);
+                currHp += (Attack * 3) * 0.3f;
             }
         }
+        Destroy(tempcoll);
     }
 
     public override void LevelUp()
