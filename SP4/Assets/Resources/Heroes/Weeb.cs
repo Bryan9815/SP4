@@ -18,20 +18,13 @@ public class Weeb : Hero
     {
         id = 2;
         ClassName = "Weeb";                                             //Weeb's Class Name
-        Hp = level * 10 + 81;                                           //Weeb's Health Points
-        Attack = Attack = level * 20.775f + 9;                          //Weeb's Attack Value
-        Defense = Defense = (level * 6.4f) + (Attack / 100) + 5;        //Weeb's Defense Value
-        Resistance = 1;                                                             //Useless Stat 1:What is this going to be for if we already have defense?
-        Speed = 1;                                                                  //Useless Stat 2: If our hero is static, why is there a need for this
-        Accuracy = 1;                                                       //Not really sure if we need this
-        Evasion = 48 + ((Defense / 12));                                //Weeb's Evasion Rate (Maximum of 100% of course)
-	    Sp = 100;                                                       //Weeb's Special Points for ultimate (Sort of)
+        Sp = 100;                                                       //Weeb's Special Points for ultimate (Sort of)
         //hero_img = ;                                                  //Weeb's Sprite I guess?
         name = "Weeb";                                                  //Name of Weeb
         level = 1;                                                      //Weeb's Level
         exp = 0;                                                        //Weeb's Experience points
-        max_exp = (level * 2 * 500);                                    //Weeb's Experience points needed to level up
         //state;
+        CalculateStats();
         anim = GetComponent<Animator>();
     }
 
@@ -39,6 +32,15 @@ public class Weeb : Hero
     protected override void Update()
     {
 
+    }
+
+    void CalculateStats()
+    {
+        Hp = level * 10 + 81;                                           //Weeb's Health Points
+        Attack = Attack = level * 20.775f + 9;                          //Weeb's Attack Value
+        Defense = Defense = (level * 6.4f) + (Attack / 100) + 5;        //Weeb's Defense Value
+        Evasion = 48 + ((Defense / 12));                                //Weeb's Evasion Rate (Maximum of 100% of course)
+        max_exp = (level * 2 * 500);                                    //Weeb's Experience points needed to level up  
     }
 
 
@@ -117,7 +119,7 @@ public class Weeb : Hero
     {
         exp = 0;
         level += 1;
-        max_exp = (level * 2 * 500);
+        CalculateStats();
     }
 
     public override void SetAttack(int newAtk)

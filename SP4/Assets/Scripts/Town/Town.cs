@@ -34,9 +34,9 @@ public class Town : MonoBehaviour {
         }
     }
 
-    public void selectYourMode()
+    public void EndlessMode()
     {
-        started = true;
+        SceneManager.LoadScene("GamePlay");
     }
 
     public void goToMain()
