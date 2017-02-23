@@ -3,8 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Hero : MonoBehaviour {
-	protected float Hp,Attack,Defense, Resistance, Speed, Accuracy, Evasion;
-	protected int currHp,Sp;
+	protected float Attack,Defense, Resistance, Speed, Accuracy, Evasion;
+	protected int Hp,currHp,Sp;
     protected Sprite hero_img;
     protected string name;
     protected int level;
