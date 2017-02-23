@@ -3,23 +3,35 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Hero : MonoBehaviour {
-    public static float Attack,Defense, Resistance, Speed, Accuracy, Evasion;
-    public static Image hero;
-    public static string name;
-    public int level;
-    public float exp, max_exp;
-    public bool unlocked;
+	protected float Hp,Attack,Defense, Resistance, Speed, Accuracy, Evasion;
+	protected int Sp;
+    protected Sprite hero_img;
+    protected string name;
+    protected int level;
+	protected int id;
+    protected float exp, max_exp;
+	protected float attackTimer, attackTimer_Max;
+	protected int state;
+	protected string ClassName;
+	public bool unlocked;
+
+	protected GameObject attackCollider;
 	// Use this for initialization
-	void Start () {
-        
+	protected virtual void Start () {
+		attackCollider = GameObject.Find ("AttackCollider");
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	protected virtual void Update () {
+		
 	}
 
-    public void BlockAttack(int i)
+	protected virtual Hero Get_Class()
+	{
+		return this;
+	}
+
+	public virtual void BlockAttack(int i)
     {
         switch(i)
         {
@@ -36,55 +48,108 @@ public class Hero : MonoBehaviour {
     }
 
     // Chain attacks
-    void OneChain()
+	protected virtual void OneChain()
     {
 
     }
 
-    void TwoChain()
+	protected virtual void TwoChain()
     {
 
     }
 
-    void ThreeChain()
+	protected virtual void ThreeChain()
     {
 
     }
 
     // Normal attack
-    void NormalAttack()
+	protected virtual void NormalAttack()
     {
 
     }
 
     // when attacked
-    void getHit()
+	public virtual void getHit(int damagetaken)
     {
         //calculate how damage is taken here
 
     }
 
     // Special ability
-    public void SpecialAbility()
+	protected virtual void SpecialAbility()
     {
 
     }
 
-    public void LevelUp()
+	public virtual void LevelUp()
     {
 
     }
 
-    public float GetAttack()
+	public virtual void SetAttack(int newAtk)
+	{
+		Attack = newAtk;
+	}
+
+	public virtual float GetAttack()
     {
         return Attack;
     }
-    public float GetDefense()
+
+	public virtual void SetDefense(int newDef)
+	{
+		Defense = newDef;
+	}
+
+	public virtual float GetDefense()
     {
         return Defense;
     }
-    public Image GetImage()
+
+	public virtual void SetImage(Sprite newHero_img)
+	{
+		gameObject.GetComponent<Image> ().sprite = newHero_img;
+		//hero_img = newHero_img;
+	}
+
+	public virtual Sprite GetImage()
     {
-        return hero;
+		return gameObject.GetComponent<Image>().sprite;
     }
+
+	public virtual int Get_Id()
+	{
+		return id;
+	}
+
+	public virtual float Get_AttackTimer()
+	{
+		return attackTimer;
+	}
+
+	public virtual float Get_Max_AttackTimer()
+	{
+		return attackTimer_Max;
+	}
+
+	public virtual string Get_ClassName()
+	{
+		return ClassName;
+	}
+
+	public virtual Hero Get_ClassType()
+	{
+		return this;
+	}
+
+	public virtual Hero Get_Instance()
+	{
+		return new Hero ();
+	}
+
+	public virtual void Exit()
+	{
+		Destroy (gameObject);
+	}
 }

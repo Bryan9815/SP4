@@ -11,6 +11,8 @@ public class Block : MonoBehaviour {
 	private bool active; // if block should be destroyed
     public float Block_Travel_Speed; // block travel speed
 	public bool set; // if block still travelling
+	public float collide_allowance;
+	public Sprite Block_Img;
     public enum Chain
     {
         One_Chain,
@@ -94,7 +96,8 @@ public class Block : MonoBehaviour {
 	public void Travel(float limit)
 	{
 		// if first block in list ----------------------------------------------------------------------------------------------------
-		if (gameobject.GetComponent<RectTransform> ().anchoredPosition.x < limit && block_slot == 0) {
+		if (gameobject.GetComponent<RectTransform> ().anchoredPosition.x < limit && block_slot == 0) 
+		{
 			Vector2 temp = new Vector2 (gameobject.GetComponent<RectTransform> ().anchoredPosition.x, gameobject.GetComponent<RectTransform> ().anchoredPosition.y);
 			temp.x += Time.deltaTime * Block_Travel_Speed;
 			gameobject.GetComponent<RectTransform> ().anchoredPosition = temp;
@@ -102,10 +105,22 @@ public class Block : MonoBehaviour {
 		} 
 		else if (block_slot != 0) { // if not first block in list ----------------------------------------------------------------------------------------------------
 			// if touching the previous block collider
-			if (gameObject.GetComponent<BoxCollider2D> ().IsTouching (BlockManager.Listof_Blocks [block_slot - 1].gameObject.GetComponent<BoxCollider2D> ())) {
+			if (gameObject.GetComponent<BoxCollider2D> ().IsTouching (BlockManager.Listof_Blocks [block_slot - 1].gameObject.GetComponent<BoxCollider2D> ())) 
+			{
 				set = true;
+				//adjust if collision detected too late ----------------------------------------------------
+				float coll_width = gameObject.GetComponent<BoxCollider2D>().size.x - gameObject.GetComponent<RectTransform>().rect.width;
+				float properdist = gameObject.GetComponent<RectTransform> ().rect.width + coll_width - collide_allowance;
+				if ( (BlockManager.Listof_Blocks [block_slot - 1].gameObject.GetComponent<RectTransform> ().anchoredPosition.x - 
+					gameObject.GetComponent<RectTransform> ().anchoredPosition.x) < properdist )
+				{
+					Vector2 temp = new Vector2 (gameobject.GetComponent<RectTransform> ().anchoredPosition.x, gameobject.GetComponent<RectTransform> ().anchoredPosition.y);
+					temp.x -= Time.deltaTime * (Block_Travel_Speed / 10);
+					gameobject.GetComponent<RectTransform> ().anchoredPosition = temp;
+				}
 			} 
-			else { // if not touching the previous block collider
+			else // if not touching the previous block collider
+			{ 
 				Vector2 temp = new Vector2 (gameobject.GetComponent<RectTransform> ().anchoredPosition.x, gameobject.GetComponent<RectTransform> ().anchoredPosition.y);
 				temp.x += Time.deltaTime * Block_Travel_Speed;
 				gameobject.GetComponent<RectTransform> ().anchoredPosition = temp;
@@ -117,8 +132,6 @@ public class Block : MonoBehaviour {
 			set = true;
 		}
 	}	
-
-
 
     public void Activate()
     {
@@ -181,6 +194,7 @@ public class Block : MonoBehaviour {
         }
 
         // Run respective hero stuffs here
+		HeroManager.List_ofHeroes [hero_slot].gameObject.GetComponent<Hero> ().BlockAttack (chain_no);
 
     }
     public void CheckBlockChain()

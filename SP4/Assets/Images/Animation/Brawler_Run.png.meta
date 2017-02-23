@@ -1,0 +1,745 @@
+fileFormatVersion: 2
+guid: e611865d1a0422d438a1a19980d15959
+timeCreated: 1487503783
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Brawler_Run_0
+    21300002: Brawler_Run_1
+    21300004: Brawler_Run_2
+    21300006: Brawler_Run_3
+    21300008: Brawler_Run_4
+    21300010: Brawler_Run_5
+    21300012: Brawler_Run_6
+    21300014: Brawler_Run_7
+    21300016: Brawler_Run_8
+    21300018: Brawler_Run_9
+    21300020: Brawler_Run_10
+    21300022: Brawler_Run_11
+    21300024: Brawler_Run_12
+    21300026: Brawler_Run_13
+    21300028: Brawler_Run_14
+    21300030: Brawler_Run_15
+    21300032: Brawler_Run_16
+    21300034: Brawler_Run_17
+    21300036: Brawler_Run_18
+    21300038: Brawler_Run_19
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Brawler_Run_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 852
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 143, y: 89}
+        - {x: 114, y: 102}
+        - {x: 92, y: 138}
+        - {x: -30, y: 138}
+        - {x: -68, y: 80}
+        - {x: -116, y: 48}
+        - {x: -137, y: 62}
+        - {x: -166, y: 12}
+        - {x: -181, y: -52}
+        - {x: -182, y: -57}
+        - {x: -182, y: -91}
+        - {x: -163, y: -114}
+        - {x: -142, y: -112}
+        - {x: -127, y: -106}
+        - {x: -88, y: -87}
+        - {x: -41, y: -89}
+        - {x: 0, y: -129}
+        - {x: 26, y: -129}
+        - {x: 71, y: -109}
+        - {x: 102, y: -74}
+        - {x: 149, y: -13}
+        - {x: 149, y: 69}
+    - name: Brawler_Run_1
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 852
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 143, y: 89}
+        - {x: 114, y: 102}
+        - {x: 92, y: 138}
+        - {x: -30, y: 138}
+        - {x: -68, y: 80}
+        - {x: -116, y: 48}
+        - {x: -137, y: 62}
+        - {x: -166, y: 12}
+        - {x: -181, y: -52}
+        - {x: -182, y: -57}
+        - {x: -182, y: -91}
+        - {x: -163, y: -114}
+        - {x: -142, y: -112}
+        - {x: -127, y: -106}
+        - {x: -88, y: -87}
+        - {x: -41, y: -89}
+        - {x: 0, y: -129}
+        - {x: 26, y: -129}
+        - {x: 71, y: -109}
+        - {x: 102, y: -74}
+        - {x: 149, y: -13}
+        - {x: 149, y: 69}
+    - name: Brawler_Run_2
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 852
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 143, y: 89}
+        - {x: 114, y: 102}
+        - {x: 92, y: 138}
+        - {x: -30, y: 138}
+        - {x: -68, y: 80}
+        - {x: -116, y: 48}
+        - {x: -137, y: 62}
+        - {x: -166, y: 12}
+        - {x: -181, y: -52}
+        - {x: -182, y: -57}
+        - {x: -182, y: -91}
+        - {x: -163, y: -114}
+        - {x: -142, y: -112}
+        - {x: -127, y: -106}
+        - {x: -88, y: -87}
+        - {x: -41, y: -89}
+        - {x: 0, y: -129}
+        - {x: 26, y: -129}
+        - {x: 71, y: -109}
+        - {x: 102, y: -74}
+        - {x: 149, y: -13}
+        - {x: 149, y: 69}
+    - name: Brawler_Run_3
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 852
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 125, y: -49}
+        - {x: 98, y: -50}
+        - {x: 109, y: -35}
+        - {x: 113, y: -28}
+        - {x: 117, y: -13}
+        - {x: 141, y: 96}
+        - {x: 122, y: 135}
+        - {x: -39, y: 135}
+        - {x: -96, y: 106}
+        - {x: -94, y: 0}
+        - {x: -78, y: -18}
+        - {x: -86, y: -18}
+        - {x: -131, y: -38}
+        - {x: -153, y: -56}
+        - {x: -153, y: -96}
+        - {x: -132, y: -136}
+        - {x: -63, y: -142}
+        - {x: 90, y: -142}
+        - {x: 147, y: -103}
+        - {x: 148, y: -100}
+        - {x: 148, y: -63}
+      - - {x: 96, y: -134}
+        - {x: 97, y: -137}
+        - {x: 100, y: -137}
+        - {x: 102, y: -135}
+        - {x: 101, y: -132}
+        - {x: 98, y: -132}
+    - name: Brawler_Run_4
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 852
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 98, y: -50}
+        - {x: 109, y: -35}
+        - {x: 113, y: -28}
+        - {x: 148, y: -11}
+        - {x: 148, y: 68}
+        - {x: 132, y: 135}
+        - {x: -55, y: 135}
+        - {x: -96, y: 106}
+        - {x: -94, y: 0}
+        - {x: -78, y: -18}
+        - {x: -86, y: -18}
+        - {x: -131, y: -38}
+        - {x: -153, y: -67}
+        - {x: -153, y: -88}
+        - {x: -151, y: -100}
+        - {x: -127, y: -119}
+        - {x: -29, y: -142}
+        - {x: 99, y: -142}
+        - {x: 148, y: -102}
+        - {x: 148, y: -64}
+        - {x: 125, y: -47}
+    - name: Brawler_Run_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 568
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 98, y: -50}
+        - {x: 109, y: -35}
+        - {x: 113, y: -28}
+        - {x: 117, y: -13}
+        - {x: 141, y: 96}
+        - {x: 122, y: 135}
+        - {x: -39, y: 135}
+        - {x: -96, y: 106}
+        - {x: -50, y: 69}
+        - {x: -92, y: 27}
+        - {x: -94, y: 0}
+        - {x: -78, y: -18}
+        - {x: -143, y: -22}
+        - {x: -153, y: -57}
+        - {x: -153, y: -116}
+        - {x: -129, y: -128}
+        - {x: -5, y: -142}
+        - {x: 123, y: -142}
+        - {x: 148, y: -99}
+        - {x: 148, y: -55}
+        - {x: 125, y: -49}
+      - - {x: 102, y: -134}
+        - {x: 103, y: -137}
+        - {x: 122, y: -137}
+        - {x: 124, y: -135}
+        - {x: 123, y: -132}
+        - {x: 104, y: -132}
+      - - {x: 162, y: -132}
+        - {x: 160, y: -134}
+        - {x: 161, y: -137}
+        - {x: 187, y: -137}
+        - {x: 188, y: -136}
+        - {x: 188, y: -132}
+    - name: Brawler_Run_6
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 568
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 111, y: -9}
+        - {x: 152, y: 98}
+        - {x: 152, y: 105}
+        - {x: 98, y: 123}
+        - {x: 74, y: 126}
+        - {x: 17, y: 126}
+        - {x: -27, y: 80}
+        - {x: -141, y: -46}
+        - {x: -144, y: -56}
+        - {x: -144, y: -96}
+        - {x: -130, y: -114}
+        - {x: -107, y: -124}
+        - {x: -36, y: -106}
+        - {x: 19, y: -142}
+        - {x: 152, y: -142}
+        - {x: 152, y: -91}
+        - {x: 124, y: -75}
+    - name: Brawler_Run_7
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 568
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 111, y: -9}
+        - {x: 152, y: 98}
+        - {x: 152, y: 105}
+        - {x: 98, y: 123}
+        - {x: 74, y: 126}
+        - {x: 17, y: 126}
+        - {x: -27, y: 80}
+        - {x: -141, y: -46}
+        - {x: -144, y: -56}
+        - {x: -144, y: -96}
+        - {x: -130, y: -114}
+        - {x: -107, y: -124}
+        - {x: -36, y: -106}
+        - {x: 19, y: -142}
+        - {x: 152, y: -142}
+        - {x: 152, y: -91}
+        - {x: 124, y: -75}
+    - name: Brawler_Run_8
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 568
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 157, y: 67}
+        - {x: 157, y: 96}
+        - {x: 121, y: 115}
+        - {x: 75, y: 130}
+        - {x: 2, y: 130}
+        - {x: -47, y: 101}
+        - {x: -39, y: 49}
+        - {x: -76, y: 15}
+        - {x: -96, y: -37}
+        - {x: -110, y: -119}
+        - {x: -110, y: -138}
+        - {x: -97, y: -141}
+        - {x: 48, y: -141}
+        - {x: 46, y: -62}
+        - {x: 121, y: 9}
+    - name: Brawler_Run_9
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 568
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 157, y: 69}
+        - {x: 157, y: 96}
+        - {x: 121, y: 115}
+        - {x: 75, y: 130}
+        - {x: 2, y: 130}
+        - {x: -47, y: 101}
+        - {x: -45, y: 50}
+        - {x: -109, y: -89}
+        - {x: -110, y: -111}
+        - {x: -110, y: -137}
+        - {x: -96, y: -141}
+        - {x: 43, y: -141}
+        - {x: 51, y: -118}
+        - {x: 25, y: -77}
+        - {x: 89, y: -30}
+      - - {x: 90, y: -133}
+        - {x: 88, y: -134}
+        - {x: 88, y: -137}
+        - {x: 89, y: -138}
+        - {x: 95, y: -138}
+        - {x: 97, y: -137}
+        - {x: 97, y: -134}
+        - {x: 95, y: -133}
+      - - {x: -152, y: -134}
+        - {x: -151, y: -137}
+        - {x: -144, y: -137}
+        - {x: -142, y: -135}
+        - {x: -143, y: -132}
+        - {x: -150, y: -132}
+    - name: Brawler_Run_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 284
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 122, y: 24}
+        - {x: 136, y: 51}
+        - {x: 136, y: 77}
+        - {x: 105, y: 133}
+        - {x: 48, y: 141}
+        - {x: 0, y: 141}
+        - {x: -36, y: 106}
+        - {x: -62, y: 67}
+        - {x: -100, y: 49}
+        - {x: -119, y: -33}
+        - {x: -143, y: -75}
+        - {x: -149, y: -88}
+        - {x: -149, y: -114}
+        - {x: -127, y: -142}
+        - {x: -25, y: -142}
+        - {x: -4, y: -73}
+        - {x: 114, y: -44}
+        - {x: 127, y: -38}
+    - name: Brawler_Run_11
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 284
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 114, y: -44}
+        - {x: 127, y: -38}
+        - {x: 136, y: 31}
+        - {x: 136, y: 77}
+        - {x: 105, y: 133}
+        - {x: 48, y: 141}
+        - {x: 0, y: 141}
+        - {x: -36, y: 106}
+        - {x: -69, y: 74}
+        - {x: -139, y: -7}
+        - {x: -104, y: -42}
+        - {x: -143, y: -76}
+        - {x: -149, y: -86}
+        - {x: -149, y: -117}
+        - {x: -125, y: -142}
+        - {x: -32, y: -142}
+        - {x: -26, y: -137}
+        - {x: -21, y: -105}
+        - {x: -4, y: -73}
+    - name: Brawler_Run_12
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 284
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 188, y: -132}
+        - {x: 81, y: -132}
+        - {x: 98, y: -79}
+        - {x: 100, y: -52}
+        - {x: 90, y: -41}
+        - {x: 48, y: -34}
+        - {x: 78, y: -38}
+        - {x: 156, y: -27}
+        - {x: 171, y: 83}
+        - {x: 107, y: 126}
+        - {x: 63, y: 142}
+        - {x: -6, y: 142}
+        - {x: -54, y: 111}
+        - {x: -154, y: 46}
+        - {x: -188, y: -46}
+        - {x: -188, y: -86}
+        - {x: -178, y: -96}
+        - {x: 1, y: -137}
+        - {x: 68, y: -138}
+        - {x: 188, y: -138}
+    - name: Brawler_Run_13
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 284
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: -48}
+        - {x: 20, y: -13}
+        - {x: 78, y: -35}
+        - {x: 148, y: -28}
+        - {x: 148, y: 100}
+        - {x: 107, y: 126}
+        - {x: 63, y: 142}
+        - {x: -6, y: 142}
+        - {x: -54, y: 111}
+        - {x: -68, y: 69}
+        - {x: -150, y: 43}
+        - {x: -186, y: -40}
+        - {x: -188, y: -51}
+        - {x: -188, y: -81}
+        - {x: -177, y: -94}
+        - {x: -62, y: -94}
+        - {x: -13, y: -136}
+        - {x: 54, y: -136}
+        - {x: 116, y: -73}
+        - {x: 94, y: -35}
+        - {x: 50, y: -41}
+    - name: Brawler_Run_14
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 284
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 130, y: 47}
+        - {x: 111, y: 64}
+        - {x: 137, y: 80}
+        - {x: 141, y: 83}
+        - {x: 141, y: 101}
+        - {x: 98, y: 142}
+        - {x: -31, y: 142}
+        - {x: -155, y: 40}
+        - {x: -149, y: -9}
+        - {x: -131, y: -14}
+        - {x: -103, y: -18}
+        - {x: -151, y: -55}
+        - {x: -157, y: -65}
+        - {x: -157, y: -132}
+        - {x: -109, y: -142}
+        - {x: 106, y: -142}
+        - {x: 138, y: -124}
+        - {x: 141, y: -112}
+        - {x: 141, y: 18}
+    - name: Brawler_Run_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 116, y: -55}
+        - {x: 141, y: -8}
+        - {x: 141, y: 18}
+        - {x: 130, y: 47}
+        - {x: 111, y: 64}
+        - {x: 137, y: 80}
+        - {x: 141, y: 83}
+        - {x: 141, y: 101}
+        - {x: 98, y: 142}
+        - {x: -31, y: 142}
+        - {x: -155, y: 40}
+        - {x: -149, y: -9}
+        - {x: -131, y: -14}
+        - {x: -103, y: -18}
+        - {x: -151, y: -55}
+        - {x: -157, y: -65}
+        - {x: -157, y: -86}
+        - {x: -138, y: -102}
+        - {x: -79, y: -127}
+        - {x: 3, y: -142}
+        - {x: 122, y: -142}
+        - {x: 141, y: -100}
+        - {x: 141, y: -90}
+        - {x: 135, y: -68}
+      - - {x: -178, y: -134}
+        - {x: -177, y: -137}
+        - {x: -139, y: -137}
+        - {x: -137, y: -135}
+        - {x: -138, y: -132}
+        - {x: -176, y: -132}
+      - - {x: -57, y: -134}
+        - {x: -56, y: -137}
+        - {x: -25, y: -137}
+        - {x: -23, y: -135}
+        - {x: -24, y: -132}
+        - {x: -55, y: -132}
+      - - {x: 118, y: -134}
+        - {x: 119, y: -137}
+        - {x: 128, y: -137}
+        - {x: 130, y: -135}
+        - {x: 129, y: -132}
+        - {x: 120, y: -132}
+    - name: Brawler_Run_16
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 0
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 87, y: 116}
+        - {x: 82, y: 114}
+        - {x: 81, y: 138}
+        - {x: 79, y: 142}
+        - {x: -27, y: 142}
+        - {x: -140, y: 16}
+        - {x: -108, y: -44}
+        - {x: -82, y: -42}
+        - {x: -75, y: -41}
+        - {x: -74, y: -40}
+        - {x: -72, y: -40}
+        - {x: -63, y: -36}
+        - {x: -69, y: -39}
+        - {x: -70, y: -40}
+        - {x: -72, y: -40}
+        - {x: -76, y: -42}
+        - {x: -79, y: -42}
+        - {x: -110, y: -51}
+        - {x: -146, y: -68}
+        - {x: -146, y: -87}
+        - {x: -104, y: -114}
+        - {x: -18, y: -108}
+        - {x: 8, y: -105}
+        - {x: 14, y: -96}
+        - {x: -1, y: -133}
+        - {x: 4, y: -142}
+        - {x: 138, y: -142}
+        - {x: 138, y: 115}
+        - {x: 121, y: 126}
+    - name: Brawler_Run_17
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 0
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 87, y: 116}
+        - {x: 82, y: 114}
+        - {x: 81, y: 138}
+        - {x: 79, y: 142}
+        - {x: -27, y: 142}
+        - {x: -140, y: 16}
+        - {x: -108, y: -44}
+        - {x: -82, y: -42}
+        - {x: -75, y: -41}
+        - {x: -74, y: -40}
+        - {x: -72, y: -40}
+        - {x: -63, y: -36}
+        - {x: -69, y: -39}
+        - {x: -70, y: -40}
+        - {x: -72, y: -40}
+        - {x: -76, y: -42}
+        - {x: -79, y: -42}
+        - {x: -110, y: -51}
+        - {x: -146, y: -68}
+        - {x: -146, y: -105}
+        - {x: -65, y: -142}
+        - {x: 138, y: -142}
+        - {x: 138, y: 115}
+        - {x: 121, y: 126}
+    - name: Brawler_Run_18
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 0
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48, y: -59}
+        - {x: 110, y: 15}
+        - {x: 133, y: 46}
+        - {x: 133, y: 101}
+        - {x: 100, y: 142}
+        - {x: -30, y: 142}
+        - {x: -50, y: 82}
+        - {x: -76, y: 0}
+        - {x: -108, y: -107}
+        - {x: -108, y: -142}
+        - {x: -21, y: -142}
+        - {x: 16, y: -141}
+        - {x: 41, y: -140}
+        - {x: 46, y: -135}
+        - {x: 48, y: -114}
+    - name: Brawler_Run_19
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 0
+        width: 376
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 104, y: 33}
+        - {x: 133, y: 47}
+        - {x: 133, y: 101}
+        - {x: 100, y: 142}
+        - {x: 46, y: 142}
+        - {x: 25, y: 134}
+        - {x: 0, y: 142}
+        - {x: -31, y: 142}
+        - {x: -78, y: 0}
+        - {x: -108, y: -103}
+        - {x: -108, y: -142}
+        - {x: 31, y: -142}
+        - {x: 53, y: -140}
+        - {x: 42, y: -59}
+        - {x: 98, y: 1}
+        - {x: 104, y: 17}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

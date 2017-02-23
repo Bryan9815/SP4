@@ -4,4 +4,9 @@ SP4/SP4.v12.suo
 SP4/Library/
 SP4/twest_Data/
 SP4/Assembly-CSharp.csproj
+<<<<<<< HEAD
 SP4/SP4.userprefs
+=======
+*.userprefs
+SP4/ProjectSettings/EditorBuildSettings.asset
+>>>>>>> 9308281ea84cf618e6ec1829dbd53e6f66caa752
