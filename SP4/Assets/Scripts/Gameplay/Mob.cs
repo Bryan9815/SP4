@@ -16,6 +16,8 @@ public class Mob : MonoBehaviour
     {
         Hp = 1;
         Defense = 1;
+        attackTimer = 0.0f;
+        attackTimer_Max = 3.0f;
 
         Arrow = GameObject.Find("Arrow");
 

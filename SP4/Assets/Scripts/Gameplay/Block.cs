@@ -12,7 +12,8 @@ public class Block : MonoBehaviour {
     public float Block_Travel_Speed; // block travel speed
 	public bool set; // if block still travelling
 	public float collide_allowance;
-	public Sprite Block_Img;
+	public Sprite Block1_Img,Block2_Img,Block3_Img;
+	public List<Sprite> BlockImageList;
     public enum Chain
     {
         One_Chain,
@@ -25,12 +26,21 @@ public class Block : MonoBehaviour {
 
     public Chain chain_type;
 
+	void Awake()
+	{
+		hero_slot = 0;
+		BlockImageList = new List<Sprite> ();
+		BlockImageList.Add (Block1_Img);
+		BlockImageList.Add (Block2_Img);
+		BlockImageList.Add (Block3_Img);
+	}
+
 	// Use this for initialization
 	void Start () {
         Name = gameobject.name;
         active = true;
         block_slot = 0;
-        hero_slot = 0;
+        
         chain_type = Chain.One_Chain;
 		set = false;
 		gameObject.GetComponent<Button> ().onClick.AddListener (delegate() {

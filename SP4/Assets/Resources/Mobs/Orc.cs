@@ -46,7 +46,6 @@ public class Orc : Mob
         switch(state)
         {
             case States.Idle:
-
                 foreach (GameObject hero in HeroList)
                 {
                     if (!gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
@@ -60,16 +59,20 @@ public class Orc : Mob
             case States.Run:
                 foreach(GameObject hero in HeroList)
                 {
+                    Vector3 temp = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+                    
                     if (!gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
-                    {
-                        Vector3 temp = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
-                        temp.x -= Time.deltaTime*10;
+                    {                        
+                        temp.x -= Time.deltaTime;
                         gameObject.transform.position = temp;
                     }
                     else
                     {
-                        Destroy(gameObject);
-                        WaveManager.ListOfMobs.Remove(gameObject);
+                        if (attackTimer > attackTimer_Max)
+                        {
+                            hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
+                            attackTimer = 0;
+                        }
                     }
                 }
                 break;

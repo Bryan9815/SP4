@@ -19,8 +19,8 @@ public class G_DwarfArcher : Mob
         Hp = 10;
         Defense = 10;
 
-        attackTimer = 5.0f;
-        attackTimer_Max = 3.1f;
+        attackTimer = 2.0f;
+        attackTimer_Max = 3.0f;
 
         state = States.Idle;
         animator = GetComponent<Animator>();
@@ -34,11 +34,12 @@ public class G_DwarfArcher : Mob
         {
             state = States.Walk;
             animator.SetTrigger("Target Detected");
+            animator.SetBool("No Targets", false);
         }
         else if(distFromHero > 7.5 && state != States.Attack)
         {
             state = States.Idle;
-            animator.SetTrigger("No Targets");
+            animator.SetBool("No Targets", true);
         }
         else if (distFromHero <= 5)
         {
@@ -70,7 +71,7 @@ public class G_DwarfArcher : Mob
                 }
                 break;
             case States.Attack:
-                if(animator.GetFloat("Cooldown Timer") < 3.1f)
+                if(animator.GetFloat("Cooldown Timer") < attackTimer_Max)
                     attackTimer += Time.deltaTime;
                 animator.SetFloat("Cooldown Timer", attackTimer);
                 
@@ -90,7 +91,7 @@ public class G_DwarfArcher : Mob
                 {
                     if (!gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
                     {
-                        temp2.x -= Time.deltaTime * 0.25f;
+                        temp2.x -= Time.deltaTime * 0.5f;
                         gameObject.transform.position = temp2;
                     }
                 }
