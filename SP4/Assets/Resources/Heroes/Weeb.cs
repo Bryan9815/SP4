@@ -70,21 +70,63 @@ public class Weeb : Hero
     {
         //EnemyHealth -= (GetAttack() * 1.0f);
         anim.SetInteger("Number of Blocks", 1);
-        anim.SetTrigger("BlockPressed");
+        anim.SetTrigger("Block Pressed"); 
+        
+        Instantiate(attackCollider);
+
+        foreach (GameObject temp in WaveManager.ListOfMobs)
+        {
+            if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+            {
+                temp.GetComponent<Mob>().getHit((int)GetAttack());
+                Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
+                v3Temp.x += 50;
+                //temp.GetComponent<Mob>().GetPosition() = v3Temp;
+                Destroy(attackCollider);
+            }
+        }
     }
 
     protected override void TwoChain()
     {
         //EnemyHealth -= (GetAttack() * 2.0f);
         anim.SetInteger("Number of Blocks", 2);
-        anim.SetTrigger("BlockPressed");
+        anim.SetTrigger("Block Pressed");
+
+        Instantiate(attackCollider);
+
+        foreach (GameObject temp in WaveManager.ListOfMobs)
+        {
+            if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+            {
+                temp.GetComponent<Mob>().getHit((int)(GetAttack() * 2.0f));
+                Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
+                v3Temp.x += 50;
+                //temp.GetComponent<Mob>().GetPosition() = v3Temp;
+                Destroy(attackCollider);
+            }
+        }
     }
 
     protected override void ThreeChain()
     {
         //EnemyHealth = (GetAttack() * 3.0f);
         anim.SetInteger("Number of Blocks", 3);
-        anim.SetTrigger("BlockPressed");
+        anim.SetTrigger("Block Pressed");
+
+        Instantiate(attackCollider);
+
+        foreach (GameObject temp in WaveManager.ListOfMobs)
+        {
+            if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+            {
+                temp.GetComponent<Mob>().getHit((int)(GetAttack() * 3.0f));
+                Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
+                v3Temp.x += 50;
+                //temp.GetComponent<Mob>().GetPosition() = v3Temp;
+                Destroy(attackCollider);
+            }
+        }
     }
 
     // Normal attack
@@ -111,8 +153,19 @@ public class Weeb : Hero
     // Special ability
     protected override void SpecialAbility()
     {
-        //EnemyHealth = (GetAttack() * 5 + GetDefense() * 2);
         anim.SetTrigger("Skill Activated");
+
+        foreach (GameObject temp in WaveManager.ListOfMobs)
+        {
+            if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+            {
+                temp.GetComponent<Mob>().getHit((int)((GetAttack() * 5.0f) + (GetDefense() * 2.0f)));
+                Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
+                v3Temp.x += 50;
+                //temp.GetComponent<Mob>().GetPosition() = v3Temp;
+                Destroy(attackCollider);
+            }
+        }
     }
 
     public override void LevelUp()

@@ -25,6 +25,7 @@ public class Cloud : Hero
         exp = 0;                                                        //Cloud's Experience points
         //state;
         CalculateStats();
+        currHp = Hp;
         anim = GetComponent<Animator>();
     }
 
@@ -68,7 +69,7 @@ public class Cloud : Hero
     protected override void OneChain()
     {
        anim.SetInteger("Number of Blocks", 1);
-       anim.SetTrigger("BlockPressed");
+       anim.SetTrigger("Block Pressed");
 
        Instantiate(attackCollider);
 
@@ -83,21 +84,44 @@ public class Cloud : Hero
                Destroy(attackCollider);
            }
        }
-       Debug.Log("LOLXDXD");
     }
 
     protected override void TwoChain()
     {
-        //Damage = GetAttack() * 2.0f;
         anim.SetInteger("Number of Blocks", 2);
-        anim.SetTrigger("BlockPressed");
+        anim.SetTrigger("Block Pressed");
+        Instantiate(attackCollider);
+
+        foreach (GameObject temp in WaveManager.ListOfMobs)
+        {
+            if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+            {
+                temp.GetComponent<Mob>().getHit((int)(GetAttack() * 2.0f));
+                Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
+                v3Temp.x += 50;
+                //temp.GetComponent<Mob>().GetPosition() = v3Temp;
+                Destroy(attackCollider);
+            }
+        }
     }
 
     protected override void ThreeChain()
     {
-        //Damage = GetAttack() * 3.0f;
         anim.SetInteger("Number of Blocks", 3);
-        anim.SetTrigger("BlockPressed");
+        anim.SetTrigger("Block Pressed");
+        Instantiate(attackCollider);
+
+        foreach (GameObject temp in WaveManager.ListOfMobs)
+        {
+            if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+            {
+                temp.GetComponent<Mob>().getHit((int)(GetAttack() * 3.0f));
+                Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
+                v3Temp.x += 50;
+                //temp.GetComponent<Mob>().GetPosition() = v3Temp;
+                Destroy(attackCollider);
+            }
+        }
     }
 
     // Normal attack
@@ -122,9 +146,21 @@ public class Cloud : Hero
     // Special ability
     protected override void SpecialAbility()
     {
-        //Damage = GetAttack() * 3;
-        //Hp = (Attack * 3) * 0.3f;
-        anim.SetTrigger("Skill Activated");
+        anim.SetTrigger("Skill Activated"); 
+        Instantiate(attackCollider);
+
+        foreach (GameObject temp in WaveManager.ListOfMobs)
+        {
+            if (attackCollider.GetComponent<Collider2D>().IsTouching(temp.GetComponent<Collider2D>()))
+            {
+                temp.GetComponent<Mob>().getHit((int)(GetAttack() * 3.0f));
+                currHp += (Attack * 3) * 0.3f;
+                Vector3 v3Temp = temp.GetComponent<Mob>().GetPosition();
+                v3Temp.x += 50;
+                //temp.GetComponent<Mob>().GetPosition() = v3Temp;
+                Destroy(attackCollider);
+            }
+        }
     }
 
     public override void LevelUp()

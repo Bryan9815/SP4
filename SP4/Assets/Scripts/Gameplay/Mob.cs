@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class Mob : MonoBehaviour
 {
     protected int Hp, Attack, Defense;
-    protected float attackTimer, attackTimer_Max, animationReset;
+    protected float attackTimer, attackTimer_Max;
     protected Vector3 position;
 
     protected static GameObject Hero1, Hero2, Hero3, Arrow;
