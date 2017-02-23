@@ -15,6 +15,7 @@ public class Orc : Mob
 	void Start () 
     {
         Hp = 10;
+        Attack = 10;
         Defense = 10;
 
         state = States.Idle;
@@ -24,8 +25,8 @@ public class Orc : Mob
 	// Update is called once per frame
 	void Update () 
     {
-        
         float distFromHero = Mathf.Sqrt((float)(gameObject.transform.position.x + Hero1.transform.position.x) * (gameObject.transform.position.x + Hero1.transform.position.x) + (gameObject.transform.position.y + Hero1.transform.position.y) * (gameObject.transform.position.y + Hero1.transform.position.y));
+        // State Transitions
         if (distFromHero <= 7.5)
         {
             state = States.Run;
@@ -36,6 +37,12 @@ public class Orc : Mob
             state = States.Idle;
             animator.SetTrigger("Idle");
         }
+        if (Hp <= 0)
+        {
+            Exit();
+        }
+
+        // States
         switch(state)
         {
             case States.Idle:

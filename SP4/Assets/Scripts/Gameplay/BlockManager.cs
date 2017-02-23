@@ -46,7 +46,7 @@ public class BlockManager : MonoBehaviour {
 	    if (Block_Spawn_Timer > Max_Block_Spawn_Timer && Listof_Blocks.Count < 8)
         {
             Block_Spawn_Timer = 0.0f;
-            SpawnNewBlock(Random.Range(1, 3));
+            SpawnNewBlock(Random.Range(0, 2));
             //Debug.Log("Block spawned");
         }
         for (int i = 0; i < Listof_Blocks.Count; ++i)
