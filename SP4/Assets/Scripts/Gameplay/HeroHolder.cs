@@ -7,6 +7,7 @@ public class HeroHolder : MonoBehaviour
 	public GameObject hero;
     public int HeroSlot;
     private float delayTimer;
+
 	// Use this for initialization
 	void Start () 
     {
