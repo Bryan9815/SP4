@@ -96,10 +96,6 @@ public class Weeb : Hero
     {
         //calculate how damage is taken here
         //damagetaken = EnemyDamage - GetDefense();
-<<<<<<< HEAD
-        Hp -= (damagetaken - GetDefense());
-        Debug.Log("Hero Name: " + gameObject.name + "\nHero HP: " + Hp);
-=======
         if (damagetaken - GetDefense() > 0)
         {
             Hp -= (damagetaken - GetDefense());
@@ -108,7 +104,6 @@ public class Weeb : Hero
         {
 
         }
->>>>>>> 17c445925069624a840122a5f4ba2befdfdbeb64
     }
 
     // Special ability
