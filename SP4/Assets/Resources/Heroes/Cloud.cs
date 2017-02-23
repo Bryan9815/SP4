@@ -66,13 +66,19 @@ public class Cloud : Hero
     // Chain attacks
     protected override void OneChain()
     {
-       if(attackCollider.GetComponent<Collider2D>().IsTouching(GameObject.Find("Orc").GetComponent<Collider2D>()))
+       anim.SetInteger("Number of Blocks", 1);
+       anim.SetTrigger("BlockPressed");
+
+       GameObject[] MobList;
+       GameObject[] MobList2; 
+
+       MobList = GameObject.FindGameObjectsWithTag("Mobs");
+       for (int i = 0; i < MobList.Length; i++)
        {
-           anim.SetInteger("Number of Blocks", 1);
-           anim.SetTrigger("BlockPressed");
-           //EnemyHp -= GetAttack() * 1.0f;
+           MobList2[i] = MobList[i].GetComponent<Collider2D>();
        }
-        Debug.Log("LOLXDXD");
+
+       Debug.Log("LOLXDXD");
     }
 
     protected override void TwoChain()
