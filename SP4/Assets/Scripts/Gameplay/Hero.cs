@@ -14,9 +14,11 @@ public class Hero : MonoBehaviour {
 	protected int state;
 	protected string ClassName;
 	public bool unlocked;
+
+	protected GameObject attackCollider;
 	// Use this for initialization
 	protected virtual void Start () {
-        
+		attackCollider = GameObject.Find ("AttackCollider");
 	}
 	
 	// Update is called once per frame

@@ -9,27 +9,50 @@ public class Leon : Hero {
 	//	public static string name;
 	//	public int level;
 	//	public float exp, max_exp;
-
+	bool isDead;
 	static Leon _instance;
-	enum States // for animation
-	{
-		Idle,
-		Attack,
-
-		Death,
-	}
+//	enum States // for animation
+//	{
+//		Idle,
+//		Attack,
+//		Chain1,
+//		Chain2,
+//		Chain3,
+//		Death,
+//	}
+//
+//	States state;
+	Animator animator;
 	// Use this for initialization
 	protected override void Start () {
 		id = 1;
 		ClassName = "Leon";
+		//Level increase stat variables
+		Sp = 0;
+		isDead = false;
+		//state = States.Idle;
+		animator = gameObject.gameObject.GetComponent<Animator> ();
+		level = 1;
+		exp = 0;
+		CalculateStats ();
+	}
 
-
-
+	void CalculateStats()
+	{										//Max
+		Hp = 100 * level * 1.45f;			//7250
+		Attack = 18 * level * 1;			//900
+		Defense = 11 * level * 1.2f;		//550
+		Evasion = 0.7f * level * 0.9f;		//31.5
+		max_exp = 500 * level * 2;			//50k
 	}
 
 	// Update is called once per frame
 	protected override void Update () {
-
+		if (Sp >= 100)
+		{
+			Sp -= 100;
+			SpecialAbility ();
+		}
 	}
 
 
@@ -57,17 +80,23 @@ public class Leon : Hero {
 	// Chain attacks
 	protected override void OneChain()
 	{
-
+		//state = States.Chain1;
+		animator.SetInteger ("Number of Blocks",1);
+		animator.SetTrigger ("Blocks Pressed");
 	}
 
 	protected override void TwoChain()
 	{
-
+		//state = States.Chain2;
+		animator.SetInteger ("Number of Blocks",2);
+		animator.SetTrigger ("Blocks Pressed");
 	}
 
 	protected override void ThreeChain()
 	{
-
+		//state = States.Chain3;
+		animator.SetInteger ("Number of Blocks",3);
+		animator.SetTrigger ("Blocks Pressed");
 	}
 
 	// Normal attack
@@ -80,18 +109,25 @@ public class Leon : Hero {
 	public override void getHit(int damagetaken)
 	{
 		//calculate how damage is taken here
-
+		animator.SetTrigger ("isHit");
+		Hp -= damagetaken;
+		if (Hp <= 0)
+		{
+			isDead = true;
+			animator.SetBool ("No HP", true);
+		}
 	}
 
 	// Special ability
 	protected override void SpecialAbility()
 	{
-
+		animator.SetTrigger ("Skill Activated");
 	}
 
 	public override void LevelUp()
 	{
-
+		level += 1;
+		CalculateStats ();
 	}
 
 	public override void SetAttack(int newAtk)

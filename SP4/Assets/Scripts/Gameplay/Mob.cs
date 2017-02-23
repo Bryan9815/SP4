@@ -9,7 +9,7 @@ public class Mob : MonoBehaviour
     protected float attackTimer, attackTimer_Max;
     protected Vector3 position;
 
-    public GameObject Hero1, Hero2, Hero3;
+    protected static GameObject Hero1, Hero2, Hero3;
     protected static List<GameObject> HeroList;
 
     // Use this for initialization
@@ -19,6 +19,10 @@ public class Mob : MonoBehaviour
         Defense = 1;
 
         HeroList = new List<GameObject>();
+
+        Hero1 = GameObject.Find("Hero1");
+        Hero2 = GameObject.Find("Hero2");
+        Hero3 = GameObject.Find("Hero3");
 
         HeroList.Add(Hero1);
         HeroList.Add(Hero2);
