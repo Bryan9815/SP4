@@ -96,6 +96,7 @@ public class Weeb : Hero
     {
         //calculate how damage is taken here
         //damagetaken = EnemyDamage - GetDefense();
+        Hp -= (damagetaken - GetDefense());
     }
 
     // Special ability
