@@ -83,7 +83,6 @@ public class Cloud : Hero
                Destroy(attackCollider);
            }
        }
-
        Debug.Log("LOLXDXD");
     }
 
@@ -113,7 +112,7 @@ public class Cloud : Hero
         //calculate how damage is taken here
         if(damagetaken - GetDefense() > 0)
         {
-            Hp -= (damagetaken - (int)GetDefense());
+            Hp -= (damagetaken - GetDefense());
         }
         else { 
 
