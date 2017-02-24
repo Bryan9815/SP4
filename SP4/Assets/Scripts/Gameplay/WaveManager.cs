@@ -8,7 +8,7 @@ public class WaveManager : MonoBehaviour
 
     public static List<GameObject> ListOfMobs;
 
-    private static int WaveNumber, MobNumber;
+    private static int WaveNumber, MobNumber, GoldEarned, KillCount;
     private bool WaveOver;
 	// Use this for initialization
     void Start()
@@ -306,5 +306,25 @@ public class WaveManager : MonoBehaviour
     public static int GetWaveNumber()
     {
         return WaveNumber;
+    }
+
+    public static void AddGoldEarned(int goldAdded)
+    {
+        GoldEarned += goldAdded;
+    }
+
+    public static int GetGoldEarned()
+    {
+        return GoldEarned;
+    }
+
+    public static void AddKillCount()
+    {
+        KillCount++;
+    }
+
+    public static int GetKillCount()
+    {
+        return KillCount;
     }
 }

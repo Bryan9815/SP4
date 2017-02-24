@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class Mob : MonoBehaviour
 {
-    protected int Hp, Attack, Defense;
+    protected int Hp, Attack, Defense, goldValue;
     protected float attackTimer, attackTimer_Max;
     protected Vector3 position;
 
@@ -64,5 +64,9 @@ public class Mob : MonoBehaviour
     {
         Destroy(gameObject);
         WaveManager.ListOfMobs.Remove(gameObject);
+        WaveManager.AddKillCount();
+        WaveManager.AddGoldEarned(goldValue);
+        Debug.Log("Gold Earned: " + WaveManager.GetGoldEarned());
+        Debug.Log("Kill Count: " + WaveManager.GetKillCount());
     }
 }

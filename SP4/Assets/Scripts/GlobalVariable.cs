@@ -19,7 +19,7 @@ public class GlobalVariable : MonoBehaviour {
 	//Indicates how far the player is in
 	private static int stageLevel;
 
-	private static List<int> PlayerActiveHeroes;
+	private static int ActiveHero1, ActiveHero2, ActiveHero3;
     //Added using unity engine UI on top
     //is for just in case anyone need a global Text field 
     //or anything related in UI
@@ -67,10 +67,9 @@ public class GlobalVariable : MonoBehaviour {
         PlayerName = PlayerPrefs.GetString("userID", "");
         PlayerGoldG = PlayerPrefs.GetInt("Gold", 100);
 
-		PlayerActiveHeroes = new List<int> ();
-		PlayerActiveHeroes.Add (1);
-		PlayerActiveHeroes.Add (2);
-		PlayerActiveHeroes.Add (3);
+        ActiveHero1 = PlayerPrefs.GetInt("Hero ID_1", 0);
+        ActiveHero2 = PlayerPrefs.GetInt("Hero ID_2", 1);
+        ActiveHero3 = PlayerPrefs.GetInt("Hero ID_3", 2);
 	}
 	
 	// Update is called once per frame
@@ -182,11 +181,78 @@ public class GlobalVariable : MonoBehaviour {
 	}
 	public static void SetPlayerHeroID(int slot,int id)
 	{
-		PlayerActiveHeroes.Insert (slot, id);
+        switch (slot)
+        {
+            case 1: 
+                ActiveHero1 = id;
+                PlayerPrefs.SetInt("Hero ID_1", id);
+                break;
+            case 2:
+                ActiveHero2 = id;
+                PlayerPrefs.SetInt("Hero ID_2", id);
+                break;
+            case 3:
+                ActiveHero3 = id;
+                PlayerPrefs.SetInt("Hero ID_3", id);
+                break;
+            default:
+                break;
+        }
 	}
 
 	public static int GetPlayerHeroID(int slot)
 	{
-		return PlayerActiveHeroes [slot];
+		switch (slot)
+        {
+            case 1:
+                return ActiveHero1;
+            case 2:
+                return ActiveHero2;
+            case 3:
+                return ActiveHero3;
+            default:
+                Debug.Log("GetPlayerHeroID Invalid Parameter: returned 0");
+                return 0;
+        }
 	}
+
+
+    public static GameObject GetHero(int id)
+    {
+        GameObject tempHero;
+        switch (id)
+        {
+            case 1:
+                tempHero = GameObject.Find("Cloud");
+                return tempHero;
+            case 2:
+                tempHero = GameObject.Find("Weeb");
+              return tempHero;
+            case 3:
+                tempHero = GameObject.Find("Werewolf");
+                return tempHero;
+            default:
+                tempHero = null;
+                Debug.Log("GetPlayerHero Invalid Parameter: returned null GameObject");
+                return tempHero;
+        }
+    }
+
+    public static GameObject GetPlayerHero(int slot)
+    {
+        GameObject tempHero;
+        switch (slot)
+        {
+            case 1:
+                return tempHero = GetHero(ActiveHero1);                
+            case 2:
+                return tempHero = GetHero(ActiveHero2);
+            case 3:
+                return tempHero = GetHero(ActiveHero3);
+            default:
+                tempHero = null;
+                Debug.Log("GetPlayerHero Invalid Parameter: returned null GameObject");
+                return tempHero;
+        }
+    }
 }

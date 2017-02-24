@@ -21,10 +21,10 @@ public class HUD : MonoBehaviour
 	private Vector3 tempHP; 
 	private Vector3 tempMP;
 
+    private bool ImageSet = false;
 	// Use this for initialization
 	void Start ()
-	{
-        characterIcon.sprite = Hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().GetSprite();
+	{        
 		Hp_txt.text = "";
 		Mp_txt.text = "";
 
@@ -40,6 +40,12 @@ public class HUD : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+        if(!ImageSet)
+        {
+            characterIcon.sprite = Hero.GetComponent<HeroHolder>().ReturnSprite();
+            ImageSet = true;
+        }
+
 		currHP -= Time.deltaTime * 2.0f;
 
 		if (currHP <= 0.0f)

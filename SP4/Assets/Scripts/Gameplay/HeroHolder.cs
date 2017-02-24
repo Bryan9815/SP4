@@ -3,26 +3,27 @@ using System.Collections;
 
 public class HeroHolder : MonoBehaviour 
 {
-
-	public GameObject hero;
+	private GameObject hero;
     public int HeroSlot;
+    private int HeroID;
     private float delayTimer;
 
 	// Use this for initialization
 	void Start () 
     {
+        hero = GlobalVariable.GetPlayerHero(HeroSlot);
         delayTimer = 0.0f;
         switch (HeroSlot)
         {
-            case 0:
+            case 1:
                 Vector3 temp1 = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 1);
                 hero.GetComponent<Hero>().transform.position = temp1;
                 break;
-            case 1:
+            case 2:
                 Vector3 temp2 = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 1);
                 hero.GetComponent<Hero>().transform.position = temp2;
                 break;
-            case 2:
+            case 3:
                 Vector3 temp3 = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 1);
                 hero.GetComponent<Hero>().transform.position = temp3;
                 break;
@@ -54,4 +55,9 @@ public class HeroHolder : MonoBehaviour
 	{
 		hero = newGameobject;
 	}
+
+    public Sprite ReturnSprite()
+    {
+        return Get_GameObject().GetComponent<Hero>().GetSprite();
+    }
 }

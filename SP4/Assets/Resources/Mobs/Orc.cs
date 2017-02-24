@@ -17,7 +17,7 @@ public class Orc : Mob
         Hp = 10;
         Attack = 10;
         Defense = 10;
-
+        goldValue = Random.Range(1, 10);
         state = States.Idle;
         animator = GetComponent<Animator>();
 	}
@@ -68,11 +68,12 @@ public class Orc : Mob
                     }
                     else
                     {
-                        if (attackTimer > attackTimer_Max)
-                        {
-                            hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
-                            attackTimer = 0;
-                        }
+                        //if (attackTimer > attackTimer_Max)
+                        //{
+                        //    hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
+                        //    attackTimer = 0;
+                        //}
+                        Exit();
                     }
                 }
                 break;
