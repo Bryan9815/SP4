@@ -7,6 +7,7 @@ using System.Collections;
 public class BG_Collision : MonoBehaviour {
 
 	public Camera cam;
+
 	//RaycastHit2D hit;
 	Vector3 touchPos;
 	Vector3 screenPos;

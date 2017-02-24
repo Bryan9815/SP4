@@ -196,10 +196,10 @@ public class Cloud : Hero
         //hero_img = newHero_img;
     }
 
-    public override Sprite GetImage()
-    {
-        return gameObject.GetComponent<Image>().sprite;
-    }
+	public override Sprite GetSprite()
+	{
+		return gameObject.GetComponent<SpriteRenderer>().sprite;
+	}
 
     public override int Get_Id()
     {

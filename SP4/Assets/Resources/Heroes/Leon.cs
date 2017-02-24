@@ -191,9 +191,9 @@ public class Leon : Hero {
 		//hero_img = newHero_img;
 	}
 
-	public override Sprite GetImage()
+	public override Sprite GetSprite()
 	{
-		return gameObject.GetComponent<Image> ().sprite;
+		return gameObject.GetComponent<SpriteRenderer>().sprite;
 	}
 
 	public override int Get_Id()
