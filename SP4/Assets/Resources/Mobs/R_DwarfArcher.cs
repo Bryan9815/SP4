@@ -20,7 +20,7 @@ public class R_DwarfArcher : Mob
         Defense = 10;
 
         attackTimer = 2.0f;
-        attackTimer_Max = 3.0f;
+        attackTimer_Max = 3.01f;
 
         state = States.Idle;
         animator = GetComponent<Animator>();

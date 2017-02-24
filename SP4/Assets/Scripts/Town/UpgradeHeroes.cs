@@ -5,7 +5,7 @@ using System.Collections;
 public class UpgradeHeroes : MonoBehaviour {
     public Button levelUPButton;
     Hero heroLeveling;
-    int costToLevelUp;
+    protected static int costToLevelUp;
     bool ableToLevelUp = false;
 	// Use this for initialization
 	void Start () 
@@ -26,13 +26,9 @@ public class UpgradeHeroes : MonoBehaviour {
 
     void buyUpgrade()
     {
-        //costToLevelUp = ((heroLeveling.GetLevel() * 20) 
-        //              * (((int)heroLeveling.GetAttack()) / 100) 
-        //              * ((int)heroLeveling.GetDefense() / 100 )
-        //              * ((int)heroLeveling.GetSpeed() / 100)
-        //                  );
         costToLevelUp = 100;
-        if(Money.playerGold >= costToLevelUp)
+        //costToLevelUp = ((heroLeveling.Get_Level() * 20)   + (((int)heroLeveling.GetAttack()) / 100)  + ((int)heroLeveling.GetDefense() / 100 ));
+        if (Money.playerGold >= GetCost())
         {
             ableToLevelUp = true;
         }
@@ -48,5 +44,9 @@ public class UpgradeHeroes : MonoBehaviour {
         {
             levelUPButton.interactable = true;
         }
+    }
+    public static float GetCost()
+    {
+        return costToLevelUp;
     }
 }

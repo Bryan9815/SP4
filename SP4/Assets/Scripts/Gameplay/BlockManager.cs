@@ -46,7 +46,7 @@ public class BlockManager : MonoBehaviour {
 	    if (Block_Spawn_Timer > Max_Block_Spawn_Timer && Listof_Blocks.Count < 8)
         {
             Block_Spawn_Timer = 0.0f;
-            SpawnNewBlock(Random.Range(0, 2));
+            SpawnNewBlock(Random.Range(0, 3));
             //Debug.Log("Block spawned");
         }
         for (int i = 0; i < Listof_Blocks.Count; ++i)
@@ -91,9 +91,13 @@ public class BlockManager : MonoBehaviour {
 //		newObject.GetComponent<Button>().onClick.AddListener (delegate() {
 //			this.GetComponent<Block>().Activate();
 //		});
+		int test = newObject.gameObject.GetComponent<Block> ().get_HeroSlot ();
         Listof_Blocks.Add(newObject);
 		float x = newObject.GetComponent<RectTransform> ().localScale.x;
 		float y = newObject.GetComponent<RectTransform> ().localScale.y;
+
+		newObject.gameObject.GetComponent<Image> ().sprite = newObject.gameObject.GetComponent<Block> ().BlockImageList [hero_slot];
+
         return newObject;
     }
 }

@@ -26,13 +26,13 @@ public class Leon : Hero {
 	// Use this for initialization
 	protected override void Start () {
 		currHp = Hp;
-		id = 1;
+		id = 3;
 		ClassName = "Leon";
 		//Level increase stat variables
 		Sp = 0;
 		isDead = false;
 		//state = States.Idle;
-		animator = gameObject.gameObject.GetComponent<Animator> ();
+		animator = GetComponent<Animator> ();
 		level = 1;
 		exp = 0;
 		CalculateStats ();
@@ -90,7 +90,7 @@ public class Leon : Hero {
 		{
 			if (tempcoll.GetComponent<BoxCollider2D> ().IsTouching (temp.GetComponent<BoxCollider2D> ()))
 			{
-				temp.GetComponent<Mob> ().getHit ((int)Attack);
+				temp.GetComponent<Mob> ().getHit ((int) (Attack));
 			}
 		}
 		Destroy (tempcoll);
@@ -191,10 +191,10 @@ public class Leon : Hero {
 		//hero_img = newHero_img;
 	}
 
-	public override Sprite GetSprite()
-	{
-		return gameObject.GetComponent<SpriteRenderer>().sprite;
-	}
+    public override Sprite GetSprite()
+    {
+        return gameObject.GetComponent<SpriteRenderer>().sprite;
+    }
 
 	public override int Get_Id()
 	{
