@@ -69,4 +69,9 @@ public class Mob : MonoBehaviour
         Debug.Log("Gold Earned: " + WaveManager.GetGoldEarned());
         Debug.Log("Kill Count: " + WaveManager.GetKillCount());
     }
+
+	protected virtual void OnTriggerEnter(Collider other) {
+		AttackCollide.Mobs_Collided.Add (this);
+	}
+
 }
