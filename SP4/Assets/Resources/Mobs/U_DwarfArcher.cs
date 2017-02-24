@@ -96,10 +96,6 @@ public class U_DwarfArcher : Mob
                     }
                 }
                 break;
-            case States.Death:
-                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Exit"))
-                    Exit();
-                break;
             default:
                 break;
         }

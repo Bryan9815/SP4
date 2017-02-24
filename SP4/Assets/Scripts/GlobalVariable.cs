@@ -67,9 +67,9 @@ public class GlobalVariable : MonoBehaviour {
         PlayerName = PlayerPrefs.GetString("userID", "");
         PlayerGoldG = PlayerPrefs.GetInt("Gold", 100);
 
-        ActiveHero1 = PlayerPrefs.GetInt("Hero ID_1", 0);
-        ActiveHero2 = PlayerPrefs.GetInt("Hero ID_2", 1);
-        ActiveHero3 = PlayerPrefs.GetInt("Hero ID_3", 2);
+        ActiveHero1 = PlayerPrefs.GetInt("Hero ID_1", 1);
+        ActiveHero2 = PlayerPrefs.GetInt("Hero ID_2", 2);
+        ActiveHero3 = PlayerPrefs.GetInt("Hero ID_3", 3);
 	}
 	
 	// Update is called once per frame

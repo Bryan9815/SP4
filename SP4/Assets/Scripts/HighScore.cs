@@ -24,7 +24,7 @@ public class HighScore : MonoBehaviour
 
         WaveRecord.text = "Wave Reached: " + PlayerPrefs.GetInt("Highest Wave Reached", 0).ToString();
         GoldRecord.text = "Gold Earned: " + PlayerPrefs.GetInt("Most Gold Earned", 0).ToString();
-        KillRecord.text = "Kill Count: " + PlayerPrefs.GetInt("Most Kills", 0).ToString();
+        KillRecord.text = "Kill Count: " + PlayerPrefs.GetInt("Most Kills", 0).ToString();  
     }
 
     IEnumerator RefreshRecords()
