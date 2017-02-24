@@ -22,12 +22,13 @@ public class AttackCollide : MonoBehaviour {
 		}
 	}
 
-//	void OnTriggerEnter(Collider other) {
+//	void OnTriggerEnter2D(Collider2D other) {
 //		Mobs_Collided.Add (other.gameObject.GetComponent<Mob> ());
 //	}
 //	 
 //	void OnTriggerExit(Collider other)
 //	{
-//		Mobs_Collided.Remove(other.gameObject.GetComponent<Mob> ());
+//		if (Mobs_Collided.Contains(other.gameObject.GetComponent<Mob> ()))
+//			Mobs_Collided.Remove(other.gameObject.GetComponent<Mob> ());
 //	}
 }

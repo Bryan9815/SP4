@@ -67,60 +67,39 @@ public class Weeb : Hero
         }
     }
 
-    // Chain attacks
-    protected override void OneChain()
-    {
-        //EnemyHealth -= (GetAttack() * 1.0f);
-        anim.SetInteger("Number of Blocks", 1);
-        anim.SetTrigger("Blocks Pressed");
+	// Chain attacks
+	protected override void OneChain()
+	{
+		anim.SetInteger("Number of Blocks", 1);
+		anim.SetTrigger("Blocks Pressed");
 
-        GameObject tempcoll = Instantiate(attackCollider);
-        tempcoll.SetActive(true);
-        foreach (GameObject temp in WaveManager.ListOfMobs)
-        {
-            if (tempcoll.GetComponent<BoxCollider2D>().IsTouching(temp.GetComponent<BoxCollider2D>()))
-            {
-                temp.GetComponent<Mob>().getHit((int)(GetAttack()));
-            }
-        }
-        Destroy(tempcoll);
-    }
+		foreach(Mob temp in AttackCollide.Mobs_Collided)
+		{
+			temp.getHit ((int) (Attack));
+		}
+	}
 
-    protected override void TwoChain()
-    {
-        //EnemyHealth -= (GetAttack() * 2.0f);
-        anim.SetInteger("Number of Blocks", 2);
-        anim.SetTrigger("Blocks Pressed");
+	protected override void TwoChain()
+	{
+		anim.SetInteger("Number of Blocks", 2);
+		anim.SetTrigger("Blocks Pressed");
 
-        GameObject tempcoll = Instantiate(attackCollider);
-        tempcoll.SetActive(true);
-        foreach (GameObject temp in WaveManager.ListOfMobs)
-        {
-            if (tempcoll.GetComponent<BoxCollider2D>().IsTouching(temp.GetComponent<BoxCollider2D>()))
-            {
-                temp.GetComponent<Mob>().getHit((int)(GetAttack() * 2.0f));
-            }
-        }
-        Destroy(tempcoll);
-    }
+		foreach(Mob temp in AttackCollide.Mobs_Collided)
+		{
+			temp.getHit ((int) (Attack* 2.0f));
+		}
+	}
 
-    protected override void ThreeChain()
-    {
-        //EnemyHealth = (GetAttack() * 3.0f);
-        anim.SetInteger("Number of Blocks", 3);
-        anim.SetTrigger("Blocks Pressed");
+	protected override void ThreeChain()
+	{
+		anim.SetInteger("Number of Blocks", 3);
+		anim.SetTrigger("Blocks Pressed");
 
-        GameObject tempcoll = Instantiate(attackCollider);
-        tempcoll.SetActive(true);
-        foreach (GameObject temp in WaveManager.ListOfMobs)
-        {
-            if (tempcoll.GetComponent<BoxCollider2D>().IsTouching(temp.GetComponent<BoxCollider2D>()))
-            {
-                temp.GetComponent<Mob>().getHit((int)(GetAttack() * 3.0f));
-            }
-        }
-        Destroy(tempcoll);
-    }
+		foreach(Mob temp in AttackCollide.Mobs_Collided)
+		{
+			temp.getHit ((int) (Attack * 3.0f));
+		}
+	}
 
     // Normal attack
     protected override void NormalAttack()

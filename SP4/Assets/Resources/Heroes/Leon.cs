@@ -23,6 +23,8 @@ public class Leon : Hero {
 //
 //	States state;
 	Animator animator;
+	//Collider
+	//GameObject tempcoll;
 	// Use this for initialization
 	protected override void Start () {
 		currHp = Hp;
@@ -84,17 +86,11 @@ public class Leon : Hero {
 		//state = States.Chain1;
 		animator.SetInteger ("Number of Blocks",1);
 		animator.SetTrigger ("Blocks Pressed");
-		GameObject tempcoll = Instantiate (attackCollider);
-		tempcoll.SetActive (true);
-		foreach(GameObject temp in WaveManager.ListOfMobs)
-		{
-			if (tempcoll.GetComponent<BoxCollider2D> ().IsTouching (temp.GetComponent<BoxCollider2D> ()))
-			{
-				temp.GetComponent<Mob> ().getHit ((int) (Attack));
-			}
-		}
-		Destroy (tempcoll);
 
+		foreach(Mob temp in AttackCollide.Mobs_Collided)
+		{
+			temp.getHit ((int) (Attack));
+		}
 	}
 
 	protected override void TwoChain()
@@ -103,16 +99,10 @@ public class Leon : Hero {
 		animator.SetInteger ("Number of Blocks",2);
 		animator.SetTrigger ("Blocks Pressed");
 
-		GameObject tempcoll = Instantiate (attackCollider);
-		tempcoll.SetActive (true);
-		foreach(GameObject temp in WaveManager.ListOfMobs)
+		foreach(Mob temp in AttackCollide.Mobs_Collided)
 		{
-			if (tempcoll.GetComponent<BoxCollider2D> ().IsTouching (temp.GetComponent<BoxCollider2D> ()))
-			{
-				temp.GetComponent<Mob> ().getHit ((int) (Attack * 1.5f));
-			}
+			temp.getHit ((int) (Attack * 1.5f));
 		}
-		Destroy (tempcoll);
 	}
 
 	protected override void ThreeChain()
@@ -121,16 +111,10 @@ public class Leon : Hero {
 		animator.SetInteger ("Number of Blocks",3);
 		animator.SetTrigger ("Blocks Pressed");
 
-		GameObject tempcoll = Instantiate (attackCollider);
-		tempcoll.SetActive (true);
-		foreach(GameObject temp in WaveManager.ListOfMobs)
+		foreach(Mob temp in AttackCollide.Mobs_Collided)
 		{
-			if (tempcoll.GetComponent<BoxCollider2D> ().IsTouching (temp.GetComponent<BoxCollider2D> ()))
-			{
-				temp.GetComponent<Mob> ().getHit ( (int) (Attack * 2f));
-			}
+			temp.getHit ((int) (Attack * 2f));
 		}
-		Destroy (tempcoll);
 	}
 
 	// Normal attack

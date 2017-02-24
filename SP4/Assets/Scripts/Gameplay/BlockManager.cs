@@ -80,7 +80,7 @@ public class BlockManager : MonoBehaviour {
 
 
 		Button newObject = Instantiate(block_obj_to_spawn,block_obj_to_spawn.transform.position,block_obj_to_spawn.transform.rotation) as Button;
-		newObject.transform.parent = gameObject.transform;
+		newObject.transform.SetParent (gameObject.transform);// = gameObject.transform;
 		//Vector3 temp = new Vector3(block_background.GetComponent<RectTransform>().anchoredPosition.x /*- (Screen.width/21)*/, block_background.GetComponent<RectTransform>().anchoredPosition.y);
 		//newObject.GetComponent<RectTransform> ().anchoredPosition.Set (temp.x, temp.y);//,temp.z);// = temp;
 		Vector3 temp = new Vector3(1,1,1);

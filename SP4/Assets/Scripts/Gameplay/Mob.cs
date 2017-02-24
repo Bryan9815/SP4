@@ -66,8 +66,8 @@ public class Mob : MonoBehaviour
         WaveManager.ListOfMobs.Remove(gameObject);
     }
 
-	protected virtual void OnTriggerEnter(Collider other) {
+	protected virtual void OnTriggerEnter2D(Collider2D other) {
 		AttackCollide.Mobs_Collided.Add (this);
-	}
 
+	}
 }
