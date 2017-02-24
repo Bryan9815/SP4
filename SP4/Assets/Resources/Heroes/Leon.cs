@@ -28,7 +28,7 @@ public class Leon : Hero {
 	// Use this for initialization
 	protected override void Start () {
 		currHp = Hp;
-		id = 1;
+		id = 3;
 		ClassName = "Leon";
 		//Level increase stat variables
 		Sp = 0;

@@ -12,7 +12,7 @@ public class HighScore : MonoBehaviour
 
     public Button ReturnToMainMenu, TriggerLeaderboard;
 
-    public Text WaveRecord, GoldRecord, Stats1, Stats2, Stats3;
+    public Text WaveRecord, GoldRecord, KillRecord, Stats1, Stats2, Stats3;
     public Image Hero1, Hero2, Hero3;
     void Start()
     {
@@ -24,6 +24,7 @@ public class HighScore : MonoBehaviour
 
         WaveRecord.text = "Wave Reached: " + PlayerPrefs.GetInt("Highest Wave Reached", 0).ToString();
         GoldRecord.text = "Gold Earned: " + PlayerPrefs.GetInt("Most Gold Earned", 0).ToString();
+        KillRecord.text = "Kill Count: " + PlayerPrefs.GetInt("Most Kills", 0).ToString();
     }
 
     IEnumerator RefreshRecords()
