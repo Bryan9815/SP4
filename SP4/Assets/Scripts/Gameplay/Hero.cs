@@ -89,9 +89,19 @@ public class Hero : MonoBehaviour {
     }
 
 	public virtual void LevelUp()
-    {
+	{
+		
+	}
 
-    }
+	public virtual void IncreaseExp(float exp_received)
+	{
+		exp += exp_received;
+		if (exp >= max_exp) 
+		{
+			float temp = exp - max_exp;
+			LevelUp ();
+		}
+	}
 
 	public virtual void SetAttack(int newAtk)
 	{
