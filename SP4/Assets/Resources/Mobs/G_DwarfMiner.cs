@@ -39,16 +39,16 @@ public class G_DwarfMiner : Mob
             state = States.Walk;
             animator.SetTrigger("Target Detected");
         }
-        else if(distFromHero > 7.5 && state != States.Attack)
+        else if (distFromHero > 7.5 && state != States.Attack)
         {
             state = States.Idle;
         }
-        else if(distFromHero > 4 && state == States.Attack)
+        else if (distFromHero > 4 && state == States.Attack)
         {
             state = States.Walk;
             animator.SetBool("Targets In Range", false);
         }
-        if(Hp <= 0)
+        if (Hp <= 0)
         {
             state = States.Death;
             animator.SetTrigger("No HP");
@@ -85,22 +85,18 @@ public class G_DwarfMiner : Mob
                 }
                 break;
             case States.Attack:
-                if(attackTimer < attackTimer_Max)
+                if (attackTimer < attackTimer_Max)
                     attackTimer += Time.deltaTime;
                 animator.SetFloat("Cooldown Timer", attackTimer);
                 foreach (GameObject hero in HeroList)
                 {
-                    if(attackTimer >= attackTimer_Max)
+                    if (attackTimer >= attackTimer_Max)
                     {
                         hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
                         attackTimer = 0.0f;
                         animator.SetFloat("Cooldown Timer", 0);
                     }
                 }
-                break;
-            case States.Death:
-                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Exit"))
-                    Exit();
                 break;
             default:
                 break;

@@ -68,12 +68,12 @@ public class Orc : Mob
                     }
                     else
                     {
-                        //if (attackTimer > attackTimer_Max)
-                        //{
-                        //    hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
-                        //    attackTimer = 0;
-                        //}
-                        Exit();
+                        if (attackTimer > attackTimer_Max)
+                        {
+                            hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
+                            attackTimer = 0;
+                        }
+                        //Exit();
                     }
                 }
                 break;

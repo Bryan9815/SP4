@@ -203,7 +203,7 @@ public class WaveManager : MonoBehaviour
         }
         else if (WaveNumber > 3 && WaveNumber <= 5)
         {
-            int temp = Random.Range(0, 1);
+            int temp = Random.Range(0, 2);
             for (int i = 0; i < MobNumber; i++)
             {
                SpawnMobs(temp);
@@ -213,84 +213,84 @@ public class WaveManager : MonoBehaviour
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(0, 2));
+                SpawnMobs(Random.Range(0, 3));
             }
         }
         else if (WaveNumber > 8 && WaveNumber <= 9)
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(0, 3));
+                SpawnMobs(Random.Range(0, 4));
             }
         }
         else if (WaveNumber > 10 && WaveNumber <= 13)
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(1, 3));
+                SpawnMobs(Random.Range(1, 5));
             }
         }
         else if (WaveNumber > 14 && WaveNumber <= 15)
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(2, 4));
+                SpawnMobs(Random.Range(2, 6));
             }
         }
         else if (WaveNumber > 15 && WaveNumber <= 16)
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(3, 5));
+                SpawnMobs(Random.Range(3, 6));
             }
         }
         else if (WaveNumber > 17 && WaveNumber <= 18)
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(4, 6));
+                SpawnMobs(Random.Range(4, 7));
             }
         }
         else if (WaveNumber > 19 && WaveNumber <= 20)
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(5, 7));
+                SpawnMobs(Random.Range(5, 8));
             }
         }
         else if (WaveNumber > 21 && WaveNumber <= 22)
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(5, 8));
+                SpawnMobs(Random.Range(5, 9));
             }
         }
         else if (WaveNumber > 23 && WaveNumber <= 24)
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(7, 9));
+                SpawnMobs(Random.Range(7, 10));
             }
         }
         else if (WaveNumber > 25 && WaveNumber <= 26)
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(8, 10));
+                SpawnMobs(Random.Range(8, 11));
             }
         }
         else if (WaveNumber > 27 && WaveNumber <= 28)
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(9, 11));
+                SpawnMobs(Random.Range(9, 12));
             }
         }
         else if (WaveNumber > 29)
         {
             for (int i = 0; i < MobNumber; i++)
             {
-                SpawnMobs(Random.Range(9, 12));
+                SpawnMobs(Random.Range(9, 13));
             }
         }
     }

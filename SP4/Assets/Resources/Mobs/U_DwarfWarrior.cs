@@ -97,10 +97,6 @@ public class U_DwarfWarrior : Mob
                     }
                 }
                 break;
-            case States.Death:
-                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Exit"))
-                    Exit();
-                break;
             default:
                 break;
         }
