@@ -148,6 +148,7 @@ public class Leon : Hero {
 		level += 1;
 		exp = 0;
 		CalculateStats ();
+        currHp = Hp;
 	}
 
 	public override void SetAttack(int newAtk)

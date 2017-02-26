@@ -30,6 +30,7 @@ public class G_DwarfArcher : Mob
     {
         Hp = (int)(54 * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
         Defense = (int)(22.74f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
+        exp = (24.56f * WaveManager.GetWaveNumber() * Random.RandomRange(1, 1.43f));
     }
 
     // Update is called once per frame

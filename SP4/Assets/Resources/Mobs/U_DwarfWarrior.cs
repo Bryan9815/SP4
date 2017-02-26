@@ -33,6 +33,7 @@ public class U_DwarfWarrior : Mob
         Hp = (int)(174 * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
         Attack = (int)(87.4f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
         Defense = (int)(87.4f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
+        exp = (71.56f * WaveManager.GetWaveNumber() * Random.RandomRange(1, 1.43f));
 
         if (Hp > 10000)
             Hp = 10000;

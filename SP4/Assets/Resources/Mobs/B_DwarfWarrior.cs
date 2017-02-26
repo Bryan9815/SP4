@@ -33,6 +33,7 @@ public class B_DwarfWarrior : Mob
         Hp = (int)(130 * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
         Attack = (int)(46.9f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
         Defense = (int)(50.91f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
+        exp = (38.43f * WaveManager.GetWaveNumber() * Random.RandomRange(1, 1.43f));
     }
 
     // Update is called once per frame

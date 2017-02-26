@@ -19,7 +19,7 @@ public class Weeb : Hero
     {
         id = 2;
         ClassName = "Weeb";                                             //Weeb's Class Name
-        Sp = 100;                                                       //Weeb's Special Points for ultimate (Sort of)
+        Sp = 0;                                                       //Weeb's Special Points for ultimate (Sort of)
         //hero_img = ;                                                  //Weeb's Sprite I guess?
         name = "Weeb";                                                  //Name of Weeb
         level = 1;                                                      //Weeb's Level
@@ -144,6 +144,7 @@ public class Weeb : Hero
         exp = 0;
         level += 1;
         CalculateStats();
+        currHp = Hp;
     }
 
     public override void SetAttack(int newAtk)

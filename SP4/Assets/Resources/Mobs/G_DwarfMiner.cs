@@ -33,6 +33,7 @@ public class G_DwarfMiner : Mob
         Hp = (int)(61 * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
         Attack = (int)(26.4f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
         Defense = (int)(22.74f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
+        exp = (17.96f * WaveManager.GetWaveNumber() * Random.RandomRange(1, 1.43f));
     }
 
     // Update is called once per frame

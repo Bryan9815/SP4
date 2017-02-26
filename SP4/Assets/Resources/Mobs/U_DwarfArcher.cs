@@ -30,6 +30,7 @@ public class U_DwarfArcher : Mob
     {
         Hp = (int)(152 * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
         Defense = (int)(73.91f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
+        exp = (67.62f * WaveManager.GetWaveNumber() * Random.RandomRange(1, 1.43f));
 
         if (Hp > 10000)
             Hp = 10000;

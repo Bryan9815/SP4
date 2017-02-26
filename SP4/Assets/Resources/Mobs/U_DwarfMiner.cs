@@ -33,6 +33,7 @@ public class U_DwarfMiner : Mob
         Hp = (int)(160 * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
         Attack = (int)(74.9f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
         Defense = (int)(73.91f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
+        exp = (67.56f * WaveManager.GetWaveNumber() * Random.RandomRange(1, 1.43f));
 
         if (Hp > 10000)
             Hp = 10000;

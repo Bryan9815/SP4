@@ -31,6 +31,7 @@ public class Orc : Mob
         Hp = (int)(7 * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
         Attack = (int)(11.4f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
         Defense = (int)(7.699f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
+        exp = (100.56f * WaveManager.GetWaveNumber() * Random.RandomRange(1, 1.43f));
     }
 
 	// Update is called once per frame

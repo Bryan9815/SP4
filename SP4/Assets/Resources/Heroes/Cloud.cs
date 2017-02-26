@@ -19,7 +19,7 @@ public class Cloud : Hero
     {
         id = 1;
         ClassName = "Cloud";                                            //Cloud's Class Name
-        Sp = 100;                                                       //Cloud's Special Points for ultimate (Sort of)
+        Sp = 0;                                                       //Cloud's Special Points for ultimate (Sort of)
         //hero_img = ;                                                  //Cloud's Sprite I guess?
         name = "Cloud";                                                 //Name of Cloud
         level = 1;                                                      //Cloud's Level
@@ -143,6 +143,7 @@ public class Cloud : Hero
         exp = 0;
         level += 1;
         CalculateStats();
+        currHp = Hp;
     }
 
     public override void SetAttack(int newAtk)

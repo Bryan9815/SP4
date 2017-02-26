@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class Mob : MonoBehaviour
 {
     protected int Hp, Attack, Defense, goldValue;
-    protected float attackTimer, attackTimer_Max;
+    protected float attackTimer, attackTimer_Max, exp;
     protected Vector3 position;
 
     protected static GameObject Hero1, Hero2, Hero3, Arrow;
@@ -67,8 +67,9 @@ public class Mob : MonoBehaviour
         WaveManager.ListOfMobs.Remove(gameObject);
         WaveManager.AddKillCount();
         WaveManager.AddGoldEarned(goldValue);
-        Debug.Log("Gold Earned: " + WaveManager.GetGoldEarned());
-        Debug.Log("Kill Count: " + WaveManager.GetKillCount());
+        Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().IncreaseExp(exp);
+        Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().IncreaseExp(exp);
+        Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().IncreaseExp(exp);
     }
 
 	protected virtual void OnTriggerEnter2D(Collider2D other) {
