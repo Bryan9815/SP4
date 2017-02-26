@@ -13,6 +13,7 @@ public class Hero : MonoBehaviour {
 	protected float attackTimer, attackTimer_Max;
 	protected int state;
 	protected string ClassName;
+    protected bool isDead;
 	public bool unlocked;
 
 	public GameObject attackCollider;
@@ -199,8 +200,14 @@ public class Hero : MonoBehaviour {
 		return new Hero ();
 	}
 
+    public virtual bool Get_IsDead()
+    {
+        return isDead;
+    }
+
 	public virtual void Exit()
 	{
-		Destroy (gameObject);
+        Vector3 temp = new Vector3(-10000, 0, 0);
+		gameObject.transform.position = temp;
 	}
 }

@@ -6,7 +6,7 @@ public class Cloud : Hero
 {
     static Cloud _instance;
     Animator anim;
-    bool isDead;
+
     enum States // for animation
     {
         Idle,
@@ -19,7 +19,7 @@ public class Cloud : Hero
     {
         id = 1;
         ClassName = "Cloud";                                            //Cloud's Class Name
-        Sp = 100;                                                       //Cloud's Special Points for ultimate (Sort of)
+        Sp = 0;                                                       //Cloud's Special Points for ultimate (Sort of)
         //hero_img = ;                                                  //Cloud's Sprite I guess?
         name = "Cloud";                                                 //Name of Cloud
         level = 1;                                                      //Cloud's Level
@@ -34,11 +34,7 @@ public class Cloud : Hero
     // Update is called once per frame
     protected override void Update()
     {
-        if (Sp >= 100)
-        {
-            Sp -= 100;
-            SpecialAbility();
-        }
+
     }
 
     void CalculateStats()
@@ -116,8 +112,8 @@ public class Cloud : Hero
     {
         //calculate how damage is taken here
         anim.SetTrigger("isHit");
-        Hp -= damagetaken;
-        if (Hp <= 0)
+        currHp -= damagetaken;
+        if (currHp <= 0)
         {
             isDead = true;
             anim.SetBool("No HP", true);
@@ -147,6 +143,7 @@ public class Cloud : Hero
         exp = 0;
         level += 1;
         CalculateStats();
+        currHp = Hp;
     }
 
     public override void SetAttack(int newAtk)
@@ -217,10 +214,5 @@ public class Cloud : Hero
         else
             return _instance;
 
-    }
-
-    public override void Exit()
-    {
-        Destroy(gameObject);
     }
 }

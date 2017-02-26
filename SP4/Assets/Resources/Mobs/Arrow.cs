@@ -3,19 +3,20 @@ using System.Collections;
 
 public class Arrow : Mob 
 {
-    public GameObject gArcher, bArcher, rArcher, uArcher;
-
 	// Use this for initialization
     protected override void Start()
     {
         if (WaveManager.GetWaveNumber() < 18)
-            Attack = 10;
+            Attack = (int)(26.4f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
         else if (WaveManager.GetWaveNumber() > 18 && WaveManager.GetWaveNumber() < 24)
-            Attack = 10;
+            Attack = (int)(40.9f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
         else if (WaveManager.GetWaveNumber() > 24 && WaveManager.GetWaveNumber() < 29)
-            Attack = 10;
+            Attack = (int)(60.9f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
         else if (WaveManager.GetWaveNumber() > 29)
-            Attack = 10;
+            Attack = (int)(74.9f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
+
+        if (Attack > 5000)
+            Attack = 5000;
     }
 	
 	// Update is called once per frame
@@ -28,11 +29,12 @@ public class Arrow : Mob
         {
             if(temp.x <= hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().transform.position.x)
             {
-                hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
+                float accuracy = Random.Range(1, 101);
+                if (accuracy > hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Evasion())
+                    hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
+
                 if (temp.x <= Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().transform.position.x)
-                {
                     Exit();
-                }
             }
         }
 	}

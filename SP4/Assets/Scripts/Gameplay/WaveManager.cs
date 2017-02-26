@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -10,6 +12,7 @@ public class WaveManager : MonoBehaviour
 
     private static int WaveNumber, MobNumber, GoldEarned, KillCount;
     private bool WaveOver;
+    public Text WaveProgress;
 	// Use this for initialization
     void Start()
     {
@@ -24,6 +27,8 @@ public class WaveManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
+        WaveProgress.text = "Wave: " + WaveNumber + "\nMonsters Remaining: " + MobNumber;
+
         if (!WaveOver)
         {
             if (ListOfMobs.Count <= 0)
@@ -35,7 +40,10 @@ public class WaveManager : MonoBehaviour
 
     void RandomizeMobNumber()
     {
-        MobNumber = Random.Range((5 + WaveNumber), (3 + WaveNumber + 2 * WaveNumber));
+        if (WaveNumber < 10)
+            MobNumber = Random.Range((5 + WaveNumber), (3 + WaveNumber + 2 * WaveNumber));
+        else
+            MobNumber = Random.Range(25, 35);
     }
 
     void SpawnMobs(int mobID)
@@ -63,7 +71,6 @@ public class WaveManager : MonoBehaviour
                     Debug.Log("newG_Dwarf_Miner is Null");
                     return;
                 }
-                Debug.Log("G_DwarMiner: " + newG_Dwarf_Miner);
                 ListOfMobs.Add(newG_Dwarf_Miner);
                 break;
             case 2: // Green Dwarf Warrior
@@ -216,21 +223,21 @@ public class WaveManager : MonoBehaviour
                 SpawnMobs(Random.Range(0, 3));
             }
         }
-        else if (WaveNumber > 8 && WaveNumber <= 9)
+        else if (WaveNumber > 7 && WaveNumber <= 9)
         {
             for (int i = 0; i < MobNumber; i++)
             {
                 SpawnMobs(Random.Range(0, 4));
             }
         }
-        else if (WaveNumber > 10 && WaveNumber <= 13)
+        else if (WaveNumber > 9 && WaveNumber <= 13)
         {
             for (int i = 0; i < MobNumber; i++)
             {
                 SpawnMobs(Random.Range(1, 5));
             }
         }
-        else if (WaveNumber > 14 && WaveNumber <= 15)
+        else if (WaveNumber > 13 && WaveNumber <= 15)
         {
             for (int i = 0; i < MobNumber; i++)
             {
@@ -244,42 +251,42 @@ public class WaveManager : MonoBehaviour
                 SpawnMobs(Random.Range(3, 6));
             }
         }
-        else if (WaveNumber > 17 && WaveNumber <= 18)
+        else if (WaveNumber > 16 && WaveNumber <= 18)
         {
             for (int i = 0; i < MobNumber; i++)
             {
                 SpawnMobs(Random.Range(4, 7));
             }
         }
-        else if (WaveNumber > 19 && WaveNumber <= 20)
+        else if (WaveNumber > 18 && WaveNumber <= 20)
         {
             for (int i = 0; i < MobNumber; i++)
             {
                 SpawnMobs(Random.Range(5, 8));
             }
         }
-        else if (WaveNumber > 21 && WaveNumber <= 22)
+        else if (WaveNumber > 20 && WaveNumber <= 22)
         {
             for (int i = 0; i < MobNumber; i++)
             {
                 SpawnMobs(Random.Range(5, 9));
             }
         }
-        else if (WaveNumber > 23 && WaveNumber <= 24)
+        else if (WaveNumber > 22 && WaveNumber <= 24)
         {
             for (int i = 0; i < MobNumber; i++)
             {
                 SpawnMobs(Random.Range(7, 10));
             }
         }
-        else if (WaveNumber > 25 && WaveNumber <= 26)
+        else if (WaveNumber > 24 && WaveNumber <= 26)
         {
             for (int i = 0; i < MobNumber; i++)
             {
                 SpawnMobs(Random.Range(8, 11));
             }
         }
-        else if (WaveNumber > 27 && WaveNumber <= 28)
+        else if (WaveNumber > 26 && WaveNumber <= 28)
         {
             for (int i = 0; i < MobNumber; i++)
             {
@@ -326,5 +333,10 @@ public class WaveManager : MonoBehaviour
     public static int GetKillCount()
     {
         return KillCount;
+    }
+
+    public static void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
