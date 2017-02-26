@@ -20,11 +20,19 @@ public class HighScore : MonoBehaviour
 
         ReturnToMainMenu.onClick.AddListener(delegate { SceneManager.LoadScene("MainMenu"); });
         TriggerLeaderboard.onClick.AddListener(delegate { displayLeaderboard = true; });
-        // Call stats and hero records
 
         WaveRecord.text = "Wave Reached: " + PlayerPrefs.GetInt("Highest Wave Reached", 0).ToString();
         GoldRecord.text = "Gold Earned: " + PlayerPrefs.GetInt("Most Gold Earned", 0).ToString();
-        KillRecord.text = "Kill Count: " + PlayerPrefs.GetInt("Most Kills", 0).ToString();  
+        KillRecord.text = "Kill Count: " + PlayerPrefs.GetInt("Most Kills", 0).ToString();
+
+        // Call stats and hero records
+        Hero1.sprite = GlobalVariable.GetHero(PlayerPrefs.GetInt("Highest Hero_1", 1)).GetComponent<Hero>().GetSprite();
+        Hero2.sprite = GlobalVariable.GetHero(PlayerPrefs.GetInt("Highest Hero_2", 2)).GetComponent<Hero>().GetSprite();
+        Hero3.sprite = GlobalVariable.GetHero(PlayerPrefs.GetInt("Highest Hero_3", 3)).GetComponent<Hero>().GetSprite();
+
+        Stats1.text = GlobalVariable.PrintRecordHeroStats(PlayerPrefs.GetInt("Highest Hero_1", 1));
+        Stats2.text = GlobalVariable.PrintRecordHeroStats(PlayerPrefs.GetInt("Highest Hero_2", 2));
+        Stats3.text = GlobalVariable.PrintRecordHeroStats(PlayerPrefs.GetInt("Highest Hero_3", 3));
     }
 
     IEnumerator RefreshRecords()

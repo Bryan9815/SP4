@@ -21,7 +21,7 @@ public class BG_Collision : MonoBehaviour {
 		  #if UNITY_ANDROID
 		   Touch myTouch = Input.GetTouch(0);
 		   Vector3 touchPos = new Vector3 (myTouch.position.x, myTouch.position.y, 1);
-			if(Input.GetTouch(0)
+			if(myTouch.tapCount == 1)
 			{
 				touchPos = myTouch.position;
 				touchPos.z = 10;

@@ -13,12 +13,13 @@ public class U_DwarfMiner : Mob
     }
     States state;
     Animator animator;
+    float distFromHero;
+
     // Use this for initialization
     protected override void Start()
     {
-        Hp = 10;
-        Attack = 10;
-        Defense = 10;
+        CalculateStats();
+        goldValue = Random.Range(121, 218);
 
         attackTimer = 0.0f;
         attackTimer_Max = 3.01f;
@@ -27,16 +28,34 @@ public class U_DwarfMiner : Mob
         animator = GetComponent<Animator>();
     }
 
+    void CalculateStats()
+    {
+        Hp = (int)(160 * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
+        Attack = (int)(74.9f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
+        Defense = (int)(73.91f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
+
+        if (Hp > 10000)
+            Hp = 10000;
+        if (Attack > 5000)
+            Attack = 5000;
+        if (Defense > 5000)
+            Defense = 5000;
+    }
+
     // Update is called once per frame
     protected override void Update()
     {
-        float distFromHero = Mathf.Sqrt((float)(gameObject.transform.position.x + Hero1.transform.position.x) * (gameObject.transform.position.x + Hero1.transform.position.x));
+        if (!Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead())
+            distFromHero = Mathf.Sqrt(((float)(gameObject.transform.position.x - Hero1.transform.position.x) * (gameObject.transform.position.x - Hero1.transform.position.x)));
+        else if (!Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead())
+            distFromHero = Mathf.Sqrt(((float)(gameObject.transform.position.x - Hero2.transform.position.x) * (gameObject.transform.position.x - Hero2.transform.position.x)));
+        else if (!Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead())
+            distFromHero = Mathf.Sqrt(((float)(gameObject.transform.position.x - Hero3.transform.position.x) * (gameObject.transform.position.x - Hero3.transform.position.x)));
 
         // State Transition
         if (distFromHero <= 7.5 && state != States.Attack)
         {
             state = States.Walk;
-            animator.SetTrigger("Target Detected");
         }
         else if (distFromHero > 7.5 && state != States.Attack)
         {
@@ -68,6 +87,7 @@ public class U_DwarfMiner : Mob
                 }
                 break;
             case States.Walk:
+                animator.SetTrigger("Target Detected");
                 foreach (GameObject hero in HeroList)
                 {
                     if (!gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
@@ -80,6 +100,7 @@ public class U_DwarfMiner : Mob
                     {
                         state = States.Attack;
                         animator.SetBool("Targets In Range", true);
+                        animator.SetTrigger("No Targets");
                     }
                 }
                 break;
@@ -87,14 +108,27 @@ public class U_DwarfMiner : Mob
                 if (attackTimer < attackTimer_Max)
                     attackTimer += Time.deltaTime;
                 animator.SetFloat("Cooldown Timer", attackTimer);
-                foreach (GameObject hero in HeroList)
+
+                if (attackTimer >= attackTimer_Max)
                 {
-                    if (attackTimer >= attackTimer_Max)
+                    float accuracy = Random.Range(1, 101);
+                    if (!Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead())
                     {
-                        hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
-                        attackTimer = 0.0f;
-                        animator.SetFloat("Cooldown Timer", 0);
+                        if (accuracy > Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Evasion())
+                            Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
                     }
+                    else if (!Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead())
+                    {
+                        if (accuracy > Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Evasion())
+                            Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
+                    }
+                    if (!Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead())
+                    {
+                        if (accuracy > Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Evasion())
+                            Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
+                    }
+                    attackTimer = 0.0f;
+                    animator.SetFloat("Cooldown Timer", 0);
                 }
                 break;
             default:

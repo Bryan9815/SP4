@@ -35,7 +35,8 @@ public class Mob : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
-
+        if (Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead()&& Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead()&& Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead())
+            WaveManager.GameOver();
     }
 
     public virtual void SetPosition(Vector3 pos)

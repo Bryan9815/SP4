@@ -9,7 +9,7 @@ public class Leon : Hero {
 	//	public static string name;
 	//	public int level;
 	//	public float exp, max_exp;
-	bool isDead;
+
 	static Leon _instance;
 //	enum States // for animation
 //	{
@@ -37,7 +37,8 @@ public class Leon : Hero {
 		animator = GetComponent<Animator> ();
 		level = 1;
 		exp = 0;
-		CalculateStats ();
+        CalculateStats();
+        currHp = Hp;
 	}
 
 	void CalculateStats()
@@ -128,9 +129,9 @@ public class Leon : Hero {
 	{
 		//calculate how damage is taken here
 		animator.SetTrigger ("isHit");
-		Hp -= damagetaken;
-		if (Hp <= 0)
-		{
+        currHp -= damagetaken;
+        if (currHp <= 0)
+        {
 			isDead = true;
 			animator.SetBool ("No HP", true);
 		}
@@ -217,10 +218,5 @@ public class Leon : Hero {
 		else
 			return _instance;
 		
-	}
-
-	public override void Exit()
-	{
-		Destroy (gameObject);
 	}
 }

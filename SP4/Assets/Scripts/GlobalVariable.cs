@@ -166,19 +166,6 @@ public class GlobalVariable : MonoBehaviour {
 		return stageLevel;
 	}
 
-	//For saving
-	public void SaveAllData()
-	{
-		PlayerPrefs.SetInt ("Wave", currWaveNumber);
-		PlayerPrefs.SetInt ("Stage", stageLevel);
-		PlayerPrefs.SetInt ("PlayerGold", PlayerGoldG);
-		PlayerPrefs.SetString ("PlayerName", PlayerName);
-		Debug.Log ("Wave = " + currWaveNumber);
-		Debug.Log ("Stage = " + stageLevel);
-		Debug.Log ("PlayerGold = " + PlayerGoldG);
-		Debug.Log ("PlayerName = " + PlayerName);
-		Debug.Log ("Saved all information, wave, stage, player's gold andp layer's name");
-	}
 	public static void SetPlayerHeroID(int slot,int id)
 	{
         switch (slot)
@@ -186,6 +173,7 @@ public class GlobalVariable : MonoBehaviour {
             case 1: 
                 ActiveHero1 = id;
                 PlayerPrefs.SetInt("Hero ID_1", id);
+                
                 break;
             case 2:
                 ActiveHero2 = id;
@@ -244,7 +232,7 @@ public class GlobalVariable : MonoBehaviour {
         switch (slot)
         {
             case 1:
-                return tempHero = GetHero(ActiveHero1);                
+                return tempHero = GetHero(ActiveHero1);
             case 2:
                 return tempHero = GetHero(ActiveHero2);
             case 3:
@@ -254,5 +242,27 @@ public class GlobalVariable : MonoBehaviour {
                 Debug.Log("GetPlayerHero Invalid Parameter: returned null GameObject");
                 return tempHero;
         }
+    }
+
+    public static string PrintPlayerHeroStats(int slot)
+    {
+        if (slot != 1 && slot != 2 && slot != 3)
+        {
+            Debug.Log("PrintPlayerHeroStats Invalid Parameter: returned null GameObject");
+            return null;
+        }
+        else
+            return GetPlayerHero(slot).GetComponent<Hero>().Get_HeroName() + "\nLevel: " + GetPlayerHero(slot).GetComponent<Hero>().Get_Level() + ", EXP: " + GetPlayerHero(slot).GetComponent<Hero>().Get_Exp() + "/" + GetPlayerHero(slot).GetComponent<Hero>().Get_MaxExp() + "\nHP: " + GetPlayerHero(slot).GetComponent<Hero>().Get_MaxHp() + "\nAttack: " + GetPlayerHero(slot).GetComponent<Hero>().GetAttack() + "\nDefense: " + GetPlayerHero(slot).GetComponent<Hero>().GetDefense();
+    }
+
+    public static string PrintRecordHeroStats(int id)
+    {
+        if (id < 1 || id > 6)
+        {
+            Debug.Log("PrintPlayerHeroStats Invalid Parameter: returned null GameObject");
+            return null;
+        }
+        else
+            return GetHero(id).GetComponent<Hero>().Get_HeroName() + "\nLevel: " + GetHero(id).GetComponent<Hero>().Get_Level() + ", EXP: " + GetHero(id).GetComponent<Hero>().Get_Exp() + "/" + GetHero(id).GetComponent<Hero>().Get_MaxExp() + "\nHP: " + GetHero(id).GetComponent<Hero>().Get_MaxHp() + "\nAttack: " + GetHero(id).GetComponent<Hero>().GetAttack() + "\nDefense: " + GetHero(id).GetComponent<Hero>().GetDefense();
     }
 }

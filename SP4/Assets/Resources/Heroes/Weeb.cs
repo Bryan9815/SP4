@@ -6,7 +6,7 @@ public class Weeb : Hero
 {
     static Weeb _instance;
     Animator anim;
-    bool isDead;
+
     enum States // for animation
     {
         Idle,
@@ -27,6 +27,7 @@ public class Weeb : Hero
         //state;
         isDead = false;
         CalculateStats();
+        currHp = Hp;
         anim = gameObject.gameObject.GetComponent<Animator>();
     }
 
@@ -112,8 +113,8 @@ public class Weeb : Hero
     {
         //calculate how damage is taken here
         anim.SetTrigger("isHit");
-        Hp -= damagetaken;
-        if (Hp <= 0)
+        currHp -= damagetaken;
+        if (currHp <= 0)
         {
             isDead = true;
             anim.SetBool("No HP", true);
@@ -204,10 +205,5 @@ public class Weeb : Hero
         else
             return _instance;
 
-    }
-
-    public override void Exit()
-    {
-        Destroy(gameObject);
     }
 }
