@@ -11,20 +11,6 @@ public class Leaderboard : MonoBehaviour {
 
     string highScores = "";
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-
-    // A player named Carmine got a score of 100. If the same name is added twice, we use the higher score.
-    // http://dreamlo.com/lb/(your super secret very long code)/add/Carmine/100
-
-    // A player named Carmine got a score of 1000 in 90 seconds.
-    // http://dreamlo.com/lb/(your super secret very long code)/add/Carmine/1000/90
-
-    // A player named Carmine got a score of 1000 in 90 seconds and is Awesome.
-    // http://dreamlo.com/lb/(your super secret very long code)/add/Carmine/1000/90/Awesome
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-
-
     public struct Score
     {
         public string playerName;
