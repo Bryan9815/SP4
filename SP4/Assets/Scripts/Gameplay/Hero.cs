@@ -14,6 +14,8 @@ public class Hero : MonoBehaviour {
 	protected int state;
 	protected string ClassName;
     protected bool isDead;
+	protected float InvincibilityTimer;
+	protected float InvincibilityDuration;
 	public bool unlocked;
 	protected BaseWeapon Weapon;
 

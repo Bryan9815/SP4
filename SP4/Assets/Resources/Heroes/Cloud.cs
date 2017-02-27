@@ -28,6 +28,8 @@ public class Cloud : Hero
         CalculateStats();
         isDead = false;
         currHp = Hp;
+		InvincibilityTimer = 0;
+		InvincibilityDuration = 1f;
         anim = gameObject.gameObject.GetComponent<Animator>();
     }
 
@@ -40,6 +42,12 @@ public class Cloud : Hero
 		{
 			Sp -= 100;
 			SpecialAbility ();
+		}
+		if (InvincibilityTimer > 0)
+		{
+			InvincibilityTimer -= Time.deltaTime;
+			if (InvincibilityTimer < 0)
+				InvincibilityTimer = 0;
 		}
     }
 
@@ -123,7 +131,10 @@ public class Cloud : Hero
     {
 		if (isDead)
 			return;
+		if (InvincibilityTimer > 0)
+			return;
         //calculate how damage is taken here
+		InvincibilityTimer += InvincibilityDuration;
         anim.SetTrigger("isHit");
         currHp -= damagetaken;
         if (currHp <= 0)

@@ -19,6 +19,8 @@ public class Leon : Hero {
 		exp = 0;
         CalculateStats();
         currHp = Hp;
+		InvincibilityTimer = 0;
+		InvincibilityDuration = 1f;
 	}
 
 	void CalculateStats()
@@ -45,6 +47,12 @@ public class Leon : Hero {
 			float temp = animator.GetFloat ("Howl Timer");
 			temp += Time.deltaTime;
 			animator.SetFloat ("Howl Timer", temp);
+		}
+		if (InvincibilityTimer > 0)
+		{
+			InvincibilityTimer -= Time.deltaTime;
+			if (InvincibilityTimer < 0)
+				InvincibilityTimer = 0;
 		}
 	}
 
@@ -124,7 +132,10 @@ public class Leon : Hero {
 	{
 		if (isDead)
 			return;
+		if (InvincibilityTimer > 0)
+			return;
 		//calculate how damage is taken here
+		InvincibilityTimer += InvincibilityDuration;
 		animator.SetTrigger ("isHit");
         currHp -= damagetaken;
         if (currHp <= 0)
