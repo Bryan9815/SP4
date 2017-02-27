@@ -6,37 +6,65 @@ public class BackgroundManager : MonoBehaviour
 {
 
     public GameObject[] bg;
+	public GameObject[] bg2;
+	public GameObject[] bg3;
+
 	private float movetowards;
 	public  float movingSpeed;
 	private RectTransform rt_bg;
 
+	//For moving the bg upwards
+	private float tempY;
+	private GameObject[] tempHolder;
+
+	private int randomBGSet;
+
 	// Use this for initialization
 	void Start ()
     {
+		tempY = 0.0f;
+		randomBGSet = Random.Range (0, 3);
 		if (movingSpeed < 0.0f)
 			movingSpeed = 0.0f;
-		for (int i = 0; i < bg.Length; i++) 
+		
+		switch (randomBGSet) 
 		{
-			rt_bg = bg [i].GetComponent<RectTransform> ();
-			bg [i].GetComponent<RectTransform>().anchoredPosition = new Vector3 (rt_bg.rect.width * i, 0.0f, 0.1f * i);
+			case 0:
+				tempHolder = bg;
+			break;
+
+			case 1:
+				tempHolder = bg2;
+			break;
+
+			case 2:
+				tempHolder = bg3;
+			break;
 		}
+		for (int i = 0; i < tempHolder.Length; i++) 
+		{
+			rt_bg = tempHolder [i].GetComponent<RectTransform> ();
+			tempHolder [i].GetComponent<RectTransform>().anchoredPosition = new Vector3 (rt_bg.rect.width * i, tempY, 0.1f * i);
+		}
+
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
 		movetowards = movingSpeed * Time.deltaTime;
-
-		for (int i = 0; i < bg.Length; i++) 
+	
+		for (int i = 0; i < tempHolder.Length; i++) 
 		{
-			bg [i].transform.Translate (Vector3.left * movetowards);
-			if (bg [i].GetComponent<RectTransform> ().anchoredPosition.x < -rt_bg.rect.width)
+			tempHolder [i].transform.Translate (Vector3.left * movetowards);
+			if (tempHolder [i].GetComponent<RectTransform> ().anchoredPosition.x < -rt_bg.rect.width)
 			{
 				if(i == 0)
-					bg [i].GetComponent<RectTransform> ().anchoredPosition = new Vector3 (bg[bg.Length - 1].GetComponent<RectTransform>().anchoredPosition.x + rt_bg.rect.width - movingSpeed, 0.0f, 1.0f * i);
+					tempHolder [i].GetComponent<RectTransform> ().anchoredPosition = new Vector3 (tempHolder[tempHolder.Length - 1].GetComponent<RectTransform>().anchoredPosition.x + rt_bg.rect.width - movingSpeed, 0.0f, 1.0f * i);
 				else		
-					bg [i].GetComponent<RectTransform> ().anchoredPosition = new Vector3 (bg[i-1].GetComponent<RectTransform>().anchoredPosition.x + rt_bg.rect.width, 0.0f, 1.0f * i);
+					tempHolder [i].GetComponent<RectTransform> ().anchoredPosition = new Vector3 (tempHolder[i-1].GetComponent<RectTransform>().anchoredPosition.x + rt_bg.rect.width, 0.0f, 1.0f * i);
 			}
 		}
+			
 	}
 }

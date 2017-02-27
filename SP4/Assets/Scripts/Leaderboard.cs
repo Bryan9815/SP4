@@ -61,7 +61,7 @@ public class Leaderboard : MonoBehaviour {
 
         WWW www = new WWW(dreamloWebserviceURL + privateCode + "/add-pipe/" + WWW.EscapeURL(playerName) + "/" + totalScore.ToString());
         yield return www;
-        highScores = www.text;
+        //highScores = www.text;
     }
 
     IEnumerator AddScoreWithPipe(string playerName, int totalScore, int totalSeconds)
@@ -85,7 +85,6 @@ public class Leaderboard : MonoBehaviour {
 
     IEnumerator GetScores()
     {
-        highScores = "";
         WWW www = new WWW(dreamloWebserviceURL + publicCode + "/pipe");
         yield return www;
         highScores = www.text;
@@ -104,12 +103,11 @@ public class Leaderboard : MonoBehaviour {
         StartCoroutine(GetScores());
     }
 
-
     public string[] ToStringArray()
     {
+        LoadScores();
         if (this.highScores == null) return null;
         if (this.highScores == "") return null;
-
         string[] rows = this.highScores.Split(new char[] { '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
         return rows;
     }

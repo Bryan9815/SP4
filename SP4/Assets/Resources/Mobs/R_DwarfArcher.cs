@@ -36,22 +36,34 @@ public class R_DwarfArcher : Mob
     // Update is called once per frame
     protected override void Update()
     {
-        float distFromHero = Mathf.Sqrt((float)(gameObject.transform.position.x + Hero1.transform.position.x) * (gameObject.transform.position.x + Hero1.transform.position.x));
-        if (distFromHero <= 7.5 && distFromHero > 5)
+        if (!Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead())
+            distFromHero = Mathf.Sqrt(((float)(gameObject.transform.position.x - Hero1.transform.position.x) * (gameObject.transform.position.x - Hero1.transform.position.x)));
+        else if (!Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead())
+            distFromHero = Mathf.Sqrt(((float)(gameObject.transform.position.x - Hero2.transform.position.x) * (gameObject.transform.position.x - Hero2.transform.position.x)));
+        else if (!Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead())
+            distFromHero = Mathf.Sqrt(((float)(gameObject.transform.position.x - Hero3.transform.position.x) * (gameObject.transform.position.x - Hero3.transform.position.x)));
+
+        if (distFromHero < 10 && distFromHero > 7.5)
         {
             state = States.Walk;
-            animator.SetTrigger("Target Detected");
-            animator.SetBool("No Targets", false);
+            if (!TargetsDetected)
+            {
+                animator.SetTrigger("Target Detected");
+                animator.SetBool("No Targets", false);
+                TargetsDetected = true;
+            }
         }
-        else if (distFromHero > 7.5 && state != States.Attack)
+        else if (distFromHero > 10 && state != States.Attack)
         {
             state = States.Idle;
             animator.SetBool("No Targets", true);
+            TargetsDetected = false;
         }
-        else if (distFromHero <= 5)
+        else if (distFromHero < 7.5)
         {
             state = States.Attack;
             animator.SetBool("Targets In Range", true);
+            animator.SetFloat("Cooldown Timer", attackTimer);
         }
         switch (state)
         {
@@ -82,29 +94,31 @@ public class R_DwarfArcher : Mob
                     attackTimer += Time.deltaTime;
                 animator.SetFloat("Cooldown Timer", attackTimer);
 
-                Vector3 temp2 = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
-
-                if (attackTimer >= attackTimer_Max)
-                {
-                    GameObject arrow = Instantiate(Arrow.GetComponent<ProjectileHolder>().Get_GameObject(), new Vector3(temp2.x - 1, temp2.y, temp2.z), Arrow.transform.rotation) as GameObject;
-                    arrow.SetActive(true);
-
-                    attackTimer = 0.0f;
-                    animator.SetFloat("Cooldown Timer", attackTimer);
-                    animator.SetTrigger("Cooldown");
-                }
-
                 foreach (GameObject hero in HeroList)
                 {
                     if (!gameObject.GetComponent<BoxCollider2D>().IsTouching(hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
                     {
-                        temp2.x -= Time.deltaTime * 0.5f;
-                        gameObject.transform.position = temp2;
+                        Vector3 temp = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+
+                        temp.x -= Time.deltaTime * 0.5f;
+                        gameObject.transform.position = temp;
                     }
                 }
                 break;
             default:
                 break;
         }
+    }
+
+    public void FireProjectile()
+    {
+        Vector3 position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+
+        GameObject arrow = Instantiate(Arrow.GetComponent<ProjectileHolder>().Get_GameObject(), new Vector3(position.x - 1, position.y, position.z), Arrow.transform.rotation) as GameObject;
+        arrow.SetActive(true);
+
+        attackTimer = 0.0f;
+        animator.SetFloat("Cooldown Timer", attackTimer);
+        animator.SetTrigger("Cooldown");
     }
 }
