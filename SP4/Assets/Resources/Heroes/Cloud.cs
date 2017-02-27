@@ -29,7 +29,7 @@ public class Cloud : Hero
         isDead = false;
         currHp = Hp;
 		InvincibilityTimer = 0;
-		InvincibilityDuration = 1f;
+		InvincibilityDuration = 2f;
 		animator = gameObject.gameObject.GetComponent<Animator>();
     }
 
@@ -48,6 +48,15 @@ public class Cloud : Hero
 			InvincibilityTimer -= Time.deltaTime;
 			if (InvincibilityTimer < 0)
 				InvincibilityTimer = 0;
+			if (GetComponent<SpriteRenderer> ().enabled)
+				GetComponent<SpriteRenderer> ().enabled = false;
+			else
+				GetComponent<SpriteRenderer> ().enabled = true;
+			if (InvincibilityTimer < 0)
+			{
+				InvincibilityTimer = 0;
+				GetComponent<SpriteRenderer> ().enabled = true;
+			}
 		}
     }
 

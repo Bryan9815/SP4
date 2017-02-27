@@ -28,7 +28,18 @@ public class Hero : MonoBehaviour {
 
 	// Use this for initialization
 	protected virtual void Start () {
-		
+		animator = GetComponent<Animator> ();
+		currHp = Hp;
+		Sp = 0;
+		ClassName = "TemplateHero";
+		level = 1;
+		exp = 0;
+		Weapon = Resources.Load<BaseWeapon>("Equipment/Weapons/TestWeapon1");
+		animator = GetComponent<Animator>();
+		InvincibilityTimer = 0;
+		InvincibilityDuration = 1f;
+		isDead = false;
+		//CalculateStats ();
 	}
 	
 	// Update is called once per frame
@@ -215,7 +226,7 @@ public class Hero : MonoBehaviour {
 
 	public virtual void Set_Idle()
 	{
-		animator.SetTrigger("Idle",true);
+		animator.SetTrigger("Idle");
 	}
 
 	public virtual void Exit()

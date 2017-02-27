@@ -26,7 +26,7 @@ public class Weeb : Hero
         exp = 0;                                                        //Weeb's Experience points
         //state;
 		InvincibilityTimer = 0;
-		InvincibilityDuration = 1f;
+		InvincibilityDuration = 3f;
         isDead = false;
         CalculateStats();
         currHp = Hp;
@@ -48,6 +48,15 @@ public class Weeb : Hero
 			InvincibilityTimer -= Time.deltaTime;
 			if (InvincibilityTimer < 0)
 				InvincibilityTimer = 0;
+			if (GetComponent<SpriteRenderer> ().enabled)
+				GetComponent<SpriteRenderer> ().enabled = false;
+			else
+				GetComponent<SpriteRenderer> ().enabled = true;
+			if (InvincibilityTimer < 0)
+			{
+				InvincibilityTimer = 0;
+				GetComponent<SpriteRenderer> ().enabled = true;
+			}
 		}
     }
 

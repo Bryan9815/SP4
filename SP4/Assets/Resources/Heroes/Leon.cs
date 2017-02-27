@@ -51,8 +51,16 @@ public class Leon : Hero {
 		if (InvincibilityTimer > 0)
 		{
 			InvincibilityTimer -= Time.deltaTime;
+			if (GetComponent<SpriteRenderer> ().enabled)
+				GetComponent<SpriteRenderer> ().enabled = false;
+			else
+				GetComponent<SpriteRenderer> ().enabled = true;
 			if (InvincibilityTimer < 0)
+			{
 				InvincibilityTimer = 0;
+				GetComponent<SpriteRenderer> ().enabled = true;
+			}
+				
 		}
 	}
 
