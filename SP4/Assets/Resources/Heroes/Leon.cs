@@ -39,6 +39,13 @@ public class Leon : Hero {
 			Sp -= 100;
 			SpecialAbility ();
 		}
+
+		if (animator.GetCurrentAnimatorStateInfo(0).IsName("Werewolf_Howl"))
+		{
+			float temp = animator.GetFloat ("Howl Timer");
+			temp += Time.deltaTime;
+			animator.SetFloat ("Howl Timer", temp);
+		}
 	}
 
 
@@ -76,6 +83,8 @@ public class Leon : Hero {
 		{
 			temp.getHit ((int) (Attack));
 		}
+
+		Sp += 20;
 	}
 
 	protected override void TwoChain()
@@ -88,6 +97,7 @@ public class Leon : Hero {
 		{
 			temp.getHit ((int) (Attack * 1.5f));
 		}
+		Sp += 40;
 	}
 
 	protected override void ThreeChain()
@@ -100,6 +110,7 @@ public class Leon : Hero {
 		{
 			temp.getHit ((int) (Attack * 2f));
 		}
+		Sp += 60;
 	}
 
 	// Normal attack
