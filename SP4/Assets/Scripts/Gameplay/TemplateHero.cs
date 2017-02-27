@@ -26,6 +26,7 @@ public class TemplateHero : Hero {
 		level = 1;
 		exp = 0;
 		Weapon = Resources.Load<BaseWeapon>("Equipment/Weapons/TestWeapon1");
+		animator = GetComponent<Animator>();
 		InvincibilityTimer = 0;
 		InvincibilityDuration = 1f;
 		isDead = false;

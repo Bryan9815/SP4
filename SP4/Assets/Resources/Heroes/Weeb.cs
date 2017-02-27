@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Weeb : Hero 
 {
     static Weeb _instance;
-    Animator anim;
+    //Animator anim;
 
     enum States // for animation
     {
@@ -30,7 +30,7 @@ public class Weeb : Hero
         isDead = false;
         CalculateStats();
         currHp = Hp;
-        anim = gameObject.gameObject.GetComponent<Animator>();
+        animator = gameObject.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -87,8 +87,8 @@ public class Weeb : Hero
 	// Chain attacks
 	protected override void OneChain()
 	{
-		anim.SetInteger("Number of Blocks", 1);
-		anim.SetTrigger("Blocks Pressed");
+		animator.SetInteger("Number of Blocks", 1);
+		animator.SetTrigger("Blocks Pressed");
 
 		foreach(Mob temp in AttackCollide.Mobs_Collided)
 		{
@@ -99,8 +99,8 @@ public class Weeb : Hero
 
 	protected override void TwoChain()
 	{
-		anim.SetInteger("Number of Blocks", 2);
-		anim.SetTrigger("Blocks Pressed");
+		animator.SetInteger("Number of Blocks", 2);
+		animator.SetTrigger("Blocks Pressed");
 
 		foreach(Mob temp in AttackCollide.Mobs_Collided)
 		{
@@ -111,8 +111,8 @@ public class Weeb : Hero
 
 	protected override void ThreeChain()
 	{
-		anim.SetInteger("Number of Blocks", 3);
-		anim.SetTrigger("Blocks Pressed");
+		animator.SetInteger("Number of Blocks", 3);
+		animator.SetTrigger("Blocks Pressed");
 
 		foreach(Mob temp in AttackCollide.Mobs_Collided)
 		{
@@ -136,19 +136,26 @@ public class Weeb : Hero
 			return;
         //calculate how damage is taken here
 		InvincibilityTimer += InvincibilityDuration;
-        anim.SetTrigger("isHit");
+		animator.SetTrigger("isHit");
         currHp -= damagetaken;
+
+		Vector3 tempPos = gameObject.transform.position;
+		tempPos.y += gameObject.GetComponent<Transform> ().localScale.y / 2;
+		DamageTextManager.GeneratePlayerTakeDmg (tempPos, damagetaken);
+
+		Debug.Log ("Ai yaa Weeb got hit....");
+
         if (currHp <= 0)
         {
             isDead = true;
-            anim.SetBool("No HP", true);
+			animator.SetBool("No HP", true);
         }
     }
 
     // Special ability
     protected override void SpecialAbility()
     {
-        anim.SetTrigger("Skill Activated");
+		animator.SetTrigger("Skill Activated");
 
         GameObject tempcoll = Instantiate(attackCollider);
         tempcoll.SetActive(true);

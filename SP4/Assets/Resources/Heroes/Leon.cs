@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Leon : Hero {
 
 	static Leon _instance;
-	Animator animator;
+	//Animator animator;
 
 	// Use this for initialization
 	protected override void Start () {
@@ -138,6 +138,13 @@ public class Leon : Hero {
 		InvincibilityTimer += InvincibilityDuration;
 		animator.SetTrigger ("isHit");
         currHp -= damagetaken;
+
+		Vector3 tempPos = gameObject.transform.position;
+		tempPos.y += gameObject.GetComponent<Transform> ().localScale.y / 2;
+		DamageTextManager.GeneratePlayerTakeDmg (tempPos, damagetaken);
+
+		Debug.Log ("Ai yaa Leon got hit....");
+
         if (currHp <= 0)
         {
 			isDead = true;

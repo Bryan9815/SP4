@@ -56,6 +56,11 @@ public class Mob : MonoBehaviour
     {
         //calculate how damage is taken here
         Hp -= damage;
+
+		Vector3 tempPos = gameObject.transform.position;
+		tempPos.y += gameObject.GetComponent<Transform> ().localScale.y / 2;
+		DamageTextManager.GenerateSprite (tempPos, damage);
+		Debug.Log ("Ai ya Mob got hit...");
     }
 
     public virtual int GetAttack()

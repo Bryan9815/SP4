@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Cloud : Hero
 {
     static Cloud _instance;
-    Animator anim;
+    //Animator anim;
 
     enum States // for animation
     {
@@ -30,7 +30,7 @@ public class Cloud : Hero
         currHp = Hp;
 		InvincibilityTimer = 0;
 		InvincibilityDuration = 1f;
-        anim = gameObject.gameObject.GetComponent<Animator>();
+		animator = gameObject.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -86,8 +86,8 @@ public class Cloud : Hero
     // Chain attacks
     protected override void OneChain()
     {
-       anim.SetInteger("Number of Blocks", 1);
-       anim.SetTrigger("Blocks Pressed");
+		animator.SetInteger("Number of Blocks", 1);
+		animator.SetTrigger("Blocks Pressed");
 
 		foreach(Mob temp in AttackCollide.Mobs_Collided)
 		{
@@ -98,8 +98,8 @@ public class Cloud : Hero
 
     protected override void TwoChain()
     {
-        anim.SetInteger("Number of Blocks", 2);
-        anim.SetTrigger("Blocks Pressed");
+		animator.SetInteger("Number of Blocks", 2);
+		animator.SetTrigger("Blocks Pressed");
 
 		foreach(Mob temp in AttackCollide.Mobs_Collided)
 		{
@@ -110,8 +110,8 @@ public class Cloud : Hero
 
     protected override void ThreeChain()
     {
-        anim.SetInteger("Number of Blocks", 3);
-        anim.SetTrigger("Blocks Pressed");
+		animator.SetInteger("Number of Blocks", 3);
+		animator.SetTrigger("Blocks Pressed");
 
 		foreach(Mob temp in AttackCollide.Mobs_Collided)
 		{
@@ -135,19 +135,26 @@ public class Cloud : Hero
 			return;
         //calculate how damage is taken here
 		InvincibilityTimer += InvincibilityDuration;
-        anim.SetTrigger("isHit");
+		animator.SetTrigger("isHit");
         currHp -= damagetaken;
+
+		Vector3 tempPos = gameObject.transform.position;
+		//tempPos.y += gameObject.GetComponent<Transform> ().localScale.y / 2;
+		DamageTextManager.GeneratePlayerTakeDmg (tempPos, damagetaken);
+
+		Debug.Log ("Ai yaa Cloud got hit....");
+
         if (currHp <= 0)
         {
             isDead = true;
-            anim.SetBool("No HP", true);
+			animator.SetBool("No HP", true);
         }
     }
 
     // Special ability
     protected override void SpecialAbility()
     {
-        anim.SetTrigger("Skill Activated");
+		animator.SetTrigger("Skill Activated");
 
         GameObject tempcoll = Instantiate(attackCollider);
         tempcoll.SetActive(true);
