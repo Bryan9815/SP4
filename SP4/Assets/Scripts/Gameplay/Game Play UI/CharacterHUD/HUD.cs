@@ -42,13 +42,13 @@ public class HUD : MonoBehaviour
 	{
         if(!ImageSet)
         {
-            currHP = maxHP = Hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Hp();
+            currHP = maxHP = Hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_MaxHp();
             currMP = Hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().GetSP();
             characterIcon.sprite = Hero.GetComponent<HeroHolder>().ReturnSprite();
             ImageSet = true;
         }
 
-        maxHP = Hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Hp();
+        maxHP = Hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_MaxHp();
 		currHP = Hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Hp();
         currMP = Hero.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().GetSP();
 

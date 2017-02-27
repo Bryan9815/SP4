@@ -6,11 +6,13 @@ using System.Collections.Generic;
 public class Mob : MonoBehaviour
 {
     protected int Hp, Attack, Defense, goldValue;
-    protected float attackTimer, attackTimer_Max, exp;
+    protected float attackTimer, attackTimer_Max, exp, distFromHero;
     protected Vector3 position;
+    protected bool TargetsDetected = false;
 
     protected static GameObject Hero1, Hero2, Hero3, Arrow;
     protected static List<GameObject> HeroList;
+
     // Use this for initialization
     protected virtual void Start()
     {
