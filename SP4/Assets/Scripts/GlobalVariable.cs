@@ -10,12 +10,6 @@ public class GlobalVariable : MonoBehaviour {
     private static string PlayerName;
     private static int PlayerGoldG;
 
-	//Indicates the max number of wave per level
-	private static int maxWaveNumber;
-
-	//Determine which wave the player is in
-	private static int currWaveNumber;
-
 	//Indicates how far the player is in
 	private static int stageLevel;
 
@@ -50,13 +44,6 @@ public class GlobalVariable : MonoBehaviour {
 		// Player Variables
 		PlayerName = PlayerPrefs.GetString("userID", "");
 		PlayerGoldG = PlayerPrefs.GetInt("Gold", 100);
-
-		//Max wave number is 5, so it means every 5 wave completed
-		//means 1 level increase to state level
-		maxWaveNumber = 5;
-
-		//Current Wave number for indicating which wave the player is in
-		currWaveNumber = PlayerPrefs.GetInt("Wave", 1);
 
 		//Stage level determine how far the player progress in the game
 		stageLevel = PlayerPrefs.GetInt("Stage",1);
@@ -155,26 +142,6 @@ public class GlobalVariable : MonoBehaviour {
         PlayerGoldG = newGold;
     }
 		
-	public static void SetWaveNumber(int newWave)
-	{
-		currWaveNumber = newWave;
-	}
-
-	public static int GetWaveNumber()
-	{
-		return currWaveNumber;
-	}
-
-	public static void SetMaxWaveNumber(int newMaxWave)
-	{
-		maxWaveNumber = newMaxWave;
-	}
-
-	public static int GetMaxWaveNumber()
-	{
-		return maxWaveNumber;
-	}
-
 	public static void SetStageLevel(int newStageLevel)
 	{
 		stageLevel = newStageLevel;

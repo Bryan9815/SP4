@@ -34,7 +34,13 @@ public class Cloud : Hero
     // Update is called once per frame
     protected override void Update()
     {
-
+		if (isDead)
+			return;
+		if (Sp >= 100)
+		{
+			Sp -= 100;
+			SpecialAbility ();
+		}
     }
 
     void CalculateStats()
@@ -53,6 +59,8 @@ public class Cloud : Hero
 
     public override void BlockAttack(int i)
     {
+		if (isDead)
+			return;
         switch (i)
         {
             case 1:
@@ -77,6 +85,7 @@ public class Cloud : Hero
 		{
 			temp.getHit ((int) (Attack));
 		}
+		Sp += 20;
     }
 
     protected override void TwoChain()
@@ -88,6 +97,7 @@ public class Cloud : Hero
 		{
 			temp.getHit ((int) (Attack* 2.0f));
 		}
+		Sp += 40;
     }
 
     protected override void ThreeChain()
@@ -99,6 +109,7 @@ public class Cloud : Hero
 		{
 			temp.getHit ((int) (Attack * 3.0f));
 		}
+		Sp += 60;
     }
 
     // Normal attack
@@ -110,9 +121,18 @@ public class Cloud : Hero
     // when attacked
     public override void getHit(int damagetaken)
     {
+		if (isDead)
+			return;
         //calculate how damage is taken here
         anim.SetTrigger("isHit");
         currHp -= damagetaken;
+
+		Vector3 tempPos = gameObject.transform.position;
+		//tempPos.y += gameObject.GetComponent<Transform> ().localScale.y / 2;
+		DamageTextManager.GeneratePlayerTakeDmg (tempPos, damagetaken);
+
+		Debug.Log ("Ai yaa Cloud got hit....");
+
         if (currHp <= 0)
         {
             isDead = true;

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class TemplateHero : Hero {
 
-	enum States // for animation
+	enum States // for animation (optional as u can use states in animator)
 	{
 		Idle,
 		Attack,
@@ -25,23 +25,26 @@ public class TemplateHero : Hero {
 		ClassName = "TemplateHero";
 		level = 1;
 		exp = 0;
+		Weapon = Resources.Load<BaseWeapon>("Equipment/Weapons/TestWeapon1");
 		//isDead = false;
 		CalculateStats ();
 	}
 
 	void CalculateStats()
 	{	
-		
 											//Max
-//		Hp = 100 * level * 1.45f;			//7250
-//		Attack = 18 * level * 1;			//900
-//		Defense = 11 * level * 1.2f;		//550
-//		Evasion = 0.7f * level * 0.9f;		//31.5
-//		max_exp = 500 * level * 2;			//50k
+		//Hp = 100 * level * 1.45f;			//7250
+		//Attack = 18 * level * 1;			//900
+		//Defense = 11 * level * 1.2f;		//550
+		//Evasion = 0.7f * level * 0.9f;		//31.5
+		//max_exp = 500 * level * 2;			//50k
+		//Attack += Weapon.Get_Attack();
 	}
 
 	// Update is called once per frame
 	protected override void Update () {
+		if (isDead)
+			return;
 		if (Sp >= 100)
 		{
 			Sp -= 100;
@@ -56,6 +59,8 @@ public class TemplateHero : Hero {
 
 	public override void BlockAttack(int i)
 	{
+		if (isDead)
+			return;
 		switch(i)
 		{
 		case 1:
@@ -113,6 +118,8 @@ public class TemplateHero : Hero {
 	// when attacked
 	public override void getHit(int damagetaken)
 	{
+		if (isDead)
+			return;
 		//calculate how damage is taken here
 		animator.SetTrigger ("isHit");
 		Hp -= damagetaken;
