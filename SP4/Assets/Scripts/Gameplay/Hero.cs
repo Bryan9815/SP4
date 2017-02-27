@@ -208,6 +208,11 @@ public class Hero : MonoBehaviour {
         return isDead;
     }
 
+	public virtual bool Get_IsInvincible()
+	{
+		return InvincibilityTimer > 0;
+	}
+
 	public virtual void Exit()
 	{
         Vector3 temp = new Vector3(-10000, 0, 0);
