@@ -119,6 +119,13 @@ public class Weeb : Hero
         //calculate how damage is taken here
         anim.SetTrigger("isHit");
         currHp -= damagetaken;
+
+		Vector3 tempPos = gameObject.transform.position;
+		tempPos.y += gameObject.GetComponent<Transform> ().localScale.y / 2;
+		DamageTextManager.GeneratePlayerTakeDmg (tempPos, damagetaken);
+
+		Debug.Log ("Ai yaa Weeb got hit....");
+
         if (currHp <= 0)
         {
             isDead = true;
