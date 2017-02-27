@@ -40,17 +40,20 @@ public class SwitchHeroes : MonoBehaviour
         Equipped = GameObject.Find(active.name);
         Unequipped = GameObject.Find(active2.name);
         GameObject temp1 = Instantiate(Equipped);
-        Hero tempEquip = temp1.GetComponent<Hero>();
+        HeroSelector tempEquip = temp1.GetComponent<HeroSelector>();
         GameObject temp2 = Instantiate(Unequipped);
-        Hero tempUnequip = temp2.GetComponent<Hero>();
+        HeroSelector tempUnequip = temp2.GetComponent<HeroSelector>();
 
         bothSelected = false;
         
         active.isOn = false;
         active2.isOn = false;
 
-        CopyHeroComponent(tempEquip, Unequipped);
-        CopyHeroComponent(tempUnequip, Equipped);
+        Unequipped.GetComponent<HeroSelector>().HeroID = tempEquip.HeroID;
+
+        Equipped.GetComponent<HeroSelector>().HeroID = tempUnequip.HeroID;
+        //CopyHeroComponent(tempEquip, Unequipped);
+        //CopyHeroComponent(tempUnequip, Equipped);
         
         DestroyImmediate(temp1);
         DestroyImmediate(temp2);
