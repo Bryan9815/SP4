@@ -6,7 +6,7 @@ public class Weeb : Hero
 {
     static Weeb _instance;
     Animator anim;
-    bool isDead;
+
     enum States // for animation
     {
         Idle,
@@ -19,7 +19,7 @@ public class Weeb : Hero
     {
         id = 2;
         ClassName = "Weeb";                                             //Weeb's Class Name
-        Sp = 100;                                                       //Weeb's Special Points for ultimate (Sort of)
+        Sp = 0;                                                       //Weeb's Special Points for ultimate (Sort of)
         //hero_img = ;                                                  //Weeb's Sprite I guess?
         name = "Weeb";                                                  //Name of Weeb
         level = 1;                                                      //Weeb's Level
@@ -27,6 +27,7 @@ public class Weeb : Hero
         //state;
         isDead = false;
         CalculateStats();
+        currHp = Hp;
         anim = gameObject.gameObject.GetComponent<Animator>();
     }
 
@@ -112,8 +113,8 @@ public class Weeb : Hero
     {
         //calculate how damage is taken here
         anim.SetTrigger("isHit");
-        Hp -= damagetaken;
-        if (Hp <= 0)
+        currHp -= damagetaken;
+        if (currHp <= 0)
         {
             isDead = true;
             anim.SetBool("No HP", true);
@@ -143,6 +144,7 @@ public class Weeb : Hero
         exp = 0;
         level += 1;
         CalculateStats();
+        currHp = Hp;
     }
 
     public override void SetAttack(int newAtk)
@@ -204,10 +206,5 @@ public class Weeb : Hero
         else
             return _instance;
 
-    }
-
-    public override void Exit()
-    {
-        Destroy(gameObject);
     }
 }

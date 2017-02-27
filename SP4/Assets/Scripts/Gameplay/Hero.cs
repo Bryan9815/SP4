@@ -13,6 +13,7 @@ public class Hero : MonoBehaviour {
 	protected float attackTimer, attackTimer_Max;
 	protected int state;
 	protected string ClassName;
+    protected bool isDead;
 	public bool unlocked;
 
 	public GameObject attackCollider;
@@ -89,9 +90,19 @@ public class Hero : MonoBehaviour {
     }
 
 	public virtual void LevelUp()
-    {
+	{
+		
+	}
 
-    }
+	public virtual void IncreaseExp(float exp_received)
+	{
+		exp += exp_received;
+		if (exp >= max_exp) 
+		{
+			float temp = exp - max_exp;
+			LevelUp ();
+		}
+	}
 
 	public virtual void SetAttack(int newAtk)
 	{
@@ -189,8 +200,14 @@ public class Hero : MonoBehaviour {
 		return new Hero ();
 	}
 
+    public virtual bool Get_IsDead()
+    {
+        return isDead;
+    }
+
 	public virtual void Exit()
 	{
-		Destroy (gameObject);
+        Vector3 temp = new Vector3(-10000, 0, 0);
+		gameObject.transform.position = temp;
 	}
 }

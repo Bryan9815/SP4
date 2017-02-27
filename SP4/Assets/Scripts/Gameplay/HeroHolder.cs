@@ -38,12 +38,7 @@ public class HeroHolder : MonoBehaviour
         if (delayTimer < 3)
             delayTimer += Time.deltaTime;
         else
-            hero.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-        if(hero.GetComponent<Hero>().transform.position.x != gameObject.transform.position.x)
-        {
-            Vector3 temp = new Vector3(gameObject.transform.position.x, hero.GetComponent<Hero>().transform.position.y, 1);
-            hero.GetComponent<Hero>().transform.position = temp;
-        }
+            hero.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
 	}
 
 	public GameObject Get_GameObject()

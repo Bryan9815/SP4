@@ -14,16 +14,28 @@ public class U_DwarfArcher : Mob
     States state;
     Animator animator;
     // Use this for initialization
-    void Start()
+    protected override void Start()
     {
-        Hp = 10;
-        Defense = 10;
+        CalculateStats();
+        goldValue = Random.Range(121, 218);
 
-        attackTimer = 2.0f;
+        attackTimer = 0.0f;
         attackTimer_Max = 3.01f;
 
         state = States.Idle;
         animator = GetComponent<Animator>();
+    }
+
+    void CalculateStats()
+    {
+        Hp = (int)(152 * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
+        Defense = (int)(73.91f * WaveManager.GetWaveNumber() * Random.Range(1, 1.43f));
+        exp = (67.62f * WaveManager.GetWaveNumber() * Random.RandomRange(1, 1.43f));
+
+        if (Hp > 10000)
+            Hp = 10000;
+        if (Defense > 5000)
+            Defense = 5000;
     }
 
     // Update is called once per frame
@@ -95,10 +107,6 @@ public class U_DwarfArcher : Mob
                         gameObject.transform.position = temp2;
                     }
                 }
-                break;
-            case States.Death:
-                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Exit"))
-                    Exit();
                 break;
             default:
                 break;
