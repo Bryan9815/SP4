@@ -16,8 +16,6 @@ public class HighScore : MonoBehaviour
     public Image Hero1, Hero2, Hero3;
     void Start()
     {
-        StartCoroutine(RefreshRecords());
-
         ReturnToMainMenu.onClick.AddListener(delegate { SceneManager.LoadScene("MainMenu"); });
         TriggerLeaderboard.onClick.AddListener(delegate { displayLeaderboard = true; });
 
@@ -33,13 +31,16 @@ public class HighScore : MonoBehaviour
         Stats1.text = GlobalVariable.PrintRecordHeroStats(PlayerPrefs.GetInt("Highest Hero_1", 1));
         Stats2.text = GlobalVariable.PrintRecordHeroStats(PlayerPrefs.GetInt("Highest Hero_2", 2));
         Stats3.text = GlobalVariable.PrintRecordHeroStats(PlayerPrefs.GetInt("Highest Hero_3", 3));
+        
+        lb.AddScore(PlayerPrefs.GetString("userID"), PlayerPrefs.GetInt("Highest Wave Reached", 0));
+        
+        StartCoroutine(RefreshRecords());
     }
 
     IEnumerator RefreshRecords()
     {
         while (true)
         {
-            lb.AddScore(PlayerPrefs.GetString("userID"), PlayerPrefs.GetInt("Highest Wave Reached", 0));
             scoreList = lb.ToListHighToLow();
             Debug.Log("scoreList Count: " + scoreList.Count.ToString());
             yield return new WaitForSeconds(5);
@@ -67,7 +68,7 @@ public class HighScore : MonoBehaviour
             GUILayout.Label("High Scores:");
             //Debug.Log("scoreList Count: " + scoreList.Count.ToString());
 
-            if (scoreList == null)
+            if (scoreList == null || scoreList.Count == 0)
             {
                 GUILayout.Label("(loading...)");
             }

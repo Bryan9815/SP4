@@ -27,7 +27,7 @@ public class WaveManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        WaveProgress.text = "Wave: " + WaveNumber + "\nMonsters Remaining: " + MobNumber;
+        WaveProgress.text = "Wave: " + WaveNumber + "\nMonsters Remaining: " + ListOfMobs.Count;
 
         if (!WaveOver)
         {
