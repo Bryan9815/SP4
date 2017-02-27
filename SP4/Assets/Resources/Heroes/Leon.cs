@@ -4,36 +4,16 @@ using UnityEngine.UI;
 
 public class Leon : Hero {
 
-	//	public static float Hp,Attack,Defense, Resistance, Speed, Accuracy, Evasion;
-	//	public static Image hero;
-	//	public static string name;
-	//	public int level;
-	//	public float exp, max_exp;
-
 	static Leon _instance;
-//	enum States // for animation
-//	{
-//		Idle,
-//		Attack,
-//		Chain1,
-//		Chain2,
-//		Chain3,
-//		Death,
-//	}
-//
-//	States state;
 	Animator animator;
-	//Collider
-	//GameObject tempcoll;
+
 	// Use this for initialization
 	protected override void Start () {
 		currHp = Hp;
 		id = 3;
 		ClassName = "Leon";
-		//Level increase stat variables
 		Sp = 0;
 		isDead = false;
-		//state = States.Idle;
 		animator = GetComponent<Animator> ();
 		level = 1;
 		exp = 0;
@@ -52,6 +32,8 @@ public class Leon : Hero {
 
 	// Update is called once per frame
 	protected override void Update () {
+		if (isDead)
+			return;
 		if (Sp >= 100)
 		{
 			Sp -= 100;
@@ -67,6 +49,8 @@ public class Leon : Hero {
 
 	public override void BlockAttack(int i)
 	{
+		if (isDead)
+			return;
 		switch(i)
 		{
 		case 1:
@@ -127,6 +111,8 @@ public class Leon : Hero {
 	// when attacked
 	public override void getHit(int damagetaken)
 	{
+		if (isDead)
+			return;
 		//calculate how damage is taken here
 		animator.SetTrigger ("isHit");
         currHp -= damagetaken;
