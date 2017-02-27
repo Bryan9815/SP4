@@ -36,6 +36,11 @@ public class Weeb : Hero
     {
 		if (isDead)
 			return;
+		if (Sp >= 100)
+		{
+			Sp -= 100;
+			SpecialAbility ();
+		}
     }
 
     void CalculateStats()
@@ -81,6 +86,7 @@ public class Weeb : Hero
 		{
 			temp.getHit ((int) (Attack));
 		}
+		Sp += 20;
 	}
 
 	protected override void TwoChain()
@@ -92,6 +98,7 @@ public class Weeb : Hero
 		{
 			temp.getHit ((int) (Attack* 2.0f));
 		}
+		Sp += 40;
 	}
 
 	protected override void ThreeChain()
@@ -103,6 +110,7 @@ public class Weeb : Hero
 		{
 			temp.getHit ((int) (Attack * 3.0f));
 		}
+		Sp += 60;
 	}
 
     // Normal attack
