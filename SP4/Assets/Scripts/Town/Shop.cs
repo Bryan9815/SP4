@@ -5,11 +5,11 @@ using System.Collections;
 
 public class Shop : MonoBehaviour 
 {
-    bool openTheShop = false, openTheUpgrade = false;
+    bool openTheShop = false, openTheUpgrade = false, openTheEquipment;
     public ToggleGroup UnBoughtHeroes;
-    public Button buyButton, rngButton;
+    public Button buyButton;
     private Toggle tungle;
-    public Canvas buyCanvas, upgradePanel;
+    public Canvas buyCanvas, upgradePanel, equipCanvas;
     public Toggle toggle1, toggle2, toggle3;
     public Text costOfRNG, costOfSpecificHero;
     int SpecificCost;
@@ -107,6 +107,27 @@ public class Shop : MonoBehaviour
         {
             openTheShop = false;
             buyCanvas.enabled = false;
+        }
+    }
+
+    public void OpenEquipment()
+    {
+        if (!openTheEquipment)
+        {
+            openTheEquipment = true;
+            equipCanvas.enabled = true;
+        }
+        if (openTheEquipment)
+        {
+            CloseUpgrade();
+        }
+    }
+    public void CloseEquipment()
+    {
+        if (openTheEquipment)
+        {
+            openTheEquipment = false;
+            equipCanvas.enabled = false;
         }
     }
 
