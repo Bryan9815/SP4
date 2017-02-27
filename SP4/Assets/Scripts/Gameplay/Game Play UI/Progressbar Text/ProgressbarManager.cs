@@ -41,7 +41,7 @@ public class ProgressbarManager : MonoBehaviour
 		currWaveNum = GlobalVariable.GetWaveNumber();
 		end.text = "End";
 		distance = endpoint.transform.localPosition.x - progressBall.transform.localPosition.x;
-		distancePerWave = distance / maxWavenum;
+		distancePerWave = distance / maxWavenum; 
 		startPosition = progressBall.transform.localPosition;
 		tempEndpoint = new Vector3 ((distancePerWave * currWaveNum) + startPosition.x,
 									 endpoint.transform.localPosition.y,
