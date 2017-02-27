@@ -34,7 +34,8 @@ public class Cloud : Hero
     // Update is called once per frame
     protected override void Update()
     {
-
+		if (isDead)
+			return;
     }
 
     void CalculateStats()
@@ -53,6 +54,8 @@ public class Cloud : Hero
 
     public override void BlockAttack(int i)
     {
+		if (isDead)
+			return;
         switch (i)
         {
             case 1:
@@ -110,6 +113,8 @@ public class Cloud : Hero
     // when attacked
     public override void getHit(int damagetaken)
     {
+		if (isDead)
+			return;
         //calculate how damage is taken here
         anim.SetTrigger("isHit");
         currHp -= damagetaken;

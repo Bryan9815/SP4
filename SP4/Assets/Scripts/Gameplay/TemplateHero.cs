@@ -43,6 +43,8 @@ public class TemplateHero : Hero {
 
 	// Update is called once per frame
 	protected override void Update () {
+		if (isDead)
+			return;
 		if (Sp >= 100)
 		{
 			Sp -= 100;
@@ -57,6 +59,8 @@ public class TemplateHero : Hero {
 
 	public override void BlockAttack(int i)
 	{
+		if (isDead)
+			return;
 		switch(i)
 		{
 		case 1:
@@ -114,6 +118,8 @@ public class TemplateHero : Hero {
 	// when attacked
 	public override void getHit(int damagetaken)
 	{
+		if (isDead)
+			return;
 		//calculate how damage is taken here
 		animator.SetTrigger ("isHit");
 		Hp -= damagetaken;
