@@ -24,12 +24,6 @@ public class ProgressbarManager : MonoBehaviour
 
 	//distance per wave for the progress bar to move
 	private float distancePerWave;
-
-	//Just a copy of GlobalVariable max wave
-	private int maxWavenum;
-
-	//Just a copy of GlobalVariable current wave
-	private int currWaveNum;
 	  
 	//Just a temp variable for setting the endpoint position
 	private Vector3 tempEndpoint;
@@ -37,27 +31,26 @@ public class ProgressbarManager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		maxWavenum = GlobalVariable.GetMaxWaveNumber();
-		currWaveNum = GlobalVariable.GetWaveNumber();
 		end.text = "End";
 		distance = endpoint.transform.localPosition.x - progressBall.transform.localPosition.x;
-		distancePerWave = distance / maxWavenum; 
+		distancePerWave = distance / WaveManager.ListOfMobs.Count;
 		startPosition = progressBall.transform.localPosition;
-		tempEndpoint = new Vector3 ((distancePerWave * currWaveNum) + startPosition.x,
+		tempEndpoint = new Vector3 (distancePerWave + startPosition.x,
 									 endpoint.transform.localPosition.y,
 									 endpoint.transform.localPosition.z);
 		
 		//Turn the display off at the start
-		//endpoint.GetComponent<SpriteRenderer> ().enabled = false;
+		endpoint.GetComponent<SpriteRenderer> ().enabled = false;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		currWaveNum = GlobalVariable.GetWaveNumber();
-		if (endpoint.transform.localPosition.x != (distancePerWave * currWaveNum) + startPosition.x) 
+		if(WaveManager.ListOfMobs.Count > 0)
+			distancePerWave = distance / WaveManager.ListOfMobs.Count;
+		if (endpoint.transform.localPosition.x != distancePerWave + startPosition.x) 
 		{
-			tempEndpoint.Set ((distancePerWave * currWaveNum) + startPosition.x, 
+			tempEndpoint.Set (distancePerWave + startPosition.x, 
 							  endpoint.transform.localPosition.y, 
 							  endpoint.transform.localPosition.z);	
 			endpoint.transform.localPosition = tempEndpoint;
