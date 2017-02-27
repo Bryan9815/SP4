@@ -15,6 +15,7 @@ public class Hero : MonoBehaviour {
 	protected string ClassName;
     protected bool isDead;
 	public bool unlocked;
+	protected BaseWeapon Weapon;
 
 	public GameObject attackCollider;
 
