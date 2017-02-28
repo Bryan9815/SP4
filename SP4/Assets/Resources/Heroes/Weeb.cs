@@ -58,6 +58,11 @@ public class Weeb : Hero
 				GetComponent<SpriteRenderer> ().enabled = true;
 			}
 		}
+		else 
+		{
+			if (!GetComponent<SpriteRenderer> ().enabled)
+				GetComponent<SpriteRenderer> ().enabled = true;
+		}
     }
 
     void CalculateStats()

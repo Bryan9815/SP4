@@ -2,9 +2,9 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Leon : Hero {
+public class Werewolf : Hero {
 
-	static Leon _instance;
+	static Werewolf _instance;
 	//Animator animator;
 
 	// Use this for initialization
@@ -25,7 +25,7 @@ public class Leon : Hero {
 
 	void CalculateStats()
 	{										//Max
-		Hp = 100 * level * 1.45f;			//7250
+		Hp = 100 * level * 1.1f;			//5500
 		Attack = 18 * level * 1;			//900
 		Defense = 11 * level * 1.2f;		//550
 		Evasion = 0.7f * level * 0.9f;		//31.5
@@ -59,8 +59,12 @@ public class Leon : Hero {
 			{
 				InvincibilityTimer = 0;
 				GetComponent<SpriteRenderer> ().enabled = true;
-			}
-				
+			}				
+		}
+		else 
+		{
+			if (!GetComponent<SpriteRenderer> ().enabled)
+				GetComponent<SpriteRenderer> ().enabled = true;
 		}
 	}
 
@@ -234,7 +238,7 @@ public class Leon : Hero {
 	{
 		if (_instance == null)
 		{
-			_instance = new Leon ();
+			_instance = new Werewolf ();
 			_instance.Start();
 			return _instance;
 		}

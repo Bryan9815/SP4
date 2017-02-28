@@ -25,16 +25,22 @@ public class SwitchHeroes : MonoBehaviour
                 active = ToggleGroupExtension.GetActive(EquippedHeroes);
             if (!active2)
                 active2 = ToggleGroupExtension.GetActive(UnEquippedHeroes);
+            
+            if (active && !active.isOn)
+            {
+                active.GetComponent<HeroSelector>().ActiveHeroUnselected();
+                active = null;
+            }
+            else if(active && active.isOn)
+                active.GetComponent<HeroSelector>().ActiveHeroSelected();
+            if (active2 && !active2.isOn)
+                active2 = null;
+            
             if (active && active2)
             {
                 if (active.isOn && active2.isOn)
                     bothSelected = true;
             }
-
-            if (active && !active.isOn)
-                active = null;
-            if (active2 && !active2.isOn)
-                active2 = null;
         }
         else if (bothSelected)
             Swap();
@@ -53,7 +59,8 @@ public class SwitchHeroes : MonoBehaviour
         HeroSelector EQ = Equipped.GetComponent<HeroSelector>();
 
         bothSelected = false;
-        
+
+        active.GetComponent<HeroSelector>().ActiveHeroUnselected();
         active.isOn = false;
         active2.isOn = false;
 
