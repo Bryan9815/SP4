@@ -143,12 +143,6 @@ public class Cloud : Hero
 		Sp += 60;
     }
 
-    // Normal attack
-    protected override void NormalAttack()
-    {
-
-    }
-
     // when attacked
     public override void getHit(int damagetaken)
     {
