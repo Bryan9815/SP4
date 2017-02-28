@@ -22,13 +22,22 @@ public class Weeb : Hero
         Sp = 0;                                                       //Weeb's Special Points for ultimate (Sort of)
         //hero_img = ;                                                  //Weeb's Sprite I guess?
         name = "Weeb";                                                  //Name of Weeb
-        level = 1;                                                      //Weeb's Level
-        exp = 0;                                                        //Weeb's Experience points
-        //state;
+        level = PlayerPrefs.GetInt("Weeb Level", 1);                   //Weeb's Level
+        exp = PlayerPrefs.GetFloat("Weeb EXP", 0);                     //Weeb's Experience points
+
+        if (level == 1)
+            CalculateStats();
+        else
+        {
+            Hp = PlayerPrefs.GetFloat("Weeb HP");
+            Attack = PlayerPrefs.GetFloat("Weeb Attack");
+            Defense = PlayerPrefs.GetFloat("Weeb Defense");
+            Evasion = PlayerPrefs.GetFloat("Weeb Evasion");
+            max_exp = PlayerPrefs.GetFloat("Weeb Max_EXP");
+        }
+        isDead = false;
 		InvincibilityTimer = 0;
 		InvincibilityDuration = 3f;
-        isDead = false;
-        CalculateStats();
         currHp = Hp;
         animator = gameObject.gameObject.GetComponent<Animator>();
     }
@@ -96,6 +105,7 @@ public class Weeb : Hero
                 ThreeChain();
                 break;
         }
+        PlayerPrefs.SetFloat("Weeb EXP", exp);
     }
 
 	// Chain attacks
@@ -190,6 +200,12 @@ public class Weeb : Hero
         level += 1;
         CalculateStats();
         currHp = Hp;
+        PlayerPrefs.SetInt("Weeb Level", level);
+        PlayerPrefs.SetFloat("Weeb HP", Hp);
+        PlayerPrefs.SetFloat("Weeb Attack", Attack);
+        PlayerPrefs.SetFloat("Weeb Defense", Defense);
+        PlayerPrefs.SetFloat("Weeb Evasion", Evasion);
+        PlayerPrefs.SetFloat("Weeb Max_EXP", max_exp);
     }
 
     public override void SetAttack(int newAtk)
