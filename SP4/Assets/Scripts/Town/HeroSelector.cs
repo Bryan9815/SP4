@@ -66,4 +66,14 @@ public class HeroSelector : MonoBehaviour
         if (!Active)
             heroStatDisplay.text = GlobalVariable.PrintRecordHeroStats(HeroID);
     }
+
+    public void ActiveHeroSelected()
+    {
+        heroStatDisplay.text = GlobalVariable.PrintRecordHeroStats(HeroID);
+    }
+
+    public void ActiveHeroUnselected()
+    {
+        heroStatDisplay.text = "";
+    }
 }
