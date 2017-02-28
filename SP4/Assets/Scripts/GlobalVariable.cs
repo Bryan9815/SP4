@@ -13,9 +13,6 @@ public class GlobalVariable : MonoBehaviour {
 	//Indicates how far the player is in
 	private static int stageLevel;
 
-	private static int ActiveHero1, ActiveHero2, ActiveHero3, InactiveHero1, InactiveHero2, InactiveHero3;
-
-    private List<int> HeroIDList;
     //Added using unity engine UI on top
     //is for just in case anyone need a global Text field 
     //or anything related in UI
@@ -54,27 +51,6 @@ public class GlobalVariable : MonoBehaviour {
         // Player Variables
         PlayerName = PlayerPrefs.GetString("userID", "");
         PlayerGoldG = PlayerPrefs.GetInt("Gold", 100);
-
-        ActiveHero1 = PlayerPrefs.GetInt("Hero ID_1", 1);
-        ActiveHero2 = PlayerPrefs.GetInt("Hero ID_2", 2);
-        ActiveHero3 = PlayerPrefs.GetInt("Hero ID_3", 3);
-
-        HeroIDList.Add(1);
-        HeroIDList.Add(2);
-        HeroIDList.Add(3);
-        HeroIDList.Add(4);
-        HeroIDList.Add(5);
-        HeroIDList.Add(6);
-
-        foreach (int ID in HeroIDList)
-        {
-            if (ID == ActiveHero1 || ID == ActiveHero2 || ID == ActiveHero3)
-                HeroIDList.Remove(ID);
-        }
-
-        PlayerPrefs.SetInt("Inactive Hero ID_1", HeroIDList.IndexOf(0));
-        PlayerPrefs.SetInt("Inactive Hero ID_2", HeroIDList.IndexOf(1));
-        PlayerPrefs.SetInt("Inactive Hero ID_3", HeroIDList.IndexOf(2));
 	}
 	
 	// Update is called once per frame
@@ -151,25 +127,48 @@ public class GlobalVariable : MonoBehaviour {
 		return stageLevel;
 	}
 
-	public static void SetPlayerHeroID(int slot,int id)
+	public static void SetPlayerHeroID(int slot,int id, bool active)
 	{
-        switch (slot)
+        if (active)
         {
-            case 1: 
-                ActiveHero1 = id;
-                PlayerPrefs.SetInt("Hero ID_1", id);
-                break;
-            case 2:
-                ActiveHero2 = id;
-                PlayerPrefs.SetInt("Hero ID_2", id);
-                break;
-            case 3:
-                ActiveHero3 = id;
-                PlayerPrefs.SetInt("Hero ID_3", id);
-                break;
-            default:
-                break;
+            switch (slot)
+            {
+                case 1:
+                    PlayerPrefs.SetInt("Hero ID_1", id);
+                    break;
+                case 2:
+                    PlayerPrefs.SetInt("Hero ID_2", id);
+                    break;
+                case 3:
+                    PlayerPrefs.SetInt("Hero ID_3", id);
+                    break;
+                default:
+                    break;
+            }
         }
+        else
+        {
+            switch (slot)
+            {
+                case 1:
+                    PlayerPrefs.SetInt("Inactive Hero ID_1", id);
+                    break;
+                case 2:
+                    PlayerPrefs.SetInt("Inactive Hero ID_2", id);
+                    break;
+                case 3:
+                    PlayerPrefs.SetInt("Inactive Hero ID_3", id);
+                    break;
+                default:
+                    break;
+            }
+        }
+        Debug.Log("Hero1 ID: " + PlayerPrefs.GetInt("Hero ID_1"));
+        Debug.Log("Hero2 ID: " + PlayerPrefs.GetInt("Hero ID_2"));
+        Debug.Log("Hero3 ID: " + PlayerPrefs.GetInt("Hero ID_3"));
+        Debug.Log("Inactive Hero1 ID: " + PlayerPrefs.GetInt("Inactive Hero ID_1"));
+        Debug.Log("Inactive Hero2 ID: " + PlayerPrefs.GetInt("Inactive Hero ID_2"));
+        Debug.Log("Inactive Hero3 ID: " + PlayerPrefs.GetInt("Inactive Hero ID_3"));
 	}
 
 	public static int GetPlayerHeroID(int slot)
@@ -177,11 +176,11 @@ public class GlobalVariable : MonoBehaviour {
 		switch (slot)
         {
             case 1:
-                return ActiveHero1;
+                return PlayerPrefs.GetInt("Hero ID_1", 1);
             case 2:
-                return ActiveHero2;
+                return PlayerPrefs.GetInt("Hero ID_2", 2);
             case 3:
-                return ActiveHero3;
+                return PlayerPrefs.GetInt("Hero ID_3", 3);
             default:
                 Debug.Log("GetPlayerHeroID Invalid Parameter: returned 0");
                 return 0;
@@ -193,11 +192,11 @@ public class GlobalVariable : MonoBehaviour {
         switch (slot)
         {
             case 1:
-                return InactiveHero1;
+                return PlayerPrefs.GetInt("Inactive Hero ID_1", 1);
             case 2:
-                return InactiveHero2;
+                return PlayerPrefs.GetInt("Inactive Hero ID_2", 2);
             case 3:
-                return InactiveHero3;
+                return PlayerPrefs.GetInt("Inactive Hero ID_3", 3);
             default:
                 Debug.Log("GetPlayerHeroID Invalid Parameter: returned 0");
                 return 0;
@@ -240,11 +239,11 @@ public class GlobalVariable : MonoBehaviour {
         switch (slot)
         {
             case 1:
-                return tempHero = GetHero(ActiveHero1);
+                return tempHero = GetHero(PlayerPrefs.GetInt("Hero ID_1", 1));
             case 2:
-                return tempHero = GetHero(ActiveHero2);
+                return tempHero = GetHero(PlayerPrefs.GetInt("Hero ID_2", 2));
             case 3:
-                return tempHero = GetHero(ActiveHero3);
+                return tempHero = GetHero(PlayerPrefs.GetInt("Hero ID_3", 3));
             default:
                 tempHero = null;
                 Debug.Log("GetPlayerHero Invalid Parameter: returned null GameObject");
@@ -258,11 +257,11 @@ public class GlobalVariable : MonoBehaviour {
         switch (slot)
         {
             case 1:
-                return tempHero = GetHero(InactiveHero1);
+                return tempHero = GetHero(PlayerPrefs.GetInt("Inactive Hero ID_1", 1));
             case 2:
-                return tempHero = GetHero(InactiveHero2);
+                return tempHero = GetHero(PlayerPrefs.GetInt("Inactive Hero ID_2", 2));
             case 3:
-                return tempHero = GetHero(InactiveHero3);
+                return tempHero = GetHero(PlayerPrefs.GetInt("Inactive Hero ID_3", 3));
             default:
                 tempHero = null;
                 Debug.Log("GetPlayerHero Invalid Parameter: returned null GameObject");

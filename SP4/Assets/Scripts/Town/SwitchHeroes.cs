@@ -44,14 +44,19 @@ public class SwitchHeroes : MonoBehaviour
         GameObject temp2 = Instantiate(Unequipped);
         HeroSelector tempUnequip = temp2.GetComponent<HeroSelector>();
 
+        HeroSelector unEQ = Unequipped.GetComponent<HeroSelector>();
+        HeroSelector EQ = Equipped.GetComponent<HeroSelector>();
+
         bothSelected = false;
         
         active.isOn = false;
         active2.isOn = false;
 
-        Unequipped.GetComponent<HeroSelector>().HeroID = tempEquip.HeroID;
+        unEQ.HeroID = tempEquip.HeroID;
+        GlobalVariable.SetPlayerHeroID(unEQ.slot, unEQ.HeroID, unEQ.Active);
+        EQ.HeroID = tempUnequip.HeroID;
+        GlobalVariable.SetPlayerHeroID(EQ.slot, EQ.HeroID, EQ.Active);
 
-        Equipped.GetComponent<HeroSelector>().HeroID = tempUnequip.HeroID;
         //CopyHeroComponent(tempEquip, Unequipped);
         //CopyHeroComponent(tempUnequip, Equipped);
         
