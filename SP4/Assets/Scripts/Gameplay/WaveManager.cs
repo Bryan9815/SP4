@@ -12,7 +12,7 @@ public class WaveManager : MonoBehaviour
 
     private static int WaveNumber, MobNumber, GoldEarned, KillCount;
     private bool WaveOver;
-    public Text WaveProgress;
+    //public Text WaveProgress;
 	// Use this for initialization
     void Start()
     {
@@ -27,7 +27,7 @@ public class WaveManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        WaveProgress.text = "Wave: " + WaveNumber + "\nMonsters Remaining: " + ListOfMobs.Count;
+        //WaveProgress.text = "Wave: " + WaveNumber + "\nMonsters Remaining: " + ListOfMobs.Count;
 
         if (!WaveOver)
         {

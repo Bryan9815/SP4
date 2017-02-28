@@ -13,6 +13,8 @@ public class GlobalVariable : MonoBehaviour {
 	//Indicates how far the player is in
 	private static int stageLevel;
 
+	private static bool runTutorial;
+
     //Added using unity engine UI on top
     //is for just in case anyone need a global Text field 
     //or anything related in UI
@@ -51,6 +53,9 @@ public class GlobalVariable : MonoBehaviour {
         // Player Variables
         PlayerName = PlayerPrefs.GetString("userID", "");
         PlayerGoldG = PlayerPrefs.GetInt("Gold", 100);
+
+		//set to true and it will run tutorial
+		runTutorial = true;
 	}
 	
 	// Update is called once per frame
@@ -290,4 +295,14 @@ public class GlobalVariable : MonoBehaviour {
         else
             return GetHero(id).GetComponent<Hero>().Get_HeroName() + "\nLevel: " + GetHero(id).GetComponent<Hero>().Get_Level() + ", EXP: " + ((int)GetHero(id).GetComponent<Hero>().Get_Exp()) + "/" + GetHero(id).GetComponent<Hero>().Get_MaxExp() + "\nHP: " + GetHero(id).GetComponent<Hero>().Get_MaxHp() + "\nAttack: " + GetHero(id).GetComponent<Hero>().GetAttack() + "\nDefense: " + GetHero(id).GetComponent<Hero>().GetDefense();
     }
+
+	public static bool GetRunTutorial()
+	{
+		return runTutorial;
+	}
+
+	public static void SetRunTutorial(bool newBool)
+	{
+		runTutorial = newBool;
+	}
 }
