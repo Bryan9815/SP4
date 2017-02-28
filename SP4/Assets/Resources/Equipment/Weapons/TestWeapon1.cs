@@ -26,6 +26,11 @@ public class TestWeapon1 : BaseWeapon {
 		Attack = 10f * Level * 0.5f;
 	}
 
+    public override string Get_Name()
+    {
+        return Name;
+    }
+
 	public override float Get_Attack()
 	{
 		return Attack;

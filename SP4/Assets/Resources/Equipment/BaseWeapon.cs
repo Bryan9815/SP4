@@ -32,6 +32,11 @@ public class BaseWeapon : MonoBehaviour {
 		Attack = 10f * Level * 0.5f;
 	}
 
+    public virtual string Get_Name()
+    {
+        return Name;
+    }
+
 	public virtual float Get_Attack()
 	{
 		return Attack;
