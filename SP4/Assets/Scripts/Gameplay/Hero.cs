@@ -14,9 +14,11 @@ public class Hero : MonoBehaviour {
 	protected int state;
 	protected string ClassName;
     protected bool isDead;
+	protected float InvincibilityTimer;
+	protected float InvincibilityDuration;
 	public bool unlocked;
 	protected BaseWeapon Weapon;
-
+	protected Animator animator;
 	public GameObject attackCollider;
 
 	protected virtual void Awake()
@@ -26,7 +28,18 @@ public class Hero : MonoBehaviour {
 
 	// Use this for initialization
 	protected virtual void Start () {
-		
+		animator = GetComponent<Animator> ();
+		currHp = Hp;
+		Sp = 0;
+		ClassName = "TemplateHero";
+		level = 1;
+		exp = 0;
+		Weapon = Resources.Load<BaseWeapon>("Equipment/Weapons/TestWeapon1");
+		animator = GetComponent<Animator>();
+		InvincibilityTimer = 0;
+		InvincibilityDuration = 1f;
+		isDead = false;
+		//CalculateStats ();
 	}
 	
 	// Update is called once per frame
@@ -204,6 +217,22 @@ public class Hero : MonoBehaviour {
     public virtual bool Get_IsDead()
     {
         return isDead;
+    }
+
+	public virtual bool Get_IsInvincible()
+	{
+		return InvincibilityTimer > 0;
+	}
+
+	public virtual void Set_Idle()
+	{
+		animator.SetTrigger("Idle");
+	}
+
+    public virtual void Set_Static()
+    {
+        animator.SetTrigger("Idle");
+        animator.enabled = false;
     }
 
 	public virtual void Exit()

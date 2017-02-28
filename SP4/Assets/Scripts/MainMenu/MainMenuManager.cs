@@ -10,17 +10,21 @@ public class MainMenuManager: MonoBehaviour
 	private Vector3 spawnPos;
 	private float spawnTimer;
 	private int spawnOnRight;
+	private float topOfScreen;
+	private float offSetY;
 	private float tempX;
 	private float tempY;
 	private float tempScale;
 	private float tempNumberofSprite;
-
+	private GameObject tempMainMenu;
 	// Use this for initialization
 	void Start () 
 	{
-		spawnTimer = 1.0f;
+		spawnTimer = 0.5f;
 		spawnOnRight = 0;
 		tempX = -GlobalVariable.GetScreenWidth () / 2;
+
+		tempMainMenu = GameObject.Find ("MainMenu");
 
 	}
 	
@@ -35,7 +39,10 @@ public class MainMenuManager: MonoBehaviour
 			tempNumberofSprite = Random.Range (1, 5);
 			for (int i = 0; i < tempNumberofSprite; i++) 
 			{
-				tempY = Random.Range (120, 240);
+				topOfScreen = tempMainMenu.GetComponent<RectTransform> ().rect.height / 2;
+				offSetY = flyingsprite.GetComponent<Transform>().localScale.y / 2;
+
+				tempY = Random.Range (offSetY, topOfScreen - offSetY);
 				spawnOnRight = Random.Range (0, 2);
 
 				switch (spawnOnRight)

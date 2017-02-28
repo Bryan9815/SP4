@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Weeb : Hero 
 {
     static Weeb _instance;
-    Animator anim;
+    //Animator anim;
 
     enum States // for animation
     {
@@ -25,16 +25,39 @@ public class Weeb : Hero
         level = 1;                                                      //Weeb's Level
         exp = 0;                                                        //Weeb's Experience points
         //state;
+		InvincibilityTimer = 0;
+		InvincibilityDuration = 3f;
         isDead = false;
         CalculateStats();
         currHp = Hp;
-        anim = gameObject.gameObject.GetComponent<Animator>();
+        animator = gameObject.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     protected override void Update()
     {
-
+		if (isDead)
+			return;
+		if (Sp >= 100)
+		{
+			Sp -= 100;
+			SpecialAbility ();
+		}
+		if (InvincibilityTimer > 0)
+		{
+			InvincibilityTimer -= Time.deltaTime;
+			if (InvincibilityTimer < 0)
+				InvincibilityTimer = 0;
+			if (GetComponent<SpriteRenderer> ().enabled)
+				GetComponent<SpriteRenderer> ().enabled = false;
+			else
+				GetComponent<SpriteRenderer> ().enabled = true;
+			if (InvincibilityTimer < 0)
+			{
+				InvincibilityTimer = 0;
+				GetComponent<SpriteRenderer> ().enabled = true;
+			}
+		}
     }
 
     void CalculateStats()
@@ -54,6 +77,8 @@ public class Weeb : Hero
 
     public override void BlockAttack(int i)
     {
+		if (isDead)
+			return;
         switch (i)
         {
             case 1:
@@ -71,35 +96,38 @@ public class Weeb : Hero
 	// Chain attacks
 	protected override void OneChain()
 	{
-		anim.SetInteger("Number of Blocks", 1);
-		anim.SetTrigger("Blocks Pressed");
+		animator.SetInteger("Number of Blocks", 1);
+		animator.SetTrigger("Blocks Pressed");
 
 		foreach(Mob temp in AttackCollide.Mobs_Collided)
 		{
 			temp.getHit ((int) (Attack));
 		}
+		Sp += 20;
 	}
 
 	protected override void TwoChain()
 	{
-		anim.SetInteger("Number of Blocks", 2);
-		anim.SetTrigger("Blocks Pressed");
+		animator.SetInteger("Number of Blocks", 2);
+		animator.SetTrigger("Blocks Pressed");
 
 		foreach(Mob temp in AttackCollide.Mobs_Collided)
 		{
 			temp.getHit ((int) (Attack* 2.0f));
 		}
+		Sp += 40;
 	}
 
 	protected override void ThreeChain()
 	{
-		anim.SetInteger("Number of Blocks", 3);
-		anim.SetTrigger("Blocks Pressed");
+		animator.SetInteger("Number of Blocks", 3);
+		animator.SetTrigger("Blocks Pressed");
 
 		foreach(Mob temp in AttackCollide.Mobs_Collided)
 		{
 			temp.getHit ((int) (Attack * 3.0f));
 		}
+		Sp += 60;
 	}
 
     // Normal attack
@@ -111,20 +139,32 @@ public class Weeb : Hero
     // when attacked
     public override void getHit(int damagetaken)
     {
+		if (isDead)
+			return;
+		if (InvincibilityTimer > 0)
+			return;
         //calculate how damage is taken here
-        anim.SetTrigger("isHit");
+		InvincibilityTimer += InvincibilityDuration;
+		animator.SetTrigger("isHit");
         currHp -= damagetaken;
+
+		Vector3 tempPos = gameObject.transform.position;
+		tempPos.y += gameObject.GetComponent<Transform> ().localScale.y / 2;
+		DamageTextManager.GeneratePlayerTakeDmg (tempPos, damagetaken);
+
+		Debug.Log ("Ai yaa Weeb got hit....");
+
         if (currHp <= 0)
         {
             isDead = true;
-            anim.SetBool("No HP", true);
+			animator.SetBool("No HP", true);
         }
     }
 
     // Special ability
     protected override void SpecialAbility()
     {
-        anim.SetTrigger("Skill Activated");
+		animator.SetTrigger("Skill Activated");
 
         GameObject tempcoll = Instantiate(attackCollider);
         tempcoll.SetActive(true);

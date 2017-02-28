@@ -10,16 +10,9 @@ public class GlobalVariable : MonoBehaviour {
     private static string PlayerName;
     private static int PlayerGoldG;
 
-	//Indicates the max number of wave per level
-	private static int maxWaveNumber;
-
-	//Determine which wave the player is in
-	private static int currWaveNumber;
-
 	//Indicates how far the player is in
 	private static int stageLevel;
 
-	private static int ActiveHero1, ActiveHero2, ActiveHero3;
     //Added using unity engine UI on top
     //is for just in case anyone need a global Text field 
     //or anything related in UI
@@ -49,27 +42,15 @@ public class GlobalVariable : MonoBehaviour {
 		PlayerName = PlayerPrefs.GetString("userID", "");
 		PlayerGoldG = PlayerPrefs.GetInt("Gold", 100);
 
-		//Max wave number is 5, so it means every 5 wave completed
-		//means 1 level increase to state level
-		maxWaveNumber = 5;
-
-		//Current Wave number for indicating which wave the player is in
-		currWaveNumber = PlayerPrefs.GetInt("Wave", 1);
-
 		//Stage level determine how far the player progress in the game
 		stageLevel = PlayerPrefs.GetInt("Stage",1);
 	}
 	// Use this for initialization
 	void Start () 
     {
-
         // Player Variables
         PlayerName = PlayerPrefs.GetString("userID", "");
         PlayerGoldG = PlayerPrefs.GetInt("Gold", 100);
-
-        ActiveHero1 = PlayerPrefs.GetInt("Hero ID_1", 1);
-        ActiveHero2 = PlayerPrefs.GetInt("Hero ID_2", 2);
-        ActiveHero3 = PlayerPrefs.GetInt("Hero ID_3", 3);
 	}
 	
 	// Update is called once per frame
@@ -137,26 +118,6 @@ public class GlobalVariable : MonoBehaviour {
         PlayerGoldG = newGold;
     }
 		
-	public static void SetWaveNumber(int newWave)
-	{
-		currWaveNumber = newWave;
-	}
-
-	public static int GetWaveNumber()
-	{
-		return currWaveNumber;
-	}
-
-	public static void SetMaxWaveNumber(int newMaxWave)
-	{
-		maxWaveNumber = newMaxWave;
-	}
-
-	public static int GetMaxWaveNumber()
-	{
-		return maxWaveNumber;
-	}
-
 	public static void SetStageLevel(int newStageLevel)
 	{
 		stageLevel = newStageLevel;
@@ -166,26 +127,48 @@ public class GlobalVariable : MonoBehaviour {
 		return stageLevel;
 	}
 
-	public static void SetPlayerHeroID(int slot,int id)
+	public static void SetPlayerHeroID(int slot,int id, bool active)
 	{
-        switch (slot)
+        if (active)
         {
-            case 1: 
-                ActiveHero1 = id;
-                PlayerPrefs.SetInt("Hero ID_1", id);
-                
-                break;
-            case 2:
-                ActiveHero2 = id;
-                PlayerPrefs.SetInt("Hero ID_2", id);
-                break;
-            case 3:
-                ActiveHero3 = id;
-                PlayerPrefs.SetInt("Hero ID_3", id);
-                break;
-            default:
-                break;
+            switch (slot)
+            {
+                case 1:
+                    PlayerPrefs.SetInt("Hero ID_1", id);
+                    break;
+                case 2:
+                    PlayerPrefs.SetInt("Hero ID_2", id);
+                    break;
+                case 3:
+                    PlayerPrefs.SetInt("Hero ID_3", id);
+                    break;
+                default:
+                    break;
+            }
         }
+        else
+        {
+            switch (slot)
+            {
+                case 1:
+                    PlayerPrefs.SetInt("Inactive Hero ID_1", id);
+                    break;
+                case 2:
+                    PlayerPrefs.SetInt("Inactive Hero ID_2", id);
+                    break;
+                case 3:
+                    PlayerPrefs.SetInt("Inactive Hero ID_3", id);
+                    break;
+                default:
+                    break;
+            }
+        }
+        Debug.Log("Hero1 ID: " + PlayerPrefs.GetInt("Hero ID_1"));
+        Debug.Log("Hero2 ID: " + PlayerPrefs.GetInt("Hero ID_2"));
+        Debug.Log("Hero3 ID: " + PlayerPrefs.GetInt("Hero ID_3"));
+        Debug.Log("Inactive Hero1 ID: " + PlayerPrefs.GetInt("Inactive Hero ID_1"));
+        Debug.Log("Inactive Hero2 ID: " + PlayerPrefs.GetInt("Inactive Hero ID_2"));
+        Debug.Log("Inactive Hero3 ID: " + PlayerPrefs.GetInt("Inactive Hero ID_3"));
 	}
 
 	public static int GetPlayerHeroID(int slot)
@@ -193,17 +176,32 @@ public class GlobalVariable : MonoBehaviour {
 		switch (slot)
         {
             case 1:
-                return ActiveHero1;
+                return PlayerPrefs.GetInt("Hero ID_1", 1);
             case 2:
-                return ActiveHero2;
+                return PlayerPrefs.GetInt("Hero ID_2", 2);
             case 3:
-                return ActiveHero3;
+                return PlayerPrefs.GetInt("Hero ID_3", 3);
             default:
                 Debug.Log("GetPlayerHeroID Invalid Parameter: returned 0");
                 return 0;
         }
 	}
 
+    public static int GetInactiveHeroID(int slot)
+    {
+        switch (slot)
+        {
+            case 1:
+                return PlayerPrefs.GetInt("Inactive Hero ID_1", 1);
+            case 2:
+                return PlayerPrefs.GetInt("Inactive Hero ID_2", 2);
+            case 3:
+                return PlayerPrefs.GetInt("Inactive Hero ID_3", 3);
+            default:
+                Debug.Log("GetPlayerHeroID Invalid Parameter: returned 0");
+                return 0;
+        }
+    }
 
     public static GameObject GetHero(int id)
     {
@@ -219,6 +217,15 @@ public class GlobalVariable : MonoBehaviour {
             case 3:
                 tempHero = GameObject.Find("Werewolf");
                 return tempHero;
+            case 4:
+                tempHero = GameObject.Find("Reaper");
+                return tempHero;
+            case 5:
+                tempHero = GameObject.Find("Brawler");
+                return tempHero;
+            case 6:
+                tempHero = GameObject.Find("Crimson_Knight");
+                return tempHero;
             default:
                 tempHero = null;
                 Debug.Log("GetPlayerHero Invalid Parameter: returned null GameObject");
@@ -232,11 +239,29 @@ public class GlobalVariable : MonoBehaviour {
         switch (slot)
         {
             case 1:
-                return tempHero = GetHero(ActiveHero1);
+                return tempHero = GetHero(PlayerPrefs.GetInt("Hero ID_1", 1));
             case 2:
-                return tempHero = GetHero(ActiveHero2);
+                return tempHero = GetHero(PlayerPrefs.GetInt("Hero ID_2", 2));
             case 3:
-                return tempHero = GetHero(ActiveHero3);
+                return tempHero = GetHero(PlayerPrefs.GetInt("Hero ID_3", 3));
+            default:
+                tempHero = null;
+                Debug.Log("GetPlayerHero Invalid Parameter: returned null GameObject");
+                return tempHero;
+        }
+    }
+
+    public static GameObject GetInactiveHero(int slot)
+    {
+        GameObject tempHero;
+        switch (slot)
+        {
+            case 1:
+                return tempHero = GetHero(PlayerPrefs.GetInt("Inactive Hero ID_1", 1));
+            case 2:
+                return tempHero = GetHero(PlayerPrefs.GetInt("Inactive Hero ID_2", 2));
+            case 3:
+                return tempHero = GetHero(PlayerPrefs.GetInt("Inactive Hero ID_3", 3));
             default:
                 tempHero = null;
                 Debug.Log("GetPlayerHero Invalid Parameter: returned null GameObject");

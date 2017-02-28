@@ -26,7 +26,10 @@ public class TemplateHero : Hero {
 		level = 1;
 		exp = 0;
 		Weapon = Resources.Load<BaseWeapon>("Equipment/Weapons/TestWeapon1");
-		//isDead = false;
+		animator = GetComponent<Animator>();
+		InvincibilityTimer = 0;
+		InvincibilityDuration = 1f;
+		isDead = false;
 		CalculateStats ();
 	}
 
@@ -43,10 +46,18 @@ public class TemplateHero : Hero {
 
 	// Update is called once per frame
 	protected override void Update () {
+		if (isDead)
+			return;
 		if (Sp >= 100)
 		{
 			Sp -= 100;
 			SpecialAbility ();
+		}
+		if (InvincibilityTimer > 0)
+		{
+			InvincibilityTimer -= Time.deltaTime;
+			if (InvincibilityTimer < 0)
+				InvincibilityTimer = 0;
 		}
 	}
 
@@ -57,6 +68,8 @@ public class TemplateHero : Hero {
 
 	public override void BlockAttack(int i)
 	{
+		if (isDead)
+			return;
 		switch(i)
 		{
 		case 1:
@@ -114,12 +127,18 @@ public class TemplateHero : Hero {
 	// when attacked
 	public override void getHit(int damagetaken)
 	{
+		if (isDead)
+			return;
+		if (InvincibilityTimer > 0)
+			return;
+		
 		//calculate how damage is taken here
+		InvincibilityTimer += InvincibilityDuration;
 		animator.SetTrigger ("isHit");
 		Hp -= damagetaken;
-		if (Hp <= 0)
+		if (currHp <= 0)
 		{
-			//isDead = true;
+			isDead = true;
 			animator.SetBool ("No HP", true);
 		}
 	}
