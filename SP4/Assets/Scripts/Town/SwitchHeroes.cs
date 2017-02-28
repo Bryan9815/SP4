@@ -30,6 +30,11 @@ public class SwitchHeroes : MonoBehaviour
                 if (active.isOn && active2.isOn)
                     bothSelected = true;
             }
+
+            if (active && !active.isOn)
+                active = null;
+            if (active2 && !active2.isOn)
+                active2 = null;
         }
         else if (bothSelected)
             Swap();
