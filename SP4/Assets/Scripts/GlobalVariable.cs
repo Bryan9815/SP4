@@ -277,7 +277,7 @@ public class GlobalVariable : MonoBehaviour {
             return null;
         }
         else
-            return GetPlayerHero(slot).GetComponent<Hero>().Get_HeroName() + "\nLevel: " + GetPlayerHero(slot).GetComponent<Hero>().Get_Level() + ", EXP: " + GetPlayerHero(slot).GetComponent<Hero>().Get_Exp() + "/" + GetPlayerHero(slot).GetComponent<Hero>().Get_MaxExp() + "\nHP: " + GetPlayerHero(slot).GetComponent<Hero>().Get_MaxHp() + "\nAttack: " + GetPlayerHero(slot).GetComponent<Hero>().GetAttack() + "\nDefense: " + GetPlayerHero(slot).GetComponent<Hero>().GetDefense();
+            return GetPlayerHero(slot).GetComponent<Hero>().Get_HeroName() + "\nLevel: " + GetPlayerHero(slot).GetComponent<Hero>().Get_Level() + ", EXP: " + ((int)GetPlayerHero(slot).GetComponent<Hero>().Get_Exp()) + "/" + GetPlayerHero(slot).GetComponent<Hero>().Get_MaxExp() + "\nHP: " + GetPlayerHero(slot).GetComponent<Hero>().Get_MaxHp() + "\nAttack: " + GetPlayerHero(slot).GetComponent<Hero>().GetAttack() + "\nDefense: " + GetPlayerHero(slot).GetComponent<Hero>().GetDefense();
     }
 
     public static string PrintRecordHeroStats(int id)
@@ -288,6 +288,6 @@ public class GlobalVariable : MonoBehaviour {
             return null;
         }
         else
-            return GetHero(id).GetComponent<Hero>().Get_HeroName() + "\nLevel: " + GetHero(id).GetComponent<Hero>().Get_Level() + ", EXP: " + GetHero(id).GetComponent<Hero>().Get_Exp() + "/" + GetHero(id).GetComponent<Hero>().Get_MaxExp() + "\nHP: " + GetHero(id).GetComponent<Hero>().Get_MaxHp() + "\nAttack: " + GetHero(id).GetComponent<Hero>().GetAttack() + "\nDefense: " + GetHero(id).GetComponent<Hero>().GetDefense();
+            return GetHero(id).GetComponent<Hero>().Get_HeroName() + "\nLevel: " + GetHero(id).GetComponent<Hero>().Get_Level() + ", EXP: " + ((int)GetHero(id).GetComponent<Hero>().Get_Exp()) + "/" + GetHero(id).GetComponent<Hero>().Get_MaxExp() + "\nHP: " + GetHero(id).GetComponent<Hero>().Get_MaxHp() + "\nAttack: " + GetHero(id).GetComponent<Hero>().GetAttack() + "\nDefense: " + GetHero(id).GetComponent<Hero>().GetDefense();
     }
 }

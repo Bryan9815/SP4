@@ -17,15 +17,22 @@ public class Cloud : Hero
     // Use this for initialization
     protected override void Start()
     {
-        id = 1;
         ClassName = "Cloud";                                            //Cloud's Class Name
-        Sp = 0;                                                       //Cloud's Special Points for ultimate (Sort of)
-        //hero_img = ;                                                  //Cloud's Sprite I guess?
+        Sp = 0;                                                         //Cloud's Special Points for ultimate (Sort of)
         name = "Cloud";                                                 //Name of Cloud
-        level = 1;                                                      //Cloud's Level
-        exp = 0;                                                        //Cloud's Experience points
-        //state;
-        CalculateStats();
+        level = PlayerPrefs.GetInt("Cloud Level", 1);                   //Cloud's Level
+        exp = PlayerPrefs.GetFloat("Cloud EXP", 0);                     //Cloud's Experience points
+
+        if(level == 1)
+            CalculateStats();
+        else 
+        {
+            Hp = PlayerPrefs.GetFloat("Cloud HP");
+            Attack = PlayerPrefs.GetFloat("Cloud Attack");
+            Defense = PlayerPrefs.GetFloat("Cloud Defense");
+            Evasion = PlayerPrefs.GetFloat("Cloud Evasion");
+            max_exp = PlayerPrefs.GetFloat("Cloud Max_EXP");
+        }
         isDead = false;
         currHp = Hp;
 		InvincibilityTimer = 0;
@@ -90,6 +97,7 @@ public class Cloud : Hero
                 ThreeChain();
                 break;
         }
+        PlayerPrefs.SetFloat("Cloud EXP", exp);
     }
 
     // Chain attacks
@@ -184,6 +192,12 @@ public class Cloud : Hero
         level += 1;
         CalculateStats();
         currHp = Hp;
+        PlayerPrefs.SetInt("Cloud Level", level);
+        PlayerPrefs.SetFloat("Cloud HP", Hp);
+        PlayerPrefs.SetFloat("Cloud Attack", Attack);
+        PlayerPrefs.SetFloat("Cloud Defense", Defense);
+        PlayerPrefs.SetFloat("Cloud Evasion", Evasion);
+        PlayerPrefs.SetFloat("Cloud Max_EXP", max_exp);
     }
 
     public override void SetAttack(int newAtk)
