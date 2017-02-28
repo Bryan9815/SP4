@@ -110,12 +110,19 @@ public class GlobalVariable : MonoBehaviour {
 
     public static int GetPlayerGold()
     {
-        return PlayerGoldG;
+        return PlayerPrefs.GetInt("Gold", 100);
     }
 
     public static void SetPlayerGold(int newGold)
     {
         PlayerGoldG = newGold;
+        PlayerPrefs.SetInt("Gold", PlayerGoldG);
+    }
+
+    public static void AddPlayerGold(int newGold)
+    {
+        PlayerGoldG += newGold;
+        PlayerPrefs.SetInt("Gold", PlayerGoldG);
     }
 		
 	public static void SetStageLevel(int newStageLevel)
@@ -163,12 +170,6 @@ public class GlobalVariable : MonoBehaviour {
                     break;
             }
         }
-        Debug.Log("Hero1 ID: " + PlayerPrefs.GetInt("Hero ID_1"));
-        Debug.Log("Hero2 ID: " + PlayerPrefs.GetInt("Hero ID_2"));
-        Debug.Log("Hero3 ID: " + PlayerPrefs.GetInt("Hero ID_3"));
-        Debug.Log("Inactive Hero1 ID: " + PlayerPrefs.GetInt("Inactive Hero ID_1"));
-        Debug.Log("Inactive Hero2 ID: " + PlayerPrefs.GetInt("Inactive Hero ID_2"));
-        Debug.Log("Inactive Hero3 ID: " + PlayerPrefs.GetInt("Inactive Hero ID_3"));
 	}
 
 	public static int GetPlayerHeroID(int slot)

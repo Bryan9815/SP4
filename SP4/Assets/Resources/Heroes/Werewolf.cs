@@ -2,23 +2,34 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Leon : Hero {
+public class Werewolf : Hero {
 
-	static Leon _instance;
+	static Werewolf _instance;
 	//Animator animator;
 
 	// Use this for initialization
 	protected override void Start () {
 		currHp = Hp;
 		id = 3;
-		ClassName = "Leon";
+		ClassName = "Werewolf";
+        name = "Werewolf";
 		Sp = 0;
+        level = PlayerPrefs.GetInt("Werewolf Level", 1);                   //Werewolf's Level
+        exp = PlayerPrefs.GetFloat("Werewolf EXP", 0);                     //Werewolf's Experience points
+
+        if (level == 1)
+            CalculateStats();
+        else
+        {
+            Hp = PlayerPrefs.GetFloat("Werewolf HP");
+            Attack = PlayerPrefs.GetFloat("Werewolf Attack");
+            Defense = PlayerPrefs.GetFloat("Werewolf Defense");
+            Evasion = PlayerPrefs.GetFloat("Werewolf Evasion");
+            max_exp = PlayerPrefs.GetFloat("Werewolf Max_EXP");
+        } 
+        currHp = Hp;
 		isDead = false;
 		animator = GetComponent<Animator> ();
-		level = 1;
-		exp = 0;
-        CalculateStats();
-        currHp = Hp;
 		InvincibilityTimer = 0;
 		InvincibilityDuration = 1f;
 	}
@@ -85,7 +96,8 @@ public class Leon : Hero {
 		case 3:
 			ThreeChain();
 			break;
-		}
+        }
+        PlayerPrefs.SetFloat("Werewolf EXP", exp);
 	}
 
 	// Chain attacks
@@ -151,7 +163,7 @@ public class Leon : Hero {
 		tempPos.y += gameObject.GetComponent<Transform> ().localScale.y / 2;
 		DamageTextManager.GeneratePlayerTakeDmg (tempPos, damagetaken);
 
-		Debug.Log ("Ai yaa Leon got hit....");
+		Debug.Log ("Ai yaa Werewolf got hit....");
 
         if (currHp <= 0)
         {
@@ -172,6 +184,12 @@ public class Leon : Hero {
 		exp = 0;
 		CalculateStats ();
         currHp = Hp;
+        PlayerPrefs.SetInt("Werewolf Level", level);
+        PlayerPrefs.SetFloat("Werewolf HP", Hp);
+        PlayerPrefs.SetFloat("Werewolf Attack", Attack);
+        PlayerPrefs.SetFloat("Werewolf Defense", Defense);
+        PlayerPrefs.SetFloat("Werewolf Evasion", Evasion);
+        PlayerPrefs.SetFloat("Werewolf Max_EXP", max_exp);
 	}
 
 	public override void SetAttack(int newAtk)
@@ -234,7 +252,7 @@ public class Leon : Hero {
 	{
 		if (_instance == null)
 		{
-			_instance = new Leon ();
+			_instance = new Werewolf ();
 			_instance.Start();
 			return _instance;
 		}

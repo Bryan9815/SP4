@@ -17,6 +17,7 @@ public class Cloud : Hero
     // Use this for initialization
     protected override void Start()
     {
+        id = 1;
         ClassName = "Cloud";                                            //Cloud's Class Name
         Sp = 0;                                                         //Cloud's Special Points for ultimate (Sort of)
         name = "Cloud";                                                 //Name of Cloud
