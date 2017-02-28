@@ -8,6 +8,7 @@ public class Orc : Mob
     {
         Idle,
         Run,
+        Death,
     }
     States state;
     Animator animator;
@@ -56,7 +57,7 @@ public class Orc : Mob
         }
         if (Hp <= 0)
         {
-            Exit();
+            state = States.Death;
         }
 
         // States
@@ -126,6 +127,12 @@ public class Orc : Mob
                         }
                     }
                 }
+                break;
+            case States.Death:
+                Destroy(gameObject.GetComponent<BoxCollider2D>());
+                animator.enabled = false;
+                if (gameObject.transform.position.y < -(Screen.height / 20))
+                    Exit();
                 break;
             default:
                 break;
