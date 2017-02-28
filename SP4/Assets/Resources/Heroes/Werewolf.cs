@@ -36,7 +36,7 @@ public class Werewolf : Hero {
 
 	void CalculateStats()
 	{										//Max
-		Hp = 100 * level * 1.45f;			//7250
+		Hp = 100 * level * 1.1f;			//5500
 		Attack = 18 * level * 1;			//900
 		Defense = 11 * level * 1.2f;		//550
 		Evasion = 0.7f * level * 0.9f;		//31.5
@@ -70,8 +70,12 @@ public class Werewolf : Hero {
 			{
 				InvincibilityTimer = 0;
 				GetComponent<SpriteRenderer> ().enabled = true;
-			}
-				
+			}				
+		}
+		else 
+		{
+			if (!GetComponent<SpriteRenderer> ().enabled)
+				GetComponent<SpriteRenderer> ().enabled = true;
 		}
 	}
 
