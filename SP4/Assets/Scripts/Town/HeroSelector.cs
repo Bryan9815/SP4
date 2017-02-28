@@ -7,8 +7,8 @@ public class HeroSelector : MonoBehaviour
     public Image heroSprite;
     public Text heroStatDisplay;
     public int HeroID, slot;
-    private bool Active;
-
+    public bool Active;
+    private bool ImageSet = false;
 	// Use this for initialization
 	void Start () 
     {
@@ -56,6 +56,11 @@ public class HeroSelector : MonoBehaviour
 	// Update is called once per frame
     void Update()
     {
+        if (!ImageSet)
+        {
+            GlobalVariable.GetHero(HeroID).GetComponent<Hero>().Set_Static();
+            ImageSet = true;
+        }
         heroSprite.sprite = GlobalVariable.GetHero(HeroID).GetComponent<Hero>().GetSprite();
 
         if (!Active)

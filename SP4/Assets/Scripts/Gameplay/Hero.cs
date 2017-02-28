@@ -229,6 +229,12 @@ public class Hero : MonoBehaviour {
 		animator.SetTrigger("Idle");
 	}
 
+    public virtual void Set_Static()
+    {
+        animator.SetTrigger("Idle");
+        animator.enabled = false;
+    }
+
 	public virtual void Exit()
 	{
         Vector3 temp = new Vector3(-10000, 0, 0);
