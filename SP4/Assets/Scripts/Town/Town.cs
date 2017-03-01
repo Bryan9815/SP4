@@ -7,15 +7,17 @@ public class Town : MonoBehaviour {
     public Canvas displayMode;
     bool toShopB = false, toCharSelectB = false, toEndlessB = false;
     float timer = 1.0f;
+    private AudioSource ThatAudioSource;
 	// Use this for initialization
 	void Start ()
     {
-
+        ThatAudioSource = GameObject.Find("TownMusic").GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+        ThatAudioSource.volume = PlayerPrefs.GetFloat("Music")/100;
         if (toShopB)
         {
             timer -= Time.deltaTime;

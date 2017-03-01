@@ -29,8 +29,8 @@ public class CrimsonKnight : Hero {
 		isDead = false;
 		SpecialAttackTimer = 0.0f;
 		SpecialAttackDuration = 3.0f;
-		DefenseIncreasePercentage = 0.5f; //20% if you couldn't tell
-        DefenseIncreaseAmount = 0; // used to store amount of defense increased
+		DefenseIncreasePercentage = 0.5f; //50% if you couldn't tell
+		DefenseIncreaseAmount = 0; // used to store amount of defense increased
         if (level == 1)
             CalculateStats();
         else
