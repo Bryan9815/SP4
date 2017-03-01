@@ -29,9 +29,9 @@ public class HighScore : MonoBehaviour
         Hero2.sprite = GlobalVariable.GetHero(PlayerPrefs.GetInt("Highest Hero_2", 2)).GetComponent<Hero>().GetSprite();
         Hero3.sprite = GlobalVariable.GetHero(PlayerPrefs.GetInt("Highest Hero_3", 3)).GetComponent<Hero>().GetSprite();
 
-        Stats1.text = GlobalVariable.PrintRecordHeroStats(PlayerPrefs.GetInt("Highest Hero_1", 1));
-        Stats2.text = GlobalVariable.PrintRecordHeroStats(PlayerPrefs.GetInt("Highest Hero_2", 2));
-        Stats3.text = GlobalVariable.PrintRecordHeroStats(PlayerPrefs.GetInt("Highest Hero_3", 3));
+        Stats1.text = GlobalVariable.PrintHeroStats(PlayerPrefs.GetInt("Highest Hero_1", 1));
+        Stats2.text = GlobalVariable.PrintHeroStats(PlayerPrefs.GetInt("Highest Hero_2", 2));
+        Stats3.text = GlobalVariable.PrintHeroStats(PlayerPrefs.GetInt("Highest Hero_3", 3));
         
         lb.AddScore(PlayerPrefs.GetString("userID"), PlayerPrefs.GetInt("Highest Wave Reached", 0));
         

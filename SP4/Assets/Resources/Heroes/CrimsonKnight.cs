@@ -1,45 +1,44 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+public class CrimsonKnight : Hero {
 
-public class TemplateHero : Hero {
-
-	enum States // for animation (optional as u can use states in animator)
-	{
-		Idle,
-		Attack,
-	}
-
+	float SpecialAttackTimer, SpecialAttackDuration;
+	float DefenseIncreasePercentage, DefenseIncreaseAmount;
 
 	protected override void Awake()
 	{
-		
+
 	}
 
 	// Use this for initialization
 	protected override void Start () {
 		animator = GetComponent<Animator> ();
+		CalculateStats ();
 		currHp = Hp;
 		Sp = 0;
-		ClassName = "TemplateHero";
+		ClassName = "CrimsonKnight";
 		level = 1;
 		exp = 0;
-		Weapon = Resources.Load<BaseWeapon>("Equipment/Weapons/TestWeapon1");
+		//Weapon = Resources.Load<BaseWeapon>("Equipment/Weapons/TestWeapon1");
 		animator = GetComponent<Animator>();
 		InvincibilityTimer = 0;
 		InvincibilityDuration = 1f;
 		isDead = false;
-		CalculateStats ();
+		SpecialAttackTimer = 0.0f;
+		SpecialAttackDuration = 3.0f;
+		DefenseIncreasePercentage = 0.5f; //20% if you couldn't tell
+		DefenseIncreaseAmount = 0; // used to store amount of defense increased
 	}
 
 	void CalculateStats()
 	{	
 											//Max
-		//Hp = 100 * level * 1.45f;			//7250
-		//Attack = 18 * level * 1;			//900
-		//Defense = 11 * level * 1.2f;		//550
-		//Evasion = 0.7f * level * 0.9f;		//31.5
-		//max_exp = 500 * level * 2;			//50k
+		Hp = 100 * level * 1.65f;			//8250
+		Attack = 6 * level * 1.2f;			//360
+		Defense = 18.5f * level * 1.2f;		//1110
+		Evasion = 0.6f * level * 0.4f;		//2.25
+		max_exp = 500 * level * 2;			//50k
 		//Attack += Weapon.Get_Attack();
 	}
 
@@ -52,6 +51,8 @@ public class TemplateHero : Hero {
 			Sp -= 100;
 			SpecialAbility ();
 		}
+
+
 		if (InvincibilityTimer > 0)
 		{
 			InvincibilityTimer -= Time.deltaTime;
@@ -69,6 +70,17 @@ public class TemplateHero : Hero {
 		{
 			if (!GetComponent<SpriteRenderer> ().enabled)
 				GetComponent<SpriteRenderer> ().enabled = true;
+		}
+
+		if (SpecialAttackTimer > 0)
+		{
+			SpecialAttackTimer -= Time.deltaTime;
+			if (SpecialAttackTimer <= 0)
+			{
+				SpecialAttackTimer = 0f;
+				Defense -= DefenseIncreaseAmount;
+				DefenseIncreaseAmount = 0;
+			}
 		}
 	}
 
@@ -114,7 +126,7 @@ public class TemplateHero : Hero {
 
 		foreach(Mob temp in AttackCollide.Mobs_Collided)
 		{
-			temp.getHit ((int) (Attack * 1.5f));
+			temp.getHit ((int) (Attack * 1.3f));
 		}
 	}
 
@@ -125,7 +137,7 @@ public class TemplateHero : Hero {
 
 		foreach(Mob temp in AttackCollide.Mobs_Collided)
 		{
-			temp.getHit ((int) (Attack * 2f));
+			temp.getHit ((int) (Attack * 1.8f));
 		}
 	}
 
@@ -142,7 +154,7 @@ public class TemplateHero : Hero {
 			return;
 		if (InvincibilityTimer > 0)
 			return;
-		
+
 		//calculate how damage is taken here
 		InvincibilityTimer += InvincibilityDuration;
 		animator.SetTrigger ("isHit");
@@ -158,6 +170,9 @@ public class TemplateHero : Hero {
 	protected override void SpecialAbility()
 	{
 		animator.SetTrigger ("Skill Activated");
+		SpecialAttackTimer = SpecialAttackDuration;
+		DefenseIncreaseAmount = DefenseIncreasePercentage * Defense;
+		Defense += DefenseIncreaseAmount;
 	}
 
 	public override void LevelUp()
