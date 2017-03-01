@@ -3,8 +3,6 @@ using System.Collections;
 
 public class Inventory : MonoBehaviour 
 {
-    public GameObject slot;
-
 	// Use this for initialization
 	void Start () 
     {
