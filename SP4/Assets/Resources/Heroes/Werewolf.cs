@@ -85,7 +85,7 @@ public class Werewolf : Hero {
 			{
 				InvincibilityTimer = 0;
 				GetComponent<SpriteRenderer> ().enabled = true;
-			}				
+			}
 		}
 		else 
 		{

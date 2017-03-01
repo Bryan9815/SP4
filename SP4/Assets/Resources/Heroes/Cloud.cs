@@ -174,17 +174,10 @@ public class Cloud : Hero
     {
 		animator.SetTrigger("Skill Activated");
 
-        GameObject tempcoll = Instantiate(attackCollider);
-        tempcoll.SetActive(true);
-        foreach (GameObject temp in WaveManager.ListOfMobs)
-        {
-            if (tempcoll.GetComponent<BoxCollider2D>().IsTouching(temp.GetComponent<BoxCollider2D>()))
-            {
-                temp.GetComponent<Mob>().getHit((int)(GetAttack() * 2.0f));
-                currHp += (Attack * 3) * 0.3f;
-            }
-        }
-        Destroy(tempcoll);
+		if (AttackCollide.Mobs_Collided.Count > 0)
+		{
+			AttackCollide.Mobs_Collided [0].getHit ((int)(Attack * 0.4f * level));
+		}
     }
 
     public override void LevelUp()
