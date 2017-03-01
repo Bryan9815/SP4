@@ -9,6 +9,7 @@ public class Mob : MonoBehaviour
     protected float attackTimer, attackTimer_Max, exp, distFromHero;
     protected Vector3 position;
     protected bool TargetsDetected = false;
+    protected bool isHit = false;
 
     protected static GameObject Hero1, Hero2, Hero3, Arrow;
     protected static List<GameObject> HeroList;
@@ -57,15 +58,39 @@ public class Mob : MonoBehaviour
         //calculate how damage is taken here
         Hp -= damage;
 
-		Vector3 tempPos = gameObject.transform.position;
-		tempPos.y += gameObject.GetComponent<Transform> ().localScale.y / 2;
-		DamageTextManager.GenerateSprite (tempPos, damage);
-		Debug.Log ("Ai ya Mob got hit...");
+        Vector3 tempPos = gameObject.transform.position;
+        tempPos.y += gameObject.GetComponent<Transform>().localScale.y / 2;
+        DamageTextManager.GenerateSprite(tempPos, damage);
+        Debug.Log("Ai ya Mob got hit...");
+    }
+
+    public virtual void getHit(int damage, bool careAboutTrigger)
+    {
+        //calculate how damage is taken here
+        if (careAboutTrigger)
+        {
+            if (!isHit)
+            {
+                Hp -= damage;
+
+                Vector3 tempPos = gameObject.transform.position;
+                tempPos.y += gameObject.GetComponent<Transform>().localScale.y / 2;
+                DamageTextManager.GenerateSprite(tempPos, damage);
+                Debug.Log("Ai ya Mob got hit...");
+            }
+        }
+        else
+            getHit(damage);
     }
 
     public virtual int GetAttack()
     {
         return Attack;
+    }
+
+    public void isHitTrigger()
+    {
+        isHit = true;
     }
 
     public virtual void Exit()

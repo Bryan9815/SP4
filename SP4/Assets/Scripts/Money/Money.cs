@@ -8,12 +8,12 @@ public class Money : MonoBehaviour {
     public Button goldButton;
     void start()
     {
-        playerGold = GlobalVariable.GetPlayerGold();
     }
 	// Update is called once per frame
 	void Update () 
     {
-        GoldText.text = "$" + playerGold.ToString(); 
+        playerGold = GlobalVariable.GetPlayerGold();
+        GoldText.text = "$" + playerGold; 
 	}
 
     public void buttonPressed()

@@ -14,6 +14,7 @@ public class HighScore : MonoBehaviour
 
     public Text WaveRecord, GoldRecord, KillRecord, Stats1, Stats2, Stats3;
     public Image Hero1, Hero2, Hero3;
+    public GUIStyle AngryBirdFont;
     void Start()
     {
         ReturnToMainMenu.onClick.AddListener(delegate { SceneManager.LoadScene("MainMenu"); });
@@ -65,12 +66,14 @@ public class HighScore : MonoBehaviour
             GUILayout.BeginArea(r, new GUIStyle("box"));
 
             GUILayout.BeginVertical();
-            GUILayout.Label("High Scores:");
+            GUIStyle font = new GUIStyle();
+            font = AngryBirdFont;
+            GUILayout.Label("High Scores:", font);
             //Debug.Log("scoreList Count: " + scoreList.Count.ToString());
 
             if (scoreList == null || scoreList.Count == 0)
             {
-                GUILayout.Label("(loading...)");
+                GUILayout.Label("(loading...)", font);
             }
             else
             {
@@ -81,9 +84,9 @@ public class HighScore : MonoBehaviour
                     count++;
                     //Debug.LogError("Printing List");
                     GUILayout.BeginHorizontal();
-                    GUILayout.Label(currentScore.playerName, layout);
-                    GUILayout.Label("Wave Reached: " + currentScore.score.ToString(), layout);
-                    GUILayout.Label(currentScore.dateString.ToString(), layout);
+                    GUILayout.Label(currentScore.playerName, font, layout);
+                    GUILayout.Label("Wave Reached: " + currentScore.score.ToString(), font, layout);
+                    GUILayout.Label(currentScore.dateString.ToString(), font, layout);
                     GUILayout.EndHorizontal();
 
                     if (count >= maxToDisplay || count >= scoreList.Count)

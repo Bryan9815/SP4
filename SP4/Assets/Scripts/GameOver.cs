@@ -47,6 +47,7 @@ public class GameOver : MonoBehaviour
         if (WaveManager.GetKillCount() > PlayerPrefs.GetInt("Most Kills", 0))
             PlayerPrefs.SetInt("Most Kills", WaveManager.GetKillCount());
 
+        GlobalVariable.AddPlayerGold(WaveManager.GetGoldEarned());
         SceneManager.LoadScene("MainMenu");
     }
 }

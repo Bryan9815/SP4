@@ -8,10 +8,11 @@ public class Orc : Mob
     {
         Idle,
         Run,
+        Death,
     }
     States state;
     Animator animator;
-
+    public GameObject explosion;
 	// Use this for initialization
     protected override void Start() 
     {
@@ -56,7 +57,7 @@ public class Orc : Mob
         }
         if (Hp <= 0)
         {
-            Exit();
+            state = States.Death;
         }
 
         // States
@@ -92,22 +93,46 @@ public class Orc : Mob
                             if (!Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead() && gameObject.GetComponent<BoxCollider2D>().IsTouching(Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
                             {
                                 if (accuracy > Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Evasion())
+                                {
                                     Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
+                                    Vector3 position = new Vector3(Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().transform.position.x, Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().transform.position.y, Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().transform.position.z);
+
+                                    GameObject explode = Instantiate(explosion, new Vector3(position.x + 1, position.y, position.z), explosion.transform.rotation) as GameObject;
+                                    explode.SetActive(true);
+                                }
                             }
                             else if (!Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead() && gameObject.GetComponent<BoxCollider2D>().IsTouching(Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
                             {
                                 if (accuracy > Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Evasion())
+                                {
                                     Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
+                                    Vector3 position = new Vector3(Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().transform.position.x, Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().transform.position.y, Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().transform.position.z);
+
+                                    GameObject explode = Instantiate(explosion, new Vector3(position.x + 1, position.y, position.z), explosion.transform.rotation) as GameObject;
+                                    explode.SetActive(true);
+                                }
                             }
                             else if (!Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead() && gameObject.GetComponent<BoxCollider2D>().IsTouching(Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<BoxCollider2D>()))
                             {
                                 if (accuracy > Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Evasion())
+                                {
                                     Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
+                                    Vector3 position = new Vector3(Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().transform.position.x, Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().transform.position.y, Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().transform.position.z);
+
+                                    GameObject explode = Instantiate(explosion, new Vector3(position.x + 1, position.y, position.z), explosion.transform.rotation) as GameObject;
+                                    explode.SetActive(true);
+                                }
                             }
                             attackTimer = 0;
                         }
                     }
                 }
+                break;
+            case States.Death:
+                Destroy(gameObject.GetComponent<BoxCollider2D>());
+                animator.enabled = false;
+                if (gameObject.transform.position.y < -(Screen.height / 20))
+                    Exit();
                 break;
             default:
                 break;

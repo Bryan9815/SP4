@@ -13,7 +13,6 @@ public class G_DwarfArcher : Mob
     }
     States state;
     Animator animator;
-    float distFromHero;
 
     // Use this for initialization
     protected override void Start()

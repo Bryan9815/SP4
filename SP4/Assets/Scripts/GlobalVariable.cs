@@ -13,6 +13,8 @@ public class GlobalVariable : MonoBehaviour {
 	//Indicates how far the player is in
 	private static int stageLevel;
 
+	private static bool runTutorial;
+
     //Added using unity engine UI on top
     //is for just in case anyone need a global Text field 
     //or anything related in UI
@@ -51,6 +53,9 @@ public class GlobalVariable : MonoBehaviour {
         // Player Variables
         PlayerName = PlayerPrefs.GetString("userID", "");
         PlayerGoldG = PlayerPrefs.GetInt("Gold", 100);
+
+		//set to true and it will run tutorial
+		runTutorial = true;
 	}
 	
 	// Update is called once per frame
@@ -110,12 +115,19 @@ public class GlobalVariable : MonoBehaviour {
 
     public static int GetPlayerGold()
     {
-        return PlayerGoldG;
+        return PlayerPrefs.GetInt("Gold", 100);
     }
 
     public static void SetPlayerGold(int newGold)
     {
         PlayerGoldG = newGold;
+        PlayerPrefs.SetInt("Gold", PlayerGoldG);
+    }
+
+    public static void AddPlayerGold(int newGold)
+    {
+        PlayerGoldG += newGold;
+        PlayerPrefs.SetInt("Gold", PlayerGoldG);
     }
 		
 	public static void SetStageLevel(int newStageLevel)
@@ -163,12 +175,6 @@ public class GlobalVariable : MonoBehaviour {
                     break;
             }
         }
-        Debug.Log("Hero1 ID: " + PlayerPrefs.GetInt("Hero ID_1"));
-        Debug.Log("Hero2 ID: " + PlayerPrefs.GetInt("Hero ID_2"));
-        Debug.Log("Hero3 ID: " + PlayerPrefs.GetInt("Hero ID_3"));
-        Debug.Log("Inactive Hero1 ID: " + PlayerPrefs.GetInt("Inactive Hero ID_1"));
-        Debug.Log("Inactive Hero2 ID: " + PlayerPrefs.GetInt("Inactive Hero ID_2"));
-        Debug.Log("Inactive Hero3 ID: " + PlayerPrefs.GetInt("Inactive Hero ID_3"));
 	}
 
 	public static int GetPlayerHeroID(int slot)
@@ -277,7 +283,7 @@ public class GlobalVariable : MonoBehaviour {
             return null;
         }
         else
-            return GetPlayerHero(slot).GetComponent<Hero>().Get_HeroName() + "\nLevel: " + GetPlayerHero(slot).GetComponent<Hero>().Get_Level() + ", EXP: " + GetPlayerHero(slot).GetComponent<Hero>().Get_Exp() + "/" + GetPlayerHero(slot).GetComponent<Hero>().Get_MaxExp() + "\nHP: " + GetPlayerHero(slot).GetComponent<Hero>().Get_MaxHp() + "\nAttack: " + GetPlayerHero(slot).GetComponent<Hero>().GetAttack() + "\nDefense: " + GetPlayerHero(slot).GetComponent<Hero>().GetDefense();
+            return GetPlayerHero(slot).GetComponent<Hero>().Get_HeroName() + "\nLevel: " + GetPlayerHero(slot).GetComponent<Hero>().Get_Level() + ", EXP: " + ((int)GetPlayerHero(slot).GetComponent<Hero>().Get_Exp()) + "/" + GetPlayerHero(slot).GetComponent<Hero>().Get_MaxExp() + "\nHP: " + GetPlayerHero(slot).GetComponent<Hero>().Get_MaxHp() + "\nAttack: " + GetPlayerHero(slot).GetComponent<Hero>().GetAttack() + "\nDefense: " + GetPlayerHero(slot).GetComponent<Hero>().GetDefense();
     }
 
     public static string PrintRecordHeroStats(int id)
@@ -288,6 +294,16 @@ public class GlobalVariable : MonoBehaviour {
             return null;
         }
         else
-            return GetHero(id).GetComponent<Hero>().Get_HeroName() + "\nLevel: " + GetHero(id).GetComponent<Hero>().Get_Level() + ", EXP: " + GetHero(id).GetComponent<Hero>().Get_Exp() + "/" + GetHero(id).GetComponent<Hero>().Get_MaxExp() + "\nHP: " + GetHero(id).GetComponent<Hero>().Get_MaxHp() + "\nAttack: " + GetHero(id).GetComponent<Hero>().GetAttack() + "\nDefense: " + GetHero(id).GetComponent<Hero>().GetDefense();
+            return GetHero(id).GetComponent<Hero>().Get_HeroName() + "\nLevel: " + GetHero(id).GetComponent<Hero>().Get_Level() + ", EXP: " + ((int)GetHero(id).GetComponent<Hero>().Get_Exp()) + "/" + GetHero(id).GetComponent<Hero>().Get_MaxExp() + "\nHP: " + GetHero(id).GetComponent<Hero>().Get_MaxHp() + "\nAttack: " + GetHero(id).GetComponent<Hero>().GetAttack() + "\nDefense: " + GetHero(id).GetComponent<Hero>().GetDefense();
     }
+
+	public static bool GetRunTutorial()
+	{
+		return runTutorial;
+	}
+
+	public static void SetRunTutorial(bool newBool)
+	{
+		runTutorial = newBool;
+	}
 }

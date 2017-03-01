@@ -16,15 +16,15 @@ public class HeroHolder : MonoBehaviour
         switch (HeroSlot)
         {
             case 1:
-                Vector3 temp1 = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 1);
+                Vector3 temp1 = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, hero.GetComponent<Hero>().transform.position.z);
                 hero.GetComponent<Hero>().transform.position = temp1;
                 break;
             case 2:
-                Vector3 temp2 = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 1);
+                Vector3 temp2 = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, hero.GetComponent<Hero>().transform.position.z);
                 hero.GetComponent<Hero>().transform.position = temp2;
                 break;
             case 3:
-                Vector3 temp3 = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 1);
+                Vector3 temp3 = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, hero.GetComponent<Hero>().transform.position.z);
                 hero.GetComponent<Hero>().transform.position = temp3;
                 break;
             default:
