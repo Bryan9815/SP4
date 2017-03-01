@@ -12,9 +12,12 @@ public class DamageTextManager : MonoBehaviour
 	public GameObject[] playerTakeDamageText;
 	static GameObject[] temp_playerTakeDamageText = new GameObject[10];
 
+	private Scene scene;
+
     // Use this for initialization
 	void Start () 
 	{
+		scene = SceneManager.GetActiveScene ();
 		for (int i = 0; i < sprite_damage_text.Length; i++)
 			temp_sprite_damage_text [i] = sprite_damage_text[i];
 
@@ -44,8 +47,10 @@ public class DamageTextManager : MonoBehaviour
 			Vector3 spawnPos = position;
 			spawnPos.x = (0.46f * i) + position.x;
 			GameObject numberSprite = temp_sprite_damage_text [tempCharSet - 48];
+
 			GameObject spawn = Instantiate (numberSprite, spawnPos, numberSprite.transform.rotation) as GameObject;
 			spawn.transform.localScale.Set (1.0f, 1.0f, 1.0f);
+
 		}
 	}
 

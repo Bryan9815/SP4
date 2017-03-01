@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
+//HS
+using UnityEngine.SceneManagement;
 
 public class Mob : MonoBehaviour
 {
@@ -10,6 +12,8 @@ public class Mob : MonoBehaviour
     protected Vector3 position;
     protected bool TargetsDetected = false;
     protected bool isHit = false;
+	//HS
+	private Scene scene;
 
     protected static GameObject Hero1, Hero2, Hero3, Arrow;
     protected static List<GameObject> HeroList;
@@ -33,6 +37,7 @@ public class Mob : MonoBehaviour
         HeroList.Add(Hero1);
         HeroList.Add(Hero2);
         HeroList.Add(Hero3);
+	
     }
 
     // Update is called once per frame
@@ -58,10 +63,15 @@ public class Mob : MonoBehaviour
         //calculate how damage is taken here
         Hp -= damage;
 
+		//HS
         Vector3 tempPos = gameObject.transform.position;
-        tempPos.y += gameObject.GetComponent<Transform>().localScale.y / 2;
+		scene = SceneManager.GetActiveScene ();
+		if (scene.name == "Tutorial")
+			tempPos.y += 1.0f;
+		else
+       	 	tempPos.y += gameObject.GetComponent<Transform>().localScale.y / 2;
         DamageTextManager.GenerateSprite(tempPos, damage);
-        Debug.Log("Ai ya Mob got hit...");
+        Debug.Log("Ai ya Mob got hit... normal");
     }
 
     public virtual void getHit(int damage, bool careAboutTrigger)
@@ -73,8 +83,9 @@ public class Mob : MonoBehaviour
             {
                 Hp -= damage;
 
+				//HS
                 Vector3 tempPos = gameObject.transform.position;
-                tempPos.y += gameObject.GetComponent<Transform>().localScale.y / 2;
+				tempPos.y += gameObject.GetComponent<Transform>().localScale.y / 2;
                 DamageTextManager.GenerateSprite(tempPos, damage);
                 Debug.Log("Ai ya Mob got hit...");
             }
