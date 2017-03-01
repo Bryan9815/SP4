@@ -4,11 +4,13 @@ using System.Collections;
 public class DynamicList : MonoBehaviour {
 
     public GameObject itemPrefab;
-    public int itemCount = 10;
+    public static int itemCount;
     public int columnCount = 1;
 
-    void Awake()
+    void Start()
     {
+        itemCount = WeaponSelect.theWeapons.Count;
+        Debug.Log(itemCount);
         //calculate the width and height of each child item.
         int rowCount = itemCount / columnCount;
         if (itemCount % rowCount > 0)

@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TestWeapon1 : BaseWeapon {
+public class StandardSword : BaseWeapon {
 
 	protected override void Awake () {
 		Level = 1;
 		Max_level = 5;
 		Name = "TestWeapon1";
-		WeaponImage = Resources.Load<Sprite>("Equipment/Image/testimg");
+        WeaponImage = Resources.Load<Sprite>("Equipment/Items/W_Sword001");
+        cost = 50;
+        id = 2;
 		CalculateAttack ();
-        cost = 10;
-        id = 1;
 	}
 
 	// Use this for initialization
@@ -66,4 +66,5 @@ public class TestWeapon1 : BaseWeapon {
 		CalculateAttack ();
 		return true;
 	}
+
 }
