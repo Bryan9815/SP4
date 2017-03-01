@@ -120,14 +120,18 @@ public class GlobalVariable : MonoBehaviour {
 
     public static void SetPlayerGold(int newGold)
     {
-        PlayerGoldG = newGold;
-        PlayerPrefs.SetInt("Gold", PlayerGoldG);
+        PlayerPrefs.SetInt("Gold", newGold);
     }
 
     public static void AddPlayerGold(int newGold)
     {
-        PlayerGoldG += newGold;
-        PlayerPrefs.SetInt("Gold", PlayerGoldG);
+        PlayerPrefs.SetInt("Gold", PlayerPrefs.GetInt("Gold") + newGold);
+    }
+
+    public static void DecreasePlayerGold(int newGold)
+    {
+        PlayerPrefs.SetInt("Gold", PlayerPrefs.GetInt("Gold") - newGold);
+        Debug.Log("Gold decreased by " + newGold);
     }
 		
 	public static void SetStageLevel(int newStageLevel)

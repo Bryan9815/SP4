@@ -21,6 +21,7 @@ public class Cloud : Hero
         ClassName = "Cloud";                                            //Cloud's Class Name
         Sp = 0;                                                         //Cloud's Special Points for ultimate (Sort of)
         name = "Cloud";                                                 //Name of Cloud
+        unlocked = BoolPrefs.GetBool("Cloud Unlocked", true);
         level = PlayerPrefs.GetInt("Cloud Level", 1);                   //Cloud's Level
         exp = PlayerPrefs.GetFloat("Cloud EXP", 0);                     //Cloud's Experience points
 
