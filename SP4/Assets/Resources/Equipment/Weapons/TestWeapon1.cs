@@ -9,6 +9,8 @@ public class TestWeapon1 : BaseWeapon {
 		Name = "TestWeapon1";
 		WeaponImage = Resources.Load<Sprite>("Equipment/Image/testimg");
 		CalculateAttack ();
+        cost = 10;
+        id = 1;
 	}
 
 	// Use this for initialization
@@ -45,6 +47,12 @@ public class TestWeapon1 : BaseWeapon {
 	{
 		return Level;
 	}
+
+    public override int Get_MaxLevel()
+    {
+        return Max_level;
+    }
+
 
 	public override bool LevelUp()
 	{

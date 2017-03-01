@@ -9,17 +9,14 @@ public class WeaponSelect : MonoBehaviour
 {
     public ToggleGroup EquippedHeroes;
     public List<GameObject> WeaponListo = new List<GameObject>();
-    public List<BaseWeapon> theWeapons = new List<BaseWeapon>();
-    GameObject Equipped, Unequipped;
-    Toggle active, active2;
-
-    GUIContent content;
+    public static List<BaseWeapon> theWeapons = new List<BaseWeapon>();
 
     public GameObject slot;
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         theWeapons.Add(Resources.Load<BaseWeapon>("Equipment/Weapons/TestWeapon1"));
+        theWeapons.Add(Resources.Load<BaseWeapon>("Equipment/Weapons/StandardSword"));
     }
 
     // Update is called once per frame

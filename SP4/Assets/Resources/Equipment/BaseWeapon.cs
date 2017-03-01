@@ -8,6 +8,7 @@ public class BaseWeapon : MonoBehaviour {
 	protected int Level;			//Capped at 5
 	protected int Max_level;
 	protected string Name;
+    protected int cost, id;
 
 	protected virtual void Awake () {
 		Level = 1;
@@ -52,6 +53,19 @@ public class BaseWeapon : MonoBehaviour {
 		return Level;
 	}
 
+    public virtual int Get_MaxLevel()
+    {
+        return Max_level;
+    }
+
+    public virtual int Get_Cost()
+    {
+        return cost;
+    }
+    public virtual int Get_ID()
+    {
+        return id;
+    }
 	public virtual bool LevelUp()
 	{
 		Level += 1;

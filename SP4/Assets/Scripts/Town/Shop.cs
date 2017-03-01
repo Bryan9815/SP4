@@ -11,7 +11,7 @@ public class Shop : MonoBehaviour
     private Toggle tungle;
     public Canvas buyCanvas, upgradePanel, equipCanvas;
     public Toggle toggle1, toggle2, toggle3;
-    public Text costOfRNG, costOfSpecificHero;
+    public Text costOfSpecificHero;
     int SpecificCost;
     bool backtotownB = false;
     float timer = 1.0f;
