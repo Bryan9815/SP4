@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 public class Block : MonoBehaviour {
     public Button gameobject;
     private string Name; // useless for now, but put just in case it might be used later
@@ -14,6 +16,9 @@ public class Block : MonoBehaviour {
 	public float collide_allowance;
 	public Sprite Block1_Img,Block2_Img,Block3_Img;
 	public List<Sprite> BlockImageList;
+
+	//HS
+	Scene scene;
     public enum Chain
     {
         One_Chain,
@@ -30,9 +35,14 @@ public class Block : MonoBehaviour {
 	{
 		hero_slot = 0;
 		BlockImageList = new List<Sprite> ();
+		scene = SceneManager.GetActiveScene ();
 		BlockImageList.Add (Block1_Img);
 		BlockImageList.Add (Block2_Img);
 		BlockImageList.Add (Block3_Img);
+
+		//HS
+		if (scene.name == "Tutorial") 
+			gameObject.GetComponent<Button> ().interactable = false;
 	}
 
 	// Use this for initialization
@@ -50,7 +60,11 @@ public class Block : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//HS
+		if (TutorialManager.counter > 0 && TutorialManager.distance <= 0.5f)
+		{
+			gameObject.GetComponent<Button> ().interactable = true;
+		}
 	}
 
 	public bool get_Set()
@@ -145,6 +159,14 @@ public class Block : MonoBehaviour {
 
     public void Activate()
     {
+		//HS
+		//it will only enter this if when it is in tutorial mode
+		if (TutorialManager.counter > 0 && TutorialManager.distance <= 0.5f) 
+		{
+			Time.timeScale = 1;
+			TutorialManager.counter++;
+		}
+
 		// if still traveling, dont activate
 		if (!set)
 			return;

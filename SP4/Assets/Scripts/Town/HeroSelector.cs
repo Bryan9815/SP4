@@ -19,36 +19,76 @@ public class HeroSelector : MonoBehaviour
 
         if (Active)
         {
-            switch (slot)
+            if (!Shop && !Upgrade)
             {
-                case 1:
-                    HeroID = PlayerPrefs.GetInt("Hero ID_1", 1);
-                    break;
-                case 2:
-                    HeroID = PlayerPrefs.GetInt("Hero ID_2", 2);
-                    break;
-                case 3:
-                    HeroID = PlayerPrefs.GetInt("Hero ID_3", 3);
-                    break;
-                default:
-                    break;
+                switch (slot)
+                {
+                    case 1:
+                        HeroID = PlayerPrefs.GetInt("Hero ID_1", 1);
+                        break;
+                    case 2:
+                        HeroID = PlayerPrefs.GetInt("Hero ID_2", 2);
+                        break;
+                    case 3:
+                        HeroID = PlayerPrefs.GetInt("Hero ID_3", 3);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                switch (slot)
+                {
+                    case 1:
+                        HeroID = 1;
+                        break;
+                    case 2:
+                        HeroID = 2;
+                        break;
+                    case 3:
+                        HeroID = 3;
+                        break;
+                    default:
+                        break;
+                }
             }
         }
         else
         {
-            switch (slot)
+            if (!Shop && !Upgrade)
             {
-                case 1:
-                    HeroID = PlayerPrefs.GetInt("Inactive Hero ID_1", 4);
-                    break;
-                case 2:
-                    HeroID = PlayerPrefs.GetInt("Inactive Hero ID_2", 5);
-                    break;
-                case 3:
-                    HeroID = PlayerPrefs.GetInt("Inactive Hero ID_3", 6);
-                    break;
-                default:
-                    break;
+                switch (slot)
+                {
+                    case 1:
+                        HeroID = PlayerPrefs.GetInt("Inactive Hero ID_1", 4);
+                        break;
+                    case 2:
+                        HeroID = PlayerPrefs.GetInt("Inactive Hero ID_2", 5);
+                        break;
+                    case 3:
+                        HeroID = PlayerPrefs.GetInt("Inactive Hero ID_3", 6);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                switch (slot)
+                {
+                    case 1:
+                        HeroID = 4;
+                        break;
+                    case 2:
+                        HeroID = 5;
+                        break;
+                    case 3:
+                        HeroID = 6;
+                        break;
+                    default:
+                        break;
+                }
             }
         }
 	}
