@@ -18,15 +18,19 @@ public class Shop : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        SpecificCost = 1000;    
+        GlobalVariable.GetHero(4).GetComponent<Hero>().Set_Unlocked(false);
+        SpecificCost = PlayerPrefs.GetInt("Cost of Hero", 1000);    
         buyButton.onClick.AddListener(delegate
         {
-            Money.playerGold -= SpecificCost;
+            GlobalVariable.DecreasePlayerGold(SpecificCost);
+            tungle.GetComponent<HeroSelector>().Get_GameObject().GetComponent<Hero>().Set_Unlocked(true);
+            tungle.GetComponent<HeroSelector>().ActiveHeroUnselected();
+            tungle.isOn = false;
             tungle.interactable = false;
             buyButton.interactable = false;
-            Destroy(tungle);
-            tungle = ToggleGroupExtension.GetActive(UnBoughtHeroes);
-            SpecificCost += 50;
+            tungle = null;
+            SpecificCost += 100;
+            PlayerPrefs.SetInt("Cost of Hero", SpecificCost);
         });
 	}
 	
@@ -34,11 +38,14 @@ public class Shop : MonoBehaviour
 	void Update ()
     {
         buySpecificHero();
-        if(tungle && tungle.interactable == false)
+        if(tungle && !tungle.isOn)
         {
             tungle.isOn = false;
+            tungle.GetComponent<HeroSelector>().ActiveHeroUnselected();
             tungle = ToggleGroupExtension.GetActive(UnBoughtHeroes);
         }
+        else if (tungle && tungle.isOn)
+            tungle.GetComponent<HeroSelector>().ActiveHeroSelected();
         displaySpecific();
 
         if(backtotownB)
@@ -53,15 +60,15 @@ public class Shop : MonoBehaviour
     {
         if (!tungle)
         {
-            tungle = ToggleGroupExtension.GetActive(UnBoughtHeroes); 
+            tungle = ToggleGroupExtension.GetActive(UnBoughtHeroes);
         }
         else if (tungle)
         {
-            if (Money.playerGold < SpecificCost && tungle.isOn == false)
+            if (GlobalVariable.GetPlayerGold() < SpecificCost && tungle.isOn == false)
             {
                 buyButton.interactable = false;
             }
-            else if (Money.playerGold >= SpecificCost)
+            else if (GlobalVariable.GetPlayerGold() >= SpecificCost)
             {
                 buyButton.interactable = true;
             }

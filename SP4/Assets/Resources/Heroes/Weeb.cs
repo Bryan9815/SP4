@@ -22,6 +22,7 @@ public class Weeb : Hero
         Sp = 0;                                                       //Weeb's Special Points for ultimate (Sort of)
         //hero_img = ;                                                  //Weeb's Sprite I guess?
         name = "Weeb";                                                  //Name of Weeb
+        unlocked = BoolPrefs.GetBool("Weeb Unlocked", true);
         level = PlayerPrefs.GetInt("Weeb Level", 1);                   //Weeb's Level
         exp = PlayerPrefs.GetFloat("Weeb EXP", 0);                     //Weeb's Experience points
 

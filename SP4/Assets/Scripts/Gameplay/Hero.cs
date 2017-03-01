@@ -16,7 +16,8 @@ public class Hero : MonoBehaviour {
     protected bool isDead;
 	protected float InvincibilityTimer;
 	protected float InvincibilityDuration;
-	public bool unlocked;
+	protected bool unlocked;
+    protected string Skill_Description;
 	protected BaseWeapon Weapon;
 	protected Animator animator;
 	public GameObject attackCollider;
@@ -242,6 +243,21 @@ public class Hero : MonoBehaviour {
     {
         animator.SetTrigger("Idle");
         animator.enabled = false;
+    }
+
+    public virtual bool Get_Unlocked()
+    {
+        return unlocked;
+    }
+
+    public virtual void Set_Unlocked(bool newBool)
+    {
+        unlocked = newBool;
+    }
+
+    public virtual string Get_Skill_Description()
+    {
+        return Skill_Description;
     }
 
 	public virtual void Exit()

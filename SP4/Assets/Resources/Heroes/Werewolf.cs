@@ -13,7 +13,8 @@ public class Werewolf : Hero {
 		id = 3;
 		ClassName = "Werewolf";
         name = "Werewolf";
-		Sp = 0;
+        Sp = 0;
+        unlocked = BoolPrefs.GetBool("Werewolf Unlocked", true);
         level = PlayerPrefs.GetInt("Werewolf Level", 1);                   //Werewolf's Level
         exp = PlayerPrefs.GetFloat("Werewolf EXP", 0);                     //Werewolf's Experience points
 

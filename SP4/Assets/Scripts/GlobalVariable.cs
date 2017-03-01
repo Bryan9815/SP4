@@ -120,14 +120,18 @@ public class GlobalVariable : MonoBehaviour {
 
     public static void SetPlayerGold(int newGold)
     {
-        PlayerGoldG = newGold;
-        PlayerPrefs.SetInt("Gold", PlayerGoldG);
+        PlayerPrefs.SetInt("Gold", newGold);
     }
 
     public static void AddPlayerGold(int newGold)
     {
-        PlayerGoldG += newGold;
-        PlayerPrefs.SetInt("Gold", PlayerGoldG);
+        PlayerPrefs.SetInt("Gold", PlayerPrefs.GetInt("Gold") + newGold);
+    }
+
+    public static void DecreasePlayerGold(int newGold)
+    {
+        PlayerPrefs.SetInt("Gold", PlayerPrefs.GetInt("Gold") - newGold);
+        Debug.Log("Gold decreased by " + newGold);
     }
 		
 	public static void SetStageLevel(int newStageLevel)
@@ -283,10 +287,10 @@ public class GlobalVariable : MonoBehaviour {
             return null;
         }
         else
-            return GetPlayerHero(slot).GetComponent<Hero>().Get_HeroName() + "\nLevel: " + GetPlayerHero(slot).GetComponent<Hero>().Get_Level() + ", EXP: " + ((int)GetPlayerHero(slot).GetComponent<Hero>().Get_Exp()) + "/" + GetPlayerHero(slot).GetComponent<Hero>().Get_MaxExp() + "\nHP: " + GetPlayerHero(slot).GetComponent<Hero>().Get_MaxHp() + "\nAttack: " + GetPlayerHero(slot).GetComponent<Hero>().GetAttack() + "\nDefense: " + GetPlayerHero(slot).GetComponent<Hero>().GetDefense();
+            return GetPlayerHero(slot).GetComponent<Hero>().Get_HeroName() + "\nLevel: " + GetPlayerHero(slot).GetComponent<Hero>().Get_Level() + ", EXP: " + ((int)GetPlayerHero(slot).GetComponent<Hero>().Get_Exp()) + "/" + GetPlayerHero(slot).GetComponent<Hero>().Get_MaxExp() + "\nHP: " + GetPlayerHero(slot).GetComponent<Hero>().Get_MaxHp() + "\nAttack: " + GetPlayerHero(slot).GetComponent<Hero>().GetAttack() + "\nDefense: " + GetPlayerHero(slot).GetComponent<Hero>().GetDefense() + "\nSkill: " + GetPlayerHero(slot).GetComponent<Hero>().Get_Skill_Description();
     }
 
-    public static string PrintRecordHeroStats(int id)
+    public static string PrintHeroStats(int id)
     {
         if (id < 1 || id > 6)
         {
@@ -294,7 +298,7 @@ public class GlobalVariable : MonoBehaviour {
             return null;
         }
         else
-            return GetHero(id).GetComponent<Hero>().Get_HeroName() + "\nLevel: " + GetHero(id).GetComponent<Hero>().Get_Level() + ", EXP: " + ((int)GetHero(id).GetComponent<Hero>().Get_Exp()) + "/" + GetHero(id).GetComponent<Hero>().Get_MaxExp() + "\nHP: " + GetHero(id).GetComponent<Hero>().Get_MaxHp() + "\nAttack: " + GetHero(id).GetComponent<Hero>().GetAttack() + "\nDefense: " + GetHero(id).GetComponent<Hero>().GetDefense();
+            return GetHero(id).GetComponent<Hero>().Get_HeroName() + "\nLevel: " + GetHero(id).GetComponent<Hero>().Get_Level() + ", EXP: " + ((int)GetHero(id).GetComponent<Hero>().Get_Exp()) + "/" + GetHero(id).GetComponent<Hero>().Get_MaxExp() + "\nHP: " + GetHero(id).GetComponent<Hero>().Get_MaxHp() + "\nAttack: " + GetHero(id).GetComponent<Hero>().GetAttack() + "\nDefense: " + GetHero(id).GetComponent<Hero>().GetDefense() + "\nSkill: " + GetHero(id).GetComponent<Hero>().Get_Skill_Description();
     }
 
 	public static bool GetRunTutorial()

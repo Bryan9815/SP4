@@ -14,7 +14,9 @@ public class Reaper : Hero
         id = 4;
         ClassName = "Reaper";
         name = "Reaper";
+        Skill_Description = "Throws his scythe forward, dealing damage to all enemies it flies through.";
         Sp = 0;
+        unlocked = BoolPrefs.GetBool("Reaper Unlocked", false);
         level = PlayerPrefs.GetInt("Reaper Level", 1);                   //Reaper's Level
         exp = PlayerPrefs.GetFloat("Reaper EXP", 0);                     //Reaper's Experience points
 
@@ -251,6 +253,12 @@ public class Reaper : Hero
     public override Hero Get_ClassType()
     {
         return this;
+    }
+
+    public override void Set_Unlocked(bool newBool)
+    {
+        unlocked = newBool;
+        BoolPrefs.SetBool("Reaper Unlocked", unlocked);
     }
 
     public override Hero Get_Instance()
