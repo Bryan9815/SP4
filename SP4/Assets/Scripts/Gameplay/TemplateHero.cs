@@ -10,7 +10,6 @@ public class TemplateHero : Hero {
 		Attack,
 	}
 
-	Animator animator;
 
 	protected override void Awake()
 	{
@@ -147,7 +146,7 @@ public class TemplateHero : Hero {
 		//calculate how damage is taken here
 		InvincibilityTimer += InvincibilityDuration;
 		animator.SetTrigger ("isHit");
-		Hp -= damagetaken;
+		currHp -= damagetaken;
 		if (currHp <= 0)
 		{
 			isDead = true;
@@ -176,11 +175,6 @@ public class TemplateHero : Hero {
 			float temp = exp - max_exp;
 			LevelUp ();
 		}
-	}
-
-	public override void SetAttack(int newAtk)
-	{
-		Attack = newAtk;
 	}
 
 	public override float GetAttack()
@@ -272,10 +266,5 @@ public class TemplateHero : Hero {
 	public override Hero Get_Instance()
 	{
 		return new TemplateHero ();
-	}
-
-	public override void Exit()
-	{
-		Destroy (gameObject);
 	}
 }

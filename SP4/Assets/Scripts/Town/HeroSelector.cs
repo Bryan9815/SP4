@@ -7,14 +7,14 @@ public class HeroSelector : MonoBehaviour
     public Image heroSprite;
     public Text heroStatDisplay;
     public int HeroID, slot;
-    public bool Active;
+    public bool Active, Shop, Upgrade;
     private bool ImageSet = false;
 	// Use this for initialization
 	void Start () 
     {
         if (gameObject.GetComponent<Toggle>().group.name == "Hero Slot 1")
             Active = true;
-        else
+        else if (!Shop && !Upgrade)
             Active = false;
 
         if (Active)
@@ -63,17 +63,33 @@ public class HeroSelector : MonoBehaviour
         }
         heroSprite.sprite = GlobalVariable.GetHero(HeroID).GetComponent<Hero>().GetSprite();
 
-        if (!Active)
-            heroStatDisplay.text = GlobalVariable.PrintRecordHeroStats(HeroID);
+        if (!Active && !Shop && !Upgrade)
+        {
+            heroStatDisplay.text = GlobalVariable.PrintHeroStats(HeroID);
+        }
+
+        if(Shop)
+        {
+            if (GlobalVariable.GetHero(HeroID).GetComponent<Hero>().Get_Unlocked())
+                gameObject.GetComponent<Toggle>().interactable = false;
+        }
+        else
+            if (!GlobalVariable.GetHero(HeroID).GetComponent<Hero>().Get_Unlocked())
+                gameObject.GetComponent<Toggle>().interactable = false;
     }
 
     public void ActiveHeroSelected()
     {
-        heroStatDisplay.text = GlobalVariable.PrintRecordHeroStats(HeroID);
+        heroStatDisplay.text = GlobalVariable.PrintHeroStats(HeroID);
     }
 
     public void ActiveHeroUnselected()
     {
         heroStatDisplay.text = "";
+    }
+
+    public GameObject Get_GameObject()
+    {
+        return GlobalVariable.GetHero(HeroID);
     }
 }

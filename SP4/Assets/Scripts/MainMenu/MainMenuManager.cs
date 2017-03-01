@@ -17,6 +17,7 @@ public class MainMenuManager: MonoBehaviour
 	private float tempScale;
 	private float tempNumberofSprite;
 	private GameObject tempMainMenu;
+    private AudioSource mainMenuMusic;
 	// Use this for initialization
 	void Start () 
 	{
@@ -25,7 +26,7 @@ public class MainMenuManager: MonoBehaviour
 		tempX = -GlobalVariable.GetScreenWidth () / 2;
 
 		tempMainMenu = GameObject.Find ("MainMenu");
-
+        mainMenuMusic = GameObject.Find("Audio Source").GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -33,7 +34,7 @@ public class MainMenuManager: MonoBehaviour
 	{
 		spawnTimer -= Time.deltaTime;
 
-
+        mainMenuMusic.volume = PlayerPrefs.GetFloat("Music")/100;
 		if (spawnTimer < 0.0f) 
 		{
 			tempNumberofSprite = Random.Range (1, 5);
@@ -48,11 +49,11 @@ public class MainMenuManager: MonoBehaviour
 				switch (spawnOnRight)
 				{
 				case 0: 
-					spawnPos = new Vector3 (tempX - Random.Range(5.0f,50.0f), tempY, -1.0f);
+					spawnPos = new Vector3 (tempX - Random.Range(5.0f,10.0f), tempY, -1.0f);
 					break;
 	
 				case 1:
-					spawnPos = new Vector3 (-tempX + Random.Range(5.0f,50.0f), tempY, -1.0f);
+					spawnPos = new Vector3 (-tempX + Random.Range(5.0f,10.0f), tempY, -1.0f);
 					break;
 				}
 				;
