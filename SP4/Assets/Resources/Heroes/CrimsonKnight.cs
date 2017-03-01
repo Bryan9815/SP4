@@ -14,7 +14,6 @@ public class CrimsonKnight : Hero {
 	// Use this for initialization
 	protected override void Start () {
 		animator = GetComponent<Animator> ();
-		currHp = Hp;
 		Sp = 0;
         ClassName = "Crimson Knight";
         name = "Crimson Knight";
@@ -41,6 +40,7 @@ public class CrimsonKnight : Hero {
             Evasion = PlayerPrefs.GetFloat("Crimson Knight Evasion");
             max_exp = PlayerPrefs.GetFloat("Crimson Knight Max_EXP");
         }
+        currHp = Hp;
 	}
 
 	void CalculateStats()

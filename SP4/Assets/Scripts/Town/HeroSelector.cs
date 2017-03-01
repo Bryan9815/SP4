@@ -68,7 +68,7 @@ public class HeroSelector : MonoBehaviour
             heroStatDisplay.text = GlobalVariable.PrintHeroStats(HeroID);
         }
 
-        if(Shop)
+        if (Shop)
         {
             if (GlobalVariable.GetHero(HeroID).GetComponent<Hero>().Get_Unlocked())
                 gameObject.GetComponent<Toggle>().interactable = false;
@@ -76,6 +76,8 @@ public class HeroSelector : MonoBehaviour
         else
             if (!GlobalVariable.GetHero(HeroID).GetComponent<Hero>().Get_Unlocked())
                 gameObject.GetComponent<Toggle>().interactable = false;
+            else
+                gameObject.GetComponent<Toggle>().interactable = true;
     }
 
     public void ActiveHeroSelected()
