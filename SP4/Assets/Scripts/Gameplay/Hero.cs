@@ -16,7 +16,7 @@ public class Hero : MonoBehaviour {
     protected bool isDead;
 	protected float InvincibilityTimer;
 	protected float InvincibilityDuration;
-	public bool unlocked;
+	protected bool unlocked;
 	protected BaseWeapon Weapon;
 	protected Animator animator;
 	public GameObject attackCollider;
@@ -233,6 +233,16 @@ public class Hero : MonoBehaviour {
     {
         animator.SetTrigger("Idle");
         animator.enabled = false;
+    }
+
+    public virtual bool Get_Unlocked()
+    {
+        return unlocked;
+    }
+
+    public virtual void Set_Unlocked(bool newBool)
+    {
+        unlocked = newBool;
     }
 
 	public virtual void Exit()
