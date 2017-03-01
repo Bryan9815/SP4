@@ -17,8 +17,8 @@ public class Reaper : Hero
         Skill_Description = "Throws his scythe forward, dealing damage to all enemies it flies through.";
         Sp = 0;
         unlocked = BoolPrefs.GetBool("Reaper Unlocked", false);
-        level = PlayerPrefs.GetInt("Reaper Level", 1);                   //Reaper's Level
-        exp = PlayerPrefs.GetFloat("Reaper EXP", 0);                     //Reaper's Experience points
+        level = PlayerPrefs.GetInt("Reaper Level", 1);
+        exp = PlayerPrefs.GetFloat("Reaper EXP", 0);                     
 
         if (level == 1)
             CalculateStats();
@@ -170,8 +170,6 @@ public class Reaper : Hero
         tempPos.y += gameObject.GetComponent<Transform>().localScale.y / 2;
         DamageTextManager.GeneratePlayerTakeDmg(tempPos, damagetaken);
 
-        Debug.Log("Ai yaa Reaper got hit....");
-
         if (currHp <= 0)
         {
             isDead = true;
@@ -197,11 +195,6 @@ public class Reaper : Hero
         PlayerPrefs.SetFloat("Reaper Defense", Defense);
         PlayerPrefs.SetFloat("Reaper Evasion", Evasion);
         PlayerPrefs.SetFloat("Reaper Max_EXP", max_exp);
-    }
-
-    public override void SetAttack(int newAtk)
-    {
-        Attack = newAtk;
     }
 
     public override float GetAttack()

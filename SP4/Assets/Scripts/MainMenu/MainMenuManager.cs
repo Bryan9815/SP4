@@ -49,11 +49,11 @@ public class MainMenuManager: MonoBehaviour
 				switch (spawnOnRight)
 				{
 				case 0: 
-					spawnPos = new Vector3 (tempX - Random.Range(5.0f,50.0f), tempY, -1.0f);
+					spawnPos = new Vector3 (tempX - Random.Range(5.0f,10.0f), tempY, -1.0f);
 					break;
 	
 				case 1:
-					spawnPos = new Vector3 (-tempX + Random.Range(5.0f,50.0f), tempY, -1.0f);
+					spawnPos = new Vector3 (-tempX + Random.Range(5.0f,10.0f), tempY, -1.0f);
 					break;
 				}
 				;

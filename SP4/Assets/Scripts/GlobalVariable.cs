@@ -52,7 +52,6 @@ public class GlobalVariable : MonoBehaviour {
     {
         // Player Variables
         PlayerName = PlayerPrefs.GetString("userID", "");
-        PlayerGoldG = PlayerPrefs.GetInt("Gold", 100);
 
 		//set to true and it will run tutorial
 		runTutorial = true;
@@ -85,7 +84,7 @@ public class GlobalVariable : MonoBehaviour {
 
     public static float GetScreenWidth()
     {
-        return screenWidth;
+        return Screen.width;
     }
 
     public static void SetScreenWidth(float newWidth)
@@ -95,7 +94,7 @@ public class GlobalVariable : MonoBehaviour {
 
     public static float GetScreenHeight()
     {
-        return screenHeight;
+        return Screen.height;
     }
 
     public static void SetScreenHeight(float newHeight)
@@ -125,13 +124,12 @@ public class GlobalVariable : MonoBehaviour {
 
     public static void AddPlayerGold(int newGold)
     {
-        PlayerPrefs.SetInt("Gold", PlayerPrefs.GetInt("Gold") + newGold);
+        PlayerPrefs.SetInt("Gold", PlayerPrefs.GetInt("Gold", 100) + newGold);
     }
 
     public static void DecreasePlayerGold(int newGold)
     {
         PlayerPrefs.SetInt("Gold", PlayerPrefs.GetInt("Gold") - newGold);
-        Debug.Log("Gold decreased by " + newGold);
     }
 		
 	public static void SetStageLevel(int newStageLevel)

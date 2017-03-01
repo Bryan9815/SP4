@@ -8,11 +8,15 @@ public class Windows : MonoBehaviour
     public Slider SFX, Music;
     public Button WindowMode_Left, WindowMode_Right, Resolution_Left, Resolution_Right, EraseData, ReturnToMainMenu;
     public Text SFX_Text, Music_Text, WindowMode, Resolution_Text;
+    bool dataErased;
+    string playerName = "";
 
     int windowMode, Resolution;
 	// Use this for initialization
 	void Start () 
     {
+        dataErased = false;
+
         windowMode = PlayerPrefs.GetInt("winMode", 0);
         Resolution = PlayerPrefs.GetInt("Resolution", 0);
         SFX.value = PlayerPrefs.GetFloat("SFX", 100);
@@ -34,6 +38,29 @@ public class Windows : MonoBehaviour
     {
         SFX_Text.text = SFX.value.ToString();
         Music_Text.text = Music.value.ToString();
+
+        if(dataErased)
+        {
+            SFX.interactable = false;
+            Music.interactable = false;
+            WindowMode_Left.interactable = false;
+            WindowMode_Right.interactable = false;
+            Resolution_Left.interactable = false;
+            Resolution_Right.interactable = false;
+            EraseData.interactable = false;
+            ReturnToMainMenu.interactable = false;
+        }
+        else
+        {
+            SFX.interactable = true;
+            Music.interactable = true;
+            WindowMode_Left.interactable = true;
+            WindowMode_Right.interactable = true;
+            Resolution_Left.interactable = true;
+            Resolution_Right.interactable = true;
+            EraseData.interactable = true;
+            ReturnToMainMenu.interactable = true;
+        }
 	}
 
     void UpdateWindow()
@@ -139,13 +166,13 @@ public class Windows : MonoBehaviour
     public void EraseAllData()
     {
         PlayerPrefs.DeleteAll();
-        //PlayerPrefs.SetFloat("ScreenWidth", 800);
-        //PlayerPrefs.SetFloat("ScreenHeight", 600);
         windowMode = PlayerPrefs.GetInt("winMode", 0);
         Resolution = PlayerPrefs.GetInt("Resolution", 0);
         SFX.value = PlayerPrefs.GetFloat("SFX", 100);
         Music.value = PlayerPrefs.GetFloat("Music", 100);
         UpdateWindow();
+
+        dataErased = true;
     }
 
     void BackToMainMenu()
@@ -158,5 +185,38 @@ public class Windows : MonoBehaviour
         PlayerPrefs.SetFloat("ScreenHeight", GlobalVariable.GetScreenHeight());
 
         SceneManager.LoadScene("MainMenu");
+    }
+
+    void OnGUI()
+    {
+        if (dataErased)
+        {
+            float width = Screen.width * 0.3f;  // Make this wider to add more columns
+            float height = Screen.height * 0.3f;
+            GUILayoutOption[] layout = new GUILayoutOption[] { GUILayout.Width(width / 2.8f) };
+
+            Rect r = new Rect((Screen.width / 2) - (width / 2), (Screen.height / 2), width, height * 0.2f);
+            GUILayout.BeginArea(r, new GUIStyle("box"));
+
+            GUILayout.BeginVertical();
+            GUILayout.BeginHorizontal();
+            GUILayout.Label("Enter Your Name: ");
+            this.playerName = GUILayout.TextField(this.playerName, layout);
+
+            if (GUILayout.Button("Ok"))
+            {
+                if (playerName == "")
+                {
+                    GUILayout.Label("Invalid name, please try again.");
+                    return;
+                }
+                PlayerPrefs.SetString("userID", playerName);
+
+                dataErased = false;
+            }
+            GUILayout.EndHorizontal();
+            GUILayout.EndVertical();
+            GUILayout.EndArea();
+        }
     }
 }

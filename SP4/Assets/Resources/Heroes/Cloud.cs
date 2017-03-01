@@ -20,6 +20,7 @@ public class Cloud : Hero
         id = 1;
         ClassName = "Cloud";                                            //Cloud's Class Name
         Sp = 0;                                                         //Cloud's Special Points for ultimate (Sort of)
+        Skill_Description = "Deal extreme damage to the nearest enemy.";
         name = "Cloud";                                                 //Name of Cloud
         unlocked = BoolPrefs.GetBool("Cloud Unlocked", true);
         level = PlayerPrefs.GetInt("Cloud Level", 1);                   //Cloud's Level
@@ -77,7 +78,7 @@ public class Cloud : Hero
     void CalculateStats()
     {
         Hp = level * 10 + 105;                                          //Cloud's Health Points
-        Attack = level * 17.25f + 9;                                    //Cloud's Attack Value
+        Attack = level * 19.25f + 9;                                    //Cloud's Attack Value
         Defense = (level * 14.31f) + (Attack / 100) + 5;                //Cloud's Defense Value
         Evasion = 48 + (((Attack - Defense) / 12));                     //Cloud's Evasion Rate (Maximum of 100% of course)
         max_exp = (500 * level * 2);                                    //Cloud's Experience points needed to level up
@@ -160,8 +161,6 @@ public class Cloud : Hero
 		//tempPos.y += gameObject.GetComponent<Transform> ().localScale.y / 2;
 		DamageTextManager.GeneratePlayerTakeDmg (tempPos, damagetaken);
 
-		Debug.Log ("Ai yaa Cloud got hit....");
-
         if (currHp <= 0)
         {
             isDead = true;
@@ -174,17 +173,10 @@ public class Cloud : Hero
     {
 		animator.SetTrigger("Skill Activated");
 
-        GameObject tempcoll = Instantiate(attackCollider);
-        tempcoll.SetActive(true);
-        foreach (GameObject temp in WaveManager.ListOfMobs)
-        {
-            if (tempcoll.GetComponent<BoxCollider2D>().IsTouching(temp.GetComponent<BoxCollider2D>()))
-            {
-                temp.GetComponent<Mob>().getHit((int)(GetAttack() * 2.0f));
-                currHp += (Attack * 3) * 0.3f;
-            }
-        }
-        Destroy(tempcoll);
+		if (AttackCollide.Mobs_Collided.Count > 0)
+		{
+			AttackCollide.Mobs_Collided [0].getHit ((int)(Attack * 0.4f * level));
+		}
     }
 
     public override void LevelUp()
@@ -199,11 +191,6 @@ public class Cloud : Hero
         PlayerPrefs.SetFloat("Cloud Defense", Defense);
         PlayerPrefs.SetFloat("Cloud Evasion", Evasion);
         PlayerPrefs.SetFloat("Cloud Max_EXP", max_exp);
-    }
-
-    public override void SetAttack(int newAtk)
-    {
-        Attack = newAtk;
     }
 
     public override float GetAttack()
