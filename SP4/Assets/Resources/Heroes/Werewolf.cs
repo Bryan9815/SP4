@@ -168,8 +168,6 @@ public class Werewolf : Hero {
 		tempPos.y += gameObject.GetComponent<Transform> ().localScale.y / 2;
 		DamageTextManager.GeneratePlayerTakeDmg (tempPos, damagetaken);
 
-		Debug.Log ("Ai yaa Werewolf got hit....");
-
         if (currHp <= 0)
         {
 			isDead = true;

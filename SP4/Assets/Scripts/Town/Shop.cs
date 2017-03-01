@@ -18,7 +18,6 @@ public class Shop : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        GlobalVariable.GetHero(4).GetComponent<Hero>().Set_Unlocked(false);
         SpecificCost = PlayerPrefs.GetInt("Cost of Hero", 1000);    
         buyButton.onClick.AddListener(delegate
         {

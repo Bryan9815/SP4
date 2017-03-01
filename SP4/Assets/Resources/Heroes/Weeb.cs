@@ -20,6 +20,7 @@ public class Weeb : Hero
         id = 2;
         ClassName = "Weeb";                                             //Weeb's Class Name
         Sp = 0;                                                       //Weeb's Special Points for ultimate (Sort of)
+        Skill_Description = "Launches an attack that scales off both the Attack & Defense stats.";
         //hero_img = ;                                                  //Weeb's Sprite I guess?
         name = "Weeb";                                                  //Name of Weeb
         unlocked = BoolPrefs.GetBool("Weeb Unlocked", true);
@@ -167,8 +168,6 @@ public class Weeb : Hero
 		Vector3 tempPos = gameObject.transform.position;
 		tempPos.y += gameObject.GetComponent<Transform> ().localScale.y / 2;
 		DamageTextManager.GeneratePlayerTakeDmg (tempPos, damagetaken);
-
-		Debug.Log ("Ai yaa Weeb got hit....");
 
         if (currHp <= 0)
         {

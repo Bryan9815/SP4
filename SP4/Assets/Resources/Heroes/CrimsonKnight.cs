@@ -17,7 +17,7 @@ public class CrimsonKnight : Hero {
 		CalculateStats ();
 		currHp = Hp;
 		Sp = 0;
-		ClassName = "CrimsonKnight";
+		ClassName = "Crimson Knight";
 		level = 1;
 		exp = 0;
 		//Weapon = Resources.Load<BaseWeapon>("Equipment/Weapons/TestWeapon1");

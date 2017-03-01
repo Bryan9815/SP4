@@ -20,6 +20,7 @@ public class Cloud : Hero
         id = 1;
         ClassName = "Cloud";                                            //Cloud's Class Name
         Sp = 0;                                                         //Cloud's Special Points for ultimate (Sort of)
+        Skill_Description = "Hits the enemies with a moderately powerful attack that recovers health.";
         name = "Cloud";                                                 //Name of Cloud
         unlocked = BoolPrefs.GetBool("Cloud Unlocked", true);
         level = PlayerPrefs.GetInt("Cloud Level", 1);                   //Cloud's Level
@@ -159,8 +160,6 @@ public class Cloud : Hero
 		Vector3 tempPos = gameObject.transform.position;
 		//tempPos.y += gameObject.GetComponent<Transform> ().localScale.y / 2;
 		DamageTextManager.GeneratePlayerTakeDmg (tempPos, damagetaken);
-
-		Debug.Log ("Ai yaa Cloud got hit....");
 
         if (currHp <= 0)
         {
