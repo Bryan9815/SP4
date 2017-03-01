@@ -63,7 +63,7 @@ public class HeroSelector : MonoBehaviour
         }
         heroSprite.sprite = GlobalVariable.GetHero(HeroID).GetComponent<Hero>().GetSprite();
 
-        if (!Active)
+        if (!Active && !Shop && !Upgrade)
         {
             heroStatDisplay.text = GlobalVariable.PrintHeroStats(HeroID);
         }

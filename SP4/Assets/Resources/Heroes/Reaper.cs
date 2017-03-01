@@ -17,8 +17,8 @@ public class Reaper : Hero
         Skill_Description = "Throws his scythe forward, dealing damage to all enemies it flies through.";
         Sp = 0;
         unlocked = BoolPrefs.GetBool("Reaper Unlocked", false);
-        level = PlayerPrefs.GetInt("Reaper Level", 1);                   //Reaper's Level
-        exp = PlayerPrefs.GetFloat("Reaper EXP", 0);                     //Reaper's Experience points
+        level = PlayerPrefs.GetInt("Reaper Level", 1);
+        exp = PlayerPrefs.GetFloat("Reaper EXP", 0);                     
 
         if (level == 1)
             CalculateStats();

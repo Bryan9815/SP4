@@ -20,7 +20,7 @@ public class Cloud : Hero
         id = 1;
         ClassName = "Cloud";                                            //Cloud's Class Name
         Sp = 0;                                                         //Cloud's Special Points for ultimate (Sort of)
-        Skill_Description = "Hits the enemies with a moderately powerful attack that recovers health.";
+        Skill_Description = "Deal extreme damage to the nearest enemy.";
         name = "Cloud";                                                 //Name of Cloud
         unlocked = BoolPrefs.GetBool("Cloud Unlocked", true);
         level = PlayerPrefs.GetInt("Cloud Level", 1);                   //Cloud's Level
@@ -78,7 +78,7 @@ public class Cloud : Hero
     void CalculateStats()
     {
         Hp = level * 10 + 105;                                          //Cloud's Health Points
-        Attack = level * 17.25f + 9;                                    //Cloud's Attack Value
+        Attack = level * 19.25f + 9;                                    //Cloud's Attack Value
         Defense = (level * 14.31f) + (Attack / 100) + 5;                //Cloud's Defense Value
         Evasion = 48 + (((Attack - Defense) / 12));                     //Cloud's Evasion Rate (Maximum of 100% of course)
         max_exp = (500 * level * 2);                                    //Cloud's Experience points needed to level up

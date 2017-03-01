@@ -119,7 +119,7 @@ public class Hero : MonoBehaviour {
 		}
 	}
 
-	public virtual void RecoverHp(int recoveredHp)
+	public virtual void RecoverHp(float recoveredHp)
 	{
 		currHp += recoveredHp;
 		if (currHp > Hp)
