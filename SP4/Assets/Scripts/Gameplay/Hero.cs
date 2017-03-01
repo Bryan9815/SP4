@@ -111,6 +111,8 @@ public class Hero : MonoBehaviour {
 
 	public virtual void IncreaseExp(float exp_received)
 	{
+		if (isDead)
+			return;
 		exp += exp_received;
 		if (exp >= max_exp) 
 		{
@@ -121,6 +123,8 @@ public class Hero : MonoBehaviour {
 
 	public virtual void RecoverHp(float recoveredHp)
 	{
+		if (isDead)
+			return;
 		currHp += recoveredHp;
 		if (currHp > Hp)
 		{
@@ -128,7 +132,7 @@ public class Hero : MonoBehaviour {
 		}
 	}
 
-	public virtual void SetAttack(int newAtk)
+	public virtual void SetAttack(float newAtk)
 	{
 		Attack = newAtk;
 	}

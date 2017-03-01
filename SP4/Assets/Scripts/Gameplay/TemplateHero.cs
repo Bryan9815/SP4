@@ -177,11 +177,6 @@ public class TemplateHero : Hero {
 		}
 	}
 
-	public override void SetAttack(int newAtk)
-	{
-		Attack = newAtk;
-	}
-
 	public override float GetAttack()
 	{
 		return Attack;

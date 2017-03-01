@@ -6,7 +6,8 @@ public class Weeb : Hero
 {
     static Weeb _instance;
     //Animator anim;
-
+	float AttackIncrease, AttackIncreaseDuration,AttackIncreaseTimer;
+	float AttackIncreasePercentage;
     enum States // for animation
     {
         Idle,
@@ -42,6 +43,10 @@ public class Weeb : Hero
 		InvincibilityDuration = 3f;
         currHp = Hp;
         animator = gameObject.gameObject.GetComponent<Animator>();
+		AttackIncrease = 0;
+		AttackIncreaseDuration = 5f;
+		AttackIncreaseTimer = 0;
+		AttackIncreasePercentage = 0.25f;
     }
 
     // Update is called once per frame
@@ -74,13 +79,23 @@ public class Weeb : Hero
 			if (!GetComponent<SpriteRenderer> ().enabled)
 				GetComponent<SpriteRenderer> ().enabled = true;
 		}
+
+		if (AttackIncreaseTimer > 0f)
+		{
+			AttackIncreaseTimer -= Time.deltaTime;
+			if (AttackIncreaseTimer <= 0f)
+			{
+				AttackIncreaseTimer = 0f;
+				EndOfAttackPartyBuff ();
+			}
+		}
     }
 
     void CalculateStats()
     {
         Hp = level * 10 + 81;                                           //Weeb's Health Points
-        Attack = level * 20.775f + 9;                          //Weeb's Attack Value
-        Defense = (level * 6.4f) + (Attack / 100) + 5;        //Weeb's Defense Value
+        Attack = level * 20.775f + 9;                          			//Weeb's Attack Value
+        Defense = (level * 6.4f) + (Attack / 100) + 5;        			//Weeb's Defense Value
         Evasion = 48 + ((Defense / 12));                                //Weeb's Evasion Rate (Maximum of 100% of course)
         max_exp = (level * 2 * 500);                                    //Weeb's Experience points needed to level up  
     }
@@ -181,17 +196,8 @@ public class Weeb : Hero
     {
 		animator.SetTrigger("Skill Activated");
 
-        GameObject tempcoll = Instantiate(attackCollider);
-        tempcoll.SetActive(true);
-        foreach (GameObject temp in WaveManager.ListOfMobs)
-        {
-            if (tempcoll.GetComponent<BoxCollider2D>().IsTouching(temp.GetComponent<BoxCollider2D>()))
-            {
-                temp.GetComponent<Mob>().getHit((int)((GetAttack() * 5.0f) + (GetDefense() * 2.0f)));
-                currHp += (Attack * 3) * 0.3f;
-            }
-        }
-        Destroy(tempcoll);
+		AttackIncreaseTimer = AttackIncreaseDuration;
+		BuffPartyAttack ();
     }
 
     public override void LevelUp()
@@ -206,11 +212,6 @@ public class Weeb : Hero
         PlayerPrefs.SetFloat("Weeb Defense", Defense);
         PlayerPrefs.SetFloat("Weeb Evasion", Evasion);
         PlayerPrefs.SetFloat("Weeb Max_EXP", max_exp);
-    }
-
-    public override void SetAttack(int newAtk)
-    {
-        Attack = newAtk;
     }
 
     public override float GetAttack()
@@ -268,4 +269,32 @@ public class Weeb : Hero
             return _instance;
 
     }
+
+	void BuffPartyAttack()
+	{
+		AttackIncrease = AttackIncreasePercentage * Attack;
+
+		float temp1 = HeroManager.List_ofHeroes [0].GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().GetAttack () + AttackIncrease;
+		HeroManager.List_ofHeroes [0].GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().SetAttack (temp1);
+
+		temp1 = HeroManager.List_ofHeroes [1].GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().GetAttack () + AttackIncrease;
+		HeroManager.List_ofHeroes [1].GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().SetAttack (temp1);
+
+		temp1 = HeroManager.List_ofHeroes [2].GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().GetAttack () + AttackIncrease;
+		HeroManager.List_ofHeroes [2].GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().SetAttack (temp1);
+	}
+
+	void EndOfAttackPartyBuff()
+	{
+		float temp1 = HeroManager.List_ofHeroes [0].GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().GetAttack () - AttackIncrease;
+		HeroManager.List_ofHeroes [0].GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().SetAttack (temp1);
+
+		temp1 = HeroManager.List_ofHeroes [1].GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().GetAttack () - AttackIncrease;
+		HeroManager.List_ofHeroes [1].GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().SetAttack (temp1);
+
+		temp1 = HeroManager.List_ofHeroes [2].GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().GetAttack () - AttackIncrease;
+		HeroManager.List_ofHeroes [2].GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().SetAttack (temp1);
+
+		AttackIncrease = 0f;
+	}
 }

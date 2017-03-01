@@ -193,11 +193,6 @@ public class Brawler : Hero {
 		}
 	}
 
-	public override void SetAttack(int newAtk)
-	{
-		Attack = newAtk;
-	}
-
 	public override float GetAttack()
 	{
 		return Attack;

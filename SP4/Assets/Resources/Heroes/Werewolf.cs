@@ -86,7 +86,7 @@ public class Werewolf : Hero {
 			{
 				InvincibilityTimer = 0;
 				GetComponent<SpriteRenderer> ().enabled = true;
-			}				
+			}
 		}
 		else 
 		{
@@ -209,11 +209,6 @@ public class Werewolf : Hero {
         PlayerPrefs.SetFloat("Werewolf Defense", Defense);
         PlayerPrefs.SetFloat("Werewolf Evasion", Evasion);
         PlayerPrefs.SetFloat("Werewolf Max_EXP", max_exp);
-	}
-
-	public override void SetAttack(int newAtk)
-	{
-		Attack = newAtk;
 	}
 
 	public override float GetAttack()

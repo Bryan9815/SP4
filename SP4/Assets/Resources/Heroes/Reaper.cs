@@ -197,11 +197,6 @@ public class Reaper : Hero
         PlayerPrefs.SetFloat("Reaper Max_EXP", max_exp);
     }
 
-    public override void SetAttack(int newAtk)
-    {
-        Attack = newAtk;
-    }
-
     public override float GetAttack()
     {
         return Attack;
