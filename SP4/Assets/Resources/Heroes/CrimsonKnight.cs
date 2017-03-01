@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class CrimsonKnight : Hero {
 
 	float SpecialAttackTimer, SpecialAttackDuration;
-	float DefenseIncreasePercentage;
+	float DefenseIncreasePercentage, DefenseIncreaseAmount;
 
 	protected override void Awake()
 	{
