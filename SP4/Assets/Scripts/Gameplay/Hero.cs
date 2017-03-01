@@ -17,6 +17,7 @@ public class Hero : MonoBehaviour {
 	protected float InvincibilityTimer;
 	protected float InvincibilityDuration;
 	protected bool unlocked;
+    protected string Skill_Description;
 	protected BaseWeapon Weapon;
 	protected Animator animator;
 	public GameObject attackCollider;
@@ -243,6 +244,11 @@ public class Hero : MonoBehaviour {
     public virtual void Set_Unlocked(bool newBool)
     {
         unlocked = newBool;
+    }
+
+    public virtual string Get_Skill_Description()
+    {
+        return Skill_Description;
     }
 
 	public virtual void Exit()

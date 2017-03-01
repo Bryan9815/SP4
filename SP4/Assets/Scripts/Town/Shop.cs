@@ -18,7 +18,8 @@ public class Shop : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        SpecificCost = 1000;    
+        GlobalVariable.GetHero(4).GetComponent<Hero>().Set_Unlocked(false);
+        SpecificCost = PlayerPrefs.GetInt("Cost of Hero", 1000);    
         buyButton.onClick.AddListener(delegate
         {
             GlobalVariable.DecreasePlayerGold(SpecificCost);
@@ -28,7 +29,8 @@ public class Shop : MonoBehaviour
             tungle.interactable = false;
             buyButton.interactable = false;
             tungle = null;
-            SpecificCost += 50;
+            SpecificCost += 100;
+            PlayerPrefs.SetInt("Cost of Hero", SpecificCost);
         });
 	}
 	
