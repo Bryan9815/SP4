@@ -146,7 +146,7 @@ public class TemplateHero : Hero {
 		//calculate how damage is taken here
 		InvincibilityTimer += InvincibilityDuration;
 		animator.SetTrigger ("isHit");
-		Hp -= damagetaken;
+		currHp -= damagetaken;
 		if (currHp <= 0)
 		{
 			isDead = true;

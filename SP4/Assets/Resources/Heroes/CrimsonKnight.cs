@@ -27,7 +27,8 @@ public class CrimsonKnight : Hero {
 		isDead = false;
 		SpecialAttackTimer = 0.0f;
 		SpecialAttackDuration = 3.0f;
-		DefenseIncreasePercentage = 0.2f; //20% if you couldn't tell
+		DefenseIncreasePercentage = 0.5f; //20% if you couldn't tell
+		DefenseIncreaseAmount = 0; // used to store amount of defense increased
 	}
 
 	void CalculateStats()
@@ -50,6 +51,8 @@ public class CrimsonKnight : Hero {
 			Sp -= 100;
 			SpecialAbility ();
 		}
+
+
 		if (InvincibilityTimer > 0)
 		{
 			InvincibilityTimer -= Time.deltaTime;
@@ -67,6 +70,17 @@ public class CrimsonKnight : Hero {
 		{
 			if (!GetComponent<SpriteRenderer> ().enabled)
 				GetComponent<SpriteRenderer> ().enabled = true;
+		}
+
+		if (SpecialAttackTimer > 0)
+		{
+			SpecialAttackTimer -= Time.deltaTime;
+			if (SpecialAttackTimer <= 0)
+			{
+				SpecialAttackTimer = 0f;
+				Defense -= DefenseIncreaseAmount;
+				DefenseIncreaseAmount = 0;
+			}
 		}
 	}
 
@@ -112,7 +126,7 @@ public class CrimsonKnight : Hero {
 
 		foreach(Mob temp in AttackCollide.Mobs_Collided)
 		{
-			temp.getHit ((int) (Attack * 1.5f));
+			temp.getHit ((int) (Attack * 1.3f));
 		}
 	}
 
@@ -123,7 +137,7 @@ public class CrimsonKnight : Hero {
 
 		foreach(Mob temp in AttackCollide.Mobs_Collided)
 		{
-			temp.getHit ((int) (Attack * 2f));
+			temp.getHit ((int) (Attack * 1.8f));
 		}
 	}
 
@@ -157,6 +171,8 @@ public class CrimsonKnight : Hero {
 	{
 		animator.SetTrigger ("Skill Activated");
 		SpecialAttackTimer = SpecialAttackDuration;
+		DefenseIncreaseAmount = DefenseIncreasePercentage * Defense;
+		Defense += DefenseIncreaseAmount;
 	}
 
 	public override void LevelUp()

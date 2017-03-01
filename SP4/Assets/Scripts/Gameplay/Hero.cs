@@ -118,6 +118,15 @@ public class Hero : MonoBehaviour {
 		}
 	}
 
+	public virtual void RecoverHp(int recoveredHp)
+	{
+		currHp += recoveredHp;
+		if (currHp > Hp)
+		{
+			currHp = Hp;
+		}
+	}
+
 	public virtual void SetAttack(int newAtk)
 	{
 		Attack = newAtk;
