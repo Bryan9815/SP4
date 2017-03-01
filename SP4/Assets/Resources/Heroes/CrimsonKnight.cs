@@ -285,6 +285,6 @@ public class CrimsonKnight : Hero {
 
 	public override Hero Get_Instance()
 	{
-		return new TemplateHero ();
+		return new CrimsonKnight ();
 	}
 }

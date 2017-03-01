@@ -6,7 +6,7 @@ public class Werewolf : Hero {
 
 	static Werewolf _instance;
 	//Animator animator;
-
+	float Heal_Interval, Heal_Timer,percenthp_heal;
 	// Use this for initialization
 	protected override void Start () {
 		currHp = Hp;
@@ -31,8 +31,11 @@ public class Werewolf : Hero {
         currHp = Hp;
 		isDead = false;
 		animator = GetComponent<Animator> ();
-		InvincibilityTimer = 0;
+		InvincibilityTimer = 0f;
 		InvincibilityDuration = 1f;
+		Heal_Interval = 0.5f;
+		Heal_Timer = 0f;
+		percenthp_heal = 0.1f;
 	}
 
 	void CalculateStats()
@@ -59,6 +62,17 @@ public class Werewolf : Hero {
 			float temp = animator.GetFloat ("Howl Timer");
 			temp += Time.deltaTime;
 			animator.SetFloat ("Howl Timer", temp);
+
+			Heal_Timer += Time.deltaTime;
+			if (Heal_Timer >= Heal_Interval)
+			{
+				Heal_Timer = 0f;
+				HealPartyHP (percenthp_heal);
+			}
+		}
+		else
+		{
+			Heal_Timer = 0f;
 		}
 		if (InvincibilityTimer > 0)
 		{
@@ -181,6 +195,7 @@ public class Werewolf : Hero {
 	protected override void SpecialAbility()
 	{
 		animator.SetTrigger ("Skill Activated");
+
 	}
 
 	public override void LevelUp()
@@ -265,5 +280,13 @@ public class Werewolf : Hero {
 		else
 			return _instance;
 		
+	}
+
+	void HealPartyHP(float percentage_of_hp)
+	{
+		float heal = percentage_of_hp * Hp;
+		HeroManager.List_ofHeroes [0].GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().RecoverHp (heal);
+		HeroManager.List_ofHeroes [1].GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().RecoverHp (heal);
+		HeroManager.List_ofHeroes [2].GetComponent<HeroHolder> ().Get_GameObject ().GetComponent<Hero> ().RecoverHp (heal);
 	}
 }

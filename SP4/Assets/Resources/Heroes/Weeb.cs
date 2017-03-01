@@ -78,8 +78,8 @@ public class Weeb : Hero
     void CalculateStats()
     {
         Hp = level * 10 + 81;                                           //Weeb's Health Points
-        Attack = Attack = level * 20.775f + 9;                          //Weeb's Attack Value
-        Defense = Defense = (level * 6.4f) + (Attack / 100) + 5;        //Weeb's Defense Value
+        Attack = level * 20.775f + 9;                          //Weeb's Attack Value
+        Defense = (level * 6.4f) + (Attack / 100) + 5;        //Weeb's Defense Value
         Evasion = 48 + ((Defense / 12));                                //Weeb's Evasion Rate (Maximum of 100% of course)
         max_exp = (level * 2 * 500);                                    //Weeb's Experience points needed to level up  
     }

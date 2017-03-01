@@ -77,7 +77,7 @@ public class Cloud : Hero
     void CalculateStats()
     {
         Hp = level * 10 + 105;                                          //Cloud's Health Points
-        Attack = level * 17.25f + 9;                                    //Cloud's Attack Value
+        Attack = level * 19.25f + 9;                                    //Cloud's Attack Value
         Defense = (level * 14.31f) + (Attack / 100) + 5;                //Cloud's Defense Value
         Evasion = 48 + (((Attack - Defense) / 12));                     //Cloud's Evasion Rate (Maximum of 100% of course)
         max_exp = (500 * level * 2);                                    //Cloud's Experience points needed to level up
