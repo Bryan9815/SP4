@@ -132,7 +132,7 @@ public class Hero : MonoBehaviour {
 		}
 	}
 
-	public virtual void SetAttack(int newAtk)
+	public virtual void SetAttack(float newAtk)
 	{
 		Attack = newAtk;
 	}

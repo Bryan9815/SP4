@@ -14,21 +14,34 @@ public class Brawler : Hero {
 		currHp = Hp;
 		Sp = 0;
 		ClassName = "Brawler";
-		level = 1;
-		exp = 0;
+        name = "Brawler";
+        Skill_Description = "Does high damage with an uppercut.";
+        unlocked = BoolPrefs.GetBool("Brawler Unlocked", false);
+        level = PlayerPrefs.GetInt("Brawler Level", 1);
+        exp = PlayerPrefs.GetFloat("Brawler EXP", 0);                     
+
 		//Weapon = Resources.Load<BaseWeapon>("Equipment/Weapons/TestWeapon1");
 		animator = GetComponent<Animator>();
 		InvincibilityTimer = 0;
 		InvincibilityDuration = 1f;
 		isDead = false;
-		CalculateStats ();
+        if (level == 1)
+            CalculateStats();
+        else
+        {
+            Hp = PlayerPrefs.GetFloat("Brawler HP");
+            Attack = PlayerPrefs.GetFloat("Brawler Attack");
+            Defense = PlayerPrefs.GetFloat("Brawler Defense");
+            Evasion = PlayerPrefs.GetFloat("Brawler Evasion");
+            max_exp = PlayerPrefs.GetFloat("Brawler Max_EXP");
+        }
 	}
 
 	void CalculateStats()
 	{	
 		//Max
 		Hp = 100 * level * 1.1f;					//5500
-		Attack = 13 * level * 0.8;					//520
+		Attack = 13 * level * 0.8f;					//520
 		Defense = 11 * level * 1.2f;				//660
 	Evasion = (Defense / 1000) * level * 0.85f;		//28.05
 		max_exp = 500 * level * 2;					//50k
@@ -84,6 +97,7 @@ public class Brawler : Hero {
 			ThreeChain();
 			break;
 		}
+        PlayerPrefs.SetFloat("Brawler EXP", exp);
 	}
 
 	// Chain attacks
@@ -160,6 +174,13 @@ public class Brawler : Hero {
 		level += 1;
 		exp = 0;
 		CalculateStats ();
+
+        PlayerPrefs.SetInt("Brawler Level", level);
+        PlayerPrefs.SetFloat("Brawler HP", Hp);
+        PlayerPrefs.SetFloat("Brawler Attack", Attack);
+        PlayerPrefs.SetFloat("Brawler Defense", Defense);
+        PlayerPrefs.SetFloat("Brawler Evasion", Evasion);
+        PlayerPrefs.SetFloat("Brawler Max_EXP", max_exp);
 	}
 
 	public override void IncreaseExp(float exp_received)
@@ -170,11 +191,6 @@ public class Brawler : Hero {
 			float temp = exp - max_exp;
 			LevelUp ();
 		}
-	}
-
-	public override void SetAttack(int newAtk)
-	{
-		Attack = newAtk;
 	}
 
 	public override float GetAttack()
@@ -190,12 +206,6 @@ public class Brawler : Hero {
 	public override float GetDefense()
 	{
 		return Defense;
-	}
-
-	public override void SetImage(Sprite newHero_img)
-	{
-		gameObject.GetComponent<Image> ().sprite = newHero_img;
-		//hero_img = newHero_img;
 	}
 
 	public override Sprite GetSprite()
@@ -262,6 +272,12 @@ public class Brawler : Hero {
 	{
 		return this;
 	}
+
+    public override void Set_Unlocked(bool newBool)
+    {
+        unlocked = newBool;
+        BoolPrefs.SetBool("Brawler Unlocked", unlocked);
+    }
 
 	public override Hero Get_Instance()
 	{

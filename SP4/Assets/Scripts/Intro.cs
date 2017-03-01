@@ -54,6 +54,11 @@ public class Intro : MonoBehaviour
 
             if (GUILayout.Button("Ok"))
             {
+                if (playerName == "")
+                {
+                    GUILayout.Label("Invalid name, please try again.");
+                    return;
+                }
                 PlayerPrefs.SetString("userID", playerName);
 
                 HavePlayerName = true;

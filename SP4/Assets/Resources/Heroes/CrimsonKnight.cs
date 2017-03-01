@@ -14,12 +14,14 @@ public class CrimsonKnight : Hero {
 	// Use this for initialization
 	protected override void Start () {
 		animator = GetComponent<Animator> ();
-		CalculateStats ();
 		currHp = Hp;
 		Sp = 0;
-		ClassName = "CrimsonKnight";
-		level = 1;
-		exp = 0;
+        ClassName = "Crimson Knight";
+        name = "Crimson Knight";
+        Skill_Description = "Increases his Defense stat by 50% for 3 seconds.";
+        unlocked = BoolPrefs.GetBool("Crimson Knight Unlocked", false);
+        level = PlayerPrefs.GetInt("Crimson Knight Level", 1);
+        exp = PlayerPrefs.GetFloat("Crimson Knight EXP", 0);
 		//Weapon = Resources.Load<BaseWeapon>("Equipment/Weapons/TestWeapon1");
 		animator = GetComponent<Animator>();
 		InvincibilityTimer = 0;
@@ -29,6 +31,16 @@ public class CrimsonKnight : Hero {
 		SpecialAttackDuration = 3.0f;
 		DefenseIncreasePercentage = 0.5f; //50% if you couldn't tell
 		DefenseIncreaseAmount = 0; // used to store amount of defense increased
+        if (level == 1)
+            CalculateStats();
+        else
+        {
+            Hp = PlayerPrefs.GetFloat("Crimson Knight HP");
+            Attack = PlayerPrefs.GetFloat("Crimson Knight Attack");
+            Defense = PlayerPrefs.GetFloat("Crimson Knight Defense");
+            Evasion = PlayerPrefs.GetFloat("Crimson Knight Evasion");
+            max_exp = PlayerPrefs.GetFloat("Crimson Knight Max_EXP");
+        }
 	}
 
 	void CalculateStats()
@@ -105,6 +117,7 @@ public class CrimsonKnight : Hero {
 			ThreeChain();
 			break;
 		}
+        PlayerPrefs.SetFloat("Crimson_Knight EXP", exp);
 	}
 
 	// Chain attacks
@@ -179,7 +192,14 @@ public class CrimsonKnight : Hero {
 	{
 		level += 1;
 		exp = 0;
-		CalculateStats ();
+        CalculateStats();
+
+        PlayerPrefs.SetInt("Crimson Knight Level", level);
+        PlayerPrefs.SetFloat("Crimson Knight HP", Hp);
+        PlayerPrefs.SetFloat("Crimson Knight Attack", Attack);
+        PlayerPrefs.SetFloat("Crimson Knight Defense", Defense);
+        PlayerPrefs.SetFloat("Crimson Knight Evasion", Evasion);
+        PlayerPrefs.SetFloat("Crimson Knight Max_EXP", max_exp);
 	}
 
 	public override void IncreaseExp(float exp_received)
@@ -190,11 +210,6 @@ public class CrimsonKnight : Hero {
 			float temp = exp - max_exp;
 			LevelUp ();
 		}
-	}
-
-	public override void SetAttack(int newAtk)
-	{
-		Attack = newAtk;
 	}
 
 	public override float GetAttack()
@@ -282,6 +297,12 @@ public class CrimsonKnight : Hero {
 	{
 		return this;
 	}
+
+    public override void Set_Unlocked(bool newBool)
+    {
+        unlocked = newBool;
+        BoolPrefs.SetBool("Crimson Knight Unlocked", unlocked);
+    }
 
 	public override Hero Get_Instance()
 	{

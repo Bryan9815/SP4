@@ -20,6 +20,7 @@ public class Cloud : Hero
         id = 1;
         ClassName = "Cloud";                                            //Cloud's Class Name
         Sp = 0;                                                         //Cloud's Special Points for ultimate (Sort of)
+        Skill_Description = "Deal extreme damage to the nearest enemy.";
         name = "Cloud";                                                 //Name of Cloud
         unlocked = BoolPrefs.GetBool("Cloud Unlocked", true);
         level = PlayerPrefs.GetInt("Cloud Level", 1);                   //Cloud's Level
@@ -160,8 +161,6 @@ public class Cloud : Hero
 		//tempPos.y += gameObject.GetComponent<Transform> ().localScale.y / 2;
 		DamageTextManager.GeneratePlayerTakeDmg (tempPos, damagetaken);
 
-		Debug.Log ("Ai yaa Cloud got hit....");
-
         if (currHp <= 0)
         {
             isDead = true;
@@ -192,11 +191,6 @@ public class Cloud : Hero
         PlayerPrefs.SetFloat("Cloud Defense", Defense);
         PlayerPrefs.SetFloat("Cloud Evasion", Evasion);
         PlayerPrefs.SetFloat("Cloud Max_EXP", max_exp);
-    }
-
-    public override void SetAttack(int newAtk)
-    {
-        Attack = newAtk;
     }
 
     public override float GetAttack()

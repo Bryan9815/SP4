@@ -14,6 +14,7 @@ public class Werewolf : Hero {
 		ClassName = "Werewolf";
         name = "Werewolf";
         Sp = 0;
+        Skill_Description = "Heals the entire party in intervals over 3 seconds.";
         unlocked = BoolPrefs.GetBool("Werewolf Unlocked", true);
         level = PlayerPrefs.GetInt("Werewolf Level", 1);                   //Werewolf's Level
         exp = PlayerPrefs.GetFloat("Werewolf EXP", 0);                     //Werewolf's Experience points
@@ -182,8 +183,6 @@ public class Werewolf : Hero {
 		tempPos.y += gameObject.GetComponent<Transform> ().localScale.y / 2;
 		DamageTextManager.GeneratePlayerTakeDmg (tempPos, damagetaken);
 
-		Debug.Log ("Ai yaa Werewolf got hit....");
-
         if (currHp <= 0)
         {
 			isDead = true;
@@ -210,11 +209,6 @@ public class Werewolf : Hero {
         PlayerPrefs.SetFloat("Werewolf Defense", Defense);
         PlayerPrefs.SetFloat("Werewolf Evasion", Evasion);
         PlayerPrefs.SetFloat("Werewolf Max_EXP", max_exp);
-	}
-
-	public override void SetAttack(int newAtk)
-	{
-		Attack = newAtk;
 	}
 
 	public override float GetAttack()
