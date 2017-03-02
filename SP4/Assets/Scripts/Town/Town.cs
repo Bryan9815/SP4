@@ -21,17 +21,14 @@ public class Town : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-<<<<<<< HEAD
         ThatAudioSource.volume = PlayerPrefs.GetFloat("Music") / 100;
         enterMenus.volume = PlayerPrefs.GetFloat("SFX") / 100;
-=======
         if (!SeenTutorial)
         {
             SceneManager.LoadScene("TownTutorial");
         }
 
         ThatAudioSource.volume = PlayerPrefs.GetFloat("Music")/100;
->>>>>>> e01ef0603a30481c0283a5281407ab99fc41d124
         if (toShopB)
         {
             timer -= Time.deltaTime;
