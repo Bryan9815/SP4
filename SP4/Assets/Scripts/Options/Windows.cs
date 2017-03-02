@@ -10,7 +10,7 @@ public class Windows : MonoBehaviour
     public Text SFX_Text, Music_Text, WindowMode, Resolution_Text;
     bool dataErased;
     string playerName = "";
-
+	public GameObject Memes;
     int windowMode, Resolution;
 	// Use this for initialization
 	void Start () 
@@ -31,6 +31,8 @@ public class Windows : MonoBehaviour
         Resolution_Right.onClick.AddListener(delegate { if (Resolution < 5)Resolution++; UpdateWindow(); });
         EraseData.onClick.AddListener(delegate { EraseAllData(); });
         ReturnToMainMenu.onClick.AddListener(delegate { BackToMainMenu(); });
+
+		Memes.SetActive (true);
 	}
 	
 	// Update is called once per frame
@@ -65,6 +67,7 @@ public class Windows : MonoBehaviour
 
     void UpdateWindow()
     {
+		Memes.GetComponent<ResImage> ().SetResImage (Resolution);
         if(Resolution == 0)
         {
             Resolution_Text.text = "   800 x 600";
