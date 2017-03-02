@@ -48,11 +48,7 @@ public class BG_Collision : MonoBehaviour {
 
     public void GoToOptions()
     {
-#if UNITY_ANDROID
-        SceneManager.LoadScene("Options_Mobile");
-#else
         SceneManager.LoadScene("Options_Window");
-#endif
     }
 
     public void GoToHighScore()
