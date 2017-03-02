@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Town : MonoBehaviour {
+    bool SeenTutorial;
     bool started = false;
     public Canvas displayMode;
     bool toShopB = false, toCharSelectB = false, toEndlessB = false, toTutorial = false;
@@ -12,6 +13,7 @@ public class Town : MonoBehaviour {
 	// Use this for initialization
 	void Awake ()
     {
+        SeenTutorial = BoolPrefs.GetBool("Seen Tutorial", false);
         ThatAudioSource = GameObject.Find("TownMusic").GetComponent<AudioSource>();
         enterMenus = GameObject.Find("EnterMenus").GetComponent<AudioSource>();
 	}
@@ -19,8 +21,17 @@ public class Town : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+<<<<<<< HEAD
         ThatAudioSource.volume = PlayerPrefs.GetFloat("Music") / 100;
         enterMenus.volume = PlayerPrefs.GetFloat("SFX") / 100;
+=======
+        if (!SeenTutorial)
+        {
+            SceneManager.LoadScene("TownTutorial");
+        }
+
+        ThatAudioSource.volume = PlayerPrefs.GetFloat("Music")/100;
+>>>>>>> e01ef0603a30481c0283a5281407ab99fc41d124
         if (toShopB)
         {
             timer -= Time.deltaTime;

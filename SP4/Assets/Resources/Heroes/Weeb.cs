@@ -21,7 +21,7 @@ public class Weeb : Hero
         id = 2;
         ClassName = "Weeb";                                             //Weeb's Class Name
         Sp = 0;                                                       //Weeb's Special Points for ultimate (Sort of)
-        Skill_Description = "Launches an attack that scales off both the Attack & Defense stats.";
+        Skill_Description = "Boost party attack by 25% of his own attack.";
         //hero_img = ;                                                  //Weeb's Sprite I guess?
         name = "Weeb";                                                  //Name of Weeb
         unlocked = BoolPrefs.GetBool("Weeb Unlocked", true);

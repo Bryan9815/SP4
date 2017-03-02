@@ -11,7 +11,6 @@ public class Brawler : Hero {
 	// Use this for initialization
 	protected override void Start () {
 		animator = GetComponent<Animator> ();
-		currHp = Hp;
 		Sp = 0;
 		ClassName = "Brawler";
         name = "Brawler";
@@ -35,7 +34,8 @@ public class Brawler : Hero {
             Evasion = PlayerPrefs.GetFloat("Brawler Evasion");
             max_exp = PlayerPrefs.GetFloat("Brawler Max_EXP");
         }
-	}
+        currHp = Hp;
+    }
 
 	void CalculateStats()
 	{	

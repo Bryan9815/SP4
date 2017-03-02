@@ -21,6 +21,7 @@ public class BG_Collision : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+<<<<<<< HEAD
 		  #if UNITY_ANDROID
 		   Touch myTouch = Input.GetTouch(0);
 		   Vector3 touchPos = new Vector3 (myTouch.position.x, myTouch.position.y, 1);
@@ -47,6 +48,8 @@ public class BG_Collision : MonoBehaviour {
 			}
 		  #else
             enterMenus.volume = PlayerPrefs.GetFloat("SFX") / 100;
+=======
+>>>>>>> e01ef0603a30481c0283a5281407ab99fc41d124
 			if (Input.GetMouseButtonDown (0))
 			{
 				touchPos = Input.mousePosition;
@@ -77,7 +80,24 @@ public class BG_Collision : MonoBehaviour {
 
 				
 			}
-		#endif
 	}
-		
+    public void GoToTown()
+    {
+        SceneManager.LoadScene("Town");
+    }
+
+    public void GoToOptions()
+    {
+        SceneManager.LoadScene("Options_Window");
+    }
+
+    public void GoToHighScore()
+    {
+        SceneManager.LoadScene("High Score");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
