@@ -8,11 +8,14 @@ public class BG_Collision : MonoBehaviour {
 
 	public Camera cam;
 
+    private AudioSource enterMenus;
 	//RaycastHit2D hit;
 	Vector3 touchPos;
 	Vector3 screenPos;
 	// Use this for initialization
-	void Awake () {
+    void Awake()
+    {
+        enterMenus = GameObject.Find("Enter Menu").GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -43,7 +46,7 @@ public class BG_Collision : MonoBehaviour {
 
 			}
 		  #else
-
+            enterMenus.volume = PlayerPrefs.GetFloat("SFX") / 100;
 			if (Input.GetMouseButtonDown (0))
 			{
 				touchPos = Input.mousePosition;
@@ -53,11 +56,19 @@ public class BG_Collision : MonoBehaviour {
 				if (hit) 
 				{
 					if (hit.collider.gameObject.name == "town_background")
-						SceneManager.LoadScene("Town");
+                    {
+                        enterMenus.Play();
+                        SceneManager.LoadScene("Town");
+                    }
 					else if (hit.collider.gameObject.name == "options")
-						SceneManager.LoadScene("Options_Window");
+                    {
+                        SceneManager.LoadScene("Options_Window");
+                    }
 					else if (hit.collider.gameObject.name == "highscore")
-						SceneManager.LoadScene("High Score");
+                    {
+                        enterMenus.Play();
+                        SceneManager.LoadScene("High Score");
+                    }
 					else if (hit.collider.gameObject.name == "quit")
 						Application.Quit();
 				}

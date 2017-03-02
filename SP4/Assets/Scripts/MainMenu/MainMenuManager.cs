@@ -17,7 +17,7 @@ public class MainMenuManager: MonoBehaviour
 	private float tempScale;
 	private float tempNumberofSprite;
 	private GameObject tempMainMenu;
-    private AudioSource mainMenuMusic;
+    private AudioSource mainMenuMusic, enterMenus;
 	// Use this for initialization
 	void Start () 
 	{
@@ -34,7 +34,7 @@ public class MainMenuManager: MonoBehaviour
 	{
 		spawnTimer -= Time.deltaTime;
 
-        mainMenuMusic.volume = PlayerPrefs.GetFloat("Music")/100;
+        mainMenuMusic.volume = PlayerPrefs.GetFloat("Music") / 100;
 		if (spawnTimer < 0.0f) 
 		{
 			tempNumberofSprite = Random.Range (1, 5);

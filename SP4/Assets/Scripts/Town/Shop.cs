@@ -15,9 +15,11 @@ public class Shop : MonoBehaviour
     int buyCost, upgradeCost;
     bool backtotownB = false;
     float timer = 1.0f;
+    private AudioSource enterMenus;
 	// Use this for initialization
 	void Start ()
     {
+        enterMenus = GameObject.Find("EnterMenus").GetComponent<AudioSource>();
         buyCost = PlayerPrefs.GetInt("Cost of Hero", 1000);    
         buyButton.onClick.AddListener(delegate
         {
@@ -41,6 +43,7 @@ public class Shop : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        enterMenus.volume = PlayerPrefs.GetFloat("SFX") / 100;
         buySpecificHero();
         if(buyToggleActive)
         {
@@ -165,7 +168,7 @@ public class Shop : MonoBehaviour
     {
         AutoFade AF = GameObject.FindGameObjectWithTag("Fader").GetComponent<AutoFade>();
         StartCoroutine(AF.FadeToBlack());
-
+        enterMenus.Play();
         backtotownB = true;
     }
 }

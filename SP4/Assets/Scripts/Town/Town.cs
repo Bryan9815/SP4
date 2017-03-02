@@ -5,34 +5,53 @@ using System.Collections;
 public class Town : MonoBehaviour {
     bool started = false;
     public Canvas displayMode;
-    bool toShopB = false, toCharSelectB = false, toEndlessB = false;
+    bool toShopB = false, toCharSelectB = false, toEndlessB = false, toTutorial = false;
     float timer = 1.0f;
-    private AudioSource ThatAudioSource;
+    private static AudioSource ThatAudioSource;
+    private AudioSource enterMenus;
 	// Use this for initialization
-	void Start ()
+	void Awake ()
     {
         ThatAudioSource = GameObject.Find("TownMusic").GetComponent<AudioSource>();
+        enterMenus = GameObject.Find("EnterMenus").GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        ThatAudioSource.volume = PlayerPrefs.GetFloat("Music")/100;
+        ThatAudioSource.volume = PlayerPrefs.GetFloat("Music") / 100;
+        enterMenus.volume = PlayerPrefs.GetFloat("SFX") / 100;
         if (toShopB)
         {
             timer -= Time.deltaTime;
             if (timer <= 0)
+            {
                 SceneManager.LoadScene("TownShop");
-        } if (toCharSelectB)
+            }
+        } 
+        if (toCharSelectB)
         {
             timer -= Time.deltaTime;
             if (timer <= 0)
+            {
                 SceneManager.LoadScene("SelectHeroes");
-        } if (toEndlessB)
+            }
+        } 
+        if (toEndlessB)
         {
             timer -= Time.deltaTime;
             if (timer <= 0)
+            {
                 SceneManager.LoadScene("GamePlay");
+            }
+        }
+        if (toTutorial)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                SceneManager.LoadScene("Tutorial");
+            }
         }
 	   
 	}
@@ -55,6 +74,7 @@ public class Town : MonoBehaviour {
 
     public void EndlessMode()
     {
+        enterMenus.Play();
         AutoFade AF = GameObject.FindGameObjectWithTag("Fader").GetComponent<AutoFade>();
         StartCoroutine(AF.FadeToBlack());
         toEndlessB = true;
@@ -62,6 +82,7 @@ public class Town : MonoBehaviour {
 
     public void goToMain()
     {
+        enterMenus.Play();
         AutoFade AF = GameObject.FindGameObjectWithTag("Fader").GetComponent<AutoFade>();
         StartCoroutine(AF.FadeToBlack());
         SceneManager.LoadScene("MainMenu");
@@ -69,6 +90,7 @@ public class Town : MonoBehaviour {
 
     public void goToShop()
     {
+        enterMenus.Play();
         AutoFade AF = GameObject.FindGameObjectWithTag("Fader").GetComponent<AutoFade>();
         StartCoroutine(AF.FadeToBlack()); 
         toShopB = true;
@@ -76,8 +98,20 @@ public class Town : MonoBehaviour {
 
     public void goToCharSelect()
     {
+        enterMenus.Play();
         AutoFade AF = GameObject.FindGameObjectWithTag("Fader").GetComponent<AutoFade>();
         StartCoroutine(AF.FadeToBlack());
         toCharSelectB = true;
+    }
+    public void goToTutorial()
+    {
+        enterMenus.Play();
+        AutoFade AF = GameObject.FindGameObjectWithTag("Fader").GetComponent<AutoFade>();
+        StartCoroutine(AF.FadeToBlack());
+        toTutorial = true;
+    }
+    public static AudioSource Get_AudioSource()
+    {
+        return ThatAudioSource;
     }
 }

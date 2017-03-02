@@ -12,6 +12,7 @@ public class WaveManager : MonoBehaviour
 
     private static int WaveNumber, MobNumber, GoldEarned, KillCount;
     private bool WaveOver;
+    AudioSource theAudioSource;
     //public Text WaveProgress;
 	// Use this for initialization
     void Start()
@@ -22,13 +23,14 @@ public class WaveManager : MonoBehaviour
         ListOfMobs = new List<GameObject>();
         RandomizeMobNumber();
         GenerateMobs();
+        theAudioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
 	void Update () 
     {
         //WaveProgress.text = "Wave: " + WaveNumber + "\nMonsters Remaining: " + ListOfMobs.Count;
-
+        theAudioSource.volume = PlayerPrefs.GetFloat("Music") / 100;
         if (!WaveOver)
         {
             if (ListOfMobs.Count <= 0)
