@@ -15,7 +15,7 @@ public class CrimsonKnight : Hero {
 	protected override void Start () {
 		animator = GetComponent<Animator> ();
 		Sp = 0;
-        ClassName = "Crimson Knight";
+        ClassName = "CrimsonKnight";
         name = "Crimson Knight";
         Skill_Description = "Increases his Defense stat by 50% for 3 seconds.";
         unlocked = BoolPrefs.GetBool("Crimson Knight Unlocked", false);

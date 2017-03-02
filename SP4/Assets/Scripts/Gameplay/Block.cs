@@ -14,7 +14,7 @@ public class Block : MonoBehaviour {
     public float Block_Travel_Speed; // block travel speed
 	public bool set; // if block still travelling
 	public float collide_allowance;
-	public Sprite Block1_Img,Block2_Img,Block3_Img;
+	public Sprite Block1_Img,Block2_Img,Block3_Img,Block4_Img,Block5_Img,Block6_Img;
 	public List<Sprite> BlockImageList;
 
 	//HS
@@ -39,6 +39,9 @@ public class Block : MonoBehaviour {
 		BlockImageList.Add (Block1_Img);
 		BlockImageList.Add (Block2_Img);
 		BlockImageList.Add (Block3_Img);
+		BlockImageList.Add (Block4_Img);
+		BlockImageList.Add (Block5_Img);
+		BlockImageList.Add (Block6_Img);
 
 		//HS
 		if (scene.name == "Tutorial") 
@@ -56,6 +59,29 @@ public class Block : MonoBehaviour {
 		gameObject.GetComponent<Button> ().onClick.AddListener (delegate() {
 			this.Activate ();
 		});
+
+		switch (HeroManager.List_ofHeroes[hero_slot].GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_ClassName())
+		{
+		case "Brawler":
+			gameObject.GetComponent<Image> ().sprite = BlockImageList [0];
+			break;
+		case "Cloud":
+			gameObject.GetComponent<Image> ().sprite = BlockImageList [1];
+			break;
+		case "CrimsonKnight":
+			gameObject.GetComponent<Image> ().sprite = BlockImageList [2];
+			break;
+		case "Reaper":
+			gameObject.GetComponent<Image> ().sprite = BlockImageList [3];
+			break;
+		case "Weeb":
+			gameObject.GetComponent<Image> ().sprite = BlockImageList [4];
+			break;
+		case "Werewolf":
+			gameObject.GetComponent<Image> ().sprite = BlockImageList [5];
+			break;
+		}
+
 	}
 	
 	// Update is called once per frame
