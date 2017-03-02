@@ -71,7 +71,6 @@ public class Mob : MonoBehaviour
 		else
        	 	tempPos.y += gameObject.GetComponent<Transform>().localScale.y / 2;
         DamageTextManager.GenerateSprite(tempPos, damage);
-        Debug.Log("Ai ya Mob got hit... normal");
     }
 
     public virtual void getHit(int damage, bool careAboutTrigger)
@@ -87,7 +86,6 @@ public class Mob : MonoBehaviour
                 Vector3 tempPos = gameObject.transform.position;
 				tempPos.y += gameObject.GetComponent<Transform>().localScale.y / 2;
                 DamageTextManager.GenerateSprite(tempPos, damage);
-                Debug.Log("Ai ya Mob got hit...");
             }
         }
         else

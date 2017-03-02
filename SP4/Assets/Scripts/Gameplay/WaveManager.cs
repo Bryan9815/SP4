@@ -46,7 +46,7 @@ public class WaveManager : MonoBehaviour
             MobNumber = Random.Range(25, 35);
     }
 
-    void SpawnMobs(int mobID)
+    public void SpawnMobs(int mobID)
     {
         Vector3 tempPos;
         switch(mobID)

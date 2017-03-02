@@ -28,8 +28,7 @@ public class flyingSprite : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		movetowards = flyingSpeed * Time.deltaTime;	
-		Debug.Log ("DestinationX = " + destinationX);
+		movetowards = flyingSpeed * Time.deltaTime;
 		//Right going left < 0.0f means it is spawn at left side of the screen
 		if (transform.localPosition.x > destination.x && destinationX < 0.0f) {
 			transform.Translate (Vector3.left * movetowards);

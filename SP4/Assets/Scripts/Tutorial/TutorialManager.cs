@@ -48,13 +48,13 @@ public class TutorialManager : MonoBehaviour
 					tutorialSequence [i].SetActive (true);
 			}
 		}
-		Debug.Log ("preCounter = " + counter);
 
 		//end of tutorial
 		if (runGameplayTutorial) 
 		{
 			if (counter == gameplayTutorialSequence.Length) 
 			{
+                BoolPrefs.SetBool("Seen Tutorial", true);
 				SceneManager.LoadScene("Town");
 				loadingScreen.SetActive(false);
 			}

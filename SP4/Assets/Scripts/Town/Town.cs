@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Town : MonoBehaviour {
+    bool SeenTutorial;
     bool started = false;
     public Canvas displayMode;
     bool toShopB = false, toCharSelectB = false, toEndlessB = false;
@@ -11,12 +12,18 @@ public class Town : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        SeenTutorial = BoolPrefs.GetBool("Seen Tutorial", false);
         ThatAudioSource = GameObject.Find("TownMusic").GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+        if (!SeenTutorial)
+        {
+            SceneManager.LoadScene("TownTutorial");
+        }
+
         ThatAudioSource.volume = PlayerPrefs.GetFloat("Music")/100;
         if (toShopB)
         {
