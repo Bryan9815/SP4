@@ -35,7 +35,6 @@ public class Arrow : Mob
             if (!Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead())
             {
                 float accuracy = Random.Range(1, 101);
-                Debug.Log("Hero1 Accuracy: " + accuracy + "\nHero1 HP: " + Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Hp());
 
                 if (accuracy > Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Evasion())
                     Hero1.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
@@ -48,7 +47,7 @@ public class Arrow : Mob
             if (!Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead())
             {
                 float accuracy = Random.Range(1, 101);
-                Debug.Log("Hero2 Accuracy: " + accuracy + "\nHero2 HP: " + Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Hp());
+
                 if (accuracy > Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Evasion())
                     Hero2.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
 
@@ -60,7 +59,6 @@ public class Arrow : Mob
             if (!Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_IsDead())
             {
                 float accuracy = Random.Range(1, 101);
-                Debug.Log("Hero3 Accuracy: " + accuracy + "\nHero3 HP: " + Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Hp());
 
                 if (accuracy > Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().Get_Evasion())
                     Hero3.GetComponent<HeroHolder>().Get_GameObject().GetComponent<Hero>().getHit(Attack);
